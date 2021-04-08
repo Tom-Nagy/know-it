@@ -9,11 +9,13 @@ Check out the other mockup:
 * ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
 * ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
 
+
 #### Visit the live Website : **[Know It :arrow_right:]("WEBSITE LINK")**.
 
 Know It is a learning application that promote curiosity and enjoyment in the process of acquiring knowledge. Its motto is: "Learning is cool 
 and knowledge is great!".
 Know It is based on the fact that learning is easier when it is fun and entertaining; and we have fun when we play! The website propose two 
+
 platform: a game and and study environment. They both are linked and related in their content, meaning that you can learn everything you need 
 (and more!) to succeed and complete the game in the study environment.  
 Different exiting and very cool topics are being treated and they all refer to the general and worldwide curriculum of children education 
@@ -73,6 +75,7 @@ game to combine everything in an interactive and fun way.
 ### Project Goals
 
 Know It encourage the **development of knowledge** and **understanding** of the different characteristics and features of the World. 
+
 It promotes curiosity and enjoyment in this process for building lasting interest.  
 It is and educational platform that makes learning cool and knowledge great!
 
@@ -84,7 +87,9 @@ It is and educational platform that makes learning cool and knowledge great!
 * Teach environmental awareness.
 * Entertain.
 * Impact a broad range of Users.
+
 * Grow Know It culture and brand awareness (to attract more Users).
+
 * Be consider for and/or as a permanent tool in schools curriculum.
 
 ### User Goals
@@ -161,6 +166,7 @@ does not affect the users stories significantly to be treated separately.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
+
 ### **Design Choices**
 
 #### Fonts
@@ -181,6 +187,7 @@ The [color scheme](assets/images/README-images/colors.png) of the website has be
 [Adobe Color](https://color.adobe.com/create/image) and swatches are said to be color blind safe by the same website 
 using the [accessibility tool](https://color.adobe.com/create/color-accessibility).  
 
+
 ![color scheme](assets/images/README-images/colors.png)
 
 As well an "COLOR" is used for links. 
@@ -197,6 +204,7 @@ They are distinctive and with a good contrast.
 "GENERAL AMD SPECIFIC FEEL OF THE WEBSITE"
 
 [**:back:** *Table of Content*](#Table-of-Content)
+
 
 ### **Wireframes**
 
@@ -236,6 +244,7 @@ Some designs are different from the wireframes because of user experience compli
 * ....
 
 [**:back:** *Table of Content*](#Table-of-Content)
+
 
 # Features
 
@@ -465,6 +474,7 @@ Issue :
 Issue : 
 
 [**:back:** *Table of Content*](#Table-of-Content)
+
 
 # Credit 
 
