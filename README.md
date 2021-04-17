@@ -205,8 +205,9 @@ The website is a learning platform that includes some content and a game. It use
 
 ### **Wireframes**
 
-![Site Map](assets/wireframes/site-map.pdf)
+![Site Map](assets/wireframes/site-map.png)
 
+* [Site Map](assets/wireframes/site-map.pdf)
 * [Home](assets/wireframes/home.pdf)
 * [About](assets/wireframes/about.pdf)
 * [Study](assets/wireframes/study.pdf)
