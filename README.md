@@ -234,29 +234,117 @@ Some designs are different from the wireframes because of user experience compli
 
 ## Features
 
+The contact page is reachable from the menu or the about page.
+It is intended not to be as obvious as the rest of the website because the main website audience is students and the contact page is mostly for teachers, schools, business etc.
+
+The navigation menu is purposely “hidden” for focus reasons. It is a toggle on small screen and display on larger screen when the icon is hovered.  
+This provides a cleaner and less busy viewport for the users. The goal being to avoid distractions.  
+CONSIDER TOGGLE ON ALL SCREENS.  
+
+When the player is activating the mechanism, a question pop up.
+The question difficulty depends on the level played.
+
+The check-box must be selected (only one at the time possible → radio button) and the button confirm answer clicked to send the answer.
+Message should appear to guide the user if the confirm button is clicked with no answer selected.
+Feedback on the answer should be given as well for right and wrong answer.
+
 ### **Existing Features**
 
 #### Repeated Features
 
-On all pages and devices there is ........
+The **navigation bar** and the **footer** are present on all the pages except for the game page.
 
-**FEATURE** DESCRIPTION OF THE FEATURE
+* The navigation bar:  
+  * There is the website logo on the left that is linked to the home page for best practice.
+  * The navigation menu is displayed as a toggle on all screen sizes in order to keep distractions to the minimum.
 
-**FEATURE** DESCRIPTION OF THE FEATURE 
-
-All pages feature .... SOMETHING FOR THIS PURPOSE ....
+* The Footer:
+  * On the left it will display the “copyright” *For educational use*.
+  * On the right it will display some external links for additional information.
 
 #### Home
 
-DESCRIPTION OF THE FEATURE
+The home page is composed of the main title: “**Welcome to Know It**” and a subtitle: “*Learning is fun and knowledge is great*”. As well, it displays a statement: Here learning is FUN!”. This welcome and invites users to discover the website and set the mood and feel of the website.  
 
-#### PAGE NAME
+It presents three buttons that link to the corresponding page:
 
-DESCRIPTION OF THE FEATURE
+* About
+* Study
+* Play
 
-#### PAGE NAME
+It corresponds to three choices that represent the main content of the website.
 
-DESCRIPTION OF THE FEATURE
+#### About
+
+The about page gives a description of the website goals and features.  
+It invites users to discover the website with two main buttons:
+
+* Study
+* Play
+
+As well a paragraph offers users to reach out to the website owner with a secondary button:
+
+* Contact
+
+#### Study
+
+This page presents some learning content.  
+It is composed of a title to explain how to proceed: “To choose a subject, click on it!”; and a subtitle to present a feature of the page inviting users to look for  magnifiers in order to discover more information about a section.  
+
+Four icons are displayed and represent the subject available to study. The fourth one being the compiled version of the other ones:
+
+* Volcano
+* Jungle
+* Ocean
+* Earth
+
+The volcano subject will be preloaded.
+
+#### Play
+
+The page presents a title inviting to play: “Let's play!”.  
+As well is displayed the steps to follow in order to set up a party.  
+There is an invitation to go to the study room in order to refresh our memory with a button linked to the corresponding page.  
+You will find a *How to play?* link that triggers a pop-up with the rules and more precise information on the game.  
+
+The interface to set up the party is composed of a **dropdown menu** to set the level, a **carousel** to display the subject's icons on one line and a button: “**Play**” to start the game. This protocol provide users an overview of the settings and choices made before to start to play.
+
+#### Game
+
+The game interface is composed of:
+
+* The game area in the middle → the labyrinth.
+* The control buttons on the bottom. They are four directional arrows.
+* A New game button on the top right to start a new game with the same configuration.
+* An Exit button on the top right to go back to the play page.
+* The icon corresponding to the subject selected on the top left.
+* The level difficulty corresponding to the level selected on the top left.
+
+The gameplay is as follow:  
+You will move the avatar through the labyrinth in order to reach the exit. The access to the exit is blocked and in order progress through the labyrinth you will need to activate some mechanism. They are accessible via a special panel easily recognizable.  
+Once you reached the panel you will have to answer a multiple choices question.  
+If you get it right you will gain access to another part of the labyrinth.  
+If you get it wrong you will get a strike, but you will be able to guess again.  
+The number of strikes allowed are determined by the level difficulty of the party.  
+The questions appear as pop-up. There you will have to select one answer and validate your answer.
+Will you be able to get out?
+
+#### Contact
+
+The contact page is very simple and offer users to reach out to the website owner.  
+There are three fields to fill up:
+
+* You are: → Who the person is.
+* Reason: → Dropdown menu to select from.
+* Tell us more: → A textarea to provide additional information.
+
+A send button is displayed as well to send the form.  
+Upon sending, a pop-up will give feedback to the user thanking him for the message. It will provide as well links to different pages of the website: Home / Study / Play.
+
+#### 404 error
+
+A custom page will handle the “404 error” by displaying a message explaining the error.  
+It provides a button to go back to the home page and some useful links. One that will bring the user to website that explain what is a 404 error and one that bring the user to the contact page to report an issue with the reason pre-populated.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -316,7 +404,7 @@ For extracting the color scheme used on the website.
 * [Am I Responsive?](http://ami.responsivedesign.is/?url=http://ami.responsivedesign.is/#)  
 For providing a screenshot of the responsiveness of the website across several devices.
 
-* [Autoprefixer CSS online](https://autoprefixer.github.io/)
+* [Autoprefixer CSS online](https://autoprefixer.github.io/)  
 For adding prefixer for cross browser compatibility.
 
 * [Git](https://git-scm.com/)  
