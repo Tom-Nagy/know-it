@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka+One&family=Handlee&display=swap');
+
+/* 
+font-family: 'Andika New Basic', sans-serif;
+font-family: 'Fredoka One', cursive;
+font-family: 'Handlee', cursive;
+ */
+
+.hide {
+    display: none;
+}
+
+/* ------------------------------------------------------Navigation */
+
+.logo {
+    margin: 16px;
+    text-decoration: none;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 16px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #d9cb11;
+}
+
+.menu-text {
+    position: relative;
+    top: -12px;
+    color: #9941bf;
+    font-family: "Fredoka One", cursive;
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+}
+
