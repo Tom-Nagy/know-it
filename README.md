@@ -205,9 +205,16 @@ The website is a learning platform that includes some content and a game. It use
 
 ### **Wireframes**
 
-* [Desktop](assets/wireframes/"desktop".pdf)
-* [Tablet](assets/wireframes/tablet.pdf)
-* [Mobile](assets/wireframes/mobile.pdf)
+![Site Map](assets/wireframes/site-map.pdf)
+
+* [Home](assets/wireframes/home.pdf)
+* [About](assets/wireframes/about.pdf)
+* [Study](assets/wireframes/study.pdf)
+* [Play](assets/wireframes/play.pdf)
+* [Game](assets/wireframes/game.pdf)
+* [Contact](assets/wireframes/contact.pdf)
+* [404 error](assets/wireframes/404-error.pdf)
+* [Know It](assets/wireframes/know-it.pdf)
 
 "THEY CAN BE DONE AS WELL PER PAGES COMPARING THE LOOK OF THE PAGE ON DIFFERENT SCREENS AT ONCE."
 
@@ -219,16 +226,6 @@ Some designs are different from the wireframes because of user experience compli
 #### Site Map
 
 "STRUCTURE OF THE WEBSITE IS DIFFERENT IN THIS AND THAT WAY BECAUSE ...."
-
-#### Footer
-
-* 
-* 
-
-#### Home
-
-*  
-*  
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
