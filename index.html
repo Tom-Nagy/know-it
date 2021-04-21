@@ -46,23 +46,21 @@
     <!-- Navigation bar -->
     <header>
       <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img
-          src="assets/images/logos/logo.png"
-          alt="Know It logo representing a smiling friendly brain with eyes."
+      <a href="index.html">
+        <img class="logo" src="assets/images/logos/logo.png" alt="Know It logo representing a smiling friendly brain with eyes."
           height="40"
           width="40"
         />
       </a>
 
       <!--Dropdown navigation menu for all devices -->
-      <button>
+      <button class="menu-icon">
         <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-        <img src="assets/images/logos/menu-64.png" alt="Icon of a book." />
+        <img src="assets/images/logos/menu-64.png" alt="Icon of a book." height="40" width="40" />
+        <span class="menu-text">Menu</span>
       </button>
-      <div class="menu-text">Menu</div>
 
-      <div class="navigation-menu">
+      <div class="navigation-menu hide">
         <ul class="navigation-list">
           <li class="navigation-items">
             <!--aria-hidden="false" in the anchor and maybe the span with sr-only => Bootstrap only ???-->
@@ -90,13 +88,11 @@
       <p>"Learning is cool and Knowledge is great!"</p>
     </div>
 
-    <!-- Catch phrase -->
-    <div class="statement">
-      <h3>Here learning is FUN !</h3>
-    </div>
-
-    <!-- Button section -->
-    <section class="home-section">
+    <!-- main section -->
+    <section class="home-section"> <!-- Class Not used at the moment-->
+      <div class="statement">
+        <h3>Here learning is FUN !</h3>
+      </div>
       <button class="buttons home-buttons about-button">About</button>
       <button class="buttons home-buttons study-button">Study</button>
       <button class="buttons home-buttons play-button">Play</button>
@@ -105,6 +101,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="copyright">
+          <i class="far fa-copyright"></i>
             For educational purposes.
         </div>
         <div class="footer-links">

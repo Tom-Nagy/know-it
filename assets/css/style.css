@@ -1,13 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka+One&family=Handlee&display=swap');
 
 /* 
-font-family: 'Andika New Basic', sans-serif;
-font-family: 'Fredoka One', cursive;
-font-family: 'Handlee', cursive;
+font-family: 'Andika New Basic', sans-serif;  ==> CONTENT
+font-family: 'Fredoka One', cursive;          ==> HEADINGS
+font-family: 'Handlee', cursive;              ==> ABOUt PAGE / BUTTONS
  */
+html,
+body {
+    position: relative;
+    margin: 0;
+    font-family: "Andika New Basic", sans-serif;
+}
 
 .hide {
     display: none;
+}
+
+.show {
+    display: block;
+}
+
+.heading {
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    font-size: 2rem;
+
+}
+
+.buttons {
+    display: block;
+    font-family: "Handlee", cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.9em 2em;
+    margin: 1.5em auto;
+    width: 150px;
+    border: 3px solid black;
+    border-radius: 30%;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
 }
 
 /* ------------------------------------------------------Navigation */
@@ -38,3 +69,77 @@ font-family: 'Handlee', cursive;
     letter-spacing: 0.03rem;
 }
 
+/* ------------------------------------------------------Footer */
+
+.footer {
+    position: relative;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    margin: 0.3em 0 0 ;
+    background-color: #d9cb11b3;
+}
+
+.copyright,
+.footer-links {
+    position: absolute;
+    display: inline-block;
+    padding: 0.3em;
+    
+    
+}
+
+.copyright {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+}
+
+.footer-links {
+    right: 10%;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    margin-left: 0.6em;
+    color: #9941bf;
+}
+
+/* ------------------------------------------------------Home page */
+/* Heading */
+
+.home-heading h1 {
+    margin-bottom: 0px;
+}
+
+.home-heading p {
+    margin-top: 0.3em;
+    font-size: 1.3rem;
+}
+
+/* Section */
+
+.home-section {
+    margin-bottom: 6em;
+}
+
+.statement {
+    text-align: center;
+    font-family: "Handlee", cursive;
+    font-size: 1.5rem;
+    margin-top: 6rem;
+}
+
+.about-button {
+    background-color: #0da80e;
+}
+
+.study-button {
+    background-color: #f57400;
+}
+
+.play-button {
+    background-color: #d9cb11;
+}
