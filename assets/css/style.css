@@ -10,6 +10,7 @@ body {
     position: relative;
     margin: 0;
     font-family: "Andika New Basic", sans-serif;
+    font-size: 1rem;
 }
 
 .hide {
@@ -23,22 +24,52 @@ body {
 .heading {
     text-align: center;
     font-family: "Fredoka One", cursive;
-    font-size: 2rem;
+    letter-spacing: 0.03rem;
 
 }
+
+/* Buttons */
 
 .buttons {
     display: block;
     font-family: "Handlee", cursive;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.9em 2em;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 0.9em 2em 0.9em 1em;
     margin: 1.5em auto;
-    width: 150px;
+    width: 130px;
     border: 3px solid black;
     border-radius: 30%;
     border-top-right-radius: 80%;
     border-bottom-right-radius: 80%;
+}
+
+.about-button {
+    background-color: #0da80e;
+}
+
+.study-button {
+    background-color: #f57400;
+}
+
+.play-button {
+    background-color: #d9cb11;
+}
+
+.contact-button {
+    background-color: #d91e2e;
+    font-family: "Handlee", cursive;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 0.4em;
+    margin: 1.5em;
+    border: 2px solid black;
 }
 
 /* ------------------------------------------------------Navigation */
@@ -110,11 +141,12 @@ body {
 /* ------------------------------------------------------Home page */
 /* Heading */
 
-.home-heading h1 {
+.home-heading {
     margin-bottom: 0px;
+    font-size: 3rem;
 }
 
-.home-heading p {
+.home-heading + p {
     margin-top: 0.3em;
     font-size: 1.3rem;
 }
@@ -132,14 +164,24 @@ body {
     margin-top: 6rem;
 }
 
-.about-button {
-    background-color: #0da80e;
+/* ------------------------------------------------------About page */
+
+.about-heading {
+    font-size: 2rem;
 }
 
-.study-button {
-    background-color: #f57400;
+.about-section {
+    margin: 3em 2em;
 }
 
-.play-button {
-    background-color: #d9cb11;
+.about-section p {
+    margin: 2em;
+    text-align: left;
 }
+
+.about-buttons {
+    display: inline-block;
+    padding: 0.3em 0.5em 0.3em 0.1em;
+    margin: 0.5em 3em;
+}
+
