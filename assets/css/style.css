@@ -5,6 +5,9 @@ font-family: 'Andika New Basic', sans-serif;  ==> CONTENT
 font-family: 'Fredoka One', cursive;          ==> HEADINGS
 font-family: 'Handlee', cursive;              ==> ABOUt PAGE / BUTTONS
  */
+
+/* ------------------------------------------------------Common styles */
+
 html,
 body {
     position: relative;
@@ -24,8 +27,8 @@ body {
 .heading {
     text-align: center;
     font-family: "Fredoka One", cursive;
+    font-size: 2rem;
     letter-spacing: 0.03rem;
-
 }
 
 /* Buttons */
@@ -166,10 +169,6 @@ body {
 
 /* ------------------------------------------------------About page */
 
-.about-heading {
-    font-size: 2rem;
-}
-
 .about-section {
     margin: 3em 2em;
 }
@@ -185,3 +184,33 @@ body {
     margin: 0.5em 3em;
 }
 
+/* ------------------------------------------------------Study page */
+
+.sujects-section {
+    position: relative;
+    text-align: center;
+}
+
+.volcano-button::after {
+    content: "Volcano";
+    position: absolute;
+    bottom: -5px;
+}
+
+.jungle-button::after {
+    content: "Jungle";
+    position: absolute;
+    bottom: -5px;
+}
+
+.ocean-button::after {
+    content: "Ocean";
+    position: absolute;
+    bottom: -5px;
+}
+
+.earth-button::after {
+    content: "Earth";
+    position: absolute;
+    bottom: -5px;
+}
