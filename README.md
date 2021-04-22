@@ -12,7 +12,7 @@ Check out the other mockups:
 
 #### Visit the live Website : **[Know It :arrow_right:]("WEBSITE LINK")**.
 
-Know It is a learning application that promote curiosity and enjoyment in the process of acquiring knowledge. Its motto is: “Learning is cool and knowledge is great!”.
+Know It is a learning application that promotes curiosity and enjoyment in the process of acquiring knowledge. Its motto is: “Learning is cool and knowledge is great!”.
 Know It is based on the fact that learning is easier when it is fun and entertaining; and we have fun when we play! The website proposes two platforms: a game and and study environment. They both are linked and related in their content, meaning that you can learn everything you need (and more!) to succeed and complete the game in the study environment.  
 Different exciting and very cool topics are being treated. They all refer to the general and worldwide curriculum of children education, they appeal to everyone and reach the maximum of communities. The content is based on the syllabus of children between the age of 12 and 15 years old. At this stage of life knowledge is bursting, interesting and exciting. Children are learning about the World and how it functions.
 It is the fundamentals and the foundation of the “grown up” knowledge. In this spirit it will attract many people from the young adolescence to no limit.
@@ -161,11 +161,14 @@ Users between 11 and 16 years old and older users are treated as the same becaus
 #### Fonts
 
 In accordance with the developer/business goals and targeted audience, the fonts chosen for the websites are **Fredoka One**, **Handlee** and **Andika New Basic**.  
-Fredoka One will b used for headings. It is *display* font with a fun rounded style that matches perfectly with the website feel.  
-The Handlee is a *handwriting* font and will be used for the home page because it provides an informal and friendly display with a playful feel. This will bring a welcoming atmosphere to the home page.
+
+* Fredoka One will be used for headings. It is *display* font with a fun rounded style that matches perfectly with the website feel.  
+* The Handlee is a *handwriting* font and will be used for the about page because it provides an informal and friendly display with a playful feel. This will bring a welcoming atmosphere to the page.
+
 > Handlee is a great font for any web page looking to add some personality and charisma. There was careful attention to detail in removing unnecessary overlap between letters, which allows Handlee to be scaled down to very small sizes while still maintaining legibility.  
->[Handlee Google Fonts](https://fonts.google.com/specimen/Handlee?query=handl#glyphs).  
-Andika New Basic is a *sans serif* font designed for literacy use. That makes it the perfect font to present and display the content on the website.  
+>[Handlee Google Fonts](https://fonts.google.com/specimen/Handlee?query=handl#glyphs).
+
+* Andika New Basic is a *sans serif* font designed for literacy use. That makes it the perfect font to present and display the content on the website.  
 
 The fonts selected for this project have clear and defined shapes to support learning. They are not aggressive and provide a general friendly feel.
 
@@ -215,9 +218,10 @@ The website is a learning platform that includes some content and a game. It use
 * [Game](assets/wireframes/game.pdf)
 * [Contact](assets/wireframes/contact.pdf)
 * [404 error](assets/wireframes/404-error.pdf)
-* [Know It](assets/wireframes/know-it.pdf)
 
-"THEY CAN BE DONE AS WELL PER PAGES COMPARING THE LOOK OF THE PAGE ON DIFFERENT SCREENS AT ONCE."
+For the full version:
+
+* [Know It](assets/wireframes/know-it.pdf)
 
 ### **Different Design**
 
@@ -543,8 +547,8 @@ Issue :
 [W3schools](https://www.w3schools.com/)  
 For general database on software development.
 
-[Hostinger Tutorials](https://www.hostinger.com/tutorials/how-to-add-favicon-to-website)  
-Provided the link and explanation on how to install the favicon for the website.
+[favicon.io](https://favicon.io/favicon-converter/)  
+For the converting the favicon and providing the links and explanation on how to install the favicon for the website.
 
 [George Dimitriadis](https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color)  
 For text-shadow tricks used in CSS to make text more readable.
@@ -576,7 +580,17 @@ For explanation and code snippet on overlay on background image used in css.
 [NAME](WEBSITE LINK)  
 [NAME](WEBSITE LINK)
 
-##### Images :
+##### Icons :
+
+[Alexandr Martinov on Iconfinder](https://www.iconfinder.com/search/?q=book&price=free)  
+For the menu icon that was slightly adjusted to the website needs using [Iconfinder Editor](https://www.iconfinder.com/editor/).
+
+* Icon made by Freepik from [www.flaticon.com](www.flaticon.com):
+  * [Volcano](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
+  * [Jungle](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
+  * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
+  * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search)
+
 
 Some of the images used on the website are taken from a ...............
 
