@@ -49,22 +49,23 @@
     <!-- Navigation bar -->
     <header>
       <!-- Logo -->
-      <a href="index.html">
+      <a href="index.html" class="logo" aria-label="Link to the home page.">
         <img
-          class="logo"
           src="assets/images/logo/logo.png"
           alt="Know It logo representing a smiling friendly brain with eyes."
+          title="Link to the home page."
           height="40"
           width="40"
         />
       </a>
 
       <!--Dropdown navigation menu for all devices -->
-      <button class="menu-icon">
+      <button class="menu-icon" aria-label="Navigation menu.">
         <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
         <img
           src="assets/images/icons/menu.png"
           alt="Icon of a book."
+          title="Navigation menu."
           height="40"
           width="40"
         />
@@ -98,44 +99,138 @@
       <h2>Study</h2>
     </div>
 
-    <!-- main section -->
+    <!-- Study section -->
     <section class="study-section">
-      <div>
-        <h4>To choose a subject, click on it!</h4>
+      <!-- Subtitle section -->
+      <div class="study-explanations">
         <p>
-          If you want to discover in depth some sections, look for the magnifier: <i class="fas fa-search-plus"></i>
+          To choose a subject, click on it!
+          <br />
+          <span>
+            If you want to discover in depth some sections, look for the
+            magnifier:
+            <button class="magnifier">
+              <i class="fas fa-search-plus"></i>
+            </button>
+          </span>
         </p>
       </div>
-      
-      <div class="sujects-section">
-        <button class="volano-button"><img src="assets/images/icons/volcano.png" alt="Volcano icon." height="50" width="50"></button>
-        <button class="jungle-button"><img src="assets/images/icons/jungle.png" alt="Jungle icon." height="50" width="50"></button>
-        <button class="ocean-button"><img src="assets/images/icons/ocean.png" alt="Ocean icon." height="50" width="50"></button>
-        <button class="earth-button"><img src="assets/images/icons/earth-globe.png" alt="Earth icon." height="50" width="50"></button>
-      </div>
 
-      <article class="show"> Content display in here</article>
-      <article class="hide"> Content display in here</article>
-      <article class="hide"> Content display in here</article>
-      <article class="hide"> Content display in here</article>
-      
+      <!-- Main section -->
+      <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
+        * [Volcano](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
+        * [Jungle](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
+        * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
+        * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search) -->
+      <div class="subjects-section">
+        <button class="subjects-buttons volcano-button">
+          <img
+            src="assets/images/icons/volcano.png"
+            alt="Volcano icon."
+            height="50"
+            width="50"
+          />
+        </button>
+        <button class="subjects-buttons jungle-button">
+          <img
+            src="assets/images/icons/jungle.png"
+            alt="Jungle icon."
+            height="50"
+            width="50"
+          />
+        </button>
+        <button class="subjects-buttons ocean-button">
+          <img
+            src="assets/images/icons/ocean.png"
+            alt="Ocean icon."
+            height="50"
+            width="50"
+          />
+        </button>
+        <button class="subjects-buttons earth-button">
+          <img
+            src="assets/images/icons/earth-globe.png"
+            alt="Earth icon."
+            height="50"
+            width="50"
+          />
+        </button>
+      </div>
+      <section class="subject-content-wrapper">
+        <article class="subject-content volcano show">
+          <h4 class="heading subject-heading">Volcano</h4>
+
+          <h5>Definition:</h5>
+          <p>
+            Volcanoes have different shapes and forms. They look like mountains
+            from which molten rocks and gaz can erupt. In simple words, it is an
+            opening through the Earth crust.
+            <br />
+            When a volcano in not in eruption, everything is happening inside
+            it. But what is going on in there?
+          </p>
+          <button class="magnifier">
+            <i class="fas fa-search-plus"></i>
+          </button>
+          <p class="hide">EXTRA CONTENT HERE</p>
+
+          <h5>How Does It Work?</h5>
+          <p></p>
+
+          <h5>Interesting Facts:</h5>
+          <p></p>
+        </article>
+
+        <article class="hide">Content display in here</article>
+
+        <article class="hide">Content display in here</article>
+
+        <article class="hide">Content display in here</article>
+      </section>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="copyright">
-        <i class="far fa-copyright"></i>
+        <i class="far fa-copyright" aria-hidden="true"></i>
         For educational purposes.
       </div>
       <div class="footer-links">
-        <a href="#">
-          <i class="fab fa-pinterest-p"></i>
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fab fa-pinterest-p"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
         </a>
-        <a href="#">
-          <i class="fas fa-graduation-cap"></i>
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fas fa-graduation-cap"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
         </a>
-        <a href="#">
-          <i class="fas fa-cogs"></i>
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fas fa-cogs"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
         </a>
       </div>
     </footer>

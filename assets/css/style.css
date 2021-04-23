@@ -3,7 +3,7 @@
 /* 
 font-family: 'Andika New Basic', sans-serif;  ==> CONTENT
 font-family: 'Fredoka One', cursive;          ==> HEADINGS
-font-family: 'Handlee', cursive;              ==> ABOUt PAGE / BUTTONS
+font-family: 'Handlee', cursive;              ==> ABOUT PAGE / BUTTONS
  */
 
 /* ------------------------------------------------------Common styles */
@@ -16,6 +16,8 @@ body {
     font-size: 1rem;
 }
 
+/* Display */
+
 .hide {
     display: none;
 }
@@ -23,6 +25,8 @@ body {
 .show {
     display: block;
 }
+
+/* Headings */
 
 .heading {
     text-align: center;
@@ -33,6 +37,12 @@ body {
 
 /* Buttons */
 
+
+/* Takes off the browser built-in outline (chrome)  */
+:focus {
+    outline: none;
+}
+
 .buttons {
     display: block;
     font-family: "Handlee", cursive;
@@ -41,11 +51,11 @@ body {
     text-decoration: none;
     text-align: center;
     color: black;
-    padding: 0.9em 2em 0.9em 1em;
+    padding: 0.9em 2.5em 0.9em 0.5em;
     margin: 1.5em auto;
     width: 130px;
     border: 3px solid black;
-    border-radius: 30%;
+    border-radius: 20px;
     border-top-right-radius: 80%;
     border-bottom-right-radius: 80%;
 }
@@ -54,12 +64,36 @@ body {
     background-color: #0da80e;
 }
 
+.about-button:focus {
+    box-shadow: 
+    0 0 0 6px white,
+    0 0 0 9px #0da80e,
+    0 0 0 12px black;
+    border: none;
+}
+
 .study-button {
     background-color: #f57400;
 }
 
+.study-button:focus {
+    box-shadow: 
+    0 0 0 6px white,
+    0 0 0 9px #f57400,
+    0 0 0 12px black;
+    border: none;
+}
+
 .play-button {
     background-color: #d9cb11;
+}
+
+.play-button:focus {
+    box-shadow: 
+    0 0 0 6px white,
+    0 0 0 9px #d9cb11,
+    0 0 0 12px black;
+    border: none;
 }
 
 .contact-button {
@@ -73,13 +107,82 @@ body {
     padding: 0.4em;
     margin: 1.5em;
     border: 2px solid black;
+    border-radius: 10px;
 }
+
+.contact-button:focus {
+    box-shadow: 
+    0 0 0 3px white,
+    0 0 0 6px #d91e2e,
+    0 0 0 9px black;
+    border: none;
+}
+
+/* Subjects Icons */
+
+.subjects-buttons {
+    position: relative;
+    margin: 2em;
+    padding: 0.8em;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #25232340;
+}
+
+.subjects-buttons:focus {
+    background-color: #d91e2e;
+}
+
+.subjects-buttons:hover { /* zoom effect to be implemented*/
+    background-color: ;
+}
+
+.volcano-button::after,
+.jungle-button::after,
+.ocean-button::after,
+.earth-button::after {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 0.3em;
+    font-family: "Handlee", cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.04rem;
+}
+
+.volcano-button::after {
+    content: "Volcano";
+}
+
+.jungle-button::after {
+    content: "Jungle";
+}
+
+.ocean-button::after {
+    content: "Ocean";
+}
+
+.earth-button::after {
+    content: "Earth";
+}
+
 
 /* ------------------------------------------------------Navigation */
 
-.logo {
+.logo img  {
     margin: 16px;
-    text-decoration: none;
+}
+
+/* Sets a border that doesn't display in order to have a round box-shadow */
+.logo:focus img {
+    box-sizing: border-box;
+    border: 0px solid;
+    border-radius: 50%;
+    box-shadow: 
+    0 0 0 6px white,
+    0 0 0 9px black;
 }
 
 .menu-icon {
@@ -92,6 +195,12 @@ body {
     width: 50px;
     border-radius: 50%;
     background-color: #d9cb11;
+}
+
+.menu-icon:focus {
+    box-shadow: 
+    0 0 0 6px white,
+    0 0 0 9px black;
 }
 
 .menu-text {
@@ -119,8 +228,6 @@ body {
     position: absolute;
     display: inline-block;
     padding: 0.3em;
-    
-    
 }
 
 .copyright {
@@ -139,6 +246,24 @@ body {
     text-decoration: none;
     margin-left: 0.6em;
     color: #9941bf;
+}
+
+.footer-links i {
+    height: 1.8em;
+    width: 1.8em;
+    border-radius: 50%;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+.footer-links a:focus i {
+    box-shadow: 
+    0 0 0 2px white,
+    0 0 0 4px black;
+}
+
+.footer-links a:hover i {
+    
 }
 
 /* ------------------------------------------------------Home page */
@@ -180,37 +305,62 @@ body {
 
 .about-buttons {
     display: inline-block;
-    padding: 0.3em 0.5em 0.3em 0.1em;
+    padding: 0.3em 1em 0.3em 0;
     margin: 0.5em 3em;
 }
 
 /* ------------------------------------------------------Study page */
 
-.sujects-section {
-    position: relative;
+/* Subtitle section */
+
+.study-explanations {
+    text-align: center;
+    margin: 2em;
+}
+
+.study-explanations p {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+}
+
+.study-explanations span {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.magnifier {
+    border-style: none;
+    background-color: transparent;
+}
+
+.magnifier i {
+    font-size: 1rem;
+    background-color: #3A8BE980;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+}
+
+/* Subjects icons section */
+
+.subjects-section {
     text-align: center;
 }
 
-.volcano-button::after {
-    content: "Volcano";
-    position: absolute;
-    bottom: -5px;
+.subject-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.jungle-button::after {
-    content: "Jungle";
-    position: absolute;
-    bottom: -5px;
+.subject-content {
+    margin: 6em 1em 2em;
+    padding: 0.5em;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
-.ocean-button::after {
-    content: "Ocean";
-    position: absolute;
-    bottom: -5px;
-}
-
-.earth-button::after {
-    content: "Earth";
-    position: absolute;
-    bottom: -5px;
+.subject-heading {
+    
 }
