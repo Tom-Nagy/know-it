@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka+One&family=Handlee&display=swap');
 
-/* 
+/*
 font-family: 'Andika New Basic', sans-serif;  ==> CONTENT
 font-family: 'Fredoka One', cursive;          ==> HEADINGS
 font-family: 'Handlee', cursive;              ==> ABOUT PAGE / BUTTONS
@@ -14,6 +14,14 @@ body {
     margin: 0;
     font-family: "Andika New Basic", sans-serif;
     font-size: 1rem;
+}
+
+p {
+    max-width: 60ch;
+}
+
+ul {
+    max-width: 60ch;
 }
 
 /* Display */
@@ -58,6 +66,25 @@ body {
     border-radius: 20px;
     border-top-right-radius: 80%;
     border-bottom-right-radius: 80%;
+    transition-duration: 350ms;
+    -o-transition-duration: 350ms;
+    -ms-transition-duration: 350ms;
+    -moz-transition-duration: 350ms;
+    -webkit-transition-duration: 350ms;
+    transition-property: transform;
+    -o-transition-property: transform;
+    -ms-transition-property: transform;
+    -moz-transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -ms-transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.buttons:hover {
+    transform: rotate(-10deg);
 }
 
 .about-button {
@@ -65,11 +92,10 @@ body {
 }
 
 .about-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 6px white,
     0 0 0 9px #0da80e,
     0 0 0 12px black;
-    border: none;
 }
 
 .study-button {
@@ -77,11 +103,10 @@ body {
 }
 
 .study-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 6px white,
     0 0 0 9px #f57400,
     0 0 0 12px black;
-    border: none;
 }
 
 .play-button {
@@ -89,20 +114,19 @@ body {
 }
 
 .play-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 6px white,
     0 0 0 9px #d9cb11,
     0 0 0 12px black;
-    border: none;
 }
 
 .contact-button {
-    background-color: #d91e2e;
     font-family: "Handlee", cursive;
     font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+    background-color: #d91e2e;
     color: black;
     padding: 0.4em;
     margin: 1.5em;
@@ -111,14 +135,19 @@ body {
 }
 
 .contact-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 3px white,
     0 0 0 6px #d91e2e,
     0 0 0 9px black;
-    border: none;
 }
 
-/* Subjects Icons */
+.contact-button:hover {
+    background-color: black;
+    color: #d91e2e;
+    border: 2px  solid #d91e2e;
+}
+
+/* Subjects Icons (buttons) */
 
 .subjects-buttons {
     position: relative;
@@ -126,15 +155,28 @@ body {
     padding: 0.8em;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: #25232340;
+    background-color: #fcfcfc;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+
+    transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    -o-transition-property: transform, box-shadow;
+    -ms-transition-property: transform, box-shadow;
+    -moz-transition-property: transform, box-shadow;
+    -webkit-transition-property: transform, box-shadow;
 }
 
 .subjects-buttons:focus {
     background-color: #d91e2e;
 }
 
-.subjects-buttons:hover { /* zoom effect to be implemented*/
-    background-color: ;
+.subjects-buttons:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
 }
 
 .volcano-button::after,
@@ -145,6 +187,7 @@ body {
     top: 100%;
     right: 50%;
     transform: translateX(50%);
+    /* Might need prefix for cross browser support */
     margin-top: 0.3em;
     font-family: "Handlee", cursive;
     font-weight: bold;
@@ -173,16 +216,18 @@ body {
 
 .logo img  {
     margin: 16px;
-}
-
-/* Sets a border that doesn't display in order to have a round box-shadow */
-.logo:focus img {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
     border: 0px solid;
     border-radius: 50%;
-    box-shadow: 
+}
+
+.logo:focus img {
+    box-shadow:
     0 0 0 6px white,
     0 0 0 9px black;
+}
+.logo:hover img {
+    box-shadow: 0 0 10px 0 black;
 }
 
 .menu-icon {
@@ -195,12 +240,32 @@ body {
     width: 50px;
     border-radius: 50%;
     background-color: #d9cb11;
+    cursor: pointer;
+
+    transition-duration: 350ms;
+    -o-transition-duration: 350ms;
+    -ms-transition-duration: 350ms;
+    -moz-transition-duration: 350ms;
+    -webkit-transition-duration: 350ms;
+    transition-property: background-color;
+    -o-transition-property: background-color;
+    -ms-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -webkit-transition-property: background-color;
 }
 
 .menu-icon:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 6px white,
     0 0 0 9px black;
+}
+
+.menu-icon:hover {
+    background-color: #9941bf;
+}
+
+.menu-icon:hover .menu-text {
+    color: #d9cb11;
 }
 
 .menu-text {
@@ -233,7 +298,7 @@ body {
 .copyright {
     left: 10%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     font-size: 0.7rem;
 }
 
@@ -254,16 +319,27 @@ body {
     border-radius: 50%;
     line-height: 1.8em;
     text-align: center;
+    transition-duration: 350ms;
+    -o-transition-duration: 350ms;
+    -ms-transition-duration: 350ms;
+    -moz-transition-duration: 350ms;
+    -webkit-transition-duration: 350ms;
+    transition-property: background-color, color;
+    -o-transition-property: background-color, color;
+    -ms-transition-property: background-color, color;
+    -moz-transition-property: background-color, color;
+    -webkit-transition-property: background-color, color;
 }
 
 .footer-links a:focus i {
-    box-shadow: 
+    box-shadow:
     0 0 0 2px white,
     0 0 0 4px black;
 }
 
 .footer-links a:hover i {
-    
+    background-color: #9941bf;
+    color: #d9cb11;
 }
 
 /* ------------------------------------------------------Home page */
@@ -314,8 +390,10 @@ body {
 /* Subtitle section */
 
 .study-explanations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 2em;
 }
 
 .study-explanations p {
@@ -331,6 +409,8 @@ body {
 .magnifier {
     border-style: none;
     background-color: transparent;
+    cursor: pointer;
+    margin-left: 2em;
 }
 
 .magnifier i {
@@ -340,6 +420,26 @@ body {
     width: 30px;
     border-radius: 50%;
     line-height: 30px;
+
+    transition-duration: 350ms;
+    -o-transition-duration: 350ms;
+    -ms-transition-duration: 350ms;
+    -moz-transition-duration: 350ms;
+    -webkit-transition-duration: 350ms;
+    transition-property: background-color;
+    -o-transition-property: background-color;
+    -ms-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -webkit-transition-property: background-color;
+}
+
+.magnifier:focus i {
+    box-shadow: 0 0 0 2px black;
+    background-color: #3a8be9;
+}
+
+.magnifier:hover i{
+    background-color: #3a8be9;
 }
 
 /* Subjects icons section */
@@ -348,6 +448,8 @@ body {
     text-align: center;
 }
 
+/* Subject Content */
+
 .subject-content-wrapper {
     display: flex;
     justify-content: center;
@@ -355,12 +457,51 @@ body {
 }
 
 .subject-content {
-    margin: 6em 1em 2em;
-    padding: 0.5em;
-    border: 2px solid black;
+    margin: 6em 12em;
+    padding: 3em;
+    border: 3px solid black;
     border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fcfcfc;
 }
 
-.subject-heading {
-    
+.subject-content h5 {
+    position: relative;
+    font-size: 1.1rem;
+    margin: 4em 2em 1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.subject-content h5::before {
+    content: "";
+    height: 2px;
+    width: 40%;
+    border-top: 2px outset #d91e2e40;
+    position: absolute;
+    top: -2em;
+    left: 30%;
+}
+
+.subject-content h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 2em;
+}
+
+.subject-content p {
+    margin: 1em auto;
+}
+
+.subject-content ul span {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.subject-content li {
+    margin: 1em;
+}
+
+.images-container {
+    text-align: center;
 }
