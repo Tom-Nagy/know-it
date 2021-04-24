@@ -189,8 +189,11 @@ The colours chosen for the website are bright and joyful. They are based on the 
 
 * Yellow for creativity and happiness.
 * Orange for sociability and fun.
-* Blue for peace and competence.
-* As well white will be used for cleanliness and simplicity.
+* Green for quality and growth.
+* Purple for wisdom.
+
+A blue will be used for displaying extra content as reference to competence and depth.
+white will be used as background colour for cleanliness and simplicity.
 
 The swatches are said to be color-blind safe by Adobe Color [accessibility tool](https://color.adobe.com/create/color-accessibility).
 
@@ -473,9 +476,11 @@ To clone a repository, take the following steps :
 
 4. Choose an option and copy the link given.
 5. Change the current working directory to the location where you want the cloned directory.
-5. Open your IDE and in the CLI type : ```git clone``` and paste the link copied on step 4.
+6. Open your IDE and in the CLI type : ```git clone``` and paste the link copied on step 4.
+
 >```$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY```
-6. Press **Enter** to create your local clone.
+
+7. Press **Enter** to create your local clone.
 
 For further information please go to [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line).
 
@@ -591,14 +596,15 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
   * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
   * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search)
 
+##### Images :
 
-Some of the images used on the website are taken from a ...............
+* Images from [Adobe Stock](https://stock.adobe.com/ie/):
 
-* Pictures from Pexels:
-
-  * For the "PROFILE"  
-    [Photo by ARTIST NAME](PICTURE LINK)  
-    [Photo by ARTIST NAME](PICTURE LINK)
+  * For the Volcano content:  
+    [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
+    [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
+    [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
+    [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
 
   * For the "FEATURES"  
     [Photo by ARTIST NAME](PICTURE LINK)  
