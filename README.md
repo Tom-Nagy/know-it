@@ -545,9 +545,23 @@ Issue :
 
 ## Credit 
 
-### Content :
+**All the written subject's content provided on the website is the result of my research and are my own production.**  
+Some resources used are but not limited to:
 
-"TO BE ADJUSTED AND COMPLETED"
+* [lelivrescolaire.fr](https://www.lelivrescolaire.fr/matiere/sciences-de-la-vie-et-de-la-terre)
+* [Owlcation](https://owlcation.com/)
+* [Kiddle](https://www.kiddle.co/)
+* [NATIONAL GEOGRAPHIC](https://www.nationalgeographic.org/)
+* [NATIONAL GEOGRAPHIC KIDS](https://www.natgeokids.com/ie/)
+* [MONGABAY](https://rainforests.mongabay.com/)
+* [Britannica](https://www.britannica.com/)
+* [National Oceanic and Atmospheric Administration: NOOA](https://www.noaa.gov/)
+* [USGS](https://www.usgs.gov/)
+* [LIVESCIENCE](https://www.livescience.com/)
+* [Wikipedia](https://www.wikipedia.org/)
+
+
+### Content :
 
 [W3schools](https://www.w3schools.com/)  
 For general database on software development.
@@ -555,35 +569,13 @@ For general database on software development.
 [favicon.io](https://favicon.io/favicon-converter/)  
 For the converting the favicon and providing the links and explanation on how to install the favicon for the website.
 
-[George Dimitriadis](https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color)  
-For text-shadow tricks used in CSS to make text more readable.
-
-[GeeksforGeeks](https://www.geeksforgeeks.org/how-to-vertically-center-text-with-css/)  
-For tips on vertical alignment in CSS.
-
-[USERWAY](https://userway.org/blog/html-required-versus-aria-required)  
-For explanation on best use of the required attribute.
-
-[SJ_OWOW](https://stackoverflow.com/questions/52378422/how-to-vertically-align-text-within-div-element-css)  
-For vertical align code snippet used in CSS.
-
-[coder coder!](https://coder-coder.com/background-image-opacity/#:~:text=There's%20no%20CSS%20property%20that,for%20the%20background%2Dimage%20property.)
-For explanation and code snippet on overlay on background image used in css. 
-
 ### Media
 
 ##### Social Media links :
 
-[Twinkl](https://www.twinkl.ie/)
-
 [Facebook](WEBSITE LINK)  
 [Instagram](WEBSITE LINK)  
 [Pinterest](WEBSITE LINK)
-
-##### "SPECIFIC PAGE" links :
-
-[NAME](WEBSITE LINK)  
-[NAME](WEBSITE LINK)
 
 ##### Icons :
 
@@ -611,9 +603,10 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
   [Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle](https://kids.kiddle.co/Image:Water_cycle.png)  
   [Image by U.S. Geological Survey , Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
 
-* For background image  
-  [Photo by ARTIST NAME](PICTURE LINK)  
-  [Photo by ARTIST NAME](PICTURE LINK)
+* For the Jungle content:
+  * Images from [Adobe Stock](https://stock.adobe.com/ie/):  
+    [Rainforest layers educational banner or poster. Jungle vertical structure educational scheme. Emergent, canopy, understory and floor levels. Flat vector illustration by Rudzhan](https://stock.adobe.com/ie/images/rainforest-layers-educational-banner-or-poster-jungle-vertical-structure-educational-scheme-emergent-canopy-understory-and-floor-levels-flat-vector-illustration/408770051?prev_url=detail&asset_id=408770051)  
+    [Aerial view of deforestation. Rainforest being removed to make way for palm oil and rubber plantations by whitcomberd](https://stock.adobe.com/ie/images/aerial-view-of-deforestation-rainforest-being-removed-to-make-way-for-palm-oil-and-rubber-plantations/240813889?prev_url=detail&asset_id=240813889)
 
 ### Aknowledgements :
 
