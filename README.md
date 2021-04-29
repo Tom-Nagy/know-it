@@ -598,21 +598,22 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
 
 ##### Images :
 
-* Images from [Adobe Stock](https://stock.adobe.com/ie/):
+* For the Volcano content:  
+  * Images from [Adobe Stock](https://stock.adobe.com/ie/):  
+  [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
+  [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
+  [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
+  [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
 
-  * For the Volcano content:  
-    [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
-    [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
-    [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
-    [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
+* For the Ocean content:  
+  [Oceans map by our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/)  
+  [Image by brgfx from [freepik](https://www.freepik.com)](https://www.freepik.com/free-vector/tidal-movements-earth_1466597.htm#page=1&query=ocean%20tides&position=49)  
+  [Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle](https://kids.kiddle.co/Image:Water_cycle.png)  
+  [Image by U.S. Geological Survey , Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
 
-  * For the "FEATURES"  
-    [Photo by ARTIST NAME](PICTURE LINK)  
-    [Photo by ARTIST NAME](PICTURE LINK)
-
-  * For background image  
-    [Photo by ARTIST NAME](PICTURE LINK)  
-    [Photo by ARTIST NAME](PICTURE LINK)
+* For background image  
+  [Photo by ARTIST NAME](PICTURE LINK)  
+  [Photo by ARTIST NAME](PICTURE LINK)
 
 ### Aknowledgements :
 
