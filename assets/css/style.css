@@ -350,9 +350,9 @@ ul {
     font-size: 3rem;
 }
 
-.home-heading + p {
+.home-heading + span {
     margin-top: 0.3em;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 /* Section */
@@ -372,6 +372,11 @@ ul {
 
 .about-section {
     margin: 3em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .about-section p {
@@ -485,9 +490,21 @@ ul {
 }
 
 .subject-content h6 {
+    position: relative;
     font-size: 1rem;
     font-weight: bold;
     margin-left: 2em;
+}
+
+.subject-content h6::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: -1em;
 }
 
 .subject-content p {
