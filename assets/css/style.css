@@ -452,6 +452,7 @@ ul {
 
 .subject-content-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -490,7 +491,7 @@ ul {
 }
 
 .subject-content p {
-    margin: 1em auto;
+    margin: 2em auto;
 }
 
 .subject-content ul span {
@@ -504,4 +505,5 @@ ul {
 
 .images-container {
     text-align: center;
+    max-width: 100%;
 }
