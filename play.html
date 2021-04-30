@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
+      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!"
+    />
+    <meta
+      name="keywords"
+      content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
+      volcano, jungle, ocean, earth"
+    />
+    <meta name="author" content="Know It" />
+
+    <script
+      src="https://kit.fontawesome.com/a5ee39e432.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon implementation from favicon.io(https://favicon.io/favicon-converter/) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+
+    <title>Know It</title>
+    <link rel="stylesheet" href="assets/css/style.css" media="all" />
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Link to the home page.">
+        <img
+          src="assets/images/logo/logo.png"
+          alt="Know It logo representing a smiling friendly brain with eyes."
+          title="Link to the home page."
+          height="40"
+          width="40"
+        />
+      </a>
+
+      <!--Dropdown navigation menu for all devices -->
+      <button class="menu-icon" aria-label="Navigation menu.">
+        <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+        <img
+          src="assets/images/icons/menu.png"
+          alt="Icon of a book."
+          title="Navigation menu."
+          height="40"
+          width="40"
+        />
+        <span class="menu-text">Menu</span>
+      </button>
+
+      <div class="navigation-menu hide">
+        <ul class="navigation-list">
+          <li class="navigation-items">
+            <!--aria-hidden="false" in the anchor and maybe the span with sr-only => Bootstrap only ???-->
+            <a href="index.html" class="navigation-links"> Home </a>
+          </li>
+          <li class="navigation-items">
+            <a href="about.html" class="navigation-links"> About </a>
+          </li>
+          <li class="navigation-items">
+            <a href="study.html" class="navigation-links"> Study </a>
+          </li>
+          <li class="navigation-items">
+            <a href="play.html" class="navigation-links"> Play </a>
+          </li>
+          <li class="navigation-items">
+            <a href="contact.html" class="navigation-links"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Heading -->
+    <div class="heading">
+      <h2>Let's play!</h2>
+    </div>
+
+    <!-- Steps to follow section -->
+    <section class="play-section-wrapper">
+      <section class="play-explanation">
+        <p>
+          To start please <strong>pick a subject</strong> first by selecting the
+          icon of your choice, then <strong>set the level</strong> and click
+          <strong>start</strong>.
+        </p>
+        <p>
+          If you need to refresh your memory you can go to the study room.
+          <a href="study.html" class="buttons small-buttons study-button">Study</a>
+        </p>
+        <button>How to play?</button>
+      </section>
+
+      <!-- Game settings interface -->
+      <section class="game-settings">
+        <!-- Carousel to display the subjects on one line -->
+        <div class="carousel">Icons Icons Icons</div>
+
+        <div class="dropdown-menu">
+          <ul>
+            Set Level
+            <li>Apprentice</li>
+            <li>Scientist</li>
+            <li>Genius</li>
+          </ul>
+        </div>
+
+        <button>Start</button>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="copyright">
+        <i class="far fa-copyright" aria-hidden="true"></i>
+        For educational purposes.
+      </div>
+      <div class="footer-links">
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fab fa-pinterest-p"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
+        </a>
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fas fa-graduation-cap"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
+        </a>
+        <a
+          href="#"
+          rel="noopener"
+          target="_blank"
+          aria-label="Link to websiteName."
+        >
+          <i
+            class="fas fa-cogs"
+            aria-hidden="true"
+            title="Link to websiteName."
+          ></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
