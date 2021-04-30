@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka+One&family=Handlee&display=swap');
 
 /*
-font-family: 'Andika New Basic', sans-serif;  ==> CONTENT
-font-family: 'Fredoka One', cursive;          ==> HEADINGS
-font-family: 'Handlee', cursive;              ==> ABOUT PAGE / BUTTONS
+font-family: "Andika New Basic", sans-serif;  ==> CONTENT
+font-family: "Fredoka One", cursive;          ==> HEADINGS
+font-family: "Handlee", cursive;              ==> ABOUT PAGE / BUTTONS
  */
 
 /* ------------------------------------------------------Common styles */
@@ -43,7 +43,7 @@ ul {
     letter-spacing: 0.03rem;
 }
 
-/* Buttons */
+/* Buttons  MAYBE PUT THE FONT FOR ALL BUTTONS HERE ???????? */
 
 
 /* Takes off the browser built-in outline (chrome)  */
@@ -51,13 +51,25 @@ ul {
     outline: none;
 }
 
-.buttons {
-    display: block;
+/* will make impossible for the user to select the text in the button */
+
+button,
+a {
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+
     font-family: "Handlee", cursive;
-    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+} 
+
+.buttons {
+    display: block;
+    font-size: 1.2rem;
     color: black;
     padding: 0.9em 2.5em 0.9em 0.5em;
     margin: 1.5em auto;
@@ -120,12 +132,15 @@ ul {
     0 0 0 12px black;
 }
 
+.small-buttons {
+    display: inline-block;
+    padding: 0.3em 1em 0.3em 0;
+    margin: 0.5em 3em;
+}
+
 .contact-button {
-    font-family: "Handlee", cursive;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.04rem;
     background-color: #d91e2e;
     color: black;
     padding: 0.4em;
@@ -189,8 +204,6 @@ ul {
     transform: translateX(50%);
     /* Might need prefix for cross browser support */
     margin-top: 0.3em;
-    font-family: "Handlee", cursive;
-    font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 0.04rem;
 }
@@ -318,7 +331,6 @@ ul {
     width: 1.8em;
     border-radius: 50%;
     line-height: 1.8em;
-    text-align: center;
     transition-duration: 350ms;
     -o-transition-duration: 350ms;
     -ms-transition-duration: 350ms;
@@ -382,12 +394,6 @@ ul {
 .about-section p {
     margin: 2em;
     text-align: left;
-}
-
-.about-buttons {
-    display: inline-block;
-    padding: 0.3em 1em 0.3em 0;
-    margin: 0.5em 3em;
 }
 
 /* ------------------------------------------------------Study page */
@@ -479,6 +485,7 @@ ul {
     text-decoration: underline;
 }
 
+/* Add a separation line before the h5 headings */
 .subject-content h5::before {
     content: "";
     height: 2px;
@@ -496,6 +503,7 @@ ul {
     margin-left: 2em;
 }
 
+/* Add a bullet point like list */
 .subject-content h6::before {
     content: "";
     height: 6px;
@@ -523,4 +531,197 @@ ul {
 .images-container {
     text-align: center;
     max-width: 100%;
+}
+
+/* ------------------------------------------------------ Play page */
+
+.play-section-wrapper,
+.game-settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-explanation .study-button {
+    font-size: 1rem;
+    margin-left: 0.1em;
+}
+
+#rules-button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-decoration: underline 2px black;
+    margin: 1em 0 1.5em;
+}
+
+#levels-button,
+#start-button {
+    border: 5px outset silver;
+    border-radius: 3px;
+    padding: 0.3em 0.5em;
+    
+}
+
+#levels-button {
+    font-size: 1.1rem;
+    background-color: #d9cb11;
+    margin-top: 2em;
+}
+
+#levels-button i {
+    font-size: 1.5rem;
+    padding: 0 0.2em;
+}
+
+#start-button {
+    font-size: 1.5rem;
+    background-color: #d91e2e;
+    margin: 1.5em 0 4em;
+}
+
+
+/* ------------------------------------------------------ Contact page */
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-form {
+    width: 220px;
+    position: relative;
+    margin: 3em auto;
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.45);
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    margin: 1em 1em 0.3em;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    font-family: "Andika New Basic", sans-serif;
+    font-size: 0.8rem;
+    padding: 0.3em;
+}
+
+#send-button {
+    font-size: 1rem;
+    margin: 2em;
+    padding: 0.3em;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus,
+#send-button:focus {
+    box-shadow: 0 0 8px 0 #9941bf;
+    background-color: #3a8be980;
+}
+
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover,
+#send-button:hover {
+    box-shadow: 0 0 8px 0 #9941bf;
+}
+
+/* ------------------------------------------------------ 404 page */
+.error-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-section p {
+    font-size: 1.5rem;
+    margin: 3em 0 0.5em;
+}
+
+.back-home-button {
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    background-color: #3a8be980;
+    padding: 1em;
+    margin: 1.5em auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0  5px  10px 0 rgba(0, 0, 0, 0.5);
+}
+.back-home-button:focus {
+    box-shadow:
+    0 0 0 6px white,
+    0 0 0 9px #3A8BE980,
+    0 0 0 10px black;
+}
+
+.back-home-button:hover {
+    background-color: black;
+    border-color: #3a8be980;
+    color: #fcfcfc;
+}
+
+.error-section ul span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.error-section li {
+    position: relative;
+    list-style-type: none;
+    margin: 0.5em;
+}
+
+.error-section li::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: -1em;
+}
+
+.error-links {
+    text-decoration: none;
+    color: #9941bf;
+}
+
+.error-links:focus {
+    box-shadow: 
+    0 0 0 1px black,
+    0 0 0 3px #9941bf,
+    0 0 0 4px black;
+}
+
+.error-links:hover {
+    text-decoration: underline 2px #9941bf;
 }
