@@ -1,6 +1,6 @@
 # **Know It**
 
-![Mockup](assets/images/README-images/ami-responsive-"home".png)
+![Mockup](assets/images/README-images/ami-responsive-website.png)
 
 Check out the other mockups:
 
@@ -10,7 +10,7 @@ Check out the other mockups:
 * ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
 * ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
 
-#### Visit the live Website : **[Know It :arrow_right:]("WEBSITE LINK")**.
+#### Visit the live Website : **[Know It :arrow_right:](tom-nagy.github.io/know-it/)**.
 
 Know It is a learning application that promotes curiosity and enjoyment in the process of acquiring knowledge. Its motto is: “Learning is cool and knowledge is great!”.
 Know It is based on the fact that learning is easier when it is fun and entertaining; and we have fun when we play! The website proposes two platforms: a game and and study environment. They both are linked and related in their content, meaning that you can learn everything you need (and more!) to succeed and complete the game in the study environment.  
@@ -73,13 +73,13 @@ It is and educational platform that makes learning cool and knowledge great!
 
 ### Developer and Business Goals
 
-* Develop an interactive website using HTML, CSS and JavaScript. 
+* Develop an interactive website using HTML, CSS and JavaScript.
 * Bring knowledge to the Users.
 * Make learning fun.
 * Teach environmental awareness.
 * Entertain.
 * Impact a broad range of Users.
-* Grow Know It culture and brand awareness (to attract more Users).
+* Grow “Know It” culture and brand awareness (to attract more Users).
 * Be consider for and/or as a permanent tool in schools curriculum.
 
 ### User Goals
@@ -440,19 +440,23 @@ To make this website accessible to the public, Walking Around has been deployed 
     * To create a repository see [Create a repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo).
 3. Navigate to **Settings** :
 
-![Settings](assets/images/README-images/deployment/repo-settings.png) ===> TO BE ADJUSTED TO THE PROJECT SO THE RIGHT REPO NAME APPEARS ON THE IMAGE
+![Settings](assets/images/README-images/deployment/repo-settings.png)
 
 4. Scroll down to the **GitHub Pages** section.
-5. Click on the **None** dropdown menu and select the branch to publish : **master**.
+5. Click on the link to go to the dedicated tab :
+
+![Navigation to the GitHub Pages tab](assets/images/README-images/deployment/github-pages.png)
+
+6. Click on the **None** dropdown menu and select the branch to publish : **master**.
 
 ![Selection of branch to publish](assets/images/README-images/deployment/branch.png)
 
-6. Click on **Save**.
-7. The website is now deployed.
+7. Click on **Save**.
+8. The website is now deployed.
 
 The link to the website is found in the **GitHub Pages** section of the repository settings.
 
-![Website link](assets/images/README-images/deployment/published.png) ===> TO BE ADJUSTED TO THE PROJECT SO THE RIGHT REPO NAME APPEARS ON THE IMAGE
+![tom-nagy.github.io/know-it/](assets/images/README-images/deployment/published.png)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -472,7 +476,7 @@ To clone a repository, take the following steps :
     * using SSH key
     * using GitHub CLI  
 
-![clone options](assets/images/README-images/deployment/cloning.png) ===> TO BE ADJUSTED TO THE PROJECT SO THE RIGHT REPO NAME APPEARS ON THE IMAGE
+![clone options](assets/images/README-images/deployment/cloning.png)
 
 4. Choose an option and copy the link given.
 5. Change the current working directory to the location where you want the cloned directory.
@@ -514,7 +518,7 @@ To Fork a repository take the following steps :
 2. Navigate to the corresponding repository.
 3. Identify the ```fork``` button on the top right of the page and click on it.
 
-![Forking](assets/images/README-images/deployment/fork.png) ===> TO BE ADJUSTED TO THE PROJECT SO THE RIGHT REPO NAME APPEARS ON THE IMAGE
+![Forking](assets/images/README-images/deployment/fork.png)
 
 4. Now you should find a copy of the repository in ```Your repositories```.
 
