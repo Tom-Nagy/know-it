@@ -17,6 +17,11 @@
     <meta name="author" content="Know It" />
 
     <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/a5ee39e432.js"
       crossorigin="anonymous"
     ></script>
@@ -39,59 +44,94 @@
       sizes="16x16"
       href="assets/images/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
 
     <title>Know It</title>
     <link rel="stylesheet" href="assets/css/style.css" media="all" />
   </head>
 
   <body>
-    <!-- Navigation bar -->
     <header>
-      <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="Link to the home page.">
-        <img
-          src="assets/images/logo/logo.png"
-          alt="Know It logo representing a smiling friendly brain with eyes."
-          title="Link to the home page."
-          height="40"
-          width="40"
-        />
-      </a>
+      <!-- Navigation bar -->
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Link to the home page.">
+          <img
+            src="assets/images/logo/logo.png"
+            alt="Know It logo representing a smiling friendly brain with eyes."
+            title="Link to the home page."
+            height="40"
+            width="40"
+          />
+        </a>
 
-      <!--Dropdown navigation menu for all devices -->
-      <button class="menu-icon" aria-label="Navigation menu.">
-        <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-        <img
-          src="assets/images/icons/menu.png"
-          alt="Icon of a book."
-          title="Navigation menu."
-          height="40"
-          width="40"
-        />
-        <span class="menu-text">Menu</span>
-      </button>
+        <!--Dropdown navigation menu for all devices -->
+        <button
+          id="navigation-button"
+          class="menu-icon"
+          aria-label="Navigation menu."
+        >
+          <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+          <img
+            src="assets/images/icons/menu.png"
+            alt="Icon of a book."
+            title="Navigation menu."
+            height="40"
+            width="40"
+          />
+          <span class="menu-text">Menu</span>
+        </button>
 
-      <div class="navigation-menu hide">
-        <ul class="navigation-list">
-          <li class="navigation-items">
-            <!--aria-hidden="false" in the anchor and maybe the span with sr-only => Bootstrap only ???-->
-            <a href="index.html" class="navigation-links"> Home </a>
-          </li>
-          <li class="navigation-items">
-            <a href="about.html" class="navigation-links"> About </a>
-          </li>
-          <li class="navigation-items">
-            <a href="study.html" class="navigation-links"> Study </a>
-          </li>
-          <li class="navigation-items">
-            <a href="play.html" class="navigation-links"> Play </a>
-          </li>
-          <li class="navigation-items">
-            <a href="contact.html" class="navigation-links"> Contact </a>
-          </li>
-        </ul>
-      </div>
+        <div class="navigation-menu hide">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a
+                href="index.html"
+                class="navigation-links"
+                aria-label="Link to the home page."
+              >
+                Home
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="about.html"
+                class="navigation-links"
+                aria-label="Link to the about page."
+              >
+                About
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="study.html"
+                class="navigation-links"
+                aria-label="Link to the study page."
+              >
+                Study
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="play.html"
+                class="navigation-links"
+                aria-label="Link to the play page."
+              >
+                Play
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="contact.html"
+                class="navigation-links"
+                aria-label="Link to the contact page."
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Heading -->
@@ -123,7 +163,7 @@
         * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
         * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search) -->
       <div class="subjects-section">
-        <button class="subjects-buttons volcano-button">
+        <button class="subjects-buttons volcano-button study-subjects">
           <img
             src="assets/images/icons/volcano.png"
             alt="Volcano icon."
@@ -132,7 +172,7 @@
             width="50"
           />
         </button>
-        <button class="subjects-buttons jungle-button">
+        <button class="subjects-buttons jungle-button study-subjects">
           <img
             src="assets/images/icons/jungle.png"
             alt="Jungle icon."
@@ -141,7 +181,7 @@
             width="50"
           />
         </button>
-        <button class="subjects-buttons ocean-button">
+        <button class="subjects-buttons ocean-button study-subjects">
           <img
             src="assets/images/icons/ocean.png"
             alt="Ocean icon."
@@ -150,7 +190,7 @@
             width="50"
           />
         </button>
-        <button class="subjects-buttons earth-button">
+        <button class="subjects-buttons earth-button study-subjects">
           <img
             src="assets/images/icons/earth-globe.png"
             alt="Earth icon."
@@ -178,7 +218,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               Volcanoes are formed when hot liquid, molten rocks and gas, known
               as magma is forced to the surface of the earth by natural forces
@@ -248,7 +288,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               You can think of the tectonic plates as giant pieces of puzzle
               that cover the Earth. They never stop moving but it is so slow we
@@ -379,7 +419,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               In more detailed classification volcanic eruptions are are of six
               types of increasing degree of explosiveness:<br />
@@ -522,7 +562,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               Jungles are mostly situated in the tropics, subtropics and around
               the equator. This type of forest host an incredible biodiversity.
@@ -597,7 +637,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               In the jungle trees are mostly evergreen.<br />
               In the canopy and above, animals move through the vegetation by
@@ -637,15 +677,15 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               The jungle is home to an incredible biodiversity such as plants
               that only grow on other trees called
               <strong>epiphytes</strong>.<br />
-              The climate present in the jungle allow organisms to grow at a very
-              quick pace. And because the competition between plants is very
-              hard and their environment harsh plants developed poisonous toxins
-              to protect themselves from the fauna.<br />
+              The climate present in the jungle allow organisms to grow at a
+              very quick pace. And because the competition between plants is
+              very hard and their environment harsh plants developed poisonous
+              toxins to protect themselves from the fauna.<br />
               Some of the most known, mesmerizing and mystifying animals present
               in the jungle are jaguars, tigers, elephants, gorillas, monkeys,
               eagles and snakes that live in the trees or on the forest floor.
@@ -784,7 +824,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               Ocean formed billions of years ago when the Earth temperature
               cooled below 100 Celsius degree. The water state changed from gas
@@ -800,9 +840,9 @@
               land are the main source of salts we find in the ocean water.
               Rainfall and rivers that erodes the rocks on the land dissolved
               them and carry minerals to the seas. While some of the minerals
-              are used by organisms found in the water, others are not. Over time
-              this process generates an increase in their concentration making
-              the ocean salty.
+              are used by organisms found in the water, others are not. Over
+              time this process generates an increase in their concentration
+              making the ocean salty.
             </p>
           </div>
 
@@ -868,7 +908,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               Almost everywhere on Earth there are two tides a day. They each
               have a high point (<em>the high tide</em>) and a low point (<em
@@ -894,7 +934,7 @@
           <button class="magnifier">
             <i class="fas fa-search-plus"></i>
           </button>
-          <div class="hide">
+          <div class="extra-info hide">
             <p>
               The ocean is never still. While the currents move the water from
               one place to another, waves are often seen on the surface of the
@@ -1112,7 +1152,6 @@
             </li>
           </ul>
         </article>
-
       </section>
     </section>
 
@@ -1162,4 +1201,5 @@
       </div>
     </footer>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>

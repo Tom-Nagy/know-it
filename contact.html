@@ -17,6 +17,11 @@
     <meta name="author" content="Know It" />
 
     <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/a5ee39e432.js"
       crossorigin="anonymous"
     ></script>
@@ -39,59 +44,104 @@
       sizes="16x16"
       href="assets/images/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
 
     <title>Know It</title>
     <link rel="stylesheet" href="assets/css/style.css" media="all" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_zZR48PZvHUdToIEtpRtBT");
+      })();
+    </script>
   </head>
 
   <body>
-    <!-- Navigation bar -->
     <header>
-      <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="Link to the home page.">
-        <img
-          src="assets/images/logo/logo.png"
-          alt="Know It logo representing a smiling friendly brain with eyes."
-          title="Link to the home page."
-          height="40"
-          width="40"
-        />
-      </a>
+      <!-- Navigation bar -->
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Link to the home page.">
+          <img
+            src="assets/images/logo/logo.png"
+            alt="Know It logo representing a smiling friendly brain with eyes."
+            title="Link to the home page."
+            height="40"
+            width="40"
+          />
+        </a>
 
-      <!--Dropdown navigation menu for all devices -->
-      <button class="menu-icon" aria-label="Navigation menu.">
-        <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-        <img
-          src="assets/images/icons/menu.png"
-          alt="Icon of a book."
-          title="Navigation menu."
-          height="40"
-          width="40"
-        />
-        <span class="menu-text">Menu</span>
-      </button>
+        <!--Dropdown navigation menu for all devices -->
+        <button
+          id="navigation-button"
+          class="menu-icon"
+          aria-label="Navigation menu."
+        >
+          <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+          <img
+            src="assets/images/icons/menu.png"
+            alt="Icon of a book."
+            title="Navigation menu."
+            height="40"
+            width="40"
+          />
+          <span class="menu-text">Menu</span>
+        </button>
 
-      <div class="navigation-menu hide">
-        <ul class="navigation-list">
-          <li class="navigation-items">
-            <!--aria-hidden="false" in the anchor and maybe the span with sr-only => Bootstrap only ???-->
-            <a href="index.html" class="navigation-links"> Home </a>
-          </li>
-          <li class="navigation-items">
-            <a href="about.html" class="navigation-links"> About </a>
-          </li>
-          <li class="navigation-items">
-            <a href="study.html" class="navigation-links"> Study </a>
-          </li>
-          <li class="navigation-items">
-            <a href="play.html" class="navigation-links"> Play </a>
-          </li>
-          <li class="navigation-items">
-            <a href="contact.html" class="navigation-links"> Contact </a>
-          </li>
-        </ul>
-      </div>
+        <div class="navigation-menu hide">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a
+                href="index.html"
+                class="navigation-links"
+                aria-label="Link to the home page."
+              >
+                Home
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="about.html"
+                class="navigation-links"
+                aria-label="Link to the about page."
+              >
+                About
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="study.html"
+                class="navigation-links"
+                aria-label="Link to the study page."
+              >
+                Study
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="play.html"
+                class="navigation-links"
+                aria-label="Link to the play page."
+              >
+                Play
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a
+                href="contact.html"
+                class="navigation-links"
+                aria-label="Link to the contact page."
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Heading -->
@@ -106,25 +156,21 @@
         soon as possible.
       </p>
 
-      <form class="contact-form" method="post" action="#">
+      <form id="contact-form" onsubmit="return" >
         <label for="name">Your name:</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Full name"
-          required
-        />
+        <input id="name" type="text" name="name" placeholder="Full name" required />
+        <label for="email">Your email address:</label>
+        <input id="email" type="email" name="email" required />
         <label for="reasons">Reason:</label>
         <select id="reasons" type="text" name="reasons" required>
+          <option value="select">Please select a reason</option>
           <option value="request">Special request</option>
-          <option value="mistake">Found a mistake</option>
           <option value="issue">Report an issue</option>
           <option value="other">Other</option>
         </select>
         <label for="message">Your message:</label>
-        <textarea name="message" id="message" cols="15" rows="5"></textarea>
-        <button id="send-button" type="button">Send</button>
+        <textarea id="message" name="message" cols="15" rows="5" required></textarea>
+        <button id="send-button" type="submit">Send</button>
       </form>
     </section>
 
@@ -174,4 +220,5 @@
       </div>
     </footer>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>
