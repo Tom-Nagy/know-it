@@ -2,16 +2,14 @@
 $(document).ready(function () {
   // To the navigation menu button.
   $("#navigation-button").click(toggleNavMenu);
-  //$("body").not($("#navigation-button")).click(toggleNavMenuOff); toggle off the nav menu when clicking anywhere on the page except navButton.
-
+  
   // To the magnifier button.
   $(".magnifier").click(toggleInfo);
 
   // To the subject buttons.
   $(".study-subjects").click(displayContent);
 
-  // To the form in the contact page.
-  $("#contact-form").submit(sendForm(this));
+ 
 
 });
 
@@ -23,16 +21,19 @@ function toggleNavMenu() {
   let navMenu = $(".navigation-menu");
   navMenu.toggle(300);
 }
-
 /*
-function toggleNavMenuOff () {
+$(document).on("click", function() {
   let navMenu = $(".navigation-menu");
-  navMenu.hide(300);
-}
+  let navButton = $("#navigation-button");
+
+  if (this !== navButton){
+    navMenu.hide(300);
+  }
+})
 */
 
 // Study page  ---------------------------------------------------------------
-
+ 
 // Toggle the extra content.
 function toggleInfo () {
 
@@ -66,24 +67,3 @@ function displayContent() {
   }
 }
 
-// Contact page  ---------------------------------------------------------------
-
-function sendForm(contactForm) {
-
-  contactForm.preventDefault();
-
-  let templateParams = {
-    "from_name" : contactForm.name.value,
-    "from_email" : contactForm.email.value,
-    "message" : contactForm.message.value
-  } 
-  
-  emailjs.send("Gmail", "know-it", templateParams) 
-  .then(function(response) {
-    console.log('SUCCESS!', response.status, response.text);
- }, function(error) {
-    console.log('FAILED...', error);
- });
-
- return false;
-}

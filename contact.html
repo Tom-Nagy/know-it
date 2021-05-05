@@ -156,9 +156,15 @@
         soon as possible.
       </p>
 
-      <form id="contact-form" onsubmit="return" >
+      <form id="contact-form" method="POST">
         <label for="name">Your name:</label>
-        <input id="name" type="text" name="name" placeholder="Full name" required />
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Full name"
+          required
+        />
         <label for="email">Your email address:</label>
         <input id="email" type="email" name="email" required />
         <label for="reasons">Reason:</label>
@@ -169,10 +175,51 @@
           <option value="other">Other</option>
         </select>
         <label for="message">Your message:</label>
-        <textarea id="message" name="message" cols="15" rows="5" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          cols="15"
+          rows="5"
+          required
+        ></textarea>
         <button id="send-button" type="submit">Send</button>
       </form>
     </section>
+
+    <!-- Modal to pop-up when email is send -->
+    <div id="email-sent" class="contact-modals">
+      <div class="modal-header">
+        <div class="modal-title">
+          Your message was sent.
+        </div>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Thank you for your request.<br />
+          Back to :<br />
+          <a href="index.html" class="back-home-button small-home-button">Home page</a>
+          <a href="study.html" class="buttons small-buttons study-button">Study</a>
+          <a href="play.html" class="buttons small-buttons play-button">Play</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal to pop-up when email has failed to send -->
+    <div id="email-error" class="contact-modals">
+      <div class="modal-header">
+        <div class="modal-title">
+          Something went wrong.
+        </div>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Please check that your entered valid information and try again.
+        </p>
+      </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -221,4 +268,5 @@
     </footer>
   </body>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/send-email.js"></script>
 </html>
