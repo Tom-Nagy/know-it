@@ -189,10 +189,10 @@
     <!-- Modal to pop-up when email is send -->
     <div id="email-sent" class="contact-modals">
       <div class="modal-header">
-        <div class="modal-title">
+        <div>
           Your message was sent.
         </div>
-        <button class="close-modal">&times;</button>
+        <button data-close-modal class="close-modal">&times;</button>
       </div>
       <div class="modal-body">
         <p>
@@ -206,12 +206,12 @@
     </div>
 
     <!-- Modal to pop-up when email has failed to send -->
-    <div id="email-error" class="contact-modals">
+    <div id="email-error" class="contact-modals modal">
       <div class="modal-header">
-        <div class="modal-title">
+        <div>
           Something went wrong.
         </div>
-        <button class="close-modal">&times;</button>
+        <button data-close-modal class="close-modal">&times;</button>
       </div>
       <div class="modal-body">
         <p>
@@ -219,6 +219,7 @@
         </p>
       </div>
     </div>
+    <div class="overlay"></div>
 
 
     <!-- Footer -->

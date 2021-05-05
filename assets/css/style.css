@@ -589,30 +589,50 @@ a {
 }
 
 .play-explanation .study-button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-left: 0.1em;
 }
 
 #rules-button {
     border: none;
+    border-radius: 5px;
     background-color: transparent;
     font-size: 1.2rem;
     text-decoration: underline 2px black;
     margin: 1em 0 1.5em;
 }
 
-#levels-button,
-#start-button {
-    border: 5px outset silver;
-    border-radius: 3px;
-    padding: 0.3em 0.5em;
-    
+#rules-button:focus {
+    box-shadow: 
+    0 0 0 3px #fcfcfc,
+    0 0 0 6px black;
+}
+
+#rules-button:hover {
+    color: #d91e2e;
+    text-decoration: underline 2px #d91e2e;
 }
 
 #levels-button {
     font-size: 1.1rem;
     background-color: #d9cb11;
     margin-top: 2em;
+    padding: 0.3em;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+#levels-button:focus {
+    box-shadow: 
+    0 0 0 2px #fcfcfc,
+    0 0 0 5px black;
+}
+
+#levels-button:hover {
+    background-color: black;
+    color: #d9cb11;
+    border-color: #d9cb11;
 }
 
 #levels-button i {
@@ -620,13 +640,53 @@ a {
     padding: 0 0.2em;
 }
 
+
+.levels-list {
+    background-color: #d9cb11;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.levels-list li {
+    margin: 1em;
+    padding: 0.3em;
+    list-style: none;
+    border: 2px solid #9941bf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.levels-list li:focus {
+    background-color: #9941bf;
+    color: #d9cb11;
+}
+
+.levels-list li:hover {
+    box-shadow: 0 0 6px 0 #9941bf;
+}
+
 #start-button {
     font-size: 1.5rem;
     background-color: #d91e2e;
     margin: 1.5em 0 4em;
+    padding: 0.3em;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
+#start-button:focus {
+    box-shadow: 
+    0 0 0 2px #fcfcfc,
+    0 0 0 5px black;
+}
 
+#start-button:hover {
+    background-color: black;
+    color: #d91e2e;
+    border-color: #d91e2e;
+}
 
 /* ------------------------------------------------------ 404 page */
 .error-section {
@@ -772,8 +832,10 @@ a {
     box-shadow: 0 0 8px 0 #9941bf;
 }
 
-/* Modals */
+/* ------------------------------------------------------------ Modals */
+/* Common */
 
+.rules-modal,
 .contact-modals {
     position: fixed;
     top: 50%;
@@ -785,25 +847,28 @@ a {
     background-color: #fcfcfc;
     z-index: 10;
     padding: 1em;
-    text-align: center;
-    box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.9);
 }
 
-.show-modal {
+.overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.overlay-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-active {
     transform: translate(-50%, -50%) scale(1);
-}
-
-.small-home-button {
-    padding: 0.5em;
-    width: fit-content;
-    margin: 1.5em auto;
-    box-shadow: none;
-    font-size: 1rem;
-}
-
-.contact-modals .small-buttons {
-    margin: 1em 0.8em;
-    font-size: 1rem;
 }
 
 .modal-header {
@@ -831,3 +896,29 @@ a {
 .close-modal:hover {
     color: red;
 }
+
+/* Contact */
+.small-home-button {
+    padding: 0.5em;
+    width: fit-content;
+    margin: 1.5em auto;
+    box-shadow: none;
+    font-size: 1rem;
+}
+
+.contact-modals .small-buttons {
+    margin: 1em 0.8em;
+    font-size: 1rem;
+}
+
+.contact-modals {
+    text-align: center;
+}
+
+/* Play */
+
+#rules-modal {
+    text-align: left;
+}
+
+

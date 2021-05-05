@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Template of how to add the service [emailjs.com](https://www.emailjs.com/docs/sdk/send/) slightly adjusted.
   $("#contact-form").submit(function (contactForm) {
     contactForm.preventDefault();
 
@@ -22,22 +23,43 @@ $(document).ready(function () {
     return false;
   });
 
-  $(".close-modal").on("click", closeModal);
 });
 
+// Modals that appears once the form submitted depending on the submission outcome.
+let formSuccess = document.getElementById("email-sent");
+let formFailed = document.getElementById("email-error");
+let overlay = document.getElementsByClassName("overlay")[0];
+let closeModalButtons = document.querySelectorAll("[data-close-modal]");
+
+// If email send
 function emailSuccess() {
-  let formSuccess = $("#email-sent");
-  formSuccess.addClass("show-modal");
+  formSuccess.classList.add("modal-active");
+  overlay.classList.add("overlay-active");
 }
 
+// If email not send
 function emailFailed() {
-  let formFailed = $("#email-error");
-  formFailed.addClass("show-modal");
+  formFailed.classList.add("modal-active");
+  overlay.classList.add("overlay-active");
 }
 
-function closeModal() {
-  let openModals = $(".contact-modals").hasClass("show-modal");
-  if (openModals) {
-    $(".contact-modals").removeClass("show-modal");
-  }
+
+
+// Close the modals
+
+closeModalButtons.forEach(button => {
+  button.addEventListener("click", () => {
+  let modal = document.getElementsByClassName("modal-active")[0];
+  closeModal(modal);
+  })
+})
+
+overlay.addEventListener("click", () => {
+  let modal = document.getElementsByClassName("modal-active")[0];
+  closeModal(modal);
+})
+
+function closeModal(modal) {
+  modal.classList.remove("modal-active");
+  overlay.classList.remove("overlay-active");
 }
