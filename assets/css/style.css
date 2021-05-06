@@ -297,6 +297,12 @@ a {
     margin: 15px 10px;
     background-color: #d9cb11f2;
     border-radius: 5px;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.menu-active {
+    transform: scale(1);
 }
 
 .navigation-list {
@@ -668,6 +674,7 @@ a {
 
 #start-button {
     font-size: 1.5rem;
+    color: black;
     background-color: #d91e2e;
     margin: 1.5em 0 4em;
     padding: 0.3em;
@@ -686,6 +693,10 @@ a {
     background-color: black;
     color: #d91e2e;
     border-color: #d91e2e;
+}
+
+.selected-subject {
+    background-color: #d91e2e;
 }
 
 /* ------------------------------------------------------ 404 page */
@@ -841,7 +852,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: 300ms ease-in-out;
+    transition: translate 350ms ease-in-out;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #fcfcfc;
@@ -852,7 +863,7 @@ a {
 .overlay {
     position: fixed;
     opacity: 0;
-    transition: 300ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
     top: 0;
     left: 0;
     right: 0;
