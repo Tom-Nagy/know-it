@@ -37,7 +37,7 @@ function emailSuccess() {
   overlay.classList.add("overlay-active");
 }
 
-// If email not send
+// If email not send 
 function emailFailed() {
   formFailed.classList.add("modal-active");
   overlay.classList.add("overlay-active");
