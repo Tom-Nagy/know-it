@@ -154,32 +154,38 @@
           >
         </p>
         <!-- Button to trigger the modal that display the rules -->
-        <button id="rules-button">How to play ?</button>
-        <div class="hide" id="rules-modal">
-          <strong>How to play:</strong>
+        <button data-modal-target="#rules" id="rules-button">How to play ?</button>
+        <div id="rules" class="rules-modal modal">
+          <div class="modal-header">
+            <div>How to play:</div>
+            <button data-close-modal class="close-modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>
+              You found yourself locked in a labyrinth. You can see the exit but
+              the only way out is to activate some mechanism in order to
+              progress through it. You will need knowledge and logic to make it
+              out.
+            </p>
 
-          <p>
-            You found yourself locked in a labyrinth. You can see the exit but
-            the only way out is to activate some mechanism in order to progress
-            through it. You will need knowledge and logic to make it out.
-          </p>
+            <ul>
+              <li>Use the arrows to move through the maze.</li>
+              <li>
+                To activate the mechanism, step on the case and answer the
+                question.
+              </li>
+              <li>If you get it right a passage will open :) .</li>
+              <li>If you get it wrong you will get a strike :( .</li>
+              <li>
+                When the game is over you will be send back to the start for a
+                new game.
+              </li>
+            </ul>
 
-          <ul>
-            <li>Use the arrows to move through the maze.</li>
-            <li>
-              To activate the mechanism, step on the case and answer the
-              question.
-            </li>
-            <li>If you get it right a passage will open :) .</li>
-            <li>If you get it wrong you will get a strike :( .</li>
-            <li>
-              When the game is over you will be send back to the start for a new
-              game.
-            </li>
-          </ul>
-
-          <p>The number of strikes before game over depend on the level.</p>
+            <p>The number of strikes before game over depend on the level.</p>
+          </div>
         </div>
+        <div class="overlay"></div>
       </section>
 
       <!-- Game settings interface -->
@@ -192,7 +198,7 @@
         * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
         * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search) -->
           <div class="subjects-section">
-            <button class="subjects-buttons volcano-button">
+            <button data-subject-button id="volcano" class="subjects-buttons volcano-button">
               <img
                 src="assets/images/icons/volcano.png"
                 alt="Volcano icon."
@@ -201,7 +207,7 @@
                 width="50"
               />
             </button>
-            <button class="subjects-buttons jungle-button">
+            <button data-subject-button id="jungle" class="subjects-buttons jungle-button">
               <img
                 src="assets/images/icons/jungle.png"
                 alt="Jungle icon."
@@ -210,7 +216,7 @@
                 width="50"
               />
             </button>
-            <button class="subjects-buttons ocean-button">
+            <button data-subject-button id="ocean" class="subjects-buttons ocean-button">
               <img
                 src="assets/images/icons/ocean.png"
                 alt="Ocean icon."
@@ -219,7 +225,7 @@
                 width="50"
               />
             </button>
-            <button class="subjects-buttons earth-button">
+            <button data-subject-button id="earth" class="subjects-buttons earth-button">
               <img
                 src="assets/images/icons/earth-globe.png"
                 alt="Earth icon."
@@ -233,16 +239,16 @@
 
         <div class="dropdown-menu">
           <button id="levels-button">
-            Set Level <i class="fas fa-sort-down"></i>
+            <span id="button-display">Set Level</span> <i class="fas fa-sort-down"></i>
           </button>
-          <ul class="hide">
-            <li>Apprentice</li>
-            <li>Scientist</li>
-            <li>Genius</li>
+          <ul class="levels-list hide">
+            <li tabindex="1" data-level="apprentice">Apprentice</li>
+            <li tabindex="1" data-level="scientist">Scientist</li>
+            <li tabindex=" 1" data-level="genius">Genius</li>
           </ul>
         </div>
 
-        <button id="start-button">Start</button>
+        <a href="game.html" aria-label="Link to the Game page." id="start-button">Start</a>
       </section>
     </section>
 
@@ -293,4 +299,5 @@
     </footer>
   </body>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/play.js"></script>
 </html>
