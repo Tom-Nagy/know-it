@@ -248,7 +248,27 @@
           </ul>
         </div>
 
-        <a href="game.html" aria-label="Link to the Game page." id="start-button">Start</a>
+        <button aria-label="Start the game." id="start-button">Start</button>
+
+        <!--------------------- Game -->
+        <div id="easy-game" class="game-modal">
+          <div class="game-display">
+            <button data-new-game class="new-game-button">New game</button>
+            <div data-game-subject class="game-subject"></div>
+            <div data-game-level class="game-level"></div>
+            <button data-exit-game="#easy-game" aria-label="Back to the play page." class="exit-button">Exit</button>
+          </div>
+          <div class="grid">
+            <div class="avatar"></div>
+          </div>
+            <div class="controls"> 
+                <button data-button-direction="up" id="arrow-up" class="control-buttons button-up"><i class="far fa-arrow-alt-circle-up"></i></button>
+                <button data-button-direction="left" id="arrow-left" class="control-buttons button-left"><i class="far fa-arrow-alt-circle-left"></i></button>
+                <button data-button-direction="right" id="arrow-right" class="control-buttons button-right"><i class="far fa-arrow-alt-circle-right"></i></button>
+                <button data-button-direction="down" id="arrow-down" class="control-buttons button-down"><i class="far fa-arrow-alt-circle-down"></i></button> 
+            </div>
+        </div>
+        <div class="game-overlay"></div>
       </section>
     </section>
 

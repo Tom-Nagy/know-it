@@ -223,7 +223,82 @@ a {
 .earth-button::after {
     content: "Earth";
 }
+/* Modals */
 
+.rules-modal,
+.contact-modals,
+.game-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: translate 350ms ease-in-out;
+    background-color: #fcfcfc;
+    z-index: 10;
+}
+
+.rules-modal,
+.contact-modals {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.overlay,
+.game-overlay {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.game-overlay {
+    background-color: #fcfcfc;
+}
+
+.overlay-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.close-modal {
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.close-modal:focus {
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px red;
+}
+
+.close-modal:hover {
+    color: red;
+}
 
 /* ------------------------------------------------------Navigation */
 
@@ -844,70 +919,6 @@ a {
 }
 
 /* ------------------------------------------------------------ Modals */
-/* Common */
-
-.rules-modal,
-.contact-modals {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: translate 350ms ease-in-out;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background-color: #fcfcfc;
-    z-index: 10;
-    padding: 1em;
-}
-
-.overlay {
-    position: fixed;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    pointer-events: none;
-    z-index: 5;
-}
-
-.overlay-active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.modal-active {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-header {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 1em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
- 
-.close-modal {
-    font-size: 2rem;
-    font-weight: bold;
-    background: none;
-    border: none;
-}
-
-.close-modal:focus {
-    border-radius: 10px;
-    box-shadow: 0 0 0 2px red;
-}
-
-.close-modal:hover {
-    color: red;
-}
-
 /* Contact */
 .small-home-button {
     padding: 0.5em;
@@ -932,4 +943,145 @@ a {
     text-align: left;
 }
 
+/* ------------------------------------------------------------ Game page 280*500*/
 
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "one two three four"
+    "five six seven eight"
+    "nine ten eleven twelve"
+    "thirteen fourteen fifteen sixteen"
+    "seventeen eighteen nineteen twenty"
+    "twenty-one twenty-two twenty-three twenty-four";
+    min-width: 280px;
+    max-width: 600px;
+    min-height: 400px;
+
+    justify-content: center;
+    align-content: center;
+
+    background-color: black;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.avatar {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 3px 0 gold;
+    justify-self: center;
+    align-self: center;
+
+    grid-area: twenty-four;
+}
+
+.controls {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 80%;
+    margin: 5px auto;
+    background-color: #fcfcfc;
+}
+
+.control-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 36px;
+    width: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.control-buttons:focus,
+.control-buttons:hover {
+    color: #d9cb11;
+    background-color: black;
+}
+
+/* Position the icon in the middle of the button */
+.control-buttons i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-up {
+    transform: translate(-50%, -125%);
+}
+
+.button-left {
+    transform: translate(-125%, -50%);
+}
+
+.button-right {
+    transform: translate(25%, -50%);
+}
+
+.button-down {
+    transform: translate(-50%, 25%);
+}
+
+/* Game display */
+
+.game-display {
+    position: relative;
+    height: 40px;
+    min-width: 280px;
+    max-width: 600px;
+    font-size: 0.9rem;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+}
+
+.new-game-button {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    color: black;
+    background-color: #d9cb11;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.game-subject,
+.game-level {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "Handlee", cursive;
+    font-weight: bold;
+    text-decoration: 1.5px underline black;
+
+}
+
+.game-subject{
+    transform: translate(-115%, -20%);
+}
+
+.game-level {
+    transform: translate(15%, -20%);
+}
+
+.exit-button {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    color: black;
+    background-color: #d91e2e;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1rem;
+}
