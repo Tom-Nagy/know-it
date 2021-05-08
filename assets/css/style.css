@@ -945,29 +945,6 @@ a {
 
 /* ------------------------------------------------------------ Game page 280*500*/
 
-.grid {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    "one two three four"
-    "five six seven eight"
-    "nine ten eleven twelve"
-    "thirteen fourteen fifteen sixteen"
-    "seventeen eighteen nineteen twenty"
-    "twenty-one twenty-two twenty-three twenty-four";
-    min-width: 280px;
-    max-width: 600px;
-    min-height: 400px;
-
-    justify-content: center;
-    align-content: center;
-
-    background-color: black;
-    margin: 10px auto;
-    border-radius: 5px;
-}
-
 .avatar {
     height: 20px;
     width: 20px;
@@ -976,8 +953,32 @@ a {
     box-shadow: 0 0 3px 0 gold;
     justify-self: center;
     align-self: center;
+    z-index: 20;
+    position: relative;
+}
 
-    grid-area: twenty-four;
+.avatar::before {
+    content: "";
+    height: 8px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    box-shadow: 8px 0 0 0 black;
+}
+
+.avatar::after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    box-shadow: 0 2px 0 0 black;
 }
 
 .controls {
@@ -1017,21 +1018,13 @@ a {
     transform: translate(-50%, -50%);
 }
 
-.button-up {
-    transform: translate(-50%, -125%);
-}
+.button-up {transform: translate(-50%, -125%);}
 
-.button-left {
-    transform: translate(-125%, -50%);
-}
+.button-left {transform: translate(-125%, -50%);}
 
-.button-right {
-    transform: translate(25%, -50%);
-}
+.button-right {transform: translate(25%, -50%);}
 
-.button-down {
-    transform: translate(-50%, 25%);
-}
+.button-down {transform: translate(-50%, 25%);}
 
 /* Game display */
 
@@ -1063,16 +1056,11 @@ a {
     font-family: "Handlee", cursive;
     font-weight: bold;
     text-decoration: 1.5px underline black;
-
 }
 
-.game-subject{
-    transform: translate(-115%, -20%);
-}
+.game-subject{transform: translate(-115%, -20%);}
 
-.game-level {
-    transform: translate(15%, -20%);
-}
+.game-level {transform: translate(15%, -20%);}
 
 .exit-button {
     position: absolute;
@@ -1084,4 +1072,307 @@ a {
     border-radius: 5px;
     text-align: center;
     line-height: 1rem;
+}
+
+
+/* ---------------------------------------- Easy level */
+.grid-easy {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "one two three four"
+    "five six seven eight"
+    "nine ten eleven twelve"
+    "thirteen fourteen fifteen sixteen"
+    "seventeen eighteen nineteen twenty"
+    "twenty-one twenty-two twenty-three twenty-four";
+    min-width: 280px;
+    max-width: 600px;
+    min-height: 400px;
+    
+    justify-content: center;
+    align-content: center;
+    
+    background-color: black;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* grid positions */
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
+.five {grid-area: five;}
+.six {grid-area: six;}
+.seven {grid-area: seven;}
+.eight {grid-area: eight;}
+.nine {grid-area: nine;}
+.ten {grid-area: ten;}
+.eleven {grid-area: eleven;}
+.twelve {grid-area: twelve;}
+.thirteen {grid-area: thirteen;}
+.fourteen {grid-area: fourteen;}
+.fifteen {grid-area: fifteen;}
+.sixteen {grid-area: sixteen;}
+.seventeen {grid-area: seventeen;}
+.eighteen {grid-area: eighteen;}
+.nineteen {grid-area: nineteen;}
+.twenty {grid-area: twenty;}
+.twenty-one {grid-area: twenty-one;}
+.twenty-two {grid-area: twenty-two;}
+.twenty-three {grid-area: twenty-three;}
+.twenty-four {grid-area: twenty-four;}
+
+/* Grid and path display */
+#one {grid-area: one;}
+#two {grid-area: two;}
+#three {grid-area: three;}
+#four {grid-area: four;}
+#five {grid-area: five;}
+#six {grid-area: six;}
+#seven {grid-area: seven;}
+#eight {grid-area: eight;}
+#nine {grid-area: nine;}
+#ten {grid-area: ten;}
+#eleven {grid-area: eleven;}
+#twelve {grid-area: twelve;}
+#thirteen {grid-area: thirteen;}
+#fourteen {grid-area: fourteen;}
+#fifteen {grid-area: fifteen;}
+#sixteen {grid-area: sixteen;}
+#seventeen {grid-area: seventeen;}
+#eighteen {grid-area: eighteen;}
+#nineteen {grid-area: nineteen;}
+#twenty {grid-area: twenty;}
+#twenty-one {grid-area: twenty-one;}
+#twenty-two {grid-area: twenty-two;}
+#twenty-three {grid-area: twenty-three;}
+#twenty-four {grid-area: twenty-four;}
+
+#two::before,
+#three::before,
+#seven::before,
+#nineteen::before,
+#twenty-three::before,
+#twenty-four::before {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#two::after,
+#three::after,
+#seven::after,
+#nineteen::after,
+#twenty-three::after,
+#twenty-four::after {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#five::before,
+#nine::before,
+#ten::before,
+#thirteen::before,
+#sixteen::before,
+#seventeen::before,
+#twenty-one::before {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-color: black;
+    z-index: 15;
+}
+
+#five::after,
+#nine::after,
+#ten::after,
+#thirteen::after,
+#sixteen::after,
+#seventeen::after,
+#twenty-one::after {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    background-color: black;
+    z-index: 15;
+}
+
+#one::before,
+#six::before,
+#eleven::before,
+#eighteen::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#one::after,
+#six::after,
+#eleven::after,
+#eighteen::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background-color: transparent;
+    box-shadow: -15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#four::before,
+#twelve::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#four::after,
+#twelve::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background-color: transparent;
+    box-shadow: 15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#eight::before,
+#fifteen::before,
+#twenty::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#eight::after,
+#fifteen::after,
+#twenty::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    background-color: transparent;
+    box-shadow: 15px 15px 0 0 black;
+    z-index: 15;
+}
+
+#fourteen::before,
+#twenty-two::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#fourteen::after,
+#twenty-two::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    background-color: transparent;
+    box-shadow: -15px 15px 0 0 black;
+    z-index: 15;
+}
+
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#ten,
+#eleven,
+#twelve,
+#thirteen,
+#fourteen,
+#fifteen,
+#sixteen,
+#seventeen,
+#eighteen,
+#nineteen,
+#twenty,
+#twenty-one,
+#twenty-two,
+#twenty-three,
+#twenty-four{
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.volcano-path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
