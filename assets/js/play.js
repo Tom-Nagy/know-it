@@ -9,7 +9,7 @@ let overlay = document.getElementsByClassName("overlay")[0];
 // Add event listener to the buttons (there is only one here) that open the modal and call the function to open it.
 openModalButtons.forEach(button => {
     button.addEventListener("click", () => {
-        let modal = document.querySelector(button.dataset.modalTarget);
+        let modal = document.querySelector(button.dataset.modalTarget); 
         openModal(modal);
     })
 })
@@ -154,10 +154,56 @@ function closeGame(openGame) {
 
 // Move the Avatar (player)
 
-let controlButtons = document.getElementsByClassName("control-buttons");
+let controlButtons = document.querySelectorAll("[data-button-direction]");
 
-controlButtons.forEach(button => {
+for (let button of controlButtons) {
     button.addEventListener("click", function() {
-        let buttonDirection = document.querySelector(button.dataset.buttonDirection);
+        // Get the direction the player chose.
+        let chosenDirection = button.dataset.buttonDirection;
+        console.log(chosenDirection);
+        let avatar = document.getElementById("player");
+
+        // Get the position of the player and the grid-area he is on.
+        let avatarPosition = avatar.className.substring(7);
+        let gridItemID = "easy-" + avatarPosition;
+        console.log(gridItemID);
+        let gridItem = document.getElementById(gridItemID);
+        console.log(gridItem);
+
+        // Get the available directions from this grid-area.
+        let availableDirections = gridItem.dataset.easyAvailableDirection; 
+        console.log(availableDirections);
+        
+        // Check if the direction chosen is available for the player to move onto and get the new position.
+        if (availableDirections.includes(chosenDirection)) {
+            getNewPosition(availableDirections, chosenDirection);
+        }
     })
-})
+} 
+
+function getNewPosition(availableDirections, chosenDirection) {
+    // Create an object of array containing the available direction to be able to iterate on.
+    let directions = availableDirections.split(" ");
+    console.log(directions);
+
+    // Get the string that correspond to the direction chosen in order to extract the new position from it.
+    for (let direction of directions) {
+        if (direction.includes(chosenDirection)) {
+            // Credit for the line 194 to [stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript).
+            // Extract the new position.
+            let newPosition =  direction.substring(direction.indexOf("-")+1);
+            console.log(newPosition);
+            moveAvatar(newPosition);
+        }
+    }
+}
+
+// Move the Avatar.
+function moveAvatar(newPosition) {
+    let avatar = document.getElementById("player");
+    let avatarClassList = avatar.classList;
+    let avatarPosition = avatar.className.substring(7);
+    avatarClassList.remove(avatarPosition);
+    avatarClassList.add(newPosition);
+}
+
