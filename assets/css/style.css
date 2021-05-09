@@ -948,9 +948,9 @@ a {
 .avatar {
     height: 20px;
     width: 20px;
+    border: 2px solid black;
     border-radius: 50%;
     background-color: #fcfcfc;
-    box-shadow: 0 0 3px 0 gold;
     justify-self: center;
     align-self: center;
     z-index: 20;
@@ -1041,7 +1041,7 @@ a {
 .new-game-button {
     position: absolute;
     top: 30%;
-    left: 2%;
+    left: 1%;
     color: black;
     background-color: #d9cb11;
     border: 2px solid black;
@@ -1058,14 +1058,14 @@ a {
     text-decoration: 1.5px underline black;
 }
 
-.game-subject{transform: translate(-115%, -20%);}
+.game-subject{transform: translate(-110%, -20%);}
 
-.game-level {transform: translate(15%, -20%);}
+.game-level {transform: translate(10%, -20%);}
 
 .exit-button {
     position: absolute;
     top: 30%;
-    right: 2%;
+    right: 1%;
     color: black;
     background-color: #d91e2e;
     border: 2px solid black;
@@ -1368,10 +1368,10 @@ a {
     width: 100%;
 }
 
-.volcano-path {
+.path {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 5px;
+    border-radius: 10px;
 }
