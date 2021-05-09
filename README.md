@@ -546,8 +546,7 @@ Issue :
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
-
-## Credit 
+## Credit
 
 **All the written subject's content provided on the website is the result of my research and are my own production.**  
 Some resources used are but not limited to:
@@ -564,7 +563,6 @@ Some resources used are but not limited to:
 * [LIVESCIENCE](https://www.livescience.com/)
 * [Wikipedia](https://www.wikipedia.org/)
 
-
 ### Content :
 
 [W3schools](https://www.w3schools.com/)  
@@ -573,13 +571,17 @@ For general database on software development.
 [favicon.io](https://favicon.io/favicon-converter/)  
 For the converting the favicon and providing the links and explanation on how to install the favicon for the website.
 
+[stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript)  
+For the explanation on how to create a substring without a fix index to start from using the indexOf() method.
+
 ### Media
 
-##### Social Media links :
+##### External links :
 
 [Facebook](WEBSITE LINK)  
 [Instagram](WEBSITE LINK)  
-[Pinterest](WEBSITE LINK)
+[Pinterest](WEBSITE LINK)  
+[Wikipedia 404 error definition](https://en.wikipedia.org/wiki/HTTP_404)
 
 ##### Icons :
 
@@ -595,22 +597,29 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
 ##### Images :
 
 * For the Volcano content:  
-  * Images from [Adobe Stock](https://stock.adobe.com/ie/):  
-  [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
-  [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
-  [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
-  [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
+  Images from [Adobe Stock](https://stock.adobe.com/ie/):  
+  * [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/    earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
+  * [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
+  * [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
+  * [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
 
 * For the Ocean content:  
-  [Oceans map by our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/)  
-  [Image by brgfx from [freepik](https://www.freepik.com)](https://www.freepik.com/free-vector/tidal-movements-earth_1466597.htm#page=1&query=ocean%20tides&position=49)  
-  [Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle](https://kids.kiddle.co/Image:Water_cycle.png)  
-  [Image by U.S. Geological Survey , Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
+  * [Oceans map by our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/)  
+  * [Image by brgfx from [freepik](https://www.freepik.com)](https://www.freepik.com/free-vector/tidal-movements-earth_1466597.htm#page=1&query=ocean%20tides&position=49)  
+  * [Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle](https://kids.kiddle.co/Image:Water_cycle.png)  
+  * [Image by U.S. Geological Survey , Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
 
 * For the Jungle content:
-  * Images from [Adobe Stock](https://stock.adobe.com/ie/):  
-    [Rainforest layers educational banner or poster. Jungle vertical structure educational scheme. Emergent, canopy, understory and floor levels. Flat vector illustration by Rudzhan](https://stock.adobe.com/ie/images/rainforest-layers-educational-banner-or-poster-jungle-vertical-structure-educational-scheme-emergent-canopy-understory-and-floor-levels-flat-vector-illustration/408770051?prev_url=detail&asset_id=408770051)  
-    [Aerial view of deforestation. Rainforest being removed to make way for palm oil and rubber plantations by whitcomberd](https://stock.adobe.com/ie/images/aerial-view-of-deforestation-rainforest-being-removed-to-make-way-for-palm-oil-and-rubber-plantations/240813889?prev_url=detail&asset_id=240813889)
+  Images from [Adobe Stock](https://stock.adobe.com/ie/):  
+  * [Rainforest layers educational banner or poster. Jungle vertical structure educational scheme. Emergent, canopy, understory and floor levels. Flat vector illustration by Rudzhan](https://stock.adobe.com/ie/images/rainforest-layers-educational-banner-or-poster-jungle-vertical-structure-educational-scheme-emergent-canopy-understory-and-floor-levels-flat-vector-illustration/408770051?prev_url=detail&asset_id=408770051)  
+  * [Aerial view of deforestation. Rainforest being removed to make way for palm oil and rubber plantations by whitcomberd](https://stock.adobe.com/ie/images/aerial-view-of-deforestation-rainforest-being-removed-to-make-way-for-palm-oil-and-rubber-plantations/240813889?prev_url=detail&asset_id=240813889)
+
+* For the Labyrinth path images depending on the subject selected:
+Images from [Adobe Stock](https://stock.adobe.com/ie/):
+  * Volcano: [heat red cracked ground texture after eruption volcano by releon8211](https://stock.adobe.com/ie/images/heat-red-cracked-ground-texture-after-eruption-volcano/110818846?prev_url=detail), 
+  * Jungle: [Yellow brick wall seamless texture for jungle theme vector by Pallavi](https://stock.adobe.com/ie/images/yellow-brick-wall-seamless-texture-for-jungle-theme-vector/271949380?prev_url=detail),
+  * Ocean: [blue water wave texture background by Naoki Kim](https://stock.adobe.com/ie/images/blue-water-wave-texture-background/154153098?prev_url=detail),
+  * Earth: [Top view of a young green forest in spring or summer by artjazz](https://stock.adobe.com/ie/images/top-view-of-a-young-green-forest-in-spring-or-summer/207714693?prev_url=detail)
 
 ### Aknowledgements :
 
