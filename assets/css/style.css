@@ -223,6 +223,7 @@ a {
 .earth-button::after {
     content: "Earth";
 }
+
 /* Modals */
 
 .rules-modal,
@@ -242,6 +243,8 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 1em;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 .overlay,
@@ -304,8 +307,8 @@ a {
 
 .logo img  {
     margin: 16px;
-    box-sizing: border-box; /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
-    border: 0px solid;
+    box-sizing: border-box; 
+    border: 0px solid; /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
     border-radius: 50%;
 }
 
@@ -409,9 +412,10 @@ a {
 /* ------------------------------------------------------Footer */
 
 .footer {
-    position: relative;
+    position: absolute;
     height: 40px;
     bottom: 0;
+    left: 0;
     width: 100%;
     margin: 0.3em 0 0 ;
     background-color: #d9cb11b3;
@@ -433,6 +437,8 @@ a {
 
 .footer-links {
     right: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
     font-size: 1rem;
 }
 
@@ -471,8 +477,13 @@ a {
 }
 
 /* ------------------------------------------------------Home page */
-/* Heading */
 
+.home-wrapper {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Heading */
 .home-heading {
     margin-bottom: 0px;
     font-size: 3rem;
@@ -497,6 +508,12 @@ a {
 }
 
 /* ------------------------------------------------------About page */
+
+.about-wrapper {
+    min-height: 100vh;
+    position: relative;
+    padding: 0.1em 0;
+}
 
 .about-section {
     margin: 3em 2em;
@@ -576,9 +593,12 @@ a {
 
 .go-play {
     display: flex;
-    justify-content: center;
+    justify-items: center;
+    align-items: center;
     margin: 2em auto;
+    padding: 1em;
     font-size: 0.9rem;
+    text-align: center;
 }
 .go-play a {
     font-size: 0.9rem;
@@ -643,6 +663,7 @@ a {
 
 .subject-content p {
     margin: 2em auto;
+    padding: 1em;
 }
 
 .subject-content ul span {
@@ -660,6 +681,11 @@ a {
 }
 
 /* ------------------------------------------------------ Play page */
+
+.play-wrapper {
+    min-height: 100vh;
+    position: relative;
+}
 
 .play-section-wrapper,
 .game-settings {
@@ -775,6 +801,12 @@ a {
 }
 
 /* ------------------------------------------------------ 404 page */
+.error-wrapper {
+    min-height: 100vh;
+    position: relative;
+    padding: 0 1em 4em;
+}
+
 .error-section {
     display: flex;
     flex-direction: column;
@@ -784,6 +816,7 @@ a {
 .error-section p {
     font-size: 1.5rem;
     margin: 3em 0 0.5em;
+    text-align: center;
 }
 
 .back-home-button {
@@ -851,11 +884,20 @@ a {
 
 /* ------------------------------------------------------ Contact page */
 
+.contact-wrapper {
+    min-height: 100vh;
+}
+
 .form-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 3em;
+}
+
+.form-section p {
+    padding: 1em;
 }
 
 #contact-form {
@@ -944,6 +986,10 @@ a {
 }
 
 /* ------------------------------------------------------------ Game page 280*500*/
+.game-modal{
+    border: none;
+    outline: none;
+}
 
 .avatar {
     height: 20px;
@@ -1374,4 +1420,478 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+}
+
+/* ------------------------------------------------------------------------- Media Queries */
+
+
+@media (max-width: 360px) {
+    
+    /* Common */
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+    
+    .buttons {
+        padding: 0.2em 1em 0.2em 0.1em;
+    }
+
+    ul {
+        padding-inline-start: 1em;
+    }
+
+    /* Footer */
+    .copyright {
+        left: 2%;
+        font-size: 0.5rem;
+    }
+
+    .footer-links {
+        right: 2%;
+        font-size: 0.8rem;
+    }
+
+    /* index.html */
+    .home-heading {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .home-heading + span {
+        font-size: 0.7rem;
+    }
+
+    .statement {
+        margin-top: 4rem;
+    }
+
+    /* about.html */
+    .about-section {
+        margin: 3em 0;
+        padding: 0.1em;
+    }
+
+    .about-section p {
+        margin: 1.5em 1em;
+    }
+
+    .contact-button {
+        margin: 0;
+    }
+
+    /* study.html */
+    .study-explanations p {
+        font-size: 1rem;
+        margin: 0.5em;
+    }
+
+    .subject-content {
+        margin: 6em 1em;
+        padding: 0.5em;
+    }
+
+    .subject-content p {
+        font-size: 0.9rem;
+    }
+
+    .images-container img {
+        width: 250px;
+        height: auto;
+    }
+
+    .go-play {
+        margin: 2em 0.2em;
+        font-size: 0.8rem;
+    }
+
+    .go-play a {
+        margin: 0.5em;
+    }
+
+    .subject-content h5 {
+        font-size: 1rem;
+    }
+
+    /* play */
+    .play-wrapper p,
+    #rules-button {
+        padding: 1em;
+    }
+
+    .modal {
+        min-width: 80vw;
+    }
+
+    .modal p {
+        padding: 0;
+    }
+
+    /* 404.html */
+    .error-wrapper {
+        padding-bottom: 0;
+    }
+    .error-wrapper .heading span,
+    .error-section p,
+    .back-home-button {
+        font-size: 1rem;
+    }
+
+    .back-home-button {
+        padding: 0.5em;
+    }
+}
+
+@media (min-width: 360px) {
+
+    /* index.html */
+    .home-wrapper {
+        padding: 0 10px 2px 10px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 560px) {
+
+    /* index.html */
+    .home-heading {
+        font-size: 2rem;
+    }
+
+    .home-heading + span {
+        font-size: 1rem;
+    }
+
+    .statement {
+        margin-top: 4rem;
+    }
+
+    /* about.html */
+    .about-section {
+        margin: 3em 0;
+        padding: 0.1em;
+    }
+
+    .contact-button {
+        margin: 0 0.2em;
+    }
+
+    /* study.html */
+    .study-explanations p {
+        font-size: 1rem;
+        margin: 0.5em;
+    }
+
+    .subject-content {
+        margin: 6em 1em;
+        padding: 0.5em;
+    }
+
+    .images-container img {
+        width: 240px;
+        height: auto;
+    }
+
+    .go-play a {
+        margin: 1em;
+    }
+
+    /* play */
+    .play-wrapper p,
+    #rules-button {
+        padding: 1em;
+    }
+
+    .modal {
+        min-width: 80vw;
+    }
+
+    .modal p {
+        padding: 0;
+    }
+
+    /* 404.html */
+    .error-wrapper {
+        padding-bottom: 0;
+    }
+
+    .error-wrapper .heading span,
+    .error-section p {
+        font-size: 1rem;
+    }
+
+    .back-home-button {
+        font-size: 1rem;
+        padding: 0.5em;
+    }
+}
+
+@media (min-height: 665px) {
+    
+    /* index.html */
+    .home-heading {
+        margin-top: 1.5em;
+    }
+
+    /* play.html */
+    .play-wrapper .heading {
+        margin-top: 2.5em;
+    }
+
+    /* 404.html */
+    .error-wrapper .heading {
+        margin-top: 3em;
+    }
+    
+}
+
+@media (min-height: 970px) {
+    
+    /* index.html */
+    .home-heading {
+        margin-top: 4em;
+    }
+
+    /* play.html */
+    .play-wrapper .heading {
+        margin-top: 5em;
+    }
+
+    .play-explanation {
+        margin: 3em 0;
+    }
+
+    /* 404.html */
+    .error-wrapper {
+        padding: 0;
+    }
+}
+
+@media (min-height: 1040px) {
+
+    /* Common */
+    .heading {
+        margin-top: 4rem;
+    }
+
+    .buttons {
+        font-size: 2rem;
+    } 
+    
+    /* Navigation bar */
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .menu-icon {
+        height: 80px;
+        width: 80px;
+    }
+
+    .menu-text {
+        font-size: 1.5rem;
+    }
+
+    .navigation-menu {
+        position: absolute;
+        top: 100px;
+        right: 12px;
+        font-size: 1.5rem;
+    }
+
+    /* index.html */
+    .home-heading {
+        font-size: 4rem;
+        margin-top: 3em;
+    }
+
+    .home-section {
+        margin-top: 10em;
+    }
+    
+    .home-heading + span {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 3rem;
+    }
+    
+    /* contact.html */
+    .contact-wrapper .heading {
+        margin-top: 4em;
+    }
+
+    /* 404.html */
+    .error-wrapper {
+        padding: 0;
+    }
+
+    .error-wrapper .heading {
+        margin-top: 10em;
+    }    
+}    
+
+
+@media (min-width: 2560px) {
+    
+    ul,
+    .menu-text,
+    .navigation-menu,
+    .about-section p,
+    .study-explanations span,
+    .go-play,
+    .go-play a,
+    .subject-content p,
+    .subject-content h6,
+    .subject-content ul span,
+    .play-wrapper p,
+    .play-explanation .study-button,
+    #rules-button,
+    .contact-wrapper,
+    .error-section ul span,
+    .error-section p,
+    .error-wrapper .heading span,
+    .back-home-button {
+        font-size: 2rem;
+    }
+
+    .buttons,
+    .volcano-button::after,
+    .jungle-button::after,
+    .ocean-button::after,
+    .earth-button::after,
+    .subject-content h5,
+    .magnifier i,
+    #start-button,
+    #levels-button,
+    #levels-button i,
+    #send-button {
+        font-size: 2.5rem;
+    }    
+    
+    .modal-header,
+    h3,
+    .home-heading + span,
+    .study-explanations p {
+        font-size: 3rem;
+    }
+
+    .heading,
+    .close-modal {
+        font-size: 4rem;
+    }    
+
+    .logo img {
+        height: 80px;
+        width: 80px;
+    }    
+
+    .menu-icon {
+        height: 100px;
+        width: 100px;
+    }    
+
+    .navigation-menu {
+        position: absolute;
+        top: 130px;
+        right: 12px;
+    }    
+
+    .footer {
+        height: 80px;
+    }    
+
+    .copyright {
+        font-size: 1.2rem;
+    }    
+
+    .footer-links {
+        font-size: 1.8rem;
+    }    
+
+    .home-heading {
+        font-size: 6rem;
+        margin-top: 2em;
+    }    
+
+    .home-section {
+        margin-top: 10em;
+    }    
+
+    .about-wrapper {
+        padding-bottom: 6rem;
+    }
+
+    .about-section p {
+        margin: 1.5em;
+    }    
+
+    .contact-button {
+        font-size: 1.5rem;
+    }    
+
+    .subjects-buttons img {
+        height: 150px;
+        width: 150px;
+    }    
+
+    .study-explanations p {
+        margin: 1em;
+    }    
+
+    .subject-content h6::before {
+        height: 15px;
+        width: 15px;
+    }    
+
+    .magnifier i {
+        height: 75px;
+        width: 75px;
+        line-height: 75px;
+    }    
+
+    .images-container img {
+        width: 900px;
+        height: auto;
+    }    
+
+    .play-wrapper .heading {
+        margin-top: 0;
+    }    
+
+    .play-explanation {
+        margin: 0;
+    }    
+
+    #start-button,
+    #levels-button {
+        margin-top: 2em;
+    }    
+
+    #contact-form {
+       min-width: 550px; 
+    }   
+
+    #contact-form input,
+    #contact-form select,
+    #contact-form textarea {
+        font-size: 1.8rem;
+    }    
+
+    .error-wrapper {
+        padding: 0;
+    }    
+
+    .error-wrapper .heading {
+        margin-top: 4em;
+    }    
+
+
+    .back-home-button {
+        padding: 1em;
+    }
 }
