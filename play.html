@@ -1089,31 +1089,55 @@
             <div id="player" class="avatar twenty-one"></div>
             <div class="labyrinth-exit twenty-four">
               <!--Credit for the exit sign image: [Arrow vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/arrow) -->
-              <img class="exit-sign" src="assets/images/labyrinth/exit-sign.jpg" alt="Exit sign." height="30" width="50">
+              <img
+                class="exit-sign"
+                src="assets/images/labyrinth/exit-sign.jpg"
+                alt="Exit sign."
+                height="30"
+                width="50"
+              />
             </div>
 
-            <div class="question thirteen"><i class="fas fa-question-circle"></i></div>
-            <div class="question two"><i class="fas fa-question-circle"></i></div>
-            <div class="question seven"><i class="fas fa-question-circle"></i></div>
-            <div class="question ten"><i class="fas fa-question-circle"></i></div>
-            <div class="question sixteen"><i class="fas fa-question-circle"></i></div>
-            <div class="question twenty-three"><i class="fas fa-question-circle"></i></div>
+            <div class="question thirteen">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="question two">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="question seven">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="question ten">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="question sixteen">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="question twenty-three">
+              <i class="fas fa-question-circle"></i>
+            </div>
 
             <div class="question-modal modal-active">
               <form id="question-form" action="#" method="post">
-                <p>the quesyion will be display here</p>
-                <input type="radio" id="answer-one">
-                <label for="answer-one"></label>
-                <input type="radio" id="answer-two">
-                <label for="answer-two"></label>
-                <input type="radio" id="answer-three">
-                <label for="answer-three"></label>
-                <button id="submit-answer" type="submit">Are you sure?</button>
+                <p id="question-display"></p>
+                <div class="answer-display">
+                  <input type="radio" id="answer-one" />
+                  <label for="answer-one"></label>
+                </div>
+                <div class="answer-display">
+                  <input type="radio" id="answer-two" />
+                  <label for="answer-two"></label>
+                </div>
+                <div class="answer-display">
+                  <input type="radio" id="answer-three" />
+                  <label for="answer-three"></label>
+                </div>
+                <button id="submit-answer" type="submit">Let's check?</button>
               </form>
             </div>
             <div class="question-overlay overlay-active"></div>
           </div>
-        
+
           <div class="controls">
             <button
               id="arrow-up"

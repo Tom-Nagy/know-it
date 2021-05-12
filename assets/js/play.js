@@ -279,6 +279,35 @@ function displayQuestion(avatarPosition) {
 function populateQuestion() {
 
 }
+fetch("assets/JSON/volcano-easy-questions.JSON")
+.then(res =>  {
+   return res.json()
+})
+.then(data => {
+  let volcanoEasyQuestions = data;
+  console.log(volcanoEasyQuestions);
+
+  let randomQuestionIndex = Math.floor(Math.random() * volcanoEasyQuestions.length);
+  console.log(randomQuestionIndex);
+
+  let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
+  console.log(randomQuestion);
+
+  let gridEasy = document.getElementById("grid-easy");
+
+  let questionDisplay = document.getElementById("question-display");
+  questionDisplay.innerText = randomQuestion.question;
+
+  let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+  console.log(firstOption);
+  firstOption.innerText = randomQuestion.optionOne;
+ 
+  let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+  secondOption.innerText = randomQuestion.optionTwo;
+
+  let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+  thirdOption.innerText = randomQuestion.optionThree;
+})
 
 
 // Submit the answer.

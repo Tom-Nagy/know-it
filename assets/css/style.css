@@ -1077,22 +1077,33 @@ a {
 
 .question-modal {
     border-radius: 5px;
-    height: 50%;
+    height: 60%;
     width: 70%;
 }
 
-#question-form {
-    font-size: 0.9rem;
+.answer-display {
+    position: relative;
+    margin-bottom: 10px;
 }
 
 #question-form p {
-    margin: 1em;
+    font-size: 0.9rem;
 }
 
 #question-form input {
-    display: block;
-    margin: 2em 1em;
+    margin: 10px;    
 }
+
+#question-form label {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translate(0, -50%);
+    font-size: 0.8rem;
+
+}
+
 
 #question-form button {
     margin: 1em;
