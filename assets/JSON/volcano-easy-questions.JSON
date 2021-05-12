@@ -1,0 +1,86 @@
+[
+  {
+    "question": "What is a volcano?",
+    "optionOne": "An opening through the Earth crust.",
+    "optionTwo": "A type of mountain.",
+    "optionThree": "An underground magma reserve.",
+    "correctAnswer": "An opening through the Earth crust."
+  },
+  {
+    "question": "What is a magma?",
+    "optionOne": "Mix of molten rocks and gas.",
+    "optionTwo": "Underground explosion.",
+    "optionThree": "A layer of the Earth.",
+    "correctAnswer": "Underground molten rocks."
+  },
+  {
+    "question": "When magma reach the surface, how is it called?",
+    "optionOne": "Magma.",
+    "optionTwo": "Rock.",
+    "optionThree": "Lava.",
+    "correctAnswer": "Lava."
+  },
+  {
+    "question": "Which of the following is not a part of a volcano?",
+    "optionOne": "Crater.",
+    "optionTwo": "Mantle.",
+    "optionThree": "Vent.",
+    "correctAnswer": "Mantle."
+  },
+  {
+    "question": "Which of the following is not a part of a volcano?",
+    "optionOne": "Conduit.",
+    "optionTwo": "Ash.",
+    "optionThree": "Hotspot.",
+    "correctAnswer": "Hotspot."
+  },
+  {
+    "question": "Which of the following is not a type of volcano?",
+    "optionOne": "Resurgent.",
+    "optionTwo": "Dome.",
+    "optionThree": "Caldera.",
+    "correctAnswer": "Resurgent."
+  },
+  {
+    "question": "Which of the following is not a type of volcano?",
+    "optionOne": "Shield.",
+    "optionTwo": "Composite.",
+    "optionThree": "Lahars.",
+    "correctAnswer": "Lahars."
+  },
+  {
+    "question": "When magma reaches the surface, how is it called?",
+    "optionOne": "Magma.",
+    "optionTwo": "Rock.",
+    "optionThree": "Lava.",
+    "correctAnswer": "Lava."
+  },
+  {
+    "question": "What is volcanology?",
+    "optionOne": "The study of volcanoes.",
+    "optionTwo": "A type of volcanic erruption.",
+    "optionThree": "The person that study volcanoes.",
+    "correctAnswer": "The study of volcanoes."
+  },
+  {
+    "question": "Which of the following is not a type of volcanic erruptions?",
+    "optionOne": "Explosive.",
+    "optionTwo": "Erosive.",
+    "optionThree": "Effusive.",
+    "correctAnswer": "Erosive."
+  },
+  {
+    "question": "What type of volcano has a very gentle slope?",
+    "optionOne": "Caldera.",
+    "optionTwo": "Composite.",
+    "optionThree": "Shield.",
+    "correctAnswer": "Shield."
+  },
+  {
+    "question": "What is lava?",
+    "optionOne": "Magma that erupts on the Earth surface.",
+    "optionTwo": "Molten rocks deep in the Earth crust.",
+    "optionThree": "Cloud created by a volcano.",
+    "correctAnswer": "Magma that erupts on the Earth surface."
+  }
+]
