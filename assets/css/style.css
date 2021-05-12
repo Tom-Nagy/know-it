@@ -56,8 +56,8 @@ a {
     /* will make impossible for the user to select the text in the button */
     user-select: none;
     -o-user-select: none;
-    -ms-user-select: none; 
-    -moz-user-select: none; 
+    -ms-user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
 
     font-family: "Handlee", cursive;
@@ -65,7 +65,7 @@ a {
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-} 
+}
 
 .buttons {
     display: block;
@@ -228,14 +228,24 @@ a {
 
 .rules-modal,
 .contact-modals,
-.game-modal {
+.game-modal,
+.question-modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: translate 350ms ease-in-out;
     background-color: #fcfcfc;
+}
+
+.rules-modal,
+.contact-modals,
+.game-modal {
     z-index: 10;
+}
+
+.question-modal {
+    z-index: 35;
 }
 
 .rules-modal,
@@ -248,7 +258,8 @@ a {
 }
 
 .overlay,
-.game-overlay {
+.game-overlay,
+.question-overlay {
     position: fixed;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
@@ -257,10 +268,19 @@ a {
     right: 0;
     bottom: 0;
     pointer-events: none;
+}
+
+.overlay,
+.game-overlay {
     z-index: 5;
 }
 
-.overlay {
+.question-overlay {
+    z-index: 30;
+}
+
+.overlay,
+.question-overlay {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -286,7 +306,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .close-modal {
     font-size: 2rem;
     font-weight: bold;
@@ -307,7 +327,7 @@ a {
 
 .logo img  {
     margin: 16px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     border: 0px solid; /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
     border-radius: 50%;
 }
@@ -710,7 +730,7 @@ a {
 }
 
 #rules-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 3px #fcfcfc,
     0 0 0 6px black;
 }
@@ -731,7 +751,7 @@ a {
 }
 
 #levels-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 2px #fcfcfc,
     0 0 0 5px black;
 }
@@ -785,7 +805,7 @@ a {
 }
 
 #start-button:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 2px #fcfcfc,
     0 0 0 5px black;
 }
@@ -872,7 +892,7 @@ a {
 }
 
 .error-links:focus {
-    box-shadow: 
+    box-shadow:
     0 0 0 1px black,
     0 0 0 3px #9941bf,
     0 0 0 4px black;
@@ -999,7 +1019,7 @@ a {
     background-color: #fcfcfc;
     justify-self: center;
     align-self: center;
-    z-index: 20;
+    z-index: 25;
     position: relative;
 }
 
@@ -1025,6 +1045,67 @@ a {
     bottom: 4px;
     left: 4px;
     box-shadow: 0 2px 0 0 black;
+}
+
+.labyrinth-exit,
+.question {
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.exit-sign,
+.question i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.exit-sign {
+    border: 2px solid blue;
+    border-radius: 3px;
+}
+
+.question i {
+    font-size: 30px;
+    /* display: block; */
+}
+
+.question-modal {
+    border-radius: 5px;
+    height: 50%;
+    width: 70%;
+}
+
+#question-form {
+    font-size: 0.9rem;
+}
+
+#question-form p {
+    margin: 1em;
+}
+
+#question-form input {
+    display: block;
+    margin: 2em 1em;
+}
+
+#question-form button {
+    margin: 1em;
+    padding: 0.3em;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: #d91e2e;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-65%, 0);
+
 }
 
 .controls {
@@ -1136,10 +1217,10 @@ a {
     min-width: 280px;
     max-width: 600px;
     min-height: 400px;
-    
+
     justify-content: center;
     align-content: center;
-    
+
     background-color: black;
     margin: 10px auto;
     border-radius: 5px;
@@ -1426,7 +1507,7 @@ a {
 
 
 @media (max-width: 360px) {
-    
+
     /* Common */
     h3 {
         font-size: 1.5rem;
@@ -1435,7 +1516,7 @@ a {
     .heading {
         font-size: 1.5rem;
     }
-    
+
     .buttons {
         padding: 0.2em 1em 0.2em 0.1em;
     }
@@ -1629,7 +1710,7 @@ a {
 }
 
 @media (min-height: 665px) {
-    
+
     /* index.html */
     .home-heading {
         margin-top: 1.5em;
@@ -1644,11 +1725,11 @@ a {
     .error-wrapper .heading {
         margin-top: 3em;
     }
-    
+
 }
 
 @media (min-height: 970px) {
-    
+
     /* index.html */
     .home-heading {
         margin-top: 4em;
@@ -1678,8 +1759,8 @@ a {
 
     .buttons {
         font-size: 2rem;
-    } 
-    
+    }
+
     /* Navigation bar */
     .logo img {
         height: 60px;
@@ -1711,15 +1792,15 @@ a {
     .home-section {
         margin-top: 10em;
     }
-    
+
     .home-heading + span {
         font-size: 2.5rem;
     }
-    
+
     h3 {
         font-size: 3rem;
     }
-    
+
     /* contact.html */
     .contact-wrapper .heading {
         margin-top: 4em;
@@ -1732,12 +1813,12 @@ a {
 
     .error-wrapper .heading {
         margin-top: 10em;
-    }    
-}    
+    }
+}
 
 
 @media (min-width: 2560px) {
-    
+
     ul,
     .menu-text,
     .navigation-menu,
@@ -1771,8 +1852,8 @@ a {
     #levels-button i,
     #send-button {
         font-size: 2.5rem;
-    }    
-    
+    }
+
     .modal-header,
     h3,
     .home-heading + span,
@@ -1783,44 +1864,44 @@ a {
     .heading,
     .close-modal {
         font-size: 4rem;
-    }    
+    }
 
     .logo img {
         height: 80px;
         width: 80px;
-    }    
+    }
 
     .menu-icon {
         height: 100px;
         width: 100px;
-    }    
+    }
 
     .navigation-menu {
         position: absolute;
         top: 130px;
         right: 12px;
-    }    
+    }
 
     .footer {
         height: 80px;
-    }    
+    }
 
     .copyright {
         font-size: 1.2rem;
-    }    
+    }
 
     .footer-links {
         font-size: 1.8rem;
-    }    
+    }
 
     .home-heading {
         font-size: 6rem;
         margin-top: 2em;
-    }    
+    }
 
     .home-section {
         margin-top: 10em;
-    }    
+    }
 
     .about-wrapper {
         padding-bottom: 6rem;
@@ -1828,67 +1909,67 @@ a {
 
     .about-section p {
         margin: 1.5em;
-    }    
+    }
 
     .contact-button {
         font-size: 1.5rem;
-    }    
+    }
 
     .subjects-buttons img {
         height: 150px;
         width: 150px;
-    }    
+    }
 
     .study-explanations p {
         margin: 1em;
-    }    
+    }
 
     .subject-content h6::before {
         height: 15px;
         width: 15px;
-    }    
+    }
 
     .magnifier i {
         height: 75px;
         width: 75px;
         line-height: 75px;
-    }    
+    }
 
     .images-container img {
         width: 900px;
         height: auto;
-    }    
+    }
 
     .play-wrapper .heading {
         margin-top: 0;
-    }    
+    }
 
     .play-explanation {
         margin: 0;
-    }    
+    }
 
     #start-button,
     #levels-button {
         margin-top: 2em;
-    }    
+    }
 
     #contact-form {
-       min-width: 550px; 
-    }   
+       min-width: 550px;
+    }
 
     #contact-form input,
     #contact-form select,
     #contact-form textarea {
         font-size: 1.8rem;
-    }    
+    }
 
     .error-wrapper {
         padding: 0;
-    }    
+    }
 
     .error-wrapper .heading {
         margin-top: 4em;
-    }    
+    }
 
 
     .back-home-button {

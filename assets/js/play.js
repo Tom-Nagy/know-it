@@ -119,7 +119,7 @@ startButton.addEventListener("click", function () {
   console.log(subject);
 
   
-  if (level === "Apprentice" &&  typeof(subject) !== "undefine") {
+  if (level === "Apprentice" &&  typeof(subject) !== "undefined") {
     displayEasyGame(level, subject);
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
@@ -144,30 +144,32 @@ function displayEasyGame(level, subject) {
   easyGame.classList.add("modal-active");
   gameOverlay.classList.add("overlay-active");
 
-  // set the labyrinth skin depending on the subject.
+  // set the labyrinth theme depending on the subject.
   if (subjectId === "volcano") {
-    setSkin(subjectId);
+    setPath(subjectId);
   } else if (subjectId === "jungle") {
-    setSkin(subjectId);
+    setPath(subjectId);
   } else if (subjectId === "ocean") {
-    setSkin(subjectId);
+    setPath(subjectId);
   } else if (subjectId === "earth") {
-    setSkin(subjectId);
+    setPath(subjectId);
   }
 
   //let selectedSubject = document.querySelector("[data-game-subject]").innerText  The question will be selected depending on selectedSubject
 }
 
-// Set the labyrinth skin.
-function setSkin(subjectId) {
+// Set the labyrinth theme.
+function setPath(subjectId) {
   let easyGame = document.getElementById("easy-game");
-  let differentSkins = easyGame.querySelectorAll("img");
+  let differentPaths = easyGame.querySelectorAll("img");
 
-  differentSkins.forEach(skin => {
-    if (skin.classList.contains(subjectId)) {
-      skin.classList.remove("hide");
-    } else if (skin.classList.contains(subjectId) === false && skin.classList.contains("hide") === false) {
-      skin.classList.add("hide");
+  differentPaths.forEach(path => {
+    if (path.classList.contains(subjectId)) {
+      path.classList.remove("hide");
+    } else if (path.classList.contains(subjectId) === false 
+    && path.classList.contains("hide") === false 
+    && path.classList.contains("exit-sign") === false ) {
+      path.classList.add("hide");
     }
   })
 }
@@ -223,7 +225,7 @@ function getNewPosition(availableDirections, chosenDirection) {
   for (let direction of directions) {
     if (direction.includes(chosenDirection)) {
       // Credit for the line 194 to [stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript).
-      // Extract the new position.
+      // Extract the new position and move the avatar.
       let newPosition = direction.substring(direction.indexOf("-") + 1);
       moveAvatar(newPosition);
     }
@@ -237,4 +239,67 @@ function moveAvatar(newPosition) {
   let avatarPosition = avatar.className.substring(7);
   avatarClassList.remove(avatarPosition);
   avatarClassList.add(newPosition);
+
+  // Check if the the grid area (case) has a question.
+  checkForQuestion();
+}
+
+function checkForQuestion() {
+  // Get the position of the avatar and the extract the grid area.
+  let avatar = document.getElementById("player");
+  let avatarClassList = avatar.classList;
+  let avatarPosition = avatar.className.substring(7);
+
+  // Get the positions of the questions.
+  let grid = document.getElementsByClassName("grid-easy")[0];
+  let questionCases = grid.querySelectorAll(".question");
+
+  // Check if the avatar is on a question case.
+  questionCases.forEach(question => {
+    if (question.classList.contains(avatarPosition)) {
+      displayQuestion(avatarPosition);
+    }
+  })
+
+}
+
+// Display the question.
+function displayQuestion(avatarPosition) {
+  // Display the modal.
+  let questionModal = document.getElementsByClassName("question-maodal")[0];
+  let questionOverlay = document.getElementsByClassName("question-overlay")[0];
+  
+  question.classList.add("modal-active");
+  questionOverlay.classList.add("overlay.active");
+
+  // Populate the question modal.
+  populateQuestion();
+}
+
+function populateQuestion() {
+
+}
+
+
+// Submit the answer.
+
+let submitQuestion = document.getElementById("submit-answer");
+
+submitQuestion.addEventListener("click", function(e) {
+  e.preventDefault();
+  checkAnswer();
+})
+
+// Check the answer.
+function checkAnswer() {
+
+}
+
+// Close the question modal.
+function closeQuestion() {
+  let questionModal = document.getElementsByClassName("question-maodal")[0];
+  let questionOverlay = document.getElementsByClassName("question-overlay")[0];
+
+  question.classList.remove("modal-active");
+  questionOverlay.classList.remove("overlay.active");
 }
