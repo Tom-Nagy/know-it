@@ -257,57 +257,66 @@ function checkForQuestion() {
   // Check if the avatar is on a question case.
   questionCases.forEach(question => {
     if (question.classList.contains(avatarPosition)) {
-      displayQuestion(avatarPosition);
+      displayQuestion();
     }
   })
 
 }
 
 // Display the question.
-function displayQuestion(avatarPosition) {
+function displayQuestion() {
   // Display the modal.
-  let questionModal = document.getElementsByClassName("question-maodal")[0];
+  let questionModal = document.getElementsByClassName("question-modal")[0];
   let questionOverlay = document.getElementsByClassName("question-overlay")[0];
   
-  question.classList.add("modal-active");
-  questionOverlay.classList.add("overlay.active");
+  questionModal.classList.add("modal-active");
+  questionOverlay.classList.add("overlay-active");
 
-  // Populate the question modal.
-  populateQuestion();
+  let level = document.getElementById("button-display").innerText;
+  let subject = document.getElementsByClassName("selected-subject")[0];
+
+  // Populate the question modal depending on the level and the subject selected.
+  if (level === "Apprentice" && subject.id === "volcano"){
+    populateVolcanoEasyQuestion();
+  } /*else if (level === "Scientist" && subject.id === "volcano") {
+    populateVolcanoInterQuestion()
+  } else if (level === "Genius" && subject.id === "volcano") {
+    populateVolcanoHardQuestion()
+  }*/
 }
 
-function populateQuestion() {
+function populatevolcanoEasyQuestion() {
 
+  fetch("assets/JSON/volcano-easy-questions.JSON")
+  .then(res =>  {
+     return res.json()
+  })
+  .then(data => {
+    let volcanoEasyQuestions = data;
+    console.log(volcanoEasyQuestions);
+  
+    let randomQuestionIndex = Math.floor(Math.random() * volcanoEasyQuestions.length);
+    console.log(randomQuestionIndex);
+  
+    let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
+    console.log(randomQuestion);
+  
+    let gridEasy = document.getElementById("grid-easy");
+  
+    let questionDisplay = document.getElementById("question-display");
+    questionDisplay.innerText = randomQuestion.question;
+  
+    let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+    console.log(firstOption);
+    firstOption.innerText = randomQuestion.optionOne;
+   
+    let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+    secondOption.innerText = randomQuestion.optionTwo;
+  
+    let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+    thirdOption.innerText = randomQuestion.optionThree;
+  })
 }
-fetch("assets/JSON/volcano-easy-questions.JSON")
-.then(res =>  {
-   return res.json()
-})
-.then(data => {
-  let volcanoEasyQuestions = data;
-  console.log(volcanoEasyQuestions);
-
-  let randomQuestionIndex = Math.floor(Math.random() * volcanoEasyQuestions.length);
-  console.log(randomQuestionIndex);
-
-  let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
-  console.log(randomQuestion);
-
-  let gridEasy = document.getElementById("grid-easy");
-
-  let questionDisplay = document.getElementById("question-display");
-  questionDisplay.innerText = randomQuestion.question;
-
-  let firstOption = document.querySelectorAll("[for='answer-one']")[0];
-  console.log(firstOption);
-  firstOption.innerText = randomQuestion.optionOne;
- 
-  let secondOption = document.querySelectorAll("[for='answer-two']")[0];
-  secondOption.innerText = randomQuestion.optionTwo;
-
-  let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
-  thirdOption.innerText = randomQuestion.optionThree;
-})
 
 
 // Submit the answer.

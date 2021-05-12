@@ -1088,6 +1088,7 @@ a {
 
 #question-form p {
     font-size: 0.9rem;
+    padding: 1em;
 }
 
 #question-form input {
@@ -1101,9 +1102,7 @@ a {
     left: 45px;
     transform: translate(0, -50%);
     font-size: 0.8rem;
-
 }
-
 
 #question-form button {
     margin: 1em;
