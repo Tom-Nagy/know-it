@@ -73,7 +73,10 @@ function setSubject(subject) {
 
   let otherSubjects = document.getElementsByClassName("subjects-buttons");
   for (let subjects of otherSubjects) {
-    if (subjects.classList.contains("selected-subject") && subjects.id !== subject) {
+    if (
+      subjects.classList.contains("selected-subject") &&
+      subjects.id !== subject
+    ) {
       subjects.classList.remove("selected-subject");
     }
   }
@@ -112,14 +115,11 @@ let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
 
 startButton.addEventListener("click", function () {
-
   // Get the game settings.
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
-  console.log(subject);
 
-  
-  if (level === "Apprentice" &&  typeof(subject) !== "undefined") {
+  if (level === "Apprentice" && typeof subject !== "undefined") {
     displayEasyGame(level, subject);
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
@@ -133,12 +133,11 @@ startButton.addEventListener("click", function () {
 
 // Easy game.
 function displayEasyGame(level, subject) {
-  
   // Display the game settings on the game interface.
   let subjectId = subject.id;
   document.querySelector("[data-game-level]").innerText = level;
   document.querySelector("[data-game-subject]").innerText = subjectId;
-    
+
   // Display the easy grid (gameplay).
   let easyGame = document.getElementById("easy-game");
   easyGame.classList.add("modal-active");
@@ -163,15 +162,17 @@ function setPath(subjectId) {
   let easyGame = document.getElementById("easy-game");
   let differentPaths = easyGame.querySelectorAll("img");
 
-  differentPaths.forEach(path => {
+  differentPaths.forEach((path) => {
     if (path.classList.contains(subjectId)) {
       path.classList.remove("hide");
-    } else if (path.classList.contains(subjectId) === false 
-    && path.classList.contains("hide") === false 
-    && path.classList.contains("exit-sign") === false ) {
+    } else if (
+      path.classList.contains(subjectId) === false &&
+      path.classList.contains("hide") === false &&
+      path.classList.contains("exit-sign") === false
+    ) {
       path.classList.add("hide");
     }
-  })
+  });
 }
 
 // --------------- Close (Exit) the Game
@@ -247,7 +248,6 @@ function moveAvatar(newPosition) {
 function checkForQuestion() {
   // Get the position of the avatar and the extract the grid area.
   let avatar = document.getElementById("player");
-  let avatarClassList = avatar.classList;
   let avatarPosition = avatar.className.substring(7);
 
   // Get the positions of the questions.
@@ -255,12 +255,11 @@ function checkForQuestion() {
   let questionCases = grid.querySelectorAll(".question");
 
   // Check if the avatar is on a question case.
-  questionCases.forEach(question => {
+  questionCases.forEach((question) => {
     if (question.classList.contains(avatarPosition)) {
       displayQuestion();
     }
-  })
-
+  });
 }
 
 // Display the question.
@@ -268,7 +267,7 @@ function displayQuestion() {
   // Display the modal.
   let questionModal = document.getElementsByClassName("question-modal")[0];
   let questionOverlay = document.getElementsByClassName("question-overlay")[0];
-  
+
   questionModal.classList.add("modal-active");
   questionOverlay.classList.add("overlay-active");
 
@@ -276,68 +275,135 @@ function displayQuestion() {
   let subject = document.getElementsByClassName("selected-subject")[0];
 
   // Populate the question modal depending on the level and the subject selected.
-  if (level === "Apprentice" && subject.id === "volcano"){
+  if (level === "Apprentice" && subject.id === "volcano") {
     populateVolcanoEasyQuestion();
   } /*else if (level === "Scientist" && subject.id === "volcano") {
     populateVolcanoInterQuestion()
   } else if (level === "Genius" && subject.id === "volcano") {
     populateVolcanoHardQuestion()
-  }*/
+  } else if (level === "Apprentice" && subject.id === "jungle") {
+    populateJungleHardQuestion()
+  } else if (level === "Scientist" && subject.id === "jungle") {
+    populateJungleHardQuestion()
+  } else if (level === "Genius" && subject.id === "jungle") {
+    populateJungleHardQuestion()
+  } else if (level === "Apprentice" && subject.id === "ocean") {
+    populateOceanHardQuestion()
+  } else if (level === "Scientist" && subject.id === "ocean") {
+    populateOceanHardQuestion()
+  } else if (level === "Genius" && subject.id === "ocean") {
+    populateOceanHardQuestion()
+  } else if (level === "Apprentice" && subject.id === "earth") {
+    populateEarthHardQuestion()
+  } else if (level === "Scientist" && subject.id === "earth") {
+    populateEarthHardQuestion()
+  } else if (level === "Genius" && subject.id === "earth") {
+    populateEarthHardQuestion()
+  }
+  */
 }
 
-function populatevolcanoEasyQuestion() {
-
+function populateVolcanoEasyQuestion() {
+  // Get the questions from the json file.
   fetch("assets/JSON/volcano-easy-questions.JSON")
-  .then(res =>  {
-     return res.json()
-  })
-  .then(data => {
-    let volcanoEasyQuestions = data;
-    console.log(volcanoEasyQuestions);
-  
-    let randomQuestionIndex = Math.floor(Math.random() * volcanoEasyQuestions.length);
-    console.log(randomQuestionIndex);
-  
-    let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
-    console.log(randomQuestion);
-  
-    let gridEasy = document.getElementById("grid-easy");
-  
-    let questionDisplay = document.getElementById("question-display");
-    questionDisplay.innerText = randomQuestion.question;
-  
-    let firstOption = document.querySelectorAll("[for='answer-one']")[0];
-    console.log(firstOption);
-    firstOption.innerText = randomQuestion.optionOne;
-   
-    let secondOption = document.querySelectorAll("[for='answer-two']")[0];
-    secondOption.innerText = randomQuestion.optionTwo;
-  
-    let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
-    thirdOption.innerText = randomQuestion.optionThree;
-  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoEasyQuestions = data;
+      console.log(volcanoEasyQuestions);
+
+      // select a random question
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+      //For the explanation on how to generate a random number and for that number not to appear twice.
+      let questionNumbers = [];
+      for (let i = 0; i < volcanoEasyQuestions.length; i++) {
+        questionNumbers.push(i);
+      }
+      console.log(questionNumbers);
+      let randomQuestionIndex = questionNumbers.splice(
+        Math.random() * questionNumbers.length,
+        1
+      )[0];
+      console.log(randomQuestionIndex);
+      let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
+
+      let questionDisplay = document.getElementById("question-display");
+      questionDisplay.innerText = randomQuestion.question;
+
+      let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+      firstOption.innerText = randomQuestion.optionOne;
+
+      let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+      secondOption.innerText = randomQuestion.optionTwo;
+
+      let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+      thirdOption.innerText = randomQuestion.optionThree;
+    });
+
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener("submit", function () {
+    checkVolcanoEasyAnswer();
+  });
 }
-
-
 // Submit the answer.
 
-let submitQuestion = document.getElementById("submit-answer");
-
-submitQuestion.addEventListener("click", function(e) {
-  e.preventDefault();
-  checkAnswer();
-})
-
 // Check the answer.
-function checkAnswer() {
+function checkVolcanoEasyAnswer() {
+  //let questionForm = document.getElementById("question-form");
+  let askedQuestion = document.getElementById("question-display").innerText;
+  console.log(askedQuestion);
 
+  fetch("assets/JSON/volcano-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoEasyQuestions = data;
+      for (let questions of volcanoEasyQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStricke();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
 }
 
 // Close the question modal.
 function closeQuestion() {
-  let questionModal = document.getElementsByClassName("question-maodal")[0];
+  let questionModal = document.getElementsByClassName("question-modal")[0];
   let questionOverlay = document.getElementsByClassName("question-overlay")[0];
 
-  question.classList.remove("modal-active");
-  questionOverlay.classList.remove("overlay.active");
+  questionModal.classList.remove("modal-active");
+  questionOverlay.classList.remove("overlay-active");
+}
+
+function incrementScrore() {
+  alert("Winner, you have one more point");
+}
+
+function decrementScore() {
+  alert("Looser, you have one less point");
+}
+
+function addStricke() {
+  alert("yout got a stricke");
 }

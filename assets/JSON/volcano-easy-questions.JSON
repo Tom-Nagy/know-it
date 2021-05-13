@@ -28,7 +28,7 @@
     "correctAnswer": "Mantle."
   },
   {
-    "question": "Which of the following is not a part of a volcano?",
+    "question": "Which of the following is not a volcano part?",
     "optionOne": "Conduit.",
     "optionTwo": "Ash.",
     "optionThree": "Hotspot.",
@@ -42,7 +42,7 @@
     "correctAnswer": "Resurgent."
   },
   {
-    "question": "Which of the following is not a type of volcano?",
+    "question": "Which of the following is not a volcano type?",
     "optionOne": "Shield.",
     "optionTwo": "Composite.",
     "optionThree": "Lahars.",
