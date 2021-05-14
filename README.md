@@ -532,17 +532,17 @@ Testing information are published in a separate file : [TESTING.md](TESTING.md)
 
 ### Solved
 
-Issue :   
-Solve : 
+Issue : when submitting an answer in the game it repeats the event that is listening for it by the number of time we have submitted an answer. For example if we are answwering the fourth question, it will read it the event four times and it should be done once only.  
+Solve : I have added a third parameter to the event listener so it happens only once. `{once: true}`
 
-Issue :   
-Solve : 
+Issue : When exiting the game, if the user click start a game with (or whithout) selecting a different subject, the previous game resume instead of starting from new.  
+Solve : Create a function (`initialGameSettings()`) that is called when the start button is click and set the position of the avatar to the starting place.
 
 ### Unsolved
 
-Issue : 
+Issue :
 
-Issue : 
+Issue : on Iphone, the menue icone is not rendering properly rendering.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -574,6 +574,9 @@ For the converting the favicon and providing the links and explanation on how to
 [stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript)  
 For the explanation on how to create a substring without a fix index to start from using the indexOf() method.
 
+[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)  
+For the explanation on how to generate a random number and for that number not to appear twice.
+
 ### Media
 
 ##### External links :
@@ -597,8 +600,8 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
 ##### Images :
 
 * For the Volcano content:  
+  * [Infographic vector created by brgfx - www.freepik.com<](https://www.freepik.com/vectors/infographic)  
   Images from [Adobe Stock](https://stock.adobe.com/ie/):  
-  * [Earth structure with lithosphere and continental crust, earth mantle and earth core vector illustration by vectortatu](https://stock.adobe.com/ie/images/    earth-structure-with-lithosphere-and-continental-crust-earth-mantle-and-earth-core-vector-illustration/117134742?prev_url=detail)  
   * [volcano and earthquake infographic vector by gritsalak](https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail)  
   * [volcano type. shield, dome, composite, and caldera by designua](https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail)  
   * [Part of a volcano by blueringmedia](https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail)
@@ -620,6 +623,9 @@ Images from [Adobe Stock](https://stock.adobe.com/ie/):
   * Jungle: [Yellow brick wall seamless texture for jungle theme vector by Pallavi](https://stock.adobe.com/ie/images/yellow-brick-wall-seamless-texture-for-jungle-theme-vector/271949380?prev_url=detail),
   * Ocean: [blue water wave texture background by Naoki Kim](https://stock.adobe.com/ie/images/blue-water-wave-texture-background/154153098?prev_url=detail),
   * Earth: [Top view of a young green forest in spring or summer by artjazz](https://stock.adobe.com/ie/images/top-view-of-a-young-green-forest-in-spring-or-summer/207714693?prev_url=detail)
+
+* For the exit sign in the labyrinth :
+[Arrow vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/arrow)
 
 ### Aknowledgements :
 

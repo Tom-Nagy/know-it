@@ -114,19 +114,42 @@ function setLevel(getLevel) {
 let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
 
+function initialGameSettings() {
+  let avatar = document.getElementById("player");
+  let avatarPosition = avatar.className.substring(7);
+  avatar.classList.remove(avatarPosition);
+  avatar.classList.add("twenty-one");
+  
+  // Set the localStorage items for the game data to zero
+  if (localStorage.score) {
+    localStorage.score = 0;
+  } else {
+    localStorage.score = 0;
+  }
+
+  if (localStorage.strike) {
+    localStorage.strike = 0;
+  } else {
+    localStorage.strike = 0;
+  }
+}
 startButton.addEventListener("click", function () {
+  initialGameSettings();
+
   // Get the game settings.
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
 
   if (level === "Apprentice" && typeof subject !== "undefined") {
     displayEasyGame(level, subject);
+
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
       `Oops, it didn't work!!
       PLease make sure you selected a SUBJECT and set the LEVEL ;)`
     );
   }
+
 });
 
 // ----------------- Display the game
@@ -179,11 +202,11 @@ function setPath(subjectId) {
 let closeGameButton = document.querySelector("[data-exit-game]");
 
 closeGameButton.addEventListener("click", function () {
-  let openGame = document.querySelector(closeGameButton.dataset.exitGame);
-  closeGame(openGame);
+  closeGame();
 });
 
-function closeGame(openGame) {
+function closeGame() {
+  let openGame = document.querySelector(closeGameButton.dataset.exitGame);
   openGame.classList.remove("modal-active");
   gameOverlay.classList.remove("overlay-active");
 }
@@ -215,12 +238,11 @@ for (let button of controlButtons) {
       getNewPosition(availableDirections, chosenDirection);
     }
   });
-}
+} 
 
 function getNewPosition(availableDirections, chosenDirection) {
   // Create an object of array containing the available direction to be able to iterate on.
   let directions = availableDirections.split(" ");
-  console.log(directions);
 
   // Get the string that correspond to the direction chosen in order to extract the new position from it.
   for (let direction of directions) {
@@ -317,7 +339,7 @@ function populateVolcanoEasyQuestion() {
       //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
       //For the explanation on how to generate a random number and for that number not to appear twice.
       let questionNumbers = [];
-      for (let i = 0; i < volcanoEasyQuestions.length; i++) {
+      for (let i = 0; i < volcanoEasyQuestions.length; i++) { /// TO BE CHECK BECAUSE DOESNT WORK
         questionNumbers.push(i);
       }
       console.log(questionNumbers);
@@ -341,18 +363,17 @@ function populateVolcanoEasyQuestion() {
       thirdOption.innerText = randomQuestion.optionThree;
     });
 
+  // Submit the answer.
   let questionForm = document.getElementById("question-form");
   questionForm.addEventListener("submit", function () {
     checkVolcanoEasyAnswer();
-  });
+  }, 
+  { once: true });
 }
-// Submit the answer.
 
 // Check the answer.
 function checkVolcanoEasyAnswer() {
-  //let questionForm = document.getElementById("question-form");
   let askedQuestion = document.getElementById("question-display").innerText;
-  console.log(askedQuestion);
 
   fetch("assets/JSON/volcano-easy-questions.JSON")
     .then((res) => {
@@ -396,14 +417,46 @@ function closeQuestion() {
   questionOverlay.classList.remove("overlay-active");
 }
 
+// Set the localStorage item to store the score and/or increment the score.
 function incrementScrore() {
-  alert("Winner, you have one more point");
+  if (localStorage.score) {
+    localStorage.score = Number(localStorage.score) + 1;
+  } else {
+    localStorage.score = 1;
+  }
 }
 
+// Set the localStorage item to store the score and/or decrement the score.
 function decrementScore() {
-  alert("Looser, you have one less point");
+  if (localStorage.score) {
+    localStorage.score = Number(localStorage.score) - 1;
+  } else {
+    localStorage.score = -1;
+  }
 }
 
-function addStricke() {
-  alert("yout got a stricke");
+// Set the localStorage item to store the strikes ( = wrong answer)  and/or increment it.
+function addStrike() {
+  if (localStorage.strike) {
+    localStorage.strike = Number(localStorage.strike) + 1;
+  } else {
+    localStorage.strike = 1;
+  }
+
+  // Check if the Strikes have reached the limit for the selected level and call gameOver if it has.
+  let level = document.getElementById("button-display").innerText;
+  if (level === "Apprentice" && Number(localStorage.strike) === 3) {
+    gameOver();
+  } else if (level === "Scientist" && Number(localStorage.strike) === 2) {
+    gameOver();
+  } else if (level === "Genius" && Number(localStorage.strike) === 1) {
+    gameOver ();
+  }
+}
+
+
+function gameOver() {
+  alert("Sorry you have reached the strike(s) limit.... GAME OVER! Try again ;)")
+  closeQuestion();
+  closeGame();
 }
