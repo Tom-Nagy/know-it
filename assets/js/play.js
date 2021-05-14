@@ -114,27 +114,40 @@ function setLevel(getLevel) {
 let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
 
-function initialGameSettings() {
+function setGameParameters() {
   let avatar = document.getElementById("player");
   let avatarPosition = avatar.className.substring(7);
   avatar.classList.remove(avatarPosition);
   avatar.classList.add("twenty-one");
   
   // Set the localStorage items for the game data to zero
+  // Score
   if (localStorage.score) {
     localStorage.score = 0;
   } else {
     localStorage.score = 0;
   }
 
+  //strike
   if (localStorage.strike) {
     localStorage.strike = 0;
   } else {
     localStorage.strike = 0;
   }
+
+  // Check if any strikes are displayed and if so hide them.
+  let strikeOne = document.querySelector(".strike-one i");
+  let strikeTwo = document.querySelector(".strike-two i");
+  
+  if (strikeOne.classList.contains("hide") === false && strikeTwo.classList.contains("hide") === false) {
+    strikeOne.classList.add("hide");
+    strikeTwo.classList.add("hide");
+  } else if (strikeOne.classList.contains("hide") === false) {
+    strikeOne.classList.add("hide");
+  }
 }
 startButton.addEventListener("click", function () {
-  initialGameSettings();
+  setGameParameters();
 
   // Get the game settings.
   let level = document.getElementById("button-display").innerText;
@@ -398,7 +411,7 @@ function checkVolcanoEasyAnswer() {
                  `
                 );
                 decrementScore();
-                addStricke();
+                addStrike();
                 closeQuestion();
               }
             }
@@ -443,6 +456,8 @@ function addStrike() {
     localStorage.strike = 1;
   }
 
+  displayStrikes();
+
   // Check if the Strikes have reached the limit for the selected level and call gameOver if it has.
   let level = document.getElementById("button-display").innerText;
   if (level === "Apprentice" && Number(localStorage.strike) === 3) {
@@ -454,6 +469,16 @@ function addStrike() {
   }
 }
 
+// Strike display.
+function displayStrikes() {
+  if (Number(localStorage.strike) === 1) {
+    let strikeOne = document.querySelector(".strike-one i");
+    strikeOne.classList.remove("hide");
+  } else if (Number(localStorage.strike) === 2) {
+    let strikeTwo = document.querySelector(".strike-two i");
+    strikeTwo.classList.remove("hide");
+  }
+}
 
 function gameOver() {
   alert("Sorry you have reached the strike(s) limit.... GAME OVER! Try again ;)")
