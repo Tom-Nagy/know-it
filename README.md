@@ -536,13 +536,17 @@ Issue : when submitting an answer in the game it repeats the event that is liste
 Solve : I have added a third parameter to the event listener so it happens only once. `{once: true}`
 
 Issue : When exiting the game, if the user click start a game with (or whithout) selecting a different subject, the previous game resume instead of starting from new.  
-Solve : Create a function (`initialGameSettings()`) that is called when the start button is click and set the position of the avatar to the starting place.
+Solve : Create a function (`setGameParameters()`) that is called when the start button is click and set the position of the avatar to the starting place.
 
 ### Unsolved
 
-Issue :
+Issue : When starting the game for the first time, and when answering the first question y clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.
 
 Issue : on Iphone, the menue icone is not rendering properly rendering.
+
+Issue : on IPhone, the button to close modal doesnt render nicely.
+
+Issue : The selcetion of random question with no repeat doesnt work. I beleive because the function is called each time we are on a question and the index of the question should be store for the party to keep track of what has been asked.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
