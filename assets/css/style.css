@@ -251,8 +251,7 @@ a {
 }
 
 .rules-modal,
-.contact-modals,
-.results-modal {
+.contact-modals {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 1em;
@@ -260,8 +259,16 @@ a {
     overflow-y: scroll;
 }
 
+.question-modal {
+    border-radius: 5px;
+    height: 60%;
+    width: 70%;
+}
+
 .results-modal {
     width: 80%;
+    border-radius: 10px;
+    padding: 1em;
 }
 
 .overlay,
@@ -843,7 +850,8 @@ a {
 
 #rewards-display i {
     font-size: 30px;
-    margin: 10px;
+    margin: 5px;
+    color: #9941bf;
 }
 
 /* ------------------------------------------------------ 404 page */
@@ -1179,7 +1187,6 @@ a {
     line-height: 1rem;
 }
 
-
 .labyrinth-exit,
 .question {
     justify-self: center;
@@ -1205,12 +1212,6 @@ a {
 
 .question i {
     font-size: 30px;
-}
-
-.question-modal {
-    border-radius: 5px;
-    height: 60%;
-    width: 70%;
 }
 
 .answer-display {
@@ -1250,13 +1251,22 @@ a {
 }
 
 #achievements {
-    text-align: center;
+    height: 60px;
+    width: 100%;
+}
+
+#score {
+    color: #d91e2e;
+}
+
+#achievements p {
+    margin: 0;
 }
 
 #achievements i {
     font-size: 25px;
     color: #9941bf;
-    margin: 20px;
+    margin: 10px;
 }
 
 

@@ -538,6 +538,9 @@ Solve : I have added a third parameter to the event listener so it happens only 
 Issue : When exiting the game, if the user click start a game with (or whithout) selecting a different subject, the previous game resume instead of starting from new.  
 Solve : Create a function (`setGameParameters()`) that is called when the start button is click and set the position of the avatar to the starting place.
 
+Issue : The rewards/achievements don't appear in the results when finishing the game with no strikes and they don't appear neither on play.html.  
+Solve : Changed the approache as I was using the `append()` method and it didn't give the result I was expecting. So I have created all the rewards that are icons in play.html and for displaying them I used a classe `hide` that has the `display="none"`. Then I toggled this class with JavaScript when relevant.
+
 ### Unsolved
 
 Issue : When starting the game for the first time, and when answering the first question y clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.
@@ -547,6 +550,10 @@ Issue : on Iphone, the menue icone is not rendering properly rendering.
 Issue : on IPhone, the button to close modal doesnt render nicely.
 
 Issue : The selcetion of random question with no repeat doesnt work. I beleive because the function is called each time we are on a question and the index of the question should be store for the party to keep track of what has been asked.
+
+Issue : From one question to another in the game, the radio button is checked at the same position than the previous question.
+
+Issue : 
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
