@@ -229,7 +229,8 @@ a {
 .rules-modal,
 .contact-modals,
 .game-modal,
-.question-modal {
+.question-modal,
+.results-modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -244,12 +245,14 @@ a {
     z-index: 10;
 }
 
-.question-modal {
+.question-modal,
+.results-modal {
     z-index: 35;
 }
 
 .rules-modal,
-.contact-modals {
+.contact-modals,
+.results-modal {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 1em;
@@ -257,9 +260,14 @@ a {
     overflow-y: scroll;
 }
 
+.results-modal {
+    width: 80%;
+}
+
 .overlay,
 .game-overlay,
-.question-overlay {
+.question-overlay,
+.results-overlay {
     position: fixed;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
@@ -275,12 +283,14 @@ a {
     z-index: 5;
 }
 
-.question-overlay {
+.question-overlay,
+.results-overlay {
     z-index: 30;
 }
 
 .overlay,
-.question-overlay {
+.question-overlay,
+.results-overlay {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -305,6 +315,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.results-modal .modal-header {
+    font-size: 1rem;
+    padding: 0;
+    
 }
 
 .close-modal {
@@ -708,7 +724,8 @@ a {
 }
 
 .play-section-wrapper,
-.game-settings {
+.game-settings,
+.game-rewards {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -818,6 +835,15 @@ a {
 
 .selected-subject {
     background-color: #d91e2e;
+}
+
+#rewards-display {
+    text-align: center;    
+}
+
+#rewards-display i {
+    font-size: 30px;
+    margin: 10px;
 }
 
 /* ------------------------------------------------------ 404 page */
@@ -980,8 +1006,6 @@ a {
     box-shadow: 0 0 8px 0 #9941bf;
 }
 
-/* ------------------------------------------------------------ Modals */
-/* Contact */
 .small-home-button {
     padding: 0.5em;
     width: fit-content;
@@ -997,12 +1021,6 @@ a {
 
 .contact-modals {
     text-align: center;
-}
-
-/* Play */
-
-#rules-modal {
-    text-align: left;
 }
 
 /* ------------------------------------------------------------ Game page 280*500*/
@@ -1045,77 +1063,6 @@ a {
     bottom: 4px;
     left: 4px;
     box-shadow: 0 2px 0 0 black;
-}
-
-.labyrinth-exit,
-.question {
-    justify-self: center;
-    align-self: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.exit-sign,
-.question i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 20;
-}
-
-.exit-sign {
-    border: 2px solid blue;
-    border-radius: 3px;
-}
-
-.question i {
-    font-size: 30px;
-    /* display: block; */
-}
-
-.question-modal {
-    border-radius: 5px;
-    height: 60%;
-    width: 70%;
-}
-
-.answer-display {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-#question-form p {
-    font-size: 0.9rem;
-    padding: 1em;
-}
-
-#question-form input {
-    margin: 10px;    
-}
-
-#question-form label {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 45px;
-    transform: translate(0, -50%);
-    font-size: 0.8rem;
-}
-
-#question-form button {
-    margin: 1em;
-    padding: 0.3em;
-    border: 2px solid black;
-    border-radius: 5px;
-    color: black;
-    background-color: #d91e2e;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-65%, 0);
-
 }
 
 .controls {
@@ -1231,6 +1178,87 @@ a {
     text-align: center;
     line-height: 1rem;
 }
+
+
+.labyrinth-exit,
+.question {
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.exit-sign,
+.question i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.exit-sign {
+    border: 2px solid blue;
+    border-radius: 3px;
+}
+
+.question i {
+    font-size: 30px;
+}
+
+.question-modal {
+    border-radius: 5px;
+    height: 60%;
+    width: 70%;
+}
+
+.answer-display {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#question-form p {
+    font-size: 0.9rem;
+    padding: 1em;
+}
+
+#question-form input {
+    margin: 10px;    
+}
+
+#question-form label {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translate(0, -50%);
+    font-size: 0.8rem;
+}
+
+#question-form button {
+    margin: 1em;
+    padding: 0.3em;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: #d91e2e;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-65%, 0);
+}
+
+#achievements {
+    text-align: center;
+}
+
+#achievements i {
+    font-size: 25px;
+    color: #9941bf;
+    margin: 20px;
+}
+
 
 
 /* ---------------------------------------- Easy level */

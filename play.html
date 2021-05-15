@@ -193,8 +193,8 @@
 
         <!-- Game settings interface -->
         <section class="game-settings">
-          <!-- Carousel to display the subjects on one line -->
-          <div class="carousel">
+          <!-- Display the subjects -->
+          <div>
             <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
           * [Volcano](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
           * [Jungle](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
@@ -269,6 +269,9 @@
           </div>
 
           <button aria-label="Start the game." id="start-button">Start</button>
+        </section>
+        <section class="game-rewards">
+          <div id="rewards-display"></div>
         </section>
         <!--------------------- Game -->
         <!-- Credit for the images used as background for the different subject on the game interface.
@@ -1117,6 +1120,8 @@
               <i class="fas fa-question-circle"></i>
             </div>
 
+            <!-- The following shoulld probably go outside grid-easy to be reused !!!!!!!!!!!!!!!!
+            Question modal and overlay to be ongame modal and overlay to be reused maybe -->
             <div class="question-modal">
               <form id="question-form" action="#">
                 <p id="question-display"></p>
@@ -1136,6 +1141,18 @@
               </form>
             </div>
             <div class="question-overlay"></div>
+
+            <div class="results-modal">
+              <div class="modal-header">
+                <div>well done on reaching the exit !!!</div>
+                <button data-close-modal class="close-modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Your Score: <span id="score"></span></p>
+                <div id="achievements"></div>
+              </div>
+            </div>
+            <div class="results-overlay"></div>
           </div>
 
           <div class="controls">
@@ -1168,8 +1185,12 @@
               <i class="far fa-arrow-alt-circle-down"></i>
             </button>
             <div class="strikes-area">
-              <div class="strike-one"><i class="fas fa-book-dead hide"></i></div>
-              <div class="strike-two"><i class="fas fa-book-dead hide"></i></div>
+              <div class="strike-one">
+                <i class="fas fa-book-dead hide"></i>
+              </div>
+              <div class="strike-two">
+                <i class="fas fa-book-dead hide"></i>
+              </div>
             </div>
           </div>
         </div>

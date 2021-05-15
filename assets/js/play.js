@@ -109,6 +109,69 @@ function setLevel(getLevel) {
   let level = document.getElementById("button-display").innerText;
 }
 
+// Dislpay game achievements.
+let rewardsDisplay = document.getElementById("rewards-display");
+let flagReward = `<i class="fas fa-flag-checkered"></i>`;
+let infinityReward = `<i class="fas fa-infinity"></i>`;
+let graduationReward = `<i class="fas fa-graduation-cap"></i>`;
+let universityReward = `<i class="fas fa-university"></i>`;
+let atomReward = `<i class="fas fa-atom"></i>`;
+let flaskReward = `<i class="fas fa-flask"></i>`;
+let brainReward = `<i class="fas fa-brain"></i>`;
+let robotReward = `<i class="fas fa-robot"></i>`;
+let trophyReward = `<i class="fas fa-trophy"></i>`;
+let hatReward = `<i class="fas fa-hat-wizard"></i>`;
+let gamepadReward = `<i class="fas fa-gamepad"></i>`;
+let astronautReward = `<i class="fas fa-user-astronaut"></i>`;
+
+if (Number(localStorage.flag) === 1) {
+  rewardsDisplay.appendChild(flagReward);
+}
+
+if (Number(localStorage.infinity) === 1) {
+  rewardsDisplay.appendChild(infinityReward);
+}
+
+if (Number(localStorage.graduation) === 1) {
+  rewardsDisplay.appendChild(graduationReward);
+}
+
+if (Number(localStorage.university) === 1) {
+  rewardsDisplay.appendChild(universityReward);
+}
+
+if (Number(localStorage.atom) === 1) {
+  rewardsDisplay.appendChild(atomReward);
+}
+
+if (Number(localStorage.flask) === 1) {
+  rewardsDisplay.appendChild(flaskReward);
+}
+
+if (Number(localStorage.brain) === 1) {
+  rewardsDisplay.appendChild(brainReward);
+}
+
+if (Number(localStorage.robot) === 1) {
+  rewardsDisplay.appendChild(robotReward);
+}
+
+if (Number(localStorage.trophy) === 1) {
+  rewardsDisplay.appendChild(trophyReward);
+}
+
+if (Number(localStorage.hat) === 1) {
+  rewardsDisplay.appendChild(hatReward);
+}
+
+if (Number(localStorage.gamepad) === 1) {
+  rewardsDisplay.appendChild(gamepadReward);
+}
+
+if (Number(localStorage.astronaut) === 1) {
+  rewardsDisplay.appendChild(astronautReward);
+}
+
 // ------------------------------------------------------------------ Game
 
 let startButton = document.getElementById("start-button");
@@ -118,8 +181,8 @@ function setGameParameters() {
   let avatar = document.getElementById("player");
   let avatarPosition = avatar.className.substring(7);
   avatar.classList.remove(avatarPosition);
-  avatar.classList.add("twenty-one");
-  
+  avatar.classList.add("twenty-two");
+
   // Set the localStorage items for the game data to zero
   // Score
   if (localStorage.score) {
@@ -138,8 +201,11 @@ function setGameParameters() {
   // Check if any strikes are displayed and if so hide them.
   let strikeOne = document.querySelector(".strike-one i");
   let strikeTwo = document.querySelector(".strike-two i");
-  
-  if (strikeOne.classList.contains("hide") === false && strikeTwo.classList.contains("hide") === false) {
+
+  if (
+    strikeOne.classList.contains("hide") === false &&
+    strikeTwo.classList.contains("hide") === false
+  ) {
     strikeOne.classList.add("hide");
     strikeTwo.classList.add("hide");
   } else if (strikeOne.classList.contains("hide") === false) {
@@ -155,14 +221,12 @@ startButton.addEventListener("click", function () {
 
   if (level === "Apprentice" && typeof subject !== "undefined") {
     displayEasyGame(level, subject);
-
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
       `Oops, it didn't work!!
       PLease make sure you selected a SUBJECT and set the LEVEL ;)`
     );
   }
-
 });
 
 // ----------------- Display the game
@@ -251,7 +315,7 @@ for (let button of controlButtons) {
       getNewPosition(availableDirections, chosenDirection);
     }
   });
-} 
+}
 
 function getNewPosition(availableDirections, chosenDirection) {
   // Create an object of array containing the available direction to be able to iterate on.
@@ -278,6 +342,7 @@ function moveAvatar(newPosition) {
 
   // Check if the the grid area (case) has a question.
   checkForQuestion();
+  checkForExit();
 }
 
 function checkForQuestion() {
@@ -352,7 +417,8 @@ function populateVolcanoEasyQuestion() {
       //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
       //For the explanation on how to generate a random number and for that number not to appear twice.
       let questionNumbers = [];
-      for (let i = 0; i < volcanoEasyQuestions.length; i++) { /// TO BE CHECK BECAUSE DOESNT WORK
+      for (let i = 0; i < volcanoEasyQuestions.length; i++) {
+        /// TO BE CHECK BECAUSE DOESNT WORK
         questionNumbers.push(i);
       }
       console.log(questionNumbers);
@@ -378,10 +444,13 @@ function populateVolcanoEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function () {
-    checkVolcanoEasyAnswer();
-  }, 
-  { once: true });
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkVolcanoEasyAnswer();
+    },
+    { once: true }
+  );
 }
 
 // Check the answer.
@@ -465,7 +534,7 @@ function addStrike() {
   } else if (level === "Scientist" && Number(localStorage.strike) === 2) {
     gameOver();
   } else if (level === "Genius" && Number(localStorage.strike) === 1) {
-    gameOver ();
+    gameOver();
   }
 }
 
@@ -481,7 +550,200 @@ function displayStrikes() {
 }
 
 function gameOver() {
-  alert("Sorry you have reached the strike(s) limit.... GAME OVER! Try again ;)")
+  alert(
+    "Sorry you have reached the strike(s) limit.... GAME OVER! Try again ;)"
+  );
   closeQuestion();
   closeGame();
 }
+
+// Finish the Game
+
+// Get the exit and avatar position and check if they are on the same grid.
+// If the player reach the exit, display the final score and atrribute achievement
+// depending on the final score.
+
+function checkForExit() {
+  let exit = document
+    .querySelector(".grid-easy .labyrinth-exit")
+    .className.substring(15);
+
+  let avatar = document.getElementById("player");
+  let avatarPosition = avatar.className.substring(7);
+
+  if (avatarPosition === exit) {
+    displayResults();
+  }
+}
+
+// Display the results upon finishing the game.
+function displayResults() {
+  let level = document.getElementById("button-display").innerText;
+  let subject = document.getElementsByClassName("selected-subject")[0];
+  let resultsModal = document.getElementsByClassName("results-modal")[0];
+  let resulstOverlay = document.getElementsByClassName("results-overlay")[0];
+  let finalScore = Number(localStorage.score);
+  let numberOfStrikes = Number(localStorage.strike);
+  let displayScore = document.getElementById("score");
+  let displayAchievements = document.getElementById("achievements");
+
+  resultsModal.classList.add("modal-active");
+  resulstOverlay.classList.add("overlay-active");
+  displayScore.innerText = finalScore;
+
+  // Display rewards depending on level, subjects and if no strikes has been received
+  // and save them with localStorage.
+  if (
+    level === "Apprentice" &&
+    subject === "volcano" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-flag-checkered"></i>
+    `;
+
+    localStorage.flag = 1;
+
+  } else if (
+    level === "Apprentice" &&
+    subject === "jungle" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-infinity"></i>
+    `;
+
+    localStorage.infinity = 1;
+
+  } else if (
+    level === "Apprentice" &&
+    subject === "ocean" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-graduation-cap"></i>
+    `;
+
+    localStorage.graduation = 1;
+
+  } else if (
+    level === "Apprentice" &&
+    subject === "earth" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p> 
+    <i class="fas fa-university"></i>
+    `;
+
+    localStorage.university = 1; 
+    
+  } else if (
+    level === "Scientist" &&
+    subject === "volcano" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-atom"></i>
+    `;
+
+    localStorage.atom = 1;
+
+  } else if (
+    level === "Scientist" &&
+    subject === "jungle" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-flask"></i>
+    `;
+
+    localStorage.flask = 1;
+
+  } else if (
+    level === "Scientist" &&
+    subject === "ocean" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-brain"></i>
+    `;
+
+    localStorage.brain = 1;
+    
+  } else if (
+    level === "Scientist" &&
+    subject === "earth" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-robot"></i>
+    `;
+
+    localStorage.robot = 1;
+    
+  } else if (
+    level === "Genius" &&
+    subject === "volcano" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-trophy"></i>
+    `;
+
+    localStorage.trophy = 1;
+
+  } else if (
+    level === "Genius" &&
+    subject === "jungle" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-hat-wizard"></i>
+    `;
+
+    localStorage.hat = 1;
+
+  } else if (
+    level === "Genius" &&
+    subject === "ocean" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-gamepad"></i>
+    `;
+
+    localStorage.gamepad = 1;
+    
+  } else if (
+    level === "Genius" &&
+    subject === "earth" &&
+    numberOfStrikes === 0
+  ) {
+    displayAchievements.innerHTML = `
+    <p>Congratulation you received a <strong>reward</strong>!</p>
+    <i class="fas fa-user-astronaut"></i>
+    `;
+
+    localStorage.astronaut = 1;
+  }
+
+  let closeResultsButton = document.querySelector(".results-modal .close-modal");
+  closeResultsButton.addEventListener("click", function() {
+    resultsModal.classList.remove("modal-active");
+    resulstOverlay.classList.remove("overlay-active");
+    closeGame();
+  })
+}
+
+
