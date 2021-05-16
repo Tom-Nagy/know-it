@@ -113,6 +113,22 @@ function setLevel(getLevel) {
 
 let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
+let questionsNumber = [];
+
+function getVolcanoEasyQuestions() {
+  fetch("assets/JSON/volcano-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoEasyQuestions = data;
+      console.log(volcanoEasyQuestions);
+
+      for (let i = 0; i < volcanoEasyQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
 
 function setGameParameters() {
   // Sould add an if statement with parameters displaying in relation to the level !!!!!!!!!!!!!!!!!
@@ -120,6 +136,9 @@ function setGameParameters() {
   let avatarPosition = avatar.className.substring(7);
   avatar.classList.remove(avatarPosition);
   avatar.classList.add("twenty-one");
+  questionsNumber = [];
+
+  getVolcanoEasyQuestions();
 
   // Set the localStorage items for the game data to zero
   // Score
@@ -153,11 +172,11 @@ function setGameParameters() {
   // Check if some achievements are displayed and if so hide them.
 
   let achievements = document.querySelectorAll("#achievements i");
-  achievements.forEach(reward => {
+  achievements.forEach((reward) => {
     if (reward.classList.contains("hide") === false) {
       reward.classList.add("hide");
     }
-  })
+  });
 }
 startButton.addEventListener("click", function () {
   setGameParameters();
@@ -354,35 +373,34 @@ function populateVolcanoEasyQuestion() {
     })
     .then((data) => {
       let volcanoEasyQuestions = data;
-      console.log(volcanoEasyQuestions);
 
-      // select a random question
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
       //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
-      //For the explanation on how to generate a random number and for that number not to appear twice.
-      let questionNumbers = [];
-      for (let i = 0; i < volcanoEasyQuestions.length; i++) {
-        /// TO BE CHECK BECAUSE DOESNT WORK
-        questionNumbers.push(i);
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(
+          Math.random() * questionsNumber.length,
+          1
+        )[0];
+        
+        let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
       }
-      console.log(questionNumbers);
-      let randomQuestionIndex = questionNumbers.splice(
-        Math.random() * questionNumbers.length,
-        1
-      )[0];
-      console.log(randomQuestionIndex);
-      let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
-
-      let questionDisplay = document.getElementById("question-display");
-      questionDisplay.innerText = randomQuestion.question;
-
-      let firstOption = document.querySelectorAll("[for='answer-one']")[0];
-      firstOption.innerText = randomQuestion.optionOne;
-
-      let secondOption = document.querySelectorAll("[for='answer-two']")[0];
-      secondOption.innerText = randomQuestion.optionTwo;
-
-      let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
-      thirdOption.innerText = randomQuestion.optionThree;
     });
 
   // Submit the answer.
