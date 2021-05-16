@@ -25,7 +25,6 @@ ul {
 }
 
 /* Display */
-
 .hide {
     display: none;
 }
@@ -34,17 +33,17 @@ ul {
     display: block;
 }
 
-/* Headings */
+.uppercase {
+    text-transform: uppercase;
+}
 
+/* Headings */
 .heading {
     text-align: center;
     font-family: "Fredoka One", cursive;
     font-size: 2rem;
     letter-spacing: 0.03rem;
 }
-
-/* Buttons  MAYBE PUT THE FONT FOR ALL BUTTONS HERE ???????? */
-
 
 /* Takes off the browser built-in outline (chrome)  */
 :focus {
@@ -267,6 +266,7 @@ a {
 
 .results-modal {
     width: 80%;
+    height: 40%;
     border-radius: 10px;
     padding: 1em;
 }
@@ -322,6 +322,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: capitalize;
 }
 
 .results-modal .modal-header {
@@ -845,7 +846,8 @@ a {
 }
 
 #rewards-display {
-    text-align: center;    
+    text-align: center;
+    padding-bottom: 4em; 
 }
 
 #rewards-display i {
@@ -1257,6 +1259,7 @@ a {
 
 #score {
     color: #d91e2e;
+    font-weight: bold;
 }
 
 #achievements p {

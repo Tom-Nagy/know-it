@@ -122,7 +122,6 @@ function getVolcanoEasyQuestions() {
     })
     .then((data) => {
       let volcanoEasyQuestions = data;
-      console.log(volcanoEasyQuestions);
 
       for (let i = 0; i < volcanoEasyQuestions.length; i++) {
         questionsNumber.push(i);
@@ -177,6 +176,11 @@ function setGameParameters() {
       reward.classList.add("hide");
     }
   });
+
+  let noReward = document.getElementById("no-reward");
+  if (noReward.classList.contains("hide") === false) {
+    noReward.classList.add("hide");
+  }
 }
 startButton.addEventListener("click", function () {
   setGameParameters();
@@ -567,6 +571,7 @@ function displayResults() {
   let hatReward = document.getElementById("hat");
   let gamepadReward = document.getElementById("gamepad");
   let astronautReward = document.getElementById("astronaut");
+  let noReward = document.getElementById("no-reward");
 
   if (
     level === "Apprentice" &&
@@ -664,6 +669,8 @@ function displayResults() {
     astronautReward.classList.remove("hide");
 
     localStorage.astronaut = 1;
+  } else {
+    noReward.classList.remove("hide");
   }
 
   displayAchievements();
