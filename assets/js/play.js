@@ -334,6 +334,14 @@ function displayQuestion() {
   let questionModal = document.getElementsByClassName("question-modal")[0];
   let questionOverlay = document.getElementsByClassName("question-overlay")[0];
 
+  // Check if a radio is selected and if so unselect it.
+  let answers = document.querySelectorAll("#question-form input");
+  answers.forEach((answer) => {
+    if (answer.checked) {
+      answer.checked = false;
+    }
+  });
+
   questionModal.classList.add("modal-active");
   questionOverlay.classList.add("overlay-active");
 
@@ -387,7 +395,7 @@ function populateVolcanoEasyQuestion() {
           Math.random() * questionsNumber.length,
           1
         )[0];
-        
+
         let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
 
         let questionDisplay = document.getElementById("question-display");
