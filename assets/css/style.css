@@ -104,9 +104,9 @@ a {
 
 .about-button:focus {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px #0da80e,
-    0 0 0 12px black;
+        0 0 0 6px white,
+        0 0 0 9px #0da80e,
+        0 0 0 12px black;
 }
 
 .study-button {
@@ -115,9 +115,9 @@ a {
 
 .study-button:focus {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px #f57400,
-    0 0 0 12px black;
+        0 0 0 6px white,
+        0 0 0 9px #f57400,
+        0 0 0 12px black;
 }
 
 .play-button {
@@ -126,9 +126,9 @@ a {
 
 .play-button:focus {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px #d9cb11,
-    0 0 0 12px black;
+        0 0 0 6px white,
+        0 0 0 9px #d9cb11,
+        0 0 0 12px black;
 }
 
 .small-buttons {
@@ -150,15 +150,15 @@ a {
 
 .contact-button:focus {
     box-shadow:
-    0 0 0 3px white,
-    0 0 0 6px #d91e2e,
-    0 0 0 9px black;
+        0 0 0 3px white,
+        0 0 0 6px #d91e2e,
+        0 0 0 9px black;
 }
 
 .contact-button:hover {
     background-color: black;
     color: #d91e2e;
-    border: 2px  solid #d91e2e;
+    border: 2px solid #d91e2e;
 }
 
 /* Subjects Icons (buttons) */
@@ -325,7 +325,7 @@ a {
 .results-modal .modal-header {
     font-size: 1rem;
     padding: 0;
-    
+
 }
 
 .close-modal {
@@ -346,18 +346,20 @@ a {
 
 /* ------------------------------------------------------Navigation */
 
-.logo img  {
+.logo img {
     margin: 16px;
     box-sizing: border-box;
-    border: 0px solid; /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
+    border: 0px solid;
+    /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
     border-radius: 50%;
 }
 
 .logo:focus img {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px black;
+        0 0 0 6px white,
+        0 0 0 9px black;
 }
+
 .logo:hover img {
     box-shadow: 0 0 10px 0 black;
 }
@@ -387,8 +389,8 @@ a {
 
 .menu-icon:focus {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px #d9cb11;
+        0 0 0 6px white,
+        0 0 0 9px #d9cb11;
 }
 
 .menu-icon:hover {
@@ -458,7 +460,7 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    margin: 0.3em 0 0 ;
+    margin: 0.3em 0 0;
     background-color: #d9cb11b3;
 }
 
@@ -508,8 +510,8 @@ a {
 
 .footer-links a:focus i {
     box-shadow:
-    0 0 0 2px white,
-    0 0 0 4px black;
+        0 0 0 2px white,
+        0 0 0 4px black;
 }
 
 .footer-links a:hover i {
@@ -530,7 +532,7 @@ a {
     font-size: 3rem;
 }
 
-.home-heading + span {
+.home-heading+span {
     margin-top: 0.3em;
     font-size: 1.6rem;
 }
@@ -622,7 +624,7 @@ a {
     background-color: #3a8be9;
 }
 
-.magnifier:hover i{
+.magnifier:hover i {
     background-color: #3a8be9;
 }
 
@@ -641,6 +643,7 @@ a {
     font-size: 0.9rem;
     text-align: center;
 }
+
 .go-play a {
     font-size: 0.9rem;
 }
@@ -753,8 +756,8 @@ a {
 
 #rules-button:focus {
     box-shadow:
-    0 0 0 3px #fcfcfc,
-    0 0 0 6px black;
+        0 0 0 3px #fcfcfc,
+        0 0 0 6px black;
 }
 
 #rules-button:hover {
@@ -774,8 +777,8 @@ a {
 
 #levels-button:focus {
     box-shadow:
-    0 0 0 2px #fcfcfc,
-    0 0 0 5px black;
+        0 0 0 2px #fcfcfc,
+        0 0 0 5px black;
 }
 
 #levels-button:hover {
@@ -828,8 +831,8 @@ a {
 
 #start-button:focus {
     box-shadow:
-    0 0 0 2px #fcfcfc,
-    0 0 0 5px black;
+        0 0 0 2px #fcfcfc,
+        0 0 0 5px black;
 }
 
 #start-button:hover {
@@ -844,7 +847,7 @@ a {
 
 #rewards-display {
     text-align: center;
-    padding-bottom: 4em; 
+    padding-bottom: 4em;
 }
 
 #rewards-display i {
@@ -866,6 +869,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .error-section p {
     font-size: 1.5rem;
     margin: 3em 0 0.5em;
@@ -882,13 +886,14 @@ a {
     margin: 1.5em auto;
     border: 3px solid black;
     border-radius: 10px;
-    box-shadow: 0  5px  10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .back-home-button:focus {
     box-shadow:
-    0 0 0 6px white,
-    0 0 0 9px #3A8BE980,
-    0 0 0 10px black;
+        0 0 0 6px white,
+        0 0 0 9px #3A8BE980,
+        0 0 0 10px black;
 }
 
 .back-home-button:hover {
@@ -926,9 +931,9 @@ a {
 
 .error-links:focus {
     box-shadow:
-    0 0 0 1px black,
-    0 0 0 3px #9941bf,
-    0 0 0 4px black;
+        0 0 0 1px black,
+        0 0 0 3px #9941bf,
+        0 0 0 4px black;
 }
 
 .error-links:hover {
@@ -1030,8 +1035,8 @@ a {
     text-align: center;
 }
 
-/* ------------------------------------------------------------ Game page 280*500*/
-.game-modal{
+/* ------------------------------------------------------------ Game  280*500*/
+.game-modal {
     border: none;
     outline: none;
 }
@@ -1099,6 +1104,7 @@ a {
 .control-buttons:focus {
     outline: none;
 }
+
 .control-buttons:hover {
     color: #d9cb11;
     background-color: black;
@@ -1113,13 +1119,21 @@ a {
 }
 
 /* Position the buttons */
-.button-up {transform: translate(-50%, -125%);}
+.button-up {
+    transform: translate(-50%, -125%);
+}
 
-.button-left {transform: translate(-125%, -50%);}
+.button-left {
+    transform: translate(-125%, -50%);
+}
 
-.button-right {transform: translate(25%, -50%);}
+.button-right {
+    transform: translate(25%, -50%);
+}
 
-.button-down {transform: translate(-50%, 25%);}
+.button-down {
+    transform: translate(-50%, 25%);
+}
 
 /* Strikes Display */
 .strikes-area {
@@ -1170,9 +1184,13 @@ a {
     text-decoration: 1.5px underline black;
 }
 
-.game-subject{transform: translate(-110%, -20%);}
+.game-subject {
+    transform: translate(-110%, -20%);
+}
 
-.game-level {transform: translate(10%, -20%);}
+.game-level {
+    transform: translate(10%, -20%);
+}
 
 .exit-button {
     position: absolute;
@@ -1224,7 +1242,7 @@ a {
 }
 
 #question-form input {
-    margin: 10px;    
+    margin: 10px;
 }
 
 #question-form label {
@@ -1270,6 +1288,327 @@ a {
     margin: 10px;
 }
 
+/* ------------------------------------------------- GRIDS ------------------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------- Common grids styles and display ---------------------------*/
+
+/* Position of the images corresponding to the labyrinth theme */
+.path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+/* grid-area positions */
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.ten {
+    grid-area: ten;
+}
+
+.eleven {
+    grid-area: eleven;
+}
+
+.twelve {
+    grid-area: twelve;
+}
+
+.thirteen {
+    grid-area: thirteen;
+}
+
+.fourteen {
+    grid-area: fourteen;
+}
+
+.fifteen {
+    grid-area: fifteen;
+}
+
+.sixteen {
+    grid-area: sixteen;
+}
+
+.seventeen {
+    grid-area: seventeen;
+}
+
+.eighteen {
+    grid-area: eighteen;
+}
+
+.nineteen {
+    grid-area: nineteen;
+}
+
+.twenty {
+    grid-area: twenty;
+}
+
+.twenty-one {
+    grid-area: twenty-one;
+}
+
+.twenty-two {
+    grid-area: twenty-two;
+}
+
+.twenty-three {
+    grid-area: twenty-three;
+}
+
+.twenty-four {
+    grid-area: twenty-four;
+}
+
+.twenty-five {
+    grid-area: twenty-five;
+}
+
+.twenty-six {
+    grid-area: twenty-six;
+}
+
+.twenty-seven {
+    grid-area: twenty-seven;
+}
+
+.twenty-eight {
+    grid-area: twenty-eight;
+}
+
+.twenty-nine {
+    grid-area: twenty-nine;
+}
+
+.thirty {
+    grid-area: thirty;
+}
+
+.thirty-one {
+    grid-area: thirty-one;
+}
+
+.thirty-two {
+    grid-area: thirty-two;
+}
+
+.thirty-three {
+    grid-area: thirty-three;
+}
+
+.thirty-four {
+    grid-area: thirty-four;
+}
+
+.thirty-five {
+    grid-area: thirty-five;
+}
+
+.thirty-six {
+    grid-area: thirty-six;
+}
+
+.thirty-seven {
+    grid-area: thirty-seven;
+}
+
+.thirty-eight {
+    grid-area: thirty-eight;
+}
+
+.thirty-nine {
+    grid-area: thirty-nine;
+}
+
+.forty {
+    grid-area: forty;
+}
+
+.forty-one {
+    grid-area: forty-one;
+}
+
+.forty-two {
+    grid-area: forty-two;
+}
+
+.forty-three {
+    grid-area: forty-three;
+}
+
+.forty-four {
+    grid-area: forty-four;
+}
+
+.forty-five {
+    grid-area: forty-five;
+}
+
+.forty-six {
+    grid-area: forty-six;
+}
+
+.forty-seven {
+    grid-area: forty-seven;
+}
+
+.forty-eight {
+    grid-area: forty-eight;
+}
+
+.forty-nine {
+    grid-area: forty-nine;
+}
+
+.fifty {
+    grid-area: fifty;
+}
+
+.fifty-one {
+    grid-area: fifty-one;
+}
+
+.fifty-two {
+    grid-area: fifty-two;
+}
+
+.fifty-three {
+    grid-area: fifty-three;
+}
+
+.fifty-four {
+    grid-area: fifty-four;
+}
+
+
+/* Grid Items Display */
+/* ----------------- Easy */
+#easy-one,
+#easy-two,
+#easy-three,
+#easy-four,
+#easy-five,
+#easy-six,
+#easy-seven,
+#easy-eight,
+#easy-nine,
+#easy-ten,
+#easy-eleven,
+#easy-twelve,
+#easy-thirteen,
+#easy-fourteen,
+#easy-fifteen,
+#easy-sixteen,
+#easy-seventeen,
+#easy-eighteen,
+#easy-nineteen,
+#easy-twenty,
+#easy-twenty-one,
+#easy-twenty-two,
+#easy-twenty-three,
+#easy-twenty-four,
+/* ------------------------ Inter */
+#inter-one,
+#inter-two,
+#inter-three,
+#inter-four,
+#inter-five,
+#inter-six,
+#inter-seven,
+#inter-eight,
+#inter-nine,
+#inter-ten,
+#inter-eleven,
+#inter-twelve,
+#inter-thirteen,
+#inter-fourteen,
+#inter-fifteen,
+#inter-sixteen,
+#inter-seventeen,
+#inter-eighteen,
+#inter-nineteen,
+#inter-twenty,
+#inter-twenty-one,
+#inter-twenty-two,
+#inter-twenty-three,
+#inter-twenty-four,
+#inter-twenty-five,
+#inter-twenty-six,
+#inter-twenty-seven,
+#inter-twenty-eight,
+#inter-twenty-nine,
+#inter-thirty,
+#inter-thirty-one,
+#inter-thirty-two,
+#inter-thirty-three,
+#inter-thirty-four,
+#inter-thirty-five,
+#inter-thirty-six,
+#inter-thirty-seven,
+#inter-thirty-eight,
+#inter-thirty-nine,
+#inter-forty,
+#inter-forty-one,
+#inter-forty-two,
+#inter-forty-three,
+#inter-forty-four,
+#inter-forty-five,
+#inter-forty-six,
+#inter-forty-seven,
+#inter-forty-eight,
+#inter-forty-nine,
+#inter-fifty,
+#inter-fifty-one,
+#inter-fifty-two,
+#inter-fifty-three,
+#inter-fifty-four {
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
 
 
 /* ---------------------------------------- Easy level ---------------------------*/
@@ -1278,12 +1617,12 @@ a {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-    "one two three four"
-    "five six seven eight"
-    "nine ten eleven twelve"
-    "thirteen fourteen fifteen sixteen"
-    "seventeen eighteen nineteen twenty"
-    "twenty-one twenty-two twenty-three twenty-four";
+        "one two three four"
+        "five six seven eight"
+        "nine ten eleven twelve"
+        "thirteen fourteen fifteen sixteen"
+        "seventeen eighteen nineteen twenty"
+        "twenty-one twenty-two twenty-three twenty-four";
     min-width: 280px;
     max-width: 600px;
     min-height: 400px;
@@ -1297,57 +1636,7 @@ a {
     overflow: hidden;
 }
 
-/* grid positions */
-.one {grid-area: one;}
-.two {grid-area: two;}
-.three {grid-area: three;}
-.four {grid-area: four;}
-.five {grid-area: five;}
-.six {grid-area: six;}
-.seven {grid-area: seven;}
-.eight {grid-area: eight;}
-.nine {grid-area: nine;}
-.ten {grid-area: ten;}
-.eleven {grid-area: eleven;}
-.twelve {grid-area: twelve;}
-.thirteen {grid-area: thirteen;}
-.fourteen {grid-area: fourteen;}
-.fifteen {grid-area: fifteen;}
-.sixteen {grid-area: sixteen;}
-.seventeen {grid-area: seventeen;}
-.eighteen {grid-area: eighteen;}
-.nineteen {grid-area: nineteen;}
-.twenty {grid-area: twenty;}
-.twenty-one {grid-area: twenty-one;}
-.twenty-two {grid-area: twenty-two;}
-.twenty-three {grid-area: twenty-three;}
-.twenty-four {grid-area: twenty-four;}
-
-/* Grid and path display */
-#easy-one {grid-area: one;}
-#easy-two {grid-area: two;}
-#easy-three {grid-area: three;}
-#easy-four {grid-area: four;}
-#easy-five {grid-area: five;}
-#easy-six {grid-area: six;}
-#easy-seven {grid-area: seven;}
-#easy-eight {grid-area: eight;}
-#easy-nine {grid-area: nine;}
-#easy-ten {grid-area: ten;}
-#easy-eleven {grid-area: eleven;}
-#easy-twelve {grid-area: twelve;}
-#easy-thirteen {grid-area: thirteen;}
-#easy-fourteen {grid-area: fourteen;}
-#easy-fifteen {grid-area: fifteen;}
-#easy-sixteen {grid-area: sixteen;}
-#easy-seventeen {grid-area: seventeen;}
-#easy-eighteen {grid-area: eighteen;}
-#easy-nineteen {grid-area: nineteen;}
-#easy-twenty {grid-area: twenty;}
-#easy-twenty-one {grid-area: twenty-one;}
-#easy-twenty-two {grid-area: twenty-two;}
-#easy-twenty-three {grid-area: twenty-three;}
-#easy-twenty-four {grid-area: twenty-four;}
+/* Path display */
 
 #easy-two::before,
 #easy-three::before,
@@ -1534,43 +1823,32 @@ a {
 }
 
 
-#easy-one,
-#easy-two,
-#easy-three,
-#easy-four,
-#easy-five,
-#easy-six,
-#easy-seven,
-#easy-eight,
-#easy-nine,
-#easy-ten,
-#easy-eleven,
-#easy-twelve,
-#easy-thirteen,
-#easy-fourteen,
-#easy-fifteen,
-#easy-sixteen,
-#easy-seventeen,
-#easy-eighteen,
-#easy-nineteen,
-#easy-twenty,
-#easy-twenty-one,
-#easy-twenty-two,
-#easy-twenty-three,
-#easy-twenty-four{
-    justify-self: center;
-    align-self: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
+/* ---------------------------------------- Intermediate level ---------------------------*/
+.grid-inter {
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "one two three four five six"
+        "seven eight nine ten eleven twelve"
+        "thirteen fourteen fifteen sixteen seventeen eighteen"
+        "nineteen twenty twenty-one twenty-two twenty-three twenty-four"
+        "twenty-five twenty-six twenty-seven twenty-eight twenty-nine thirty"
+        "thirty-one thirty-two thirty-three thirty-four thirty-five thirty-six"
+        "thirty-seven thirty-eight thirty-nine forty forty-one forty-two"
+        "forty-three forty-four forty-five forty-six forty-seven forty-eight"
+        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four";
+    min-width: 280px;
+    max-width: 600px;
+    min-height: 400px;
 
-.path {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+
+    background-color: black;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 /* ------------------------------------------------------------------------- Media Queries */
@@ -1612,7 +1890,7 @@ a {
         margin-top: 3rem;
     }
 
-    .home-heading + span {
+    .home-heading+span {
         font-size: 0.7rem;
     }
 
@@ -1685,6 +1963,7 @@ a {
     .error-wrapper {
         padding-bottom: 0;
     }
+
     .error-wrapper .heading span,
     .error-section p,
     .back-home-button {
@@ -1711,7 +1990,7 @@ a {
         font-size: 2rem;
     }
 
-    .home-heading + span {
+    .home-heading+span {
         font-size: 1rem;
     }
 
@@ -1863,7 +2142,7 @@ a {
         margin-top: 10em;
     }
 
-    .home-heading + span {
+    .home-heading+span {
         font-size: 2.5rem;
     }
 
@@ -1926,7 +2205,7 @@ a {
 
     .modal-header,
     h3,
-    .home-heading + span,
+    .home-heading+span,
     .study-explanations p {
         font-size: 3rem;
     }
@@ -2024,7 +2303,7 @@ a {
     }
 
     #contact-form {
-       min-width: 550px;
+        min-width: 550px;
     }
 
     #contact-form input,

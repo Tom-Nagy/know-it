@@ -180,12 +180,56 @@ function setGameParameters() {
   // Set the array to empty before populating it with the corresponding indexes.
   questionsNumber = [];
 
+  // Set the avatar position and display the avatar and the exit depending on the level.
   if (level === "Apprentice") {
     let avatar = document.getElementById("easy-player");
+    avatar.classList.remove("hide");
     let avatarPosition = avatar.className.substring(7);
     avatar.classList.remove(avatarPosition);
     avatar.classList.add("twenty-one");
+
+    let exit = document.querySelector(".grid-easy .labyrinth-exit");
+    exit.classList.remove("hide");
+
+    // Hide the grids that are not being played.
+    let interGrid = document.getElementById("inter-game");
+    //let hardGrid = document.getElementById("hard-game");
+    interGrid.style.display = "none";
+    //hardGrid.style.display = "none";
+
+  } else if (level === "Scientist") {
+    let avatar = document.getElementById("inter-player");
+    avatar.classList.remove("hide");
+    let avatarPosition = avatar.className.substring(7);
+    avatar.classList.remove(avatarPosition);
+    avatar.classList.add("forty-nine");
+
+    let exit = document.querySelector(".grid-inter .labyrinth-exit");
+    exit.classList.remove("hide");
+
+    // Hide the grids that are not being played.
+    let easyGrid = document.getElementById("easy-game");
+    //let hardGrid = document.getElementById("hard-game");
+    easyGrid.style.display = "none";
+    //hardGrid.style.display = "none";
+
   }
+  /*else if (level === "Genius") {
+     let avatar = document.getElementById("hard-player");
+     avatar.classList.remove("hide");
+     let avatarPosition = avatar.className.substring(7);
+     avatar.classList.remove(avatarPosition);
+     avatar.classList.add("twenty-one");
+
+     let exit = document.querySelector(".grid-hard .labyrinth-exit");
+     exit.classList.remove("hide");
+
+     // Hide the grids that are not being played.
+     let easyGrid = document.getElementById("easy-game");
+     let interGrid = document.getElementById("inter-game");
+     easyGrid.style.display = "none";
+     interGrid.style.display = "none";
+   }*/
 
   // Set the array hosting the indexes questions depending on game's settings.
   if (level === "Apprentice" && subject.id === "volcano") {
@@ -250,34 +294,30 @@ startButton.addEventListener("click", function () {
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
 
-  // Display the game settings on the game interface.
-  document.querySelector("[data-game-level]").innerText = level;
-  document.querySelector("[data-game-subject]").innerText = subject.id;
-
   // Display the game modal.
   let game = document.getElementById("game");
   game.classList.add("modal-active");
   gameOverlay.classList.add("overlay-active");
 
-  if (level === "Apprentice" && typeof subject !== "undefined") {
-    displayEasyGame(subject);
+  if (level !== "Set Level" && typeof subject !== "undefined") {
+    displayTheme(subject);
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
       `Oops, it didn't work!!
       PLease make sure you selected a SUBJECT and set the LEVEL ;)`
     );
   }
+
+  // Display the game settings on the game interface.
+  document.querySelector("[data-game-level]").innerText = level;
+  document.querySelector("[data-game-subject]").innerText = subject.id;
 });
 
 // ----------------- Display the game
 
 // Easy game.
-function displayEasyGame(subject) {
+function displayTheme(subject) {
   let subjectId = subject.id;
-
-  // Display the easy grid.
-  let easyGame = document.getElementById("easy-game");
-  easyGame.classList.remove("hide");
 
   // set the labyrinth theme depending on the subject.
   if (subjectId === "volcano") {
@@ -293,10 +333,21 @@ function displayEasyGame(subject) {
 
 // Set the labyrinth theme.
 function setPath(subjectId) {
-  let easyGame = document.getElementById("easy-game");
-  let differentPaths = easyGame.querySelectorAll("img");
+  let level = document.getElementById("button-display").innerText;
+  let differentPaths;
 
-  differentPaths.forEach((path) => {
+  if (level === "Apprentice") {
+    let easyGame = document.getElementById("easy-game");
+    differentPaths = easyGame.querySelectorAll("img");
+  } else if (level == "Scientist") {
+    let interGame = document.getElementById("inter-game");
+    differentPaths = interGame.querySelectorAll("img");
+  } else if (level == "Genius") {
+    let hardGame = document.getElementById("hard-game");
+    differentPaths = hardGame.querySelectorAll("img");
+  }
+
+  differentPaths.forEach(path => {
     if (path.classList.contains(subjectId)) {
       path.classList.remove("hide");
     } else if (
@@ -310,18 +361,55 @@ function setPath(subjectId) {
 }
 
 // --------------- Close (Exit) the Game
-let closeGameButton = document.querySelector("[data-exit-game]");
+let closeGameButton = document.getElementById("exit-game");
 
 closeGameButton.addEventListener("click", function () {
   closeGame();
 });
 
 function closeGame() {
-  let openGame = document.querySelector(closeGameButton.dataset.exitGame);
-  let easyGame = document.getElementById("easy-game");
-  easyGame.classList.add("hide");
+  let level = document.getElementById("button-display").innerText;
+  let openGame = document.getElementById("game");
+
   openGame.classList.remove("modal-active");
   gameOverlay.classList.remove("overlay-active");
+
+  // Close the game open depending on the level.
+  if (level === "Apprentice") {
+    let easyGame = document.getElementById("easy-game");
+    easyGame.classList.add("hide");
+  } else if (level === "Scientist") {
+    let interGame = document.getElementById("inter-game");
+    interGame.classList.add("hide");
+  }
+  /*else if (level === "Genius") {
+     let hardGame = docuemnt.getElementById("hard-game");
+     hardGame.classList.add("hide");
+   }*/
+
+  // Reset the Avatars and Exits Items to be hidden.
+  let allAvatars = document.querySelectorAll(".avatar");
+  let allExits = document.querySelectorAll(".labyrinth-exit");
+
+  allAvatars.forEach(avatar => {
+    if (avatar.classList.contains("hide") === false) {
+      avatar.classList.add("hide");
+    }
+  })
+
+  allExits.forEach(exit => {
+    if (exit.classList.contains("hide") === false) {
+      exit.classList.add("hide");
+    }
+  })
+
+  // Reset the grids display property to grid.
+  let grids = document.querySelectorAll(".grids");
+  grids.forEach(grid => {
+    if (grid.style.display === "none") {
+      grid.style.display = "grid";
+    }
+  })
 }
 
 // Move the Avatar (player)
@@ -336,7 +424,7 @@ for (let button of controlButtons) {
     // Get the direction the player chose.
     let chosenDirection = button.dataset.buttonDirection;
     let availableDirections = "";
-    
+
     console.log(availableDirections);
     console.log(level);
 
