@@ -1,1141 +1,487 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
-      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!"
-    />
-    <meta
-      name="keywords"
-      content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
-      volcano, jungle, ocean, earth"
-    />
-    <meta name="author" content="Know It" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/a5ee39e432.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
+      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!" />
+  <meta name="keywords" content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
+      volcano, jungle, ocean, earth" />
+  <meta name="author" content="Know It" />
 
-    <!-- Favicon implementation from favicon.io(https://favicon.io/favicon-converter/) -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon/favicon-16x16.png"
-    />
-    <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a5ee39e432.js" crossorigin="anonymous"></script>
 
-    <title>Know It</title>
-    <link rel="stylesheet" href="assets/css/style.css" media="all" />
-  </head>
+  <!-- Favicon implementation from favicon.io(https://favicon.io/favicon-converter/) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
+  <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
 
-  <body>
-    <div class="play-wrapper">
-      <header>
-        <!-- Navigation bar -->
-        <nav>
-          <!-- Logo -->
-          <a href="index.html" class="logo" aria-label="Link to the home page.">
-            <img
-              src="assets/images/logo/logo.png"
-              alt="Know It logo representing a smiling friendly brain with eyes."
-              title="Link to the home page."
-              height="40"
-              width="40"
-            />
-          </a>
+  <title>Know It</title>
+  <link rel="stylesheet" href="assets/css/style.css" media="all" />
+</head>
 
-          <!--Dropdown navigation menu for all devices -->
-          <button
-            id="navigation-button"
-            class="menu-icon"
-            aria-label="Navigation menu."
-          >
-            <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-            <img
-              src="assets/images/icons/menu.png"
-              alt="Icon of a book."
-              title="Navigation menu."
-              height="40"
-              width="40"
-            />
-            <span class="menu-text">Menu</span>
-          </button>
+<body>
+  <div class="play-wrapper">
+    <header>
+      <!-- Navigation bar -->
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Link to the home page.">
+          <img src="assets/images/logo/logo.png" alt="Know It logo representing a smiling friendly brain with eyes."
+            title="Link to the home page." height="40" width="40" />
+        </a>
 
-          <div class="navigation-menu">
-            <ul class="navigation-list">
-              <li class="navigation-items">
-                <a
-                  href="index.html"
-                  class="navigation-links"
-                  aria-label="Link to the home page."
-                >
-                  Home
-                </a>
+        <!--Dropdown navigation menu for all devices -->
+        <button id="navigation-button" class="menu-icon" aria-label="Navigation menu.">
+          <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+          <img src="assets/images/icons/menu.png" alt="Icon of a book." title="Navigation menu." height="40"
+            width="40" />
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <div class="navigation-menu">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a href="index.html" class="navigation-links" aria-label="Link to the home page.">
+                Home
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="about.html" class="navigation-links" aria-label="Link to the about page.">
+                About
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="study.html" class="navigation-links" aria-label="Link to the study page.">
+                Study
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="play.html" class="navigation-links" aria-label="Link to the play page.">
+                Play
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="contact.html" class="navigation-links" aria-label="Link to the contact page.">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Heading -->
+    <div class="heading">
+      <h2>Let's play!</h2>
+    </div>
+
+    <!-- Steps to follow section -->
+    <section class="play-section-wrapper">
+      <section class="play-explanation">
+        <p>
+          To start please <strong>pick a subject</strong> first by selecting
+          the icon of your choice, then <strong>set the level</strong> and
+          click <strong>start</strong>.
+        </p>
+        <p>
+          If you need to refresh your memory you can go to the study room.
+          <a href="study.html" class="buttons small-buttons study-button">Study</a>
+        </p>
+        <!-- Button to trigger the modal that display the rules -->
+        <button data-modal-target="#rules" id="rules-button">
+          How to play ?
+        </button>
+        <div id="rules" class="rules-modal modal">
+          <div class="modal-header">
+            <div>How to play:</div>
+            <button data-close-modal class="close-modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>
+              You found yourself locked in a labyrinth. You can see the exit
+              but the only way out is to activate some mechanism in order to
+              progress through it. You will need knowledge and logic to make
+              it out.
+            </p>
+
+            <ul>
+              <li>Use the arrows to move through the maze.</li>
+              <li>
+                To activate the mechanism, step on the case and answer the
+                question.
               </li>
-              <li class="navigation-items">
-                <a
-                  href="about.html"
-                  class="navigation-links"
-                  aria-label="Link to the about page."
-                >
-                  About
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="study.html"
-                  class="navigation-links"
-                  aria-label="Link to the study page."
-                >
-                  Study
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="play.html"
-                  class="navigation-links"
-                  aria-label="Link to the play page."
-                >
-                  Play
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="contact.html"
-                  class="navigation-links"
-                  aria-label="Link to the contact page."
-                >
-                  Contact
-                </a>
+              <li>If you get it right a passage will open :) .</li>
+              <li>If you get it wrong you will get a strike :( .</li>
+              <li>
+                When the game is over you will be send back to the start for a
+                new game.
               </li>
             </ul>
+
+            <p>The number of strikes before game over depend on the level.</p>
           </div>
-        </nav>
-      </header>
+        </div>
+        <div class="overlay"></div>
+      </section>
 
-      <!-- Heading -->
-      <div class="heading">
-        <h2>Let's play!</h2>
-      </div>
-
-      <!-- Steps to follow section -->
-      <section class="play-section-wrapper">
-        <section class="play-explanation">
-          <p>
-            To start please <strong>pick a subject</strong> first by selecting
-            the icon of your choice, then <strong>set the level</strong> and
-            click <strong>start</strong>.
-          </p>
-          <p>
-            If you need to refresh your memory you can go to the study room.
-            <a href="study.html" class="buttons small-buttons study-button"
-              >Study</a
-            >
-          </p>
-          <!-- Button to trigger the modal that display the rules -->
-          <button data-modal-target="#rules" id="rules-button">
-            How to play ?
-          </button>
-          <div id="rules" class="rules-modal modal">
-            <div class="modal-header">
-              <div>How to play:</div>
-              <button data-close-modal class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>
-                You found yourself locked in a labyrinth. You can see the exit
-                but the only way out is to activate some mechanism in order to
-                progress through it. You will need knowledge and logic to make
-                it out.
-              </p>
-
-              <ul>
-                <li>Use the arrows to move through the maze.</li>
-                <li>
-                  To activate the mechanism, step on the case and answer the
-                  question.
-                </li>
-                <li>If you get it right a passage will open :) .</li>
-                <li>If you get it wrong you will get a strike :( .</li>
-                <li>
-                  When the game is over you will be send back to the start for a
-                  new game.
-                </li>
-              </ul>
-
-              <p>The number of strikes before game over depend on the level.</p>
-            </div>
-          </div>
-          <div class="overlay"></div>
-        </section>
-
-        <!-- Game settings interface -->
-        <section class="game-settings">
-          <!-- Display the subjects -->
-          <div>
-            <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
+      <!-- Game settings interface -->
+      <section class="game-settings">
+        <!-- Display the subjects -->
+        <div>
+          <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
           * [Volcano](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
           * [Jungle](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
           * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
           * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search) -->
-            <div class="subjects-section">
-              <button
-                data-subject-button
-                id="volcano"
-                class="subjects-buttons volcano-button"
-              >
-                <img
-                  src="assets/images/icons/volcano.png"
-                  alt="Volcano icon."
-                  title="Volcano icon."
-                  height="50"
-                  width="50"
-                />
-              </button>
-              <button
-                data-subject-button
-                id="jungle"
-                class="subjects-buttons jungle-button"
-              >
-                <img
-                  src="assets/images/icons/jungle.png"
-                  alt="Jungle icon."
-                  title="Jungle icon."
-                  height="50"
-                  width="50"
-                />
-              </button>
-              <button
-                data-subject-button
-                id="ocean"
-                class="subjects-buttons ocean-button"
-              >
-                <img
-                  src="assets/images/icons/ocean.png"
-                  alt="Ocean icon."
-                  title="Ocean icon."
-                  height="50"
-                  width="50"
-                />
-              </button>
-              <button
-                data-subject-button
-                id="earth"
-                class="subjects-buttons earth-button"
-              >
-                <img
-                  src="assets/images/icons/earth-globe.png"
-                  alt="Earth icon."
-                  title="Earth icon."
-                  height="50"
-                  width="50"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="dropdown-menu">
-            <button id="levels-button">
-              <span id="button-display">Set Level</span>
-              <i class="fas fa-sort-down"></i>
+          <div class="subjects-section">
+            <button data-subject-button id="volcano" class="subjects-buttons volcano-button">
+              <img src="assets/images/icons/volcano.png" alt="Volcano icon." title="Volcano icon." height="50"
+                width="50" />
             </button>
-            <ul class="levels-list hide">
-              <li tabindex="1" data-level="apprentice">Apprentice</li>
-              <li tabindex="1" data-level="scientist">Scientist</li>
-              <li tabindex=" 1" data-level="genius">Genius</li>
-            </ul>
+            <button data-subject-button id="jungle" class="subjects-buttons jungle-button">
+              <img src="assets/images/icons/jungle.png" alt="Jungle icon." title="Jungle icon." height="50"
+                width="50" />
+            </button>
+            <button data-subject-button id="ocean" class="subjects-buttons ocean-button">
+              <img src="assets/images/icons/ocean.png" alt="Ocean icon." title="Ocean icon." height="50" width="50" />
+            </button>
+            <button data-subject-button id="earth" class="subjects-buttons earth-button">
+              <img src="assets/images/icons/earth-globe.png" alt="Earth icon." title="Earth icon." height="50"
+                width="50" />
+            </button>
           </div>
+        </div>
 
-          <button aria-label="Start the game." id="start-button">Start</button>
-        </section>
-        <section class="game-rewards">
-          <div id="rewards-display">
-            <span>
-              <i id="perm-flag" class="fas fa-flag-checkered hide"></i>
-              <i id="perm-infinity" class="fas fa-infinity hide"></i>
-              <i id="perm-graduation" class="fas fa-graduation-cap hide"></i>
-              <i id="perm-university" class="fas fa-university hide"></i>
-              <i id="perm-atom" class="fas fa-atom hide"></i>
-              <i id="perm-flask" class="fas fa-flask hide"></i>
-              <i id="perm-brain" class="fas fa-brain hide"></i>
-              <i id="perm-robot" class="fas fa-robot hide"></i>
-              <i id="perm-trophy" class="fas fa-trophy hide"></i>
-              <i id="perm-hat" class="fas fa-hat-wizard hide"></i>
-              <i id="perm-gamepad" class="fas fa-gamepad hide"></i>
-              <i id="perm-astronaut" class="fas fa-user-astronaut hide"></i>
-            </span>
-          </div>
-        </section>
-        <!--------------------- Game -->
-        <!-- Credit for the images used as background for the different subject on the game interface.
+        <div class="dropdown-menu">
+          <button id="levels-button">
+            <span id="button-display">Set Level</span>
+            <i class="fas fa-sort-down"></i>
+          </button>
+          <ul class="levels-list hide">
+            <li tabindex="1" data-level="apprentice">Apprentice</li>
+            <li tabindex="1" data-level="scientist">Scientist</li>
+            <li tabindex=" 1" data-level="genius">Genius</li>
+          </ul>
+        </div>
+
+        <button aria-label="Start the game." id="start-button">Start</button>
+      </section>
+      <section class="game-rewards">
+        <div id="rewards-display">
+          <span>
+            <i id="perm-flag" class="fas fa-flag-checkered hide"></i>
+            <i id="perm-infinity" class="fas fa-infinity hide"></i>
+            <i id="perm-graduation" class="fas fa-graduation-cap hide"></i>
+            <i id="perm-university" class="fas fa-university hide"></i>
+            <i id="perm-atom" class="fas fa-atom hide"></i>
+            <i id="perm-flask" class="fas fa-flask hide"></i>
+            <i id="perm-brain" class="fas fa-brain hide"></i>
+            <i id="perm-robot" class="fas fa-robot hide"></i>
+            <i id="perm-trophy" class="fas fa-trophy hide"></i>
+            <i id="perm-hat" class="fas fa-hat-wizard hide"></i>
+            <i id="perm-gamepad" class="fas fa-gamepad hide"></i>
+            <i id="perm-astronaut" class="fas fa-user-astronaut hide"></i>
+          </span>
+        </div>
+      </section>
+      <!--------------------- Game -->
+      <!-- Credit for the images used as background for the different subject on the game interface.
         All images are from [Adobe Stock](https://stock.adobe.com/ie/):
         volcano: [heat red cracked ground texture after eruption volcano by releon8211](https://stock.adobe.com/ie/images/heat-red-cracked-ground-texture-after-eruption-volcano/110818846?prev_url=detail), 
         jungle: [Yellow brick wall seamless texture for jungle theme vector by Pallavi](https://stock.adobe.com/ie/images/yellow-brick-wall-seamless-texture-for-jungle-theme-vector/271949380?prev_url=detail),
         ocean: [blue water wave texture background by Naoki Kim](https://stock.adobe.com/ie/images/blue-water-wave-texture-background/154153098?prev_url=detail),
         earth: [Top view of a young green forest in spring or summer by artjazz](https://stock.adobe.com/ie/images/top-view-of-a-young-green-forest-in-spring-or-summer/207714693?prev_url=detail)
         -->
-        <div id="easy-game" class="game-modal">
-          <div class="game-display">
-            <button data-new-game class="new-game-button">New game</button>
-            <div data-game-subject class="game-subject"></div>
-            <div data-game-level class="game-level"></div>
-            <button
-              data-exit-game="#easy-game"
-              aria-label="Back to the play page."
-              class="exit-button"
-            >
-              Exit
-            </button>
+      <div id="game" class="game-modal">
+        <div class="game-display">
+          <button data-new-game class="new-game-button">New game</button>
+          <div data-game-subject class="game-subject"></div>
+          <div data-game-level class="game-level"></div>
+          <button data-exit-game="#game" aria-label="Back to the play page." class="exit-button">
+            Exit
+          </button>
+        </div>
+
+        <!-- Grid for easy level -->
+        <div id="easy-game"  class="grid-easy hide">
+          <div id="easy-one" data-easy-available-direction="right-two down-five">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-two" data-easy-available-direction="left-one right-three">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-three" data-easy-available-direction="left-two right-four">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-four" data-easy-available-direction="left-three down-eight">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-five" data-easy-available-direction="up-one down-nine">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-six" data-easy-available-direction="right-seven down-ten">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-seven" data-easy-available-direction="left-six right-eight">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-eight" data-easy-available-direction="up-four left-seven">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-nine" data-easy-available-direction="up-five down-thirteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-ten" data-easy-available-direction="up-six down-fourteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-eleven" data-easy-available-direction="right-twelve down-fifteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twelve" data-easy-available-direction="left-eleven down-sixteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-thirteen" data-easy-available-direction="up-nine down-seventeen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-fourteen" data-easy-available-direction="up-ten right-fifteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-fifteen" data-easy-available-direction="up-eleven left-fourteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-sixteen" data-easy-available-direction="up-twelve down-twenty">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-seventeen" data-easy-available-direction="up-thirteen down-twenty-one">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-eighteen" data-easy-available-direction="right-nineteen down-twenty-two">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-nineteen" data-easy-available-direction="left-eighteen right-twenty">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twenty" data-easy-available-direction="up-sixteen left-nineteen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twenty-one" data-easy-available-direction="up-seventeen">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twenty-two" data-easy-available-direction="up-eighteen right-twenty-three">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twenty-three" data-easy-available-direction="left-twenty-two right-twenty-four">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+          </div>
+          <div id="easy-twenty-four" data-easy-available-direction="left-twenty-three">
+            <img class="path volcano hide" src="assets/images/labyrinth/volcano-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path jungle hide" src="assets/images/labyrinth/jungle-path.jpg" alt="Labyrinth path."
+              height="60" width="60" />
+            <img class="path ocean hide" src="assets/images/labyrinth/ocean-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
+            <img class="path earth hide" src="assets/images/labyrinth/earth-path.jpg" alt="Labyrinth path." height="60"
+              width="60" />
           </div>
 
-          <div class="grid-easy">
-            <div
-              id="easy-one"
-              data-easy-available-direction="right-two down-five"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-two"
-              data-easy-available-direction="left-one right-three"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-three"
-              data-easy-available-direction="left-two right-four"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-four"
-              data-easy-available-direction="left-three down-eight"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-five"
-              data-easy-available-direction="up-one down-nine"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-six"
-              data-easy-available-direction="right-seven down-ten"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-seven"
-              data-easy-available-direction="left-six right-eight"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-eight"
-              data-easy-available-direction="up-four left-seven"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-nine"
-              data-easy-available-direction="up-five down-thirteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-ten"
-              data-easy-available-direction="up-six down-fourteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-eleven"
-              data-easy-available-direction="right-twelve down-fifteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twelve"
-              data-easy-available-direction="left-eleven down-sixteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-thirteen"
-              data-easy-available-direction="up-nine down-seventeen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-fourteen"
-              data-easy-available-direction="up-ten right-fifteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-fifteen"
-              data-easy-available-direction="up-eleven left-fourteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-sixteen"
-              data-easy-available-direction="up-twelve down-twenty"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-seventeen"
-              data-easy-available-direction="up-thirteen down-twenty-one"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-eighteen"
-              data-easy-available-direction="right-nineteen down-twenty-two"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-nineteen"
-              data-easy-available-direction="left-eighteen right-twenty"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twenty"
-              data-easy-available-direction="up-sixteen left-nineteen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twenty-one"
-              data-easy-available-direction="up-seventeen"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twenty-two"
-              data-easy-available-direction="up-eighteen right-twenty-three"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twenty-three"
-              data-easy-available-direction="left-twenty-two right-twenty-four"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
-            <div
-              id="easy-twenty-four"
-              data-easy-available-direction="left-twenty-three"
-            >
-              <img
-                class="path volcano hide"
-                src="assets/images/labyrinth/volcano-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path jungle hide"
-                src="assets/images/labyrinth/jungle-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path ocean hide"
-                src="assets/images/labyrinth/ocean-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-              <img
-                class="path earth hide"
-                src="assets/images/labyrinth/earth-path.jpg"
-                alt="Labyrinth path."
-                height="60"
-                width="60"
-              />
-            </div>
+          <div id="easy-player" class="avatar twenty-one"></div>
+          <div class="labyrinth-exit twenty-four">
+            <!--Credit for the exit sign image: [Arrow vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/arrow) -->
+            <img class="exit-sign" src="assets/images/labyrinth/exit-sign.jpg" alt="Exit sign." height="30"
+              width="50" />
+          </div>
 
-            <div id="player" class="avatar twenty-one"></div>
-            <div class="labyrinth-exit twenty-four">
-              <!--Credit for the exit sign image: [Arrow vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/arrow) -->
-              <img
-                class="exit-sign"
-                src="assets/images/labyrinth/exit-sign.jpg"
-                alt="Exit sign."
-                height="30"
-                width="50"
-              />
-            </div>
+          <div class="question thirteen">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="question two">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="question seven">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="question ten">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="question sixteen">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="question twenty-three">
+            <i class="fas fa-question-circle"></i>
+          </div>
+        </div>
 
-            <div class="question thirteen">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="question two">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="question seven">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="question ten">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="question sixteen">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="question twenty-three">
-              <i class="fas fa-question-circle"></i>
-            </div>
+        <!-- Grid for easy level -->
 
-            <!-- The following shoulld probably go outside grid-easy to be reused !!!!!!!!!!!!!!!!
+        <!-- The following shoulld probably go outside grid-easy to be reused !!!!!!!!!!!!!!!!
             Question modal and overlay to be ongame modal and overlay to be reused maybe -->
             <div class="question-modal">
               <form id="question-form" action="#">
@@ -1155,8 +501,7 @@
                 <button id="submit-answer" type="submit">Let's check!</button>
               </form>
             </div>
-            <div class="question-overlay"></div>
-
+  
             <div class="results-modal">
               <div class="modal-header">
                 <div>well done on reaching the exit !!!</div>
@@ -1167,7 +512,8 @@
                 <div id="achievements">
                   <span class="uppercase">Reward:</span>
                   <p id="no-reward" class="hide">
-                    No reward this time! Try again without getting strikes to win a reward ;)
+                    No reward this time! Try again without getting strikes to
+                    win a reward ;)
                   </p>
                   <span id="rewards">
                     <i id="flag" class="fas fa-flag-checkered hide"></i>
@@ -1186,98 +532,55 @@
                 </div>
               </div>
             </div>
-            <div class="results-overlay"></div>
-          </div>
+            <div class="ongame-overlay"></div>
 
-          <div class="controls">
-            <button
-              id="arrow-up"
-              data-button-direction="up"
-              class="control-buttons button-up"
-            >
-              <i class="far fa-arrow-alt-circle-up"></i>
-            </button>
-            <button
-              id="arrow-left"
-              data-button-direction="left"
-              class="control-buttons button-left"
-            >
-              <i class="far fa-arrow-alt-circle-left"></i>
-            </button>
-            <button
-              id="arrow-right"
-              data-button-direction="right"
-              class="control-buttons button-right"
-            >
-              <i class="far fa-arrow-alt-circle-right"></i>
-            </button>
-            <button
-              id="arrow-down"
-              data-button-direction="down"
-              class="control-buttons button-down"
-            >
-              <i class="far fa-arrow-alt-circle-down"></i>
-            </button>
-            <div class="strikes-area">
-              <div class="strike-one">
-                <i class="fas fa-book-dead hide"></i>
-              </div>
-              <div class="strike-two">
-                <i class="fas fa-book-dead hide"></i>
-              </div>
+        <div class="controls">
+          <button id="arrow-up" data-button-direction="up" class="control-buttons button-up">
+            <i class="far fa-arrow-alt-circle-up"></i>
+          </button>
+          <button id="arrow-left" data-button-direction="left" class="control-buttons button-left">
+            <i class="far fa-arrow-alt-circle-left"></i>
+          </button>
+          <button id="arrow-right" data-button-direction="right" class="control-buttons button-right">
+            <i class="far fa-arrow-alt-circle-right"></i>
+          </button>
+          <button id="arrow-down" data-button-direction="down" class="control-buttons button-down">
+            <i class="far fa-arrow-alt-circle-down"></i>
+          </button>
+          <div class="strikes-area">
+            <div class="strike-one">
+              <i class="fas fa-book-dead hide"></i>
+            </div>
+            <div class="strike-two">
+              <i class="fas fa-book-dead hide"></i>
             </div>
           </div>
         </div>
-        <div class="game-overlay"></div>
-      </section>
+      </div>
+      <div class="game-overlay"></div>
+    </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="copyright">
-          <i class="far fa-copyright" aria-hidden="true"></i>
-          For educational purposes.
-        </div>
-        <div class="footer-links">
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fab fa-pinterest-p"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-graduation-cap"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-cogs"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-        </div>
-      </footer>
-    </div>
-  </body>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/play.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="copyright">
+        <i class="far fa-copyright" aria-hidden="true"></i>
+        For educational purposes.
+      </div>
+      <div class="footer-links">
+        <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+          <i class="fab fa-pinterest-p" aria-hidden="true" title="Link to websiteName."></i>
+        </a>
+        <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+          <i class="fas fa-graduation-cap" aria-hidden="true" title="Link to websiteName."></i>
+        </a>
+        <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+          <i class="fas fa-cogs" aria-hidden="true" title="Link to websiteName."></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/play.js"></script>
+
 </html>

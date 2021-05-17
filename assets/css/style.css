@@ -273,8 +273,7 @@ a {
 
 .overlay,
 .game-overlay,
-.question-overlay,
-.results-overlay {
+.ongame-overlay {
     position: fixed;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
@@ -290,14 +289,12 @@ a {
     z-index: 5;
 }
 
-.question-overlay,
-.results-overlay {
+.ongame-overlay {
     z-index: 30;
 }
 
 .overlay,
-.question-overlay,
-.results-overlay {
+.ongame-overlay {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -851,7 +848,7 @@ a {
 }
 
 #rewards-display i {
-    font-size: 30px;
+    font-size: 1.5em;
     margin: 5px;
     color: #9941bf;
 }
@@ -1275,7 +1272,7 @@ a {
 
 
 
-/* ---------------------------------------- Easy level */
+/* ---------------------------------------- Easy level ---------------------------*/
 .grid-easy {
     display: grid;
     grid-template-rows: repeat(6, 1fr);

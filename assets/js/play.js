@@ -109,7 +109,7 @@ function setLevel(getLevel) {
   let level = document.getElementById("button-display").innerText;
 }
 
-// ------------------------------------------------------------------ Game
+// ------------------------------------------------------------------ Game -------------------------------------------------------
 
 let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
@@ -173,16 +173,16 @@ function getEarthEasyQuestions() {
 }
 
 function setGameParameters() {
-  // Sould add an if statement with parameters displaying in relation to the level !!!!!!!!!!!!!!!!!
+
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
-  let avatar = document.getElementById("player");
-  let avatarPosition = avatar.className.substring(7);
 
   // Set the array to empty before populating it with the corresponding indexes.
   questionsNumber = [];
 
   if (level === "Apprentice") {
+    let avatar = document.getElementById("easy-player");
+    let avatarPosition = avatar.className.substring(7);
     avatar.classList.remove(avatarPosition);
     avatar.classList.add("twenty-one");
   }
@@ -250,8 +250,17 @@ startButton.addEventListener("click", function () {
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
 
+  // Display the game settings on the game interface.
+  document.querySelector("[data-game-level]").innerText = level;
+  document.querySelector("[data-game-subject]").innerText = subject.id;
+
+  // Display the game modal.
+  let game = document.getElementById("game");
+  game.classList.add("modal-active");
+  gameOverlay.classList.add("overlay-active");
+
   if (level === "Apprentice" && typeof subject !== "undefined") {
-    displayEasyGame(level, subject);
+    displayEasyGame(subject);
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
       `Oops, it didn't work!!
@@ -263,16 +272,12 @@ startButton.addEventListener("click", function () {
 // ----------------- Display the game
 
 // Easy game.
-function displayEasyGame(level, subject) {
-  // Display the game settings on the game interface.   !!!!!!!!!!!!!!! THIS SHOULD BE ON STARTING THE GAME ===>> TO TAKE OUT OF THE HERE
+function displayEasyGame(subject) {
   let subjectId = subject.id;
-  document.querySelector("[data-game-level]").innerText = level;
-  document.querySelector("[data-game-subject]").innerText = subjectId;
 
-  // Display the easy grid (gameplay).
+  // Display the easy grid.
   let easyGame = document.getElementById("easy-game");
-  easyGame.classList.add("modal-active");
-  gameOverlay.classList.add("overlay-active");
+  easyGame.classList.remove("hide");
 
   // set the labyrinth theme depending on the subject.
   if (subjectId === "volcano") {
@@ -313,6 +318,8 @@ closeGameButton.addEventListener("click", function () {
 
 function closeGame() {
   let openGame = document.querySelector(closeGameButton.dataset.exitGame);
+  let easyGame = document.getElementById("easy-game");
+  easyGame.classList.add("hide");
   openGame.classList.remove("modal-active");
   gameOverlay.classList.remove("overlay-active");
 }
@@ -323,17 +330,27 @@ let controlButtons = document.querySelectorAll("[data-button-direction]");
 
 for (let button of controlButtons) {
   button.addEventListener("click", function () {
+
+    let level = document.getElementById("button-display").innerText;
+
     // Get the direction the player chose.
     let chosenDirection = button.dataset.buttonDirection;
-    let avatar = document.getElementById("player");
+    let availableDirections = "";
+    
+    console.log(availableDirections);
+    console.log(level);
 
-    // Get the position of the player and the grid-area he is on.
-    let avatarPosition = avatar.className.substring(7);
-    let gridItemID = "easy-" + avatarPosition;
-    let gridItem = document.getElementById(gridItemID);
+    // Get the position of the player (depending on the grid level) and the grid-area he is on.
+    if (level === "Apprentice") {
+      let avatar = document.getElementById("easy-player");
+      let avatarPosition = avatar.className.substring(7);
+      let gridItemID = "easy-" + avatarPosition;
+      let gridItem = document.getElementById(gridItemID);
 
-    // Get the available directions from this grid-area.
-    let availableDirections = gridItem.dataset.easyAvailableDirection;
+      // Get the available directions from this grid-area.
+      availableDirections = gridItem.dataset.easyAvailableDirection;
+    }
+    console.log(availableDirections);
 
     // Check if the direction chosen is available for the player to move onto and get the new position.
     if (availableDirections.includes(chosenDirection)) {
@@ -359,7 +376,12 @@ function getNewPosition(availableDirections, chosenDirection) {
 
 // Move the Avatar.
 function moveAvatar(newPosition) {
-  let avatar = document.getElementById("player");
+  let level = document.getElementById("button-display").innerText;
+  let avatar;
+  if (level === "Apprentice") {
+    avatar = document.getElementById("easy-player");
+  }
+
   let avatarClassList = avatar.classList;
   let avatarPosition = avatar.className.substring(7);
   avatarClassList.remove(avatarPosition);
@@ -371,12 +393,19 @@ function moveAvatar(newPosition) {
 }
 
 function checkForQuestion() {
-  // Get the position of the avatar and the extract the grid area.
-  let avatar = document.getElementById("player");
+  let level = document.getElementById("button-display").innerText;
+
+  // Get the position of the avatar and the grid.
+  let avatar;
+  let grid;
+  if (level === "Apprentice") {
+    avatar = document.getElementById("easy-player");
+    grid = document.getElementById("easy-game");
+  }
+
   let avatarPosition = avatar.className.substring(7);
 
   // Get the positions of the questions.
-  let grid = document.getElementsByClassName("grid-easy")[0];
   let questionCases = grid.querySelectorAll(".question");
 
   // Check if the avatar is on a question case.
@@ -391,7 +420,7 @@ function checkForQuestion() {
 function displayQuestion() {
   // Display the modal.
   let questionModal = document.getElementsByClassName("question-modal")[0];
-  let questionOverlay = document.getElementsByClassName("question-overlay")[0];
+  let questionOverlay = document.getElementsByClassName("ongame-overlay")[0];
 
   // Check if a radio is selected and if so unselect it.
   let answers = document.querySelectorAll("#question-form input");
@@ -774,7 +803,7 @@ function checkEarthEasyAnswer() {
 // Close the question modal.
 function closeQuestion() {
   let questionModal = document.getElementsByClassName("question-modal")[0];
-  let questionOverlay = document.getElementsByClassName("question-overlay")[0];
+  let questionOverlay = document.getElementsByClassName("ongame-overlay")[0];
 
   questionModal.classList.remove("modal-active");
   questionOverlay.classList.remove("overlay-active");
@@ -845,11 +874,14 @@ function gameOver() {
 // depending on the final score.
 
 function checkForExit() {
-  let exit = document
-    .querySelector(".grid-easy .labyrinth-exit")
-    .className.substring(15);
+  let level = document.getElementById("button-display").innerText;
+  let exit = document.querySelector(".grid-easy .labyrinth-exit").className.substring(15);
+  let avatar;
 
-  let avatar = document.getElementById("player");
+  if (level === "Apprentice") {
+    avatar = document.getElementById("easy-player");
+  }
+
   let avatarPosition = avatar.className.substring(7);
 
   if (avatarPosition === exit) {
@@ -862,7 +894,7 @@ function displayResults() {
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
   let resultsModal = document.getElementsByClassName("results-modal")[0];
-  let resulstOverlay = document.getElementsByClassName("results-overlay")[0];
+  let resulstOverlay = document.getElementsByClassName("ongame-overlay")[0];
   let finalScore = Number(localStorage.score);
   let numberOfStrikes = Number(localStorage.strike);
   let displayScore = document.getElementById("score");
