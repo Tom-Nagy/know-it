@@ -1,0 +1,254 @@
+[
+  {
+    "question": "What is a volcano?",
+    "optionOne": "An opening through the Earth crust.",
+    "optionTwo": "A type of mountain.",
+    "optionThree": "An underground magma reserve.",
+    "correctAnswer": "An opening through the Earth crust."
+  },
+  {
+    "question": "What is a magma?",
+    "optionOne": "Mix of molten rocks and gas.",
+    "optionTwo": "Underground explosion.",
+    "optionThree": "A layer of the Earth.",
+    "correctAnswer": "Mix of molten rocks and gas."
+  },
+  {
+    "question": "When magma reach the surface, how is it called?",
+    "optionOne": "Magma.",
+    "optionTwo": "Rock.",
+    "optionThree": "Lava.",
+    "correctAnswer": "Lava."
+  },
+  {
+    "question": "Which of the following is not a part of a volcano?",
+    "optionOne": "Crater.",
+    "optionTwo": "Mantle.",
+    "optionThree": "Vent.",
+    "correctAnswer": "Mantle."
+  },
+  {
+    "question": "Which of the following is not a volcano part?",
+    "optionOne": "Conduit.",
+    "optionTwo": "Ash.",
+    "optionThree": "Hotspot.",
+    "correctAnswer": "Hotspot."
+  },
+  {
+    "question": "Which of the following is not a type of volcano?",
+    "optionOne": "Resurgent.",
+    "optionTwo": "Dome.",
+    "optionThree": "Caldera.",
+    "correctAnswer": "Resurgent."
+  },
+  {
+    "question": "Which of the following is not a volcano type?",
+    "optionOne": "Shield.",
+    "optionTwo": "Composite.",
+    "optionThree": "Lahars.",
+    "correctAnswer": "Lahars."
+  },
+  {
+    "question": "When magma reaches the surface, how is it called?",
+    "optionOne": "Magma.",
+    "optionTwo": "Rock.",
+    "optionThree": "Lava.",
+    "correctAnswer": "Lava."
+  },
+  {
+    "question": "What is volcanology?",
+    "optionOne": "The study of volcanoes.",
+    "optionTwo": "A type of volcanic erruption.",
+    "optionThree": "The person that study volcanoes.",
+    "correctAnswer": "The study of volcanoes."
+  },
+  {
+    "question": "Which of the following is not a type of volcanic erruptions?",
+    "optionOne": "Explosive.",
+    "optionTwo": "Erosive.",
+    "optionThree": "Effusive.",
+    "correctAnswer": "Erosive."
+  },
+  {
+    "question": "What type of volcano has a very gentle slope?",
+    "optionOne": "Caldera.",
+    "optionTwo": "Composite.",
+    "optionThree": "Shield.",
+    "correctAnswer": "Shield."
+  },
+  {
+    "question": "What is lava?",
+    "optionOne": "Magma that erupts on the Earth surface.",
+    "optionTwo": "Molten rocks deep in the Earth crust.",
+    "optionThree": "Cloud created by a volcano.",
+    "correctAnswer": "Magma that erupts on the Earth surface."
+  },
+  {
+    "question": "How much precipitation a year jungles get?",
+    "optionOne": "Between 200 and 600 cms.",
+    "optionTwo": "Between 100 and 200 cms.",
+    "optionThree": "Between 600 and 900 cms.",
+    "correctAnswer": "Between 200 and 600 cms."
+  },
+  {
+    "question": "What does equable mean?",
+    "optionOne": "With the same amount.",
+    "optionTwo": "With not much variation.",
+    "optionThree": "Within the equator.",
+    "correctAnswer": "With not much variation."
+  },
+  {
+    "question": "What is humus?",
+    "optionOne": "The decay of the forest elements.",
+    "optionTwo": "A species of frog.",
+    "optionThree": "The name a flower that only Grows in the jungle.",
+    "correctAnswer": "The decay of the forest elements."
+  },
+  {
+    "question": "Which of the following is not a jungle layer?",
+    "optionOne": "Canopy.",
+    "optionTwo": "Understory.",
+    "optionThree": "Bushy.",
+    "correctAnswer": "Bushy."
+  },
+  {
+    "question": "what is buttress roots?",
+    "optionOne": "An animal only living in tree's roots.",
+    "optionTwo": "Shallow and widespread roots structure.",
+    "optionThree": "A name given to very soft roots.",
+    "correctAnswer": "Shallow and widespread roots structure."
+  },
+  {
+    "question": "Which of the following facts is true?",
+    "optionOne": "Only 2% of the rainwater is reaching the forest floor.",
+    "optionTwo": "Only 2% of the wind is reaching the forest floor.",
+    "optionThree": "Only 2% of the light is reaching the rainforest floor.",
+    "correctAnswer": "Only 2% of the light is reaching the rainforest floor."
+  },
+  {
+    "question": "Which of the following facts is false?",
+    "optionOne": "The jungle is so vast that it does not encourage specialization.",
+    "optionTwo": "It can take up to 10 minutes for a drop of rain water to fall on the floor of the rainforest.",
+    "optionThree": "The emergent layer is the dryest.",
+    "correctAnswer": "The jungle is so vast that it does not encourage specialization."
+  },
+  {
+    "question": "Wich is the largest rainforest?",
+    "optionOne": "The Amazon.",
+    "optionTwo": "The Daintree.",
+    "optionThree": "The Congo.",
+    "correctAnswer": "The Amazon."
+  },
+  {
+    "question": "What is biology?",
+    "optionOne": "The science of organism living in pairs.",
+    "optionTwo": "The science of life and living organisms.",
+    "optionThree": "The person that study the Earth.",
+    "correctAnswer": "The science of life and living organisms."
+  },
+  {
+    "question": "Which of the following is false?",
+    "optionOne": "Sometimes it froze in the jungle.",
+    "optionTwo": "The temperature rarely exceed 35 celsius degrees in the jungle.",
+    "optionThree": "Jungles are one of the most important habitat on Earth.",
+    "correctAnswer": "Sometimes it froze in the jungle."
+  },
+  {
+    "question": "Which of the following is true?",
+    "optionOne": "Deforestation is a myth.",
+    "optionTwo": "The forest floor in the rainforest is the brigthest.",
+    "optionThree": "The average humidity in the rainforest is very high and around 80%.",
+    "correctAnswer": "The average humidity in the rainforest is very high and around 80%."
+  },
+  {
+    "question": "About 25% of what comes from the Jungle?",
+    "optionOne": "Medicine.",
+    "optionTwo": "Wood.",
+    "optionThree": "Water.",
+    "correctAnswer": "Medicines."
+  },
+  {
+    "question": "What is an Ocean?",
+    "optionOne": "A large body of salted water.",
+    "optionTwo": "A large sea.",
+    "optionThree": "A large lake.",
+    "correctAnswer": "A large body of salted water."
+  },
+  {
+    "question": "How much of the Earth surface is covered by the ocean?",
+    "optionOne": "About 30%.",
+    "optionTwo": "About 50%.",
+    "optionThree": "About 70%.",
+    "correctAnswer": "About 70%."
+  },
+  {
+    "question": "Nowadays how many oceans exist?",
+    "optionOne": "4.",
+    "optionTwo": "5.",
+    "optionThree": "6.",
+    "correctAnswer": "5."
+  },
+  {
+    "question": "Which of the following is not an ocean?",
+    "optionOne": "Pacific.",
+    "optionTwo": "Indian.",
+    "optionThree": "American.",
+    "correctAnswer": "American."
+  },
+  {
+    "question": "How is called the zone defined by the tidal range?",
+    "optionOne": "Intertidal zone.",
+    "optionTwo": "Midtidal zone.",
+    "optionThree": "Ecotidal zone.",
+    "correctAnswer": "Intertidal zone."
+  },
+  {
+    "question": "How much oxygen is produced by the ocean?",
+    "optionOne": "About 20%.",
+    "optionTwo": "About 50%.",
+    "optionThree": "About 70%.",
+    "correctAnswer": "About 50%."
+  },
+  {
+    "question": "Which of the following facts is false?",
+    "optionOne": "More than 80% of the ocean is unexplored.",
+    "optionTwo": "Water takes about 1000 years to travel all the way around the globe.",
+    "optionThree": "Less than 60% of the total water on Earth is in the Ocean.",
+    "correctAnswer": "Less than 60% of the total water on Earth is in the Ocean."
+  },
+  {
+    "question": "Wich is the largest ocean?",
+    "optionOne": "Pacific.",
+    "optionTwo": "Antartic.",
+    "optionThree": "Atlantic.",
+    "correctAnswer": "Pacific."
+  },
+  {
+    "question": "What is oceanology?",
+    "optionOne": "The study of Earth surface.",
+    "optionTwo": "The study of the ocean.",
+    "optionThree": "Whom study the ocean.",
+    "correctAnswer": "The study of the ocean."
+  },
+  {
+    "question": "Which of the folling is not plankton?",
+    "optionOne": "Phytoplankton.",
+    "optionTwo": "Zooplankton.",
+    "optionThree": "Oceoplankton.",
+    "correctAnswer": "Oceoplankton."
+  },
+  {
+    "question": "What is evaporation?",
+    "optionOne": "Water changing state from liquid to vapor.",
+    "optionTwo": "Water changing state from solid to liquid.",
+    "optionThree": "Water changing state from solid to vapor.",
+    "correctAnswer": "Water changing state from liquid to vapor."
+  },
+  {
+    "question": "Which of the oceans is the warmest?",
+    "optionOne": "Pacific.",
+    "optionTwo": "Indian.",
+    "optionThree": "Atlantic.",
+    "correctAnswer": "Indian."
+  }
+]
