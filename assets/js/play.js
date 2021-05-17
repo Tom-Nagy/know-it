@@ -117,7 +117,7 @@ let questionsNumber = [];
 
 // Get the number of question from the json file and add it to the questionsNumber array for later use.
 function getVolcanoEasyQuestions() {
-  fetch("assets/JSON/volcano-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -131,7 +131,7 @@ function getVolcanoEasyQuestions() {
 }
 
 function getJungleEasyQuestions() {
-  fetch("assets/JSON/jungle-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/jungle-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -145,7 +145,7 @@ function getJungleEasyQuestions() {
 }
 
 function getOceanEasyQuestions() {
-  fetch("assets/JSON/ocean-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/ocean-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -159,7 +159,7 @@ function getOceanEasyQuestions() {
 }
 
 function getEarthEasyQuestions() {
-  fetch("assets/JSON/earth-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/earth-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -437,7 +437,7 @@ function displayQuestion() {
 
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
-  fetch("assets/JSON/volcano-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -486,7 +486,7 @@ function populateVolcanoEasyQuestion() {
 function checkVolcanoEasyAnswer() {
   let askedQuestion = document.getElementById("question-display").innerText;
 
-  fetch("assets/JSON/volcano-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -521,7 +521,7 @@ function checkVolcanoEasyAnswer() {
 
 function populateJungleEasyQuestion() {
   // Get the questions from the json file.
-  fetch("assets/JSON/jungle-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/jungle-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -570,7 +570,7 @@ function populateJungleEasyQuestion() {
 function checkJungleEasyAnswer() {
   let askedQuestion = document.getElementById("question-display").innerText;
 
-  fetch("assets/JSON/jungle-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/jungle-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -605,7 +605,7 @@ function checkJungleEasyAnswer() {
 
 function populateOceanEasyQuestion() {
   // Get the questions from the json file.
-  fetch("assets/JSON/ocean-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/ocean-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -654,7 +654,7 @@ function populateOceanEasyQuestion() {
 function checkOceanEasyAnswer() {
   let askedQuestion = document.getElementById("question-display").innerText;
 
-  fetch("assets/JSON/ocean-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/ocean-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -689,7 +689,7 @@ function checkOceanEasyAnswer() {
 
 function populateEarthEasyQuestion() {
   // Get the questions from the json file.
-  fetch("assets/JSON/earth-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/earth-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
@@ -738,7 +738,7 @@ function populateEarthEasyQuestion() {
 function checkEarthEasyAnswer() {
   let askedQuestion = document.getElementById("question-display").innerText;
 
-  fetch("assets/JSON/earth-easy-questions.JSON")
+  fetch("assets/JSON/easy-questions/earth-easy-questions.JSON")
     .then((res) => {
       return res.json();
     })
