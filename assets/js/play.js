@@ -115,6 +115,7 @@ let startButton = document.getElementById("start-button");
 let gameOverlay = document.getElementsByClassName("game-overlay")[0];
 let questionsNumber = [];
 
+// Get the number of question from the json file and add it to the questionsNumber array for later use.
 function getVolcanoEasyQuestions() {
   fetch("assets/JSON/volcano-easy-questions.JSON")
     .then((res) => {
@@ -129,15 +130,73 @@ function getVolcanoEasyQuestions() {
     });
 }
 
+function getJungleEasyQuestions() {
+  fetch("assets/JSON/jungle-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleEasyQuestions = data;
+
+      for (let i = 0; i < jungleEasyQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getOceanEasyQuestions() {
+  fetch("assets/JSON/ocean-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanEasyQuestions = data;
+
+      for (let i = 0; i < oceanEasyQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getEarthEasyQuestions() {
+  fetch("assets/JSON/earth-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthEasyQuestions = data;
+
+      for (let i = 0; i < earthEasyQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
 function setGameParameters() {
   // Sould add an if statement with parameters displaying in relation to the level !!!!!!!!!!!!!!!!!
+  let level = document.getElementById("button-display").innerText;
+  let subject = document.getElementsByClassName("selected-subject")[0];
   let avatar = document.getElementById("player");
   let avatarPosition = avatar.className.substring(7);
-  avatar.classList.remove(avatarPosition);
-  avatar.classList.add("twenty-one");
+
+  // Set the array to empty before populating it with the corresponding indexes.
   questionsNumber = [];
 
-  getVolcanoEasyQuestions();
+  if (level === "Apprentice") {
+    avatar.classList.remove(avatarPosition);
+    avatar.classList.add("twenty-one");
+  }
+
+  // Set the array hosting the indexes questions depending on game's settings.
+  if (level === "Apprentice" && subject.id === "volcano") {
+    getVolcanoEasyQuestions();
+  } else if (level === "Apprentice" && subject.id === "jungle") {
+    getJungleEasyQuestions();
+  } else if (level === "Apprentice" && subject.id === "ocean") {
+    getOceanEasyQuestions();
+  } else if (level === "Apprentice" && subject.id === "earth") {
+    getEarthEasyQuestions();
+  }
 
   // Set the localStorage items for the game data to zero
   // Score
@@ -182,6 +241,8 @@ function setGameParameters() {
     noReward.classList.add("hide");
   }
 }
+
+// Start the game and set game parameters.
 startButton.addEventListener("click", function () {
   setGameParameters();
 
@@ -203,7 +264,7 @@ startButton.addEventListener("click", function () {
 
 // Easy game.
 function displayEasyGame(level, subject) {
-  // Display the game settings on the game interface.
+  // Display the game settings on the game interface.   !!!!!!!!!!!!!!! THIS SHOULD BE ON STARTING THE GAME ===>> TO TAKE OUT OF THE HERE
   let subjectId = subject.id;
   document.querySelector("[data-game-level]").innerText = level;
   document.querySelector("[data-game-subject]").innerText = subjectId;
@@ -223,8 +284,6 @@ function displayEasyGame(level, subject) {
   } else if (subjectId === "earth") {
     setPath(subjectId);
   }
-
-  //let selectedSubject = document.querySelector("[data-game-subject]").innerText  The question will be selected depending on selectedSubject
 }
 
 // Set the labyrinth theme.
@@ -351,30 +410,29 @@ function displayQuestion() {
   // Populate the question modal depending on the level and the subject selected.
   if (level === "Apprentice" && subject.id === "volcano") {
     populateVolcanoEasyQuestion();
-  } /*else if (level === "Scientist" && subject.id === "volcano") {
-    populateVolcanoInterQuestion()
-  } else if (level === "Genius" && subject.id === "volcano") {
-    populateVolcanoHardQuestion()
   } else if (level === "Apprentice" && subject.id === "jungle") {
-    populateJungleHardQuestion()
-  } else if (level === "Scientist" && subject.id === "jungle") {
-    populateJungleHardQuestion()
-  } else if (level === "Genius" && subject.id === "jungle") {
-    populateJungleHardQuestion()
+    populateJungleEasyQuestion();
   } else if (level === "Apprentice" && subject.id === "ocean") {
-    populateOceanHardQuestion()
-  } else if (level === "Scientist" && subject.id === "ocean") {
-    populateOceanHardQuestion()
-  } else if (level === "Genius" && subject.id === "ocean") {
-    populateOceanHardQuestion()
+    populateOceanEasyQuestion();
   } else if (level === "Apprentice" && subject.id === "earth") {
-    populateEarthHardQuestion()
+    populateEarthEasyQuestion();
+  } else if (level === "Scientist" && subject.id === "volcano") {
+    populateVolcanoInterQuestion();
+  } else if (level === "Scientist" && subject.id === "jungle") {
+    populateJungleInterQuestion();
+  } else if (level === "Scientist" && subject.id === "ocean") {
+    populateOceanInterQuestion();
   } else if (level === "Scientist" && subject.id === "earth") {
-    populateEarthHardQuestion()
+    populateEarthInterQuestion();
+  } else if (level === "Genius" && subject.id === "volcano") {
+    populateVolcanoHardQuestion();
+  } else if (level === "Genius" && subject.id === "jungle") {
+    populateJungleHardQuestion();
+  } else if (level === "Genius" && subject.id === "ocean") {
+    populateOceanHardQuestion();
   } else if (level === "Genius" && subject.id === "earth") {
-    populateEarthHardQuestion()
+    populateEarthHardQuestion();
   }
-  */
 }
 
 function populateVolcanoEasyQuestion() {
@@ -391,10 +449,7 @@ function populateVolcanoEasyQuestion() {
       //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
 
       if (questionsNumber.length > 0) {
-        let randomQuestionIndex = questionsNumber.splice(
-          Math.random() * questionsNumber.length,
-          1
-        )[0];
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
 
         let randomQuestion = volcanoEasyQuestions[randomQuestionIndex];
 
@@ -421,8 +476,9 @@ function populateVolcanoEasyQuestion() {
     "submit",
     function () {
       checkVolcanoEasyAnswer();
-    },
-    { once: true }
+    }, {
+      once: true
+    }
   );
 }
 
@@ -437,6 +493,258 @@ function checkVolcanoEasyAnswer() {
     .then((data) => {
       let volcanoEasyQuestions = data;
       for (let questions of volcanoEasyQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+function populateJungleEasyQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/jungle-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleEasyQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = jungleEasyQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkJungleEasyAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkJungleEasyAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/jungle-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleEasyQuestions = data;
+      for (let questions of jungleEasyQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+function populateOceanEasyQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/ocean-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanEasyQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = oceanEasyQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkOceanEasyAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkOceanEasyAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/ocean-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanEasyQuestions = data;
+      for (let questions of oceanEasyQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+function populateEarthEasyQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/earth-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthEasyQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = earthEasyQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkEarthEasyAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkEarthEasyAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/earth-easy-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthEasyQuestions = data;
+      for (let questions of earthEasyQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
           answers.forEach((answer) => {
@@ -582,101 +890,54 @@ function displayResults() {
   let noReward = document.getElementById("no-reward");
 
   if (
-    level === "Apprentice" &&
-    subject.id === "volcano" &&
-    numberOfStrikes === 0
-  ) {
+    level === "Apprentice" && subject.id === "volcano" && numberOfStrikes === 0) {
     flagReward.classList.remove("hide");
-
     localStorage.flag = 1;
-  } else if (
-    level === "Apprentice" &&
-    subject.id === "jungle" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Apprentice" && subject.id === "jungle" && numberOfStrikes === 0) {
     infinityReward.classList.remove("hide");
-
     localStorage.infinity = 1;
-  } else if (
-    level === "Apprentice" &&
-    subject.id === "ocean" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Apprentice" && subject.id === "ocean" && numberOfStrikes === 0) {
     graduationReward.classList.remove("hide");
-
     localStorage.graduation = 1;
-  } else if (
-    level === "Apprentice" &&
-    subject.id === "earth" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Apprentice" && subject.id === "earth" && numberOfStrikes === 0) {
     universityReward.classList.remove("hide");
-
     localStorage.university = 1;
-  } else if (
-    level === "Scientist" &&
-    subject.id === "volcano" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Scientist" && subject.id === "volcano" && numberOfStrikes === 0) {
     atomReward.classList.remove("hide");
-
     localStorage.atom = 1;
-  } else if (
-    level === "Scientist" &&
-    subject.id === "jungle" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Scientist" && subject.id === "jungle" && numberOfStrikes === 0) {
     flaskReward.classList.remove("hide");
-
     localStorage.flask = 1;
-  } else if (
-    level === "Scientist" &&
-    subject.id === "ocean" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Scientist" && subject.id === "ocean" && numberOfStrikes === 0) {
     brainReward.classList.remove("hide");
-
     localStorage.brain = 1;
-  } else if (
-    level === "Scientist" &&
-    subject.id === "earth" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Scientist" && subject.id === "earth" && numberOfStrikes === 0) {
     robotReward.classList.remove("hide");
-
     localStorage.robot = 1;
-  } else if (
-    level === "Genius" &&
-    subject.id === "volcano" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Genius" && subject.id === "volcano" && numberOfStrikes === 0) {
     trophyReward.classList.remove("hide");
-
     localStorage.trophy = 1;
-  } else if (
-    level === "Genius" &&
-    subject.id === "jungle" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Genius" && subject.id === "jungle" && numberOfStrikes === 0) {
     hatReward.classList.remove("hide");
-
     localStorage.hat = 1;
-  } else if (
-    level === "Genius" &&
-    subject.id === "ocean" &&
-    numberOfStrikes === 0
-  ) {
+
+  } else if (level === "Genius" && subject.id === "ocean" && numberOfStrikes === 0) {
     gamepadReward.classList.remove("hide");
-
     localStorage.gamepad = 1;
-  } else if (
-    level === "Genius" &&
-    subject.id === "earth" &&
-    numberOfStrikes === 0
-  ) {
-    astronautReward.classList.remove("hide");
 
+  } else if (level === "Genius" && subject.id === "earth" && numberOfStrikes === 0) {
+    astronautReward.classList.remove("hide");
     localStorage.astronaut = 1;
+
   } else {
     noReward.classList.remove("hide");
   }

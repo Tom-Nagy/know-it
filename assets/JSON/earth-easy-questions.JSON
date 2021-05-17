@@ -85,8 +85,8 @@
   },
   {
     "question": "How much precipitation a year jungles get?",
-    "optionOne": "Between 200 and 600 cms.",
-    "optionTwo": "Between 100 and 200 cms.",
+    "optionOne": "Between 100 and 200 cms.",
+    "optionTwo": "Between 200 and 600 cms.",
     "optionThree": "Between 600 and 900 cms.",
     "correctAnswer": "Between 200 and 600 cms."
   },
@@ -126,7 +126,7 @@
     "correctAnswer": "Only 2% of the light is reaching the rainforest floor."
   },
   {
-    "question": "Which of the following facts is false?",
+    "question": "Which of the following statements is false?",
     "optionOne": "The jungle is so vast that it does not encourage specialization.",
     "optionTwo": "It can take up to 10 minutes for a drop of rain water to fall on the floor of the rainforest.",
     "optionThree": "The emergent layer is the dryest.",
