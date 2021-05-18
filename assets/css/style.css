@@ -1083,8 +1083,8 @@ a {
     left: 0;
     height: 100px;
     width: 80%;
-    margin: 10px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 10px 20px;
     background-color: #fcfcfc;
 }
 
@@ -1289,9 +1289,6 @@ a {
 }
 
 /* ------------------------------------------------- GRIDS ------------------------------------------------------------- */
-
-
-
 
 /* ---------------------------------------- Common grids styles and display ---------------------------*/
 
@@ -1850,6 +1847,266 @@ a {
     border-radius: 5px;
     overflow: hidden;
 }
+
+.grid-inter .path {
+    height: 40px;
+    width: 40px;
+}
+
+.grid-inter .exit-sign {
+    height: 30px;
+    width: 40px;
+}
+
+.grid-inter .question i {
+    font-size: 20px;
+}
+
+/* Path display */
+
+#inter-four::before,
+#inter-five::before,
+#inter-fifteen::before,
+#inter-twenty-one::before,
+#inter-twenty-two::before,
+#inter-twenty-three::before,
+#inter-forty-seven::before,
+#inter-fifty-one::before,
+#inter-fifty-two::before,
+#inter-fifty-three::before {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#inter-four::after,
+#inter-five::after,
+#inter-fifteen::after,
+#inter-twenty-one::after,
+#inter-twenty-two::after,
+#inter-twenty-three::after,
+#inter-forty-seven::after,
+#inter-fifty-one::after,
+#inter-fifty-two::after,
+#inter-fifty-three::after {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#inter-seven::before,
+#inter-twelve::before,
+#inter-thirteen::before,
+#inter-nineteen::before,
+#inter-twenty-five::before,
+#inter-thirty::before,
+#inter-thirty-three::before,
+#inter-thirty-four::before,
+#inter-thirty-five::before,
+#inter-thirty-six::before,
+#inter-thirty-nine::before,
+#inter-forty::before,
+#inter-forty-three::before,
+#inter-forty-four::before,
+#inter-forty-nine::before {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#inter-seven::after,
+#inter-twelve::after,
+#inter-thirteen::after,
+#inter-nineteen::after,
+#inter-twenty-five::after,
+#inter-thirty::after,
+#inter-thirty-three::after,
+#inter-thirty-four::after,
+#inter-thirty-five::after,
+#inter-thirty-six::after,
+#inter-thirty-nine::after,
+#inter-forty::after,
+#inter-forty-three::after,
+#inter-forty-four::after,
+#inter-forty-nine::after {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#inter-one::before,
+#inter-three::before,
+#inter-ten::before,
+#inter-fourteen::before,
+#inter-twenty-six::before,
+#inter-twenty-eight::before,
+#inter-thirty-seven::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#inter-one::after,
+#inter-three::after,
+#inter-ten::after,
+#inter-fourteen::after,
+#inter-twenty-six::after,
+#inter-twenty-eight::after,
+#inter-thirty-seven::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -22px;
+    right: -22px;
+    background-color: transparent;
+    box-shadow: -15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#inter-two::before,
+#inter-six::before,
+#inter-eleven::before,
+#inter-twenty-four::before,
+#inter-twenty-seven::before,
+#inter-twenty-nine::before,
+#inter-thirty-eight::before,
+#inter-forty-eight::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#inter-two::after,
+#inter-six::after,
+#inter-eleven::after,
+#inter-twenty-four::after,
+#inter-twenty-seven::after,
+#inter-twenty-nine::after,
+#inter-thirty-eight::after,
+#inter-forty-eight::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -22px;
+    left: -22px;
+    background-color: transparent;
+    box-shadow: 15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#inter-nine::before,
+#inter-sixteen::before,
+#inter-eighteen::before,
+#inter-thirty-two::before,
+#inter-forty-two::before,
+#inter-fifty-four::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#inter-nine::after,
+#inter-sixteen::after,
+#inter-eighteen::after,
+#inter-thirty-two::after,
+#inter-forty-two::after,
+#inter-fifty-four::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    left: -22px;
+    background-color: transparent;
+    box-shadow: 15px 15px 0 0 black;
+    z-index: 15;
+}
+
+#inter-eight::before,
+#inter-seventeen::before,
+#inter-twenty::before,
+#inter-thirty-one::before,
+#inter-forty-one::before,
+#inter-forty-six::before,
+#inter-fifty::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#inter-eight::after,
+#inter-seventeen::after,
+#inter-twenty::after,
+#inter-thirty-one::after,
+#inter-forty-one::after,
+#inter-forty-six::after,
+#inter-fifty::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    background-color: transparent;
+    box-shadow: -15px 15px 0 0 black;
+    z-index: 15;
+}
+
+
 
 /* ------------------------------------------------------------------------- Media Queries */
 

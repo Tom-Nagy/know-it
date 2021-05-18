@@ -437,7 +437,25 @@ for (let button of controlButtons) {
 
       // Get the available directions from this grid-area.
       availableDirections = gridItem.dataset.easyAvailableDirection;
-    }
+
+    } else if (level === "Scientist") {
+      let avatar = document.getElementById("inter-player");
+      let avatarPosition = avatar.className.substring(7);
+      let gridItemID = "inter-" + avatarPosition;
+      let gridItem = document.getElementById(gridItemID);
+
+      // Get the available directions from this grid-area.
+      availableDirections = gridItem.dataset.easyAvailableDirection;
+
+    } /*else if (level === "Genius") {
+      let avatar = document.getElementById("hard-player");
+      let avatarPosition = avatar.className.substring(7);
+      let gridItemID = "hard-" + avatarPosition;
+      let gridItem = document.getElementById(gridItemID);
+
+      // Get the available directions from this grid-area.
+      availableDirections = gridItem.dataset.easyAvailableDirection;
+    }*/
     console.log(availableDirections);
 
     // Check if the direction chosen is available for the player to move onto and get the new position.
@@ -468,7 +486,11 @@ function moveAvatar(newPosition) {
   let avatar;
   if (level === "Apprentice") {
     avatar = document.getElementById("easy-player");
-  }
+  } else if (level === "Scientist") {
+    avatar = document.getElementById("inter-player");
+  }/* else if (level === "Genius") {
+    avatar = document.getElementById("hard-player");
+  }*/
 
   let avatarClassList = avatar.classList;
   let avatarPosition = avatar.className.substring(7);
@@ -489,7 +511,13 @@ function checkForQuestion() {
   if (level === "Apprentice") {
     avatar = document.getElementById("easy-player");
     grid = document.getElementById("easy-game");
-  }
+  } else if (level === "Scientist") {
+    avatar = document.getElementById("inter-player");
+    grid = document.getElementById("inter-game");
+  }/* else if (level === "Genius") {
+    avatar = document.getElementById("hard-player");
+    grid = document.getElementById("hard-game");
+  }*/
 
   let avatarPosition = avatar.className.substring(7);
 
@@ -504,7 +532,7 @@ function checkForQuestion() {
   });
 }
 
-// Display the question.
+// Call the function to display questions depending on the level and the subject.
 function displayQuestion() {
   // Display the modal.
   let questionModal = document.getElementsByClassName("question-modal")[0];
@@ -552,6 +580,7 @@ function displayQuestion() {
   }
 }
 
+// Display the Question
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
@@ -636,6 +665,7 @@ function checkVolcanoEasyAnswer() {
     });
 }
 
+// Display the Question
 function populateJungleEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/jungle-easy-questions.JSON")
@@ -720,6 +750,7 @@ function checkJungleEasyAnswer() {
     });
 }
 
+// Display the Question
 function populateOceanEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/ocean-easy-questions.JSON")
@@ -804,6 +835,7 @@ function checkOceanEasyAnswer() {
     });
 }
 
+// Display the Question
 function populateEarthEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/earth-easy-questions.JSON")
