@@ -193,9 +193,9 @@ function setGameParameters() {
 
     // Hide the grids that are not being played.
     let interGrid = document.getElementById("inter-game");
-    //let hardGrid = document.getElementById("hard-game");
+    let hardGrid = document.getElementById("hard-game");
     interGrid.style.display = "none";
-    //hardGrid.style.display = "none";
+    hardGrid.style.display = "none";
 
   } else if (level === "Scientist") {
     let avatar = document.getElementById("inter-player");
@@ -209,27 +209,26 @@ function setGameParameters() {
 
     // Hide the grids that are not being played.
     let easyGrid = document.getElementById("easy-game");
-    //let hardGrid = document.getElementById("hard-game");
+    let hardGrid = document.getElementById("hard-game");
     easyGrid.style.display = "none";
-    //hardGrid.style.display = "none";
+    hardGrid.style.display = "none";
 
+  } else if (level === "Genius") {
+    let avatar = document.getElementById("hard-player");
+    avatar.classList.remove("hide");
+    let avatarPosition = avatar.className.substring(7);
+    avatar.classList.remove(avatarPosition);
+    avatar.classList.add("twenty-two");
+
+    let exit = document.querySelector(".grid-hard .labyrinth-exit");
+    exit.classList.remove("hide");
+
+    // Hide the grids that are not being played.
+    let easyGrid = document.getElementById("easy-game");
+    let interGrid = document.getElementById("inter-game");
+    easyGrid.style.display = "none";
+    interGrid.style.display = "none";
   }
-  /*else if (level === "Genius") {
-     let avatar = document.getElementById("hard-player");
-     avatar.classList.remove("hide");
-     let avatarPosition = avatar.className.substring(7);
-     avatar.classList.remove(avatarPosition);
-     avatar.classList.add("twenty-one");
-
-     let exit = document.querySelector(".grid-hard .labyrinth-exit");
-     exit.classList.remove("hide");
-
-     // Hide the grids that are not being played.
-     let easyGrid = document.getElementById("easy-game");
-     let interGrid = document.getElementById("inter-game");
-     easyGrid.style.display = "none";
-     interGrid.style.display = "none";
-   }*/
 
   // Set the array hosting the indexes questions depending on game's settings.
   if (level === "Apprentice" && subject.id === "volcano") {
@@ -240,7 +239,7 @@ function setGameParameters() {
     getOceanEasyQuestions();
   } else if (level === "Apprentice" && subject.id === "earth") {
     getEarthEasyQuestions();
-  }
+  } // ADD THE DIFFERENTE LEVEL BUT NEED THE JSON FILE FIRST AND AS WELL POPULATE-QUESTION AND CHECK-ANSWER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   // Set the localStorage items for the game data to zero
   // Score
@@ -288,29 +287,33 @@ function setGameParameters() {
 
 // Start the game and set game parameters.
 startButton.addEventListener("click", function () {
-  setGameParameters();
 
   // Get the game settings.
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
 
-  // Display the game modal.
-  let game = document.getElementById("game");
-  game.classList.add("modal-active");
-  gameOverlay.classList.add("overlay-active");
-
+  
   if (level !== "Set Level" && typeof subject !== "undefined") {
     displayTheme(subject);
+    
+    // Display the game modal.
+    let game = document.getElementById("game");
+    game.classList.add("modal-active");
+    gameOverlay.classList.add("overlay-active");
+
+    // Display the game settings (level  and subject) on the game interface.
+    document.querySelector("[data-game-level]").innerText = level;
+    document.querySelector("[data-game-subject]").innerText = subject.id;
+
+    // Set game parameters for a new party.
+    setGameParameters();
+
   } else if (level === "Set Level" || typeof subject === "undefined") {
     alert(
       `Oops, it didn't work!!
       PLease make sure you selected a SUBJECT and set the LEVEL ;)`
     );
   }
-
-  // Display the game settings on the game interface.
-  document.querySelector("[data-game-level]").innerText = level;
-  document.querySelector("[data-game-subject]").innerText = subject.id;
 });
 
 // ----------------- Display the game
@@ -381,11 +384,10 @@ function closeGame() {
   } else if (level === "Scientist") {
     let interGame = document.getElementById("inter-game");
     interGame.classList.add("hide");
+  } else if (level === "Genius") {
+    let hardGame = document.getElementById("hard-game");
+    hardGame.classList.add("hide");
   }
-  /*else if (level === "Genius") {
-     let hardGame = docuemnt.getElementById("hard-game");
-     hardGame.classList.add("hide");
-   }*/
 
   // Reset the Avatars and Exits Items to be hidden.
   let allAvatars = document.querySelectorAll(".avatar");
@@ -447,7 +449,7 @@ for (let button of controlButtons) {
       // Get the available directions from this grid-area.
       availableDirections = gridItem.dataset.easyAvailableDirection;
 
-    } /*else if (level === "Genius") {
+    } else if (level === "Genius") {
       let avatar = document.getElementById("hard-player");
       let avatarPosition = avatar.className.substring(7);
       let gridItemID = "hard-" + avatarPosition;
@@ -455,7 +457,7 @@ for (let button of controlButtons) {
 
       // Get the available directions from this grid-area.
       availableDirections = gridItem.dataset.easyAvailableDirection;
-    }*/
+    }
     console.log(availableDirections);
 
     // Check if the direction chosen is available for the player to move onto and get the new position.
@@ -488,9 +490,9 @@ function moveAvatar(newPosition) {
     avatar = document.getElementById("easy-player");
   } else if (level === "Scientist") {
     avatar = document.getElementById("inter-player");
-  }/* else if (level === "Genius") {
+  } else if (level === "Genius") {
     avatar = document.getElementById("hard-player");
-  }*/
+  }
 
   let avatarClassList = avatar.classList;
   let avatarPosition = avatar.className.substring(7);
@@ -514,10 +516,10 @@ function checkForQuestion() {
   } else if (level === "Scientist") {
     avatar = document.getElementById("inter-player");
     grid = document.getElementById("inter-game");
-  }/* else if (level === "Genius") {
+  } else if (level === "Genius") {
     avatar = document.getElementById("hard-player");
     grid = document.getElementById("hard-game");
-  }*/
+  }
 
   let avatarPosition = avatar.className.substring(7);
 
@@ -1000,6 +1002,10 @@ function checkForExit() {
 
   if (level === "Apprentice") {
     avatar = document.getElementById("easy-player");
+  } else if (level === "Scientist") {
+    avatar = document.getElementById("inter-player");
+  } else if (level === "Genius") {
+    avatar = document.getElementById("hard-player");
   }
 
   let avatarPosition = avatar.className.substring(7);

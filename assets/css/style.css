@@ -1041,6 +1041,8 @@ a {
     outline: none;
 }
 
+/* Player display */
+/* Easy grid */
 .avatar {
     height: 20px;
     width: 20px;
@@ -1074,6 +1076,46 @@ a {
     position: absolute;
     bottom: 4px;
     left: 4px;
+    box-shadow: 0 2px 0 0 black;
+}
+
+/* Inter and Hard grid */
+.grid-inter .avatar,
+.grid-hard .avatar {
+    height: 20px;
+    width: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    justify-self: center;
+    align-self: center;
+    z-index: 25;
+    position: relative;
+}
+
+.grid-inter .avatar::before,
+.grid-hard .avatar::before {
+    content: "";
+    height: 8px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    box-shadow: 7px 0 0 0 black;
+}
+
+.grid-inter .avatar::after,
+.grid-hard .avatar::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 4px;
+    left: 3px;
     box-shadow: 0 2px 0 0 black;
 }
 
@@ -1599,7 +1641,62 @@ a {
 #inter-fifty-one,
 #inter-fifty-two,
 #inter-fifty-three,
-#inter-fifty-four {
+#inter-fifty-four,
+/* -------------------------- Hard */
+#hard-one,
+#hard-two,
+#hard-three,
+#hard-four,
+#hard-five,
+#hard-six,
+#hard-seven,
+#hard-eight,
+#hard-nine,
+#hard-ten,
+#hard-eleven,
+#hard-twelve,
+#hard-thirteen,
+#hard-fourteen,
+#hard-fifteen,
+#hard-sixteen,
+#hard-seventeen,
+#hard-eighteen,
+#hard-nineteen,
+#hard-twenty,
+#hard-twenty-one,
+#hard-twenty-two,
+#hard-twenty-three,
+#hard-twenty-four,
+#hard-twenty-five,
+#hard-twenty-six,
+#hard-twenty-seven,
+#hard-twenty-eight,
+#hard-twenty-nine,
+#hard-thirty,
+#hard-thirty-one,
+#hard-thirty-two,
+#hard-thirty-three,
+#hard-thirty-four,
+#hard-thirty-five,
+#hard-thirty-six,
+#hard-thirty-seven,
+#hard-thirty-eight,
+#hard-thirty-nine,
+#hard-forty,
+#hard-forty-one,
+#hard-forty-two,
+#hard-forty-three,
+#hard-forty-four,
+#hard-forty-five,
+#hard-forty-six,
+#hard-forty-seven,
+#hard-forty-eight,
+#hard-forty-nine,
+#hard-fifty,
+#hard-fifty-one,
+#hard-fifty-two,
+#hard-fifty-three,
+#hard-fifty-four {
     justify-self: center;
     align-self: center;
     position: relative;
@@ -1608,7 +1705,7 @@ a {
 }
 
 
-/* ---------------------------------------- Easy level ---------------------------*/
+/* ---------------------------------------- Easy level/Grid ---------------------------*/
 .grid-easy {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -1820,7 +1917,7 @@ a {
 }
 
 
-/* ---------------------------------------- Intermediate level ---------------------------*/
+/* ---------------------------------------- Intermediate level/Grid ---------------------------*/
 .grid-inter {
     display: grid;
     grid-template-rows: repeat(9, 1fr);
@@ -2106,6 +2203,294 @@ a {
     z-index: 15;
 }
 
+/* ---------------------------------------- Hard level/Grid ---------------------------*/
+
+.grid-hard {
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "one two three four five six"
+        "seven eight nine ten eleven twelve"
+        "thirteen fourteen fifteen sixteen seventeen eighteen"
+        "nineteen twenty twenty-one twenty-two twenty-three twenty-four"
+        "twenty-five twenty-six twenty-seven twenty-eight twenty-nine thirty"
+        "thirty-one thirty-two thirty-three thirty-four thirty-five thirty-six"
+        "thirty-seven thirty-eight thirty-nine forty forty-one forty-two"
+        "forty-three forty-four forty-five forty-six forty-seven forty-eight"
+        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four";
+    min-width: 280px;
+    max-width: 600px;
+    min-height: 400px;
+
+    justify-content: center;
+    align-content: center;
+
+    background-color: black;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.grid-hard .path {
+    height: 40px;
+    width: 40px;
+}
+
+.grid-hard .exit-sign {
+    height: 30px;
+    width: 40px;
+}
+
+.grid-hard .question i {
+    font-size: 20px;
+}
+
+/* Path display */
+
+#hard-two::before,
+#hard-three::before,
+#hard-eight::before,
+#hard-twenty-seven::before,
+#hard-twenty-eight::before,
+#hard-thirty-three::before,
+#hard-thirty-four::before,
+#hard-thirty-five::before,
+#hard-thirty-nine::before,
+#hard-forty::before,
+#hard-forty-one::before,
+#hard-forty-five::before,
+#hard-fifty::before,
+#hard-fifty-one::before,
+#hard-fifty-four::before {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#hard-two::after,
+#hard-three::after,
+#hard-eight::after,
+#hard-twenty-seven::after,
+#hard-twenty-eight::after,
+#hard-thirty-three::after,
+#hard-thirty-four::after,
+#hard-thirty-five::after,
+#hard-thirty-nine::after,
+#hard-forty::after,
+#hard-forty-one::after,
+#hard-forty-five::after,
+#hard-fifty::after,
+#hard-fifty-one::after,
+#hard-fifty-four::after {
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#hard-twelve::before,
+#hard-fifteen::before,
+#hard-eighteen::before,
+#hard-nineteen::before,
+#hard-twenty-two::before,
+#hard-twenty-three::before,
+#hard-twenty-four::before,
+#hard-twenty-five::before,
+#hard-thirty::before,
+#hard-thirty-one::before,
+#hard-thirty-seven::before,
+#hard-forty-three::before {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#hard-twelve::after,
+#hard-fifteen::after,
+#hard-eighteen::after,
+#hard-nineteen::after,
+#hard-twenty-two::after,
+#hard-twenty-three::after,
+#hard-twenty-four::after,
+#hard-twenty-five::after,
+#hard-thirty::after,
+#hard-thirty-one::after,
+#hard-thirty-seven::after,
+#hard-forty-three::after {
+    content: "";
+    height: 98%;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 15;
+}
+
+#hard-one::before,
+#hard-five::before,
+#hard-thirteen::before,
+#hard-sixteen::before,
+#hard-twenty-six::before,
+#hard-thirty-eight::before,
+#hard-forty-seven::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#hard-one::after,
+#hard-five::after,
+#hard-thirteen::after,
+#hard-sixteen::after,
+#hard-twenty-six::after,
+#hard-thirty-eight::after,
+#hard-forty-seven::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -22px;
+    right: -22px;
+    background-color: transparent;
+    box-shadow: -15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#hard-four::before,
+#hard-six::before,
+#hard-nine::before,
+#hard-fourteen::before,
+#hard-seventeen::before,
+#hard-forty-two::before,
+#hard-forty-six::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px -20px 0 1px black;
+    z-index: 15;
+}
+
+#hard-four::after,
+#hard-six::after,
+#hard-nine::after,
+#hard-fourteen::after,
+#hard-seventeen::after,
+#hard-forty-two::after,
+#hard-forty-six::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -22px;
+    left: -22px;
+    background-color: transparent;
+    box-shadow: 15px -15px 0 0 black;
+    z-index: 15;
+}
+
+#hard-eleven::before,
+#hard-twenty-one::before,
+#hard-twenty-nine::before,
+#hard-thirty-six::before,
+#hard-forty-eight::before,
+#hard-fifty-two::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: transparent;
+    box-shadow: 19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#hard-eleven::after,
+#hard-twenty-one::after,
+#hard-twenty-nine::after,
+#hard-thirty-six::after,
+#hard-forty-eight::after,
+#hard-fifty-two::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    left: -22px;
+    background-color: transparent;
+    box-shadow: 15px 15px 0 0 black;
+    z-index: 15;
+}
+
+#hard-seven::before,
+#hard-ten::before,
+#hard-twenty::before,
+#hard-thirty-two::before,
+#hard-forty-four::before,
+#hard-forty-nine::before,
+#hard-fifty-three::before {
+    content: "";
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: transparent;
+    box-shadow: -19px 20px 0 1px black;
+    z-index: 15;
+}
+
+#hard-seven::after,
+#hard-ten::after,
+#hard-twenty::after,
+#hard-thirty-two::after,
+#hard-forty-four::after,
+#hard-forty-nine::after,
+#hard-fifty-three::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    background-color: transparent;
+    box-shadow: -15px 15px 0 0 black;
+    z-index: 15;
+}
 
 
 /* ------------------------------------------------------------------------- Media Queries */
