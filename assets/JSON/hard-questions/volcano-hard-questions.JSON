@@ -1,0 +1,100 @@
+[
+  {
+    "question": "The tectonic plates form?",
+    "optionOne": "The listhophere.",
+    "optionTwo": "The asthenosphere.",
+    "optionThree": "The paleosphere.",
+    "correctAnswer": "The listhophere."
+  },
+  {
+    "question": "Except tectonic plates boundaries, where can we find volcanoes?",
+    "optionOne": "In hotzones.",
+    "optionTwo": "In hotspots.",
+    "optionThree": "At subduction zones.",
+    "correctAnswer": "In hotspots."
+  },
+  {
+    "question": "At what rate tectonic plates progress?",
+    "optionOne": "Between 3 and 5cms a year.",
+    "optionTwo": "Between 5 and 8cms a year.",
+    "optionThree": "Between 8 and 10cms a year.",
+    "correctAnswer": "Between 3 and 5cms a year."
+  },
+  {
+    "question": "Which of the following is not a tectonic boundary type?",
+    "optionOne": "Divergent.",
+    "optionTwo": "Transform.",
+    "optionThree": "Adjacent.",
+    "correctAnswer": "Adjacent."
+  },
+  {
+    "question": "Which of the following is a tectonic boundary type?",
+    "optionOne": "Opposite.",
+    "optionTwo": "Convergent.",
+    "optionThree": "Lateral.",
+    "correctAnswer": "Convergent."
+  },
+  {
+    "question": "Which volcano type creates hudge crater?",
+    "optionOne": "Composite volcano.",
+    "optionTwo": "Dome volcano.",
+    "optionThree": "Caldera volcano.",
+    "correctAnswer": "Caldera volcano."
+  },
+  {
+    "question": "What characterize volcano types?",
+    "optionOne": "The lava flow.",
+    "optionTwo": "The slope angle or steepness.",
+    "optionThree": "The explosion's violence.",
+    "correctAnswer": "The lava flow."
+  },
+  {
+    "question": "What characterized volcanic eruption in detailed classification?",
+    "optionOne": "Seismologic activity and ground composition.",
+    "optionTwo": "Volcanic activity type and location.",
+    "optionThree": "Tectonic plates names that created them.",
+    "correctAnswer": "Volcanic activity type and location."
+  },
+  {
+    "question": "Which of the following is not a type erruption?",
+    "optionOne": "Hawaiian.",
+    "optionTwo": "Pelean.",
+    "optionThree": "Italian.",
+    "correctAnswer": "Italian."
+  },
+  {
+    "question": "Which is the most destructive and intense volcanic erruption?",
+    "optionOne": "Plinian.",
+    "optionTwo": "Icelandic.",
+    "optionThree": "Stombolian.",
+    "correctAnswer": "Plinian."
+  },
+  {
+    "question": "What type of glass lava can create?",
+    "optionOne": "Vesicles.",
+    "optionTwo": "Obsidian.",
+    "optionThree": "Basalt.",
+    "correctAnswer": "Obsidian."
+  },
+  {
+    "question": "What can create volcanic chain?",
+    "optionOne": "earthquakes.",
+    "optionTwo": "Magma chambers.",
+    "optionThree": "Hotspots.",
+    "correctAnswer": "Hotspots."
+  },
+  {
+    "question": "What is the hottest lava temperature?",
+    "optionOne": "About 1100 celsius degree.",
+    "optionTwo": "About 800 celsius degree.",
+    "optionThree": "About 100 celsius degree.",
+    "correctAnswer": "About 1100 celsius degree."
+  },
+  {
+    "question": "What is a plume composed of?",
+    "optionOne": "Volcanic water.",
+    "optionTwo": "Volcanic ash.",
+    "optionThree": "Volcanic smoke.",
+    "correctAnswer": "Volcanic ash."
+  }
+]

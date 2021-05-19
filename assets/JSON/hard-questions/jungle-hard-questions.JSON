@@ -1,0 +1,100 @@
+[
+  {
+    "question": "How much of the earth surface rainforests cover?",
+    "optionOne": "4%.",
+    "optionTwo": "12%.",
+    "optionThree": "18%.",
+    "correctAnswer": "4%."
+  },
+  {
+    "question": "How large is the canopy layer?",
+    "optionOne": "About 3 meters.",
+    "optionTwo": "About 6 meters.",
+    "optionThree": "About 9 meters.",
+    "correctAnswer": "About 6 meters."
+  },
+  {
+    "question": "What layer of the rainforest is the darkest?",
+    "optionOne": "The Canopy Layer.",
+    "optionTwo": "The Understory Layer.",
+    "optionThree": "The Forest Floor.",
+    "correctAnswer": "The Forest Floor."
+  },
+  {
+    "question": "Which of the rainforest layer is home to the most animals?",
+    "optionOne": "Canopy.",
+    "optionTwo": "Understory.",
+    "optionThree": "Forest floor.",
+    "correctAnswer": "Canopy."
+  },
+  {
+    "question": "What specialization flowers of the understory develop?",
+    "optionOne": "Long stem.",
+    "optionTwo": "Strong sent.",
+    "optionThree": "Light color.",
+    "correctAnswer": "Strong sent."
+  },
+  {
+    "question": "What is specialization?",
+    "optionOne": "The amount of different species in one place.",
+    "optionTwo": "The type of food a species is attracted to.",
+    "optionThree": "Strategies and innovations develop by species to survive.",
+    "correctAnswer": "Strategies and innovations develop by species to survive."
+  },
+  {
+    "question": "How much of the species rainforest host is likely to be lost evey decade?",
+    "optionOne": "None.",
+    "optionTwo": "Between 5 and 10%.",
+    "optionThree": "More than 50%.",
+    "correctAnswer": "Between 5 and 10%."
+  },
+  {
+    "question": "Why plants of the rainforest developed leaves with pointy tips?",
+    "optionOne": "so the wind doesn't blow the leaves away.",
+    "optionTwo": "So the water doesn't stay on the leaves avoiding the development of fungus.",
+    "optionThree": "To fight aginst insects that eat their leaves.",
+    "correctAnswer": "So the water doesn't stay on the leaves avoiding the development of fungus."
+  },
+  {
+    "question": "how are called the pointy tips leaves that plants of the rainforest developed?",
+    "optionOne": "Drip tips.",
+    "optionTwo": "Dry tips.",
+    "optionThree": "Hydro tips.",
+    "correctAnswer": "Drip tips."
+  },
+  {
+    "question": "What is foliage?",
+    "optionOne": "The fact of having no leaves.",
+    "optionTwo": "The leafy parts of a tree or a plant.",
+    "optionThree": "The layer of leaves fallen on the forest floor.",
+    "correctAnswer": "The leafy parts of a tree or a plant."
+  },
+  {
+    "question": "What is biodiversity?",
+    "optionOne": "What is common in all species.",
+    "optionTwo": "The science of life and living organisms.",
+    "optionThree": "A measure of the diversity of species.",
+    "correctAnswer": "A measure of the diversity of species."
+  },
+  {
+    "question": "How long can live the Brazil nut tree?",
+    "optionOne": "120 years.",
+    "optionTwo": "600 years.",
+    "optionThree": "1000 years.",
+    "correctAnswer": "1000 years."
+  },
+  {
+    "question": "What are epiphytes?",
+    "optionOne": "Plants that only grow on other trees.",
+    "optionTwo": "Plants that eat insects.",
+    "optionThree": "Plants that grow in an epi shape.",
+    "correctAnswer": "Plants that only grow on other trees."
+  },
+  {
+    "question": "What is the food chain?",
+    "optionOne": "It describes the way fruits are attached to trees.",
+    "optionTwo": "It describes how different organisms eat each other.",
+    "optionThree": "The quatity of food an animal eat in a periode of time.",
+    "correctAnswer": "It describes how different organisms eat each other."
+  }
+]

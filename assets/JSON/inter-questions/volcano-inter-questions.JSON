@@ -1,0 +1,100 @@
+[
+  {
+    "question": "Where are found most of the volcanoes?",
+    "optionOne": "Close to the tectonic plates boundaries.",
+    "optionTwo": "Where the ground is soft.",
+    "optionThree": "On the continental crust .",
+    "correctAnswer": "Close to the tectonic plates boundaries."
+  },
+  {
+    "question": "From which layer of the earth magma comes from?",
+    "optionOne": "The inner core.",
+    "optionTwo": "The mantle.",
+    "optionThree": "The Crust.",
+    "correctAnswer": "The mantle."
+  },
+  {
+    "question": "What composes the earth's crust?",
+    "optionOne": "The continental and oceanic crust.",
+    "optionTwo": "The upper and lower mantle.",
+    "optionThree": "The oceans and continents.",
+    "correctAnswer": "The continental and oceanic crust."
+  },
+  {
+    "question": "What are tectonic plates?",
+    "optionOne": "Seismic zones.",
+    "optionTwo": "Continents.",
+    "optionThree": "Sections of rocks constantly moving.",
+    "correctAnswer": "Sections of rocks constantly moving."
+  },
+  {
+    "question": "Where is magma collected?",
+    "optionOne": "In a magma room.",
+    "optionTwo": "In a magma box.",
+    "optionThree": "In a magma chamber.",
+    "correctAnswer": "In a magma chamber."
+  },
+  {
+    "question": "Which of the volcano types is the result of low viscosity lava?",
+    "optionOne": "Shield volcano.",
+    "optionTwo": "Dome volcano.",
+    "optionThree": "Caldera volcano.",
+    "correctAnswer": "Shield volcano."
+  },
+  {
+    "question": "What is the other name for composite volcano?",
+    "optionOne": "Compovolcano.",
+    "optionTwo": "Stratovolcano.",
+    "optionThree": "Bulkovolcano.",
+    "correctAnswer": "Stratovolcano."
+  },
+  {
+    "question": "What characterized explosive eruption?",
+    "optionOne": "Outpouring of lava with low viscosity and gas.",
+    "optionTwo": "Volcano's hight and location.",
+    "optionThree": "Violent gas, ahes and rocks emission.",
+    "correctAnswer": "Violent gas, ahes and rocks emission."
+  },
+  {
+    "question": "What characterized effusive eruption?",
+    "optionOne": "Outpouring of lava with low viscosity and gas.",
+    "optionTwo": "Violent gas, ahes and rocks emission.",
+    "optionThree": "Number of volcanic eruptions in the past 10 years.",
+    "correctAnswer": "Outpouring of lava with low viscosity and gas."
+  },
+  {
+    "question": "Which of the following isn't a type of volcanic erruption?",
+    "optionOne": "Vulcanian.",
+    "optionTwo": "Latin.",
+    "optionThree": "Pelean.",
+    "correctAnswer": "Latin."
+  },
+  {
+    "question": "Where are found 90% of the active vocanoes?",
+    "optionOne": "In the Atlantic Ring of Fire.",
+    "optionTwo": "In the Arctic Ring of Fire.",
+    "optionThree": "In the Pacific Ring of Fire.",
+    "correctAnswer": "In the Pacific Ring of Fire."
+  },
+  {
+    "question": "What is the longest mountain range on earth?",
+    "optionOne": "The mid-ocean ridge.",
+    "optionTwo": "The himalayas.",
+    "optionThree": "The mariana trench.",
+    "correctAnswer": "The mid-ocean ridge."
+  },
+  {
+    "question": "What act as giant moving belt for the tectonic plates?",
+    "optionOne": "The inner core.",
+    "optionTwo": "The astenosphere.",
+    "optionThree": "The oceanic crust.",
+    "correctAnswer": "The astenosphere."
+  },
+  {
+    "question": "A fast moving mudflow made of volcanic ash and water is the definition of?",
+    "optionOne": "Brown lava.",
+    "optionTwo": "Volcanic mud.",
+    "optionThree": "Lahar.",
+    "correctAnswer": "Lahar."
+  }
+]

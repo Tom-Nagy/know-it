@@ -28,25 +28,11 @@
     "correctAnswer": "American."
   },
   {
-    "question": "How is called the zone defined by the tidal range?",
-    "optionOne": "Intertidal zone.",
-    "optionTwo": "Midtidal zone.",
-    "optionThree": "Ecotidal zone.",
-    "correctAnswer": "Intertidal zone."
-  },
-  {
     "question": "How much oxygen is produced by the ocean?",
     "optionOne": "About 20%.",
     "optionTwo": "About 50%.",
     "optionThree": "About 70%.",
     "correctAnswer": "About 50%."
-  },
-  {
-    "question": "Which of the following facts is false?",
-    "optionOne": "More than 80% of the ocean is unexplored.",
-    "optionTwo": "Water takes about 1000 years to travel all the way around the globe.",
-    "optionThree": "Less than 60% of the total water on Earth is in the Ocean.",
-    "correctAnswer": "Less than 60% of the total water on Earth is in the Ocean."
   },
   {
     "question": "Wich is the largest ocean?",
@@ -56,25 +42,11 @@
     "correctAnswer": "Pacific."
   },
   {
-    "question": "What is oceanology?",
-    "optionOne": "The study of Earth surface.",
-    "optionTwo": "The study of the ocean.",
-    "optionThree": "Whom study the ocean.",
-    "correctAnswer": "The study of the ocean."
-  },
-  {
     "question": "Which of the folling is not plankton?",
     "optionOne": "Phytoplankton.",
     "optionTwo": "Zooplankton.",
     "optionThree": "Oceoplankton.",
     "correctAnswer": "Oceoplankton."
-  },
-  {
-    "question": "What is evaporation?",
-    "optionOne": "Water changing state from liquid to vapor.",
-    "optionTwo": "Water changing state from solid to liquid.",
-    "optionThree": "Water changing state from solid to vapor.",
-    "correctAnswer": "Water changing state from liquid to vapor."
   },
   {
     "question": "Which of the oceans is the warmest?",

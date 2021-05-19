@@ -1,0 +1,100 @@
+[
+  {
+    "question": "What is an ebb tide?",
+    "optionOne": "When the tide is going towards the low tide.",
+    "optionTwo": "When the level of the water is still.",
+    "optionThree": "When the tide is going towards the hight tide.",
+    "correctAnswer": "When the tide is going towards the low tide."
+  },
+  {
+    "question": "How is called the low point of the tide?",
+    "optionOne": "The down tide.",
+    "optionTwo": "The low tide.",
+    "optionThree": "The bottom tide.",
+    "correctAnswer": "The low tide."
+  },
+  {
+    "question": "What kind of energy is transmitted by a wave?",
+    "optionOne": "Elastic energy.",
+    "optionTwo": "Thermal energy.",
+    "optionThree": "kinetic energy.",
+    "correctAnswer": "kinetic energy."
+  },
+  {
+    "question": "What are called waves that appear without being expected and of unexpected size?",
+    "optionOne": "Rogue waves.",
+    "optionTwo": "Hidden waves.",
+    "optionThree": "Random waves.",
+    "correctAnswer": "Rogue waves."
+  },
+  {
+    "question": "Who produce the most oxygen on earth?",
+    "optionOne": "Trees.",
+    "optionTwo": "Phytoplankton.",
+    "optionThree": "Zooplankton.",
+    "correctAnswer": "Phytoplankton."
+  },
+  {
+    "question": "What is evaporation?",
+    "optionOne": "Water changing state from liquid to vapor.",
+    "optionTwo": "Water changing state from solid to liquid.",
+    "optionThree": "Water changing state from solid to vapor.",
+    "correctAnswer": "Water changing state from liquid to vapor."
+  },
+  {
+    "question": "How is called the zone defined by the tidal range?",
+    "optionOne": "Intertidal zone.",
+    "optionTwo": "Midtidal zone.",
+    "optionThree": "Ecotidal zone.",
+    "correctAnswer": "Intertidal zone."
+  },
+  {
+    "question": "Which of the following facts is false?",
+    "optionOne": "More than 80% of the ocean is unexplored.",
+    "optionTwo": "Water takes about 1000 years to travel all the way around the globe.",
+    "optionThree": "Less than 60% of the total water on Earth is in the Ocean.",
+    "correctAnswer": "Less than 60% of the total water on Earth is in the Ocean."
+  },
+  {
+    "question": "What is the name of the fish leaving on earth 300 million years ago and still swiming the ocean?",
+    "optionOne": "The coelacanth.",
+    "optionTwo": "The cyprinus carpio.",
+    "optionThree": "The oncorhyncus keta.",
+    "correctAnswer": "The coelacanth."
+  },
+  {
+    "question": "What is deposition?",
+    "optionOne": "Water changing state from solid to liquid.",
+    "optionTwo": "Water changing state from vapor to solid.",
+    "optionThree": "Water changing state from liquid to solid.",
+    "correctAnswer": "Water changing state from vapor to solid."
+  },
+  {
+    "question": "What is the largest living organism on earth that can be seen from the Moon?",
+    "optionOne": "The Blue Whale.",
+    "optionTwo": "The Polar Bear.",
+    "optionThree": "The Great Barrier Reef.",
+    "correctAnswer": "The Great Barrier Reef."
+  },
+  {
+    "question": "What is oceanology?",
+    "optionOne": "The study of Earth surface.",
+    "optionTwo": "The study of the ocean.",
+    "optionThree": "Whom study the ocean.",
+    "correctAnswer": "The study of the ocean."
+  },
+  {
+    "question": "What causes tides?",
+    "optionOne": "Gravitational forces.",
+    "optionTwo": "Waves.",
+    "optionThree": "Ocean currents.",
+    "correctAnswer": "Gravitational forces."
+  },
+  {
+    "question": "What is the deepest part of the ocean at more than 10 kms?",
+    "optionOne": "The Philippine Trench.",
+    "optionTwo": "The Tonga Trench.",
+    "optionThree": "The Marina Trench.",
+    "correctAnswer": "The Marina Trench."
+  }
+]

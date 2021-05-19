@@ -1,0 +1,100 @@
+[
+  {
+    "question": "What is latest ocean created?",
+    "optionOne": "The Arctic.",
+    "optionTwo": "The Antarctic.",
+    "optionThree": "The Indian.",
+    "correctAnswer": "The Arctic."
+  },
+  {
+    "question": "Where is the salt of the ocean mainly from?",
+    "optionOne": "Melting ice caps.",
+    "optionTwo": "Erosion of rocks on land.",
+    "optionThree": "Rain.",
+    "correctAnswer": "Erosion of rocks on land."
+  },
+  {
+    "question": "What is the color of the ocean?",
+    "optionOne": "Transparent.",
+    "optionTwo": "It depends on the sky.",
+    "optionThree": "Blue-green.",
+    "correctAnswer": "Blue-green."
+  },
+  {
+    "question": "How many tides occur each day?",
+    "optionOne": "2.",
+    "optionTwo": "3.",
+    "optionThree": "4.",
+    "correctAnswer": "2."
+  },
+  {
+    "question": "What is a flood tide?",
+    "optionOne": "When the tide is going towards the low tide.",
+    "optionTwo": "When the level of the water is still.",
+    "optionThree": "When the tide is going towards the hight tide.",
+    "correctAnswer": "When the tide is going towards the hight tide."
+  },
+  {
+    "question": "What is an ocean current?",
+    "optionOne": "The conductivity of the water.",
+    "optionTwo": "A continuous movement of water.",
+    "optionThree": "A still body of water.",
+    "correctAnswer": "A continuous movement of water."
+  },
+  {
+    "question": "What are created by wind, water temperature, salinity and tides?",
+    "optionOne": "Ocean's currents.",
+    "optionTwo": "Ocean's waves.",
+    "optionThree": "Ocean's names.",
+    "correctAnswer": "Ocean currents."
+  },
+  {
+    "question": "Why is the ocean playing an important role in the climate regulation?",
+    "optionOne": "Because It is cold.",
+    "optionTwo": "Because it transports heat from the equator to the poles.",
+    "optionThree": "Because it is hugely used for transportation.",
+    "correctAnswer": "Because it transports heat from the equator to the poles."
+  },
+  {
+    "question": "How much of the total water on earth is in the ocean?",
+    "optionOne": "About 50%.",
+    "optionTwo": "About 70%.",
+    "optionThree": "About 90%.",
+    "correctAnswer": "About 90%."
+  },
+  {
+    "question": "How much of the esrth surface is covered by the Pacific Ocean?",
+    "optionOne": "30%.",
+    "optionTwo": "40%.",
+    "optionThree": "50%.",
+    "correctAnswer": "30%."
+  },
+  {
+    "question": "What is sublimation?",
+    "optionOne": "Water changing state from liquid to vapor.",
+    "optionTwo": "Water changing state from solid to liquid.",
+    "optionThree": "Water changing state from solid to vapor.",
+    "correctAnswer": "Water changing state from solid to vapor."
+  },
+  {
+    "question": "What is water vapor?",
+    "optionOne": "A gas invisible to the eye.",
+    "optionTwo": "A cloud.",
+    "optionThree": "Liquid water.",
+    "correctAnswer": "A gas invisible to the eye."
+  },
+  {
+    "question": "If all the salt of the ocean would be spread on the earth land surface, how hight would it go?",
+    "optionOne": "50 meters.",
+    "optionTwo": "150 meters.",
+    "optionThree": "300 meters.",
+    "correctAnswer": "150 meters."
+  },
+  {
+    "question": "What is the name of the current that transport more water than all the rivers on earth combined?",
+    "optionOne": "The North Pacific Drift.",
+    "optionTwo": "Equatorial Countercurrent.",
+    "optionThree": "The Gulf Stream.",
+    "correctAnswer": "The Gulf Stream."
+  }
+]

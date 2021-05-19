@@ -7,32 +7,11 @@
     "correctAnswer": "Between 200 and 600 cms."
   },
   {
-    "question": "What does equable mean?",
-    "optionOne": "With the same amount.",
-    "optionTwo": "With not much variation.",
-    "optionThree": "Within the equator.",
-    "correctAnswer": "With not much variation."
-  },
-  {
-    "question": "What is humus?",
-    "optionOne": "The decay of the forest elements.",
-    "optionTwo": "A species of frog.",
-    "optionThree": "The name a flower that only Grows in the jungle.",
-    "correctAnswer": "The decay of the forest elements."
-  },
-  {
     "question": "Which of the following is not a jungle layer?",
     "optionOne": "Canopy.",
     "optionTwo": "Understory.",
     "optionThree": "Bushy.",
     "correctAnswer": "Bushy."
-  },
-  {
-    "question": "What is buttress roots?",
-    "optionOne": "An animal only living in tree's roots.",
-    "optionTwo": "Shallow and widespread roots structure.",
-    "optionThree": "A name given to very soft roots.",
-    "correctAnswer": "Shallow and widespread roots structure."
   },
   {
     "question": "Which of the following facts is true?",
@@ -49,20 +28,6 @@
     "correctAnswer": "The jungle is so vast that it does not encourage specialization."
   },
   {
-    "question": "Wich is the largest rainforest?",
-    "optionOne": "The Amazon.",
-    "optionTwo": "The Daintree.",
-    "optionThree": "The Congo.",
-    "correctAnswer": "The Amazon."
-  },
-  {
-    "question": "What is biology?",
-    "optionOne": "The science of organism living in pairs.",
-    "optionTwo": "The science of life and living organisms.",
-    "optionThree": "The person that study the Earth.",
-    "correctAnswer": "The science of life and living organisms."
-  },
-  {
     "question": "Which of the following is false?",
     "optionOne": "Sometimes it froze in the jungle.",
     "optionTwo": "The temperature rarely exceed 35 celsius degrees in the jungle.",
@@ -75,12 +40,5 @@
     "optionTwo": "The forest floor in the rainforest is the brigthest.",
     "optionThree": "The average humidity in the rainforest is very high and around 80%.",
     "correctAnswer": "The average humidity in the rainforest is very high and around 80%."
-  },
-  {
-    "question": "About 25% of what comes from the Jungle?",
-    "optionOne": "Medicines.",
-    "optionTwo": "Wood.",
-    "optionThree": "Water.",
-    "correctAnswer": "Medicines."
   }
 ]
