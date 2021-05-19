@@ -1,1234 +1,1059 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
-      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!"
-    />
-    <meta
-      name="keywords"
-      content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
-      volcano, jungle, ocean, earth"
-    />
-    <meta name="author" content="Know It" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/a5ee39e432.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
+      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!" />
+  <meta name="keywords" content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
+      volcano, jungle, ocean, earth" />
+  <meta name="author" content="Know It" />
 
-    <!-- Favicon implementation from favicon.io(https://favicon.io/favicon-converter/) -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon/favicon-16x16.png"
-    />
-    <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a5ee39e432.js" crossorigin="anonymous"></script>
 
-    <title>Know It</title>
-    <link rel="stylesheet" href="assets/css/style.css" media="all" />
-  </head>
+  <!-- Favicon implementation from favicon.io(https://favicon.io/favicon-converter/) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
+  <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest" /> -->
 
-  <body>
-      <header>
-        <!-- Navigation bar -->
-        <nav>
-          <!-- Logo -->
-          <a href="index.html" class="logo" aria-label="Link to the home page.">
-            <img
-              src="assets/images/logo/logo.png"
-              alt="Know It logo representing a smiling friendly brain with eyes."
-              title="Link to the home page."
-              height="40"
-              width="40"
-            />
-          </a>
+  <title>Know It</title>
+  <link rel="stylesheet" href="assets/css/style.css" media="all" />
+</head>
 
-          <!--Dropdown navigation menu for all devices -->
-          <button id="navigation-button" class="menu-icon" aria-label="Navigation menu.">
-            <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-            <img
-              src="assets/images/icons/menu.png"
-              alt="Icon of a book."
-              title="Navigation menu."
-              height="40"
-              width="40"
-            />
-            <span class="menu-text">Menu</span>
-          </button>
+<body>
+  <header>
+    <!-- Navigation bar -->
+    <nav>
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Link to the home page.">
+        <img src="assets/images/logo/logo.png" alt="Know It logo representing a smiling friendly brain with eyes."
+          title="Link to the home page." height="40" width="40" />
+      </a>
 
-          <div class="navigation-menu">
-            <ul class="navigation-list">
-              <li class="navigation-items">
-                <a
-                  href="index.html"
-                  class="navigation-links"
-                  aria-label="Link to the home page."
-                >
-                  Home
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="about.html"
-                  class="navigation-links"
-                  aria-label="Link to the about page."
-                >
-                  About
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="study.html"
-                  class="navigation-links"
-                  aria-label="Link to the study page."
-                >
-                  Study
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="play.html"
-                  class="navigation-links"
-                  aria-label="Link to the play page."
-                >
-                  Play
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="contact.html"
-                  class="navigation-links"
-                  aria-label="Link to the contact page."
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <!--Dropdown navigation menu for all devices -->
+      <button id="navigation-button" class="menu-icon" aria-label="Navigation menu.">
+        <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+        <img src="assets/images/icons/menu.png" alt="Icon of a book." title="Navigation menu." height="40" width="40" />
+        <span class="menu-text">Menu</span>
+      </button>
 
-      <!-- Heading -->
-      <div class="heading">
-        <h2>Study</h2>
+      <div class="navigation-menu">
+        <ul class="navigation-list">
+          <li class="navigation-items">
+            <a href="index.html" class="navigation-links" aria-label="Link to the home page.">
+              Home
+            </a>
+          </li>
+          <li class="navigation-items">
+            <a href="about.html" class="navigation-links" aria-label="Link to the about page.">
+              About
+            </a>
+          </li>
+          <li class="navigation-items">
+            <a href="study.html" class="navigation-links" aria-label="Link to the study page.">
+              Study
+            </a>
+          </li>
+          <li class="navigation-items">
+            <a href="play.html" class="navigation-links" aria-label="Link to the play page.">
+              Play
+            </a>
+          </li>
+          <li class="navigation-items">
+            <a href="contact.html" class="navigation-links" aria-label="Link to the contact page.">
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
+    </nav>
+  </header>
 
-      <!-- Study section -->
-      <section class="study-section">
-        <!-- Subtitle section -->
-        <div class="study-explanations">
-          <p>
-            To choose a subject, click on it!
-            <br />
-            <span>Earth corresponds to the compilation of all the other subjects!</span><br>
-            <span>
-              If you want to discover in depth some sections, look for the
-              magnifier:
-              <button class="magnifier">
-                <i class="fas fa-search-plus"></i>
-              </button>
-            </span>
-          </p>
-        </div>
+  <!-- Heading -->
+  <div class="heading">
+    <h2>Study</h2>
+  </div>
 
-        <!-- Main section -->
-        <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
+  <!-- Study section -->
+  <section class="study-section">
+    <!-- Subtitle section -->
+    <div class="study-explanations">
+      <p>
+        To choose a subject, click on it!
+        <br />
+        <span>Earth corresponds to the compilation of all the other subjects!</span><br>
+        <span>
+          If you want to discover in depth some sections, look for the
+          magnifier:
+          <button class="magnifier">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </span>
+      </p>
+    </div>
+
+    <!-- Main section -->
+    <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
           * [Volcano](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
           * [Jungle](https://www.flaticon.com/free-icon/volcano_2206644?term=volcano&page=1&position=3&page=1&position=3&related_id=2206644&origin=search)
           * [Ocean](https://www.flaticon.com/free-icon/ocean_3254422?term=ocean&page=1&position=8&page=1&position=8&related_id=3254422&origin=search)
           * [Earth](https://www.flaticon.com/free-icon/earth-globe_616616?term=earth&page=1&position=12&page=1&position=12&related_id=616616&origin=search) -->
-        <div class="subjects-section">
-          <button class="subjects-buttons volcano-button study-subjects">
-            <img
-              src="assets/images/icons/volcano.png"
-              alt="Volcano icon."
-              title="Volcano icon."
-              height="50"
-              width="50"
-            />
-          </button>
-          <button class="subjects-buttons jungle-button study-subjects">
-            <img
-              src="assets/images/icons/jungle.png"
-              alt="Jungle icon."
-              title="Jungle icon."
-              height="50"
-              width="50"
-            />
-          </button>
-          <button class="subjects-buttons ocean-button study-subjects">
-            <img
-              src="assets/images/icons/ocean.png"
-              alt="Ocean icon."
-              title="Ocean icon."
-              height="50"
-              width="50"
-            />
-          </button>
-          <button class="subjects-buttons earth-button study-subjects">
-            <img
-              src="assets/images/icons/earth-globe.png"
-              alt="Earth icon."
-              title="Earth icon."
-              height="50"
-              width="50"
-            />
-          </button>
+    <div class="subjects-section">
+      <button class="subjects-buttons volcano-button study-subjects">
+        <img src="assets/images/icons/volcano.png" alt="Volcano icon." title="Volcano icon." height="50" width="50" />
+      </button>
+      <button class="subjects-buttons jungle-button study-subjects">
+        <img src="assets/images/icons/jungle.png" alt="Jungle icon." title="Jungle icon." height="50" width="50" />
+      </button>
+      <button class="subjects-buttons ocean-button study-subjects">
+        <img src="assets/images/icons/ocean.png" alt="Ocean icon." title="Ocean icon." height="50" width="50" />
+      </button>
+      <button class="subjects-buttons earth-button study-subjects">
+        <img src="assets/images/icons/earth-globe.png" alt="Earth icon." title="Earth icon." height="50" width="50" />
+      </button>
+    </div>
+
+    <p class="go-play">
+      Ready to test your knowledge?<br>
+      Then let's play: <a href="play.html" class="buttons small-buttons play-button">Play</a>
+    </p>
+
+    <section class="subject-content-wrapper">
+      <!-- Volcano article -->
+      <article class="subject-content volcano show">
+        <h4 class="heading">Volcano</h4>
+
+        <h5>Definition:</h5>
+        <p>
+          Volcanoes have different shapes and forms. Some look like mountains
+          (<em>cone like shape</em>) from which molten rocks and gas can
+          erupt. In simple words, it is an opening through the Earth crust.
+          <br />
+          When a volcano in not in eruption, everything is happening inside
+          it. But what is going on in there?
+        </p>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            Volcanoes are formed when hot liquid, molten rocks and gas, known
+            as magma is forced to the surface of the earth by natural forces
+            such as temperature and pressure. During this process the land
+            around the column of magma rises to form the shape of the
+            volcano<br />
+            Most of the volcanoes are situated close to the tectonic plates boundaries.
+            But they can appear other places too.
+          </p>
         </div>
 
-        <p class="go-play">
-          Ready to test your knowledge?<br>
-          Then let's play: <a href="play.html" class="buttons small-buttons play-button">Play</a>
+        <h5>How Does It Work?</h5>
+
+        <h6>The Layers</h6>
+        <div class="images-container">
+          <!-- [Infographic vector created by brgfx - www.freepik.com<](https://www.freepik.com/vectors/infographic)-->
+          <img src="assets/images/subjects-images/volcano/earth-structure.jpg"
+            alt="Illustration of the different layers of the planet Earth."
+            title="Illustration of the different layers of the planet Earth." height="600" width="600" />
+        </div>
+        <p>
+          Our loved planet Earth is not solid everywhere! And volcanoes are
+          proof of it. As you can see on the illustration, we live on a the
+          outer part of the planet called the <strong>crust</strong>. It is
+          about 35 kilometers thick and the thinnest layer. Deeper within the
+          Earth and surrounding the planet's core is a liquid layer called the
+          <strong>outer core</strong>. The <strong>mantle</strong> (<em>composed of the upper and lower mantle</em>)
+          sometimes produces the <strong>magma</strong> that flows out of the volcanoes
+          as <strong>lava</strong>.
         </p>
 
-        <section class="subject-content-wrapper">
-          <!-- Volcano article -->
-          <article class="subject-content volcano show">
-            <h4 class="heading">Volcano</h4>
-
-            <h5>Definition:</h5>
-            <p>
-              Volcanoes have different shapes and forms. Some look like mountains
-              (<em>cone like shape</em>) from which molten rocks and gas can
-              erupt. In simple words, it is an opening through the Earth crust.
-              <br />
-              When a volcano in not in eruption, everything is happening inside
-              it. But what is going on in there?
-            </p>
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                Volcanoes are formed when hot liquid, molten rocks and gas, known
-                as magma is forced to the surface of the earth by natural forces
-                such as temperature and pressure. During this process the land
-                around the column of magma rises to form the shape of the
-                volcano<br />
-                Most of the volcanoes are situated where two tectonic plates
-                collide. But they can appear other places too.
-              </p>
-            </div>
-
-            <h5>How Does It Work?</h5>
-
-            <h6>The Layers</h6>
-            <div class="images-container">
-              <!-- [Infographic vector created by brgfx - www.freepik.com<](https://www.freepik.com/vectors/infographic)-->
-              <img
-                src="assets/images/subjects-images/volcano/earth-structure.jpg"
-                alt="Illustration of the different layers of the planet Earth."
-                title="Illustration of the different layers of the planet Earth."
-                height="600"
-                width="600"
-              />
-            </div>
-            <p>
-              Our loved planet Earth is not solid everywhere! And volcanoes are
-              proof of it. As you can see on the illustration, we live on a the
-              outer part of the planet called the <strong>crust</strong>. It is
-              about 35 kilometers thick and the thinnest layer. Deeper within the
-              Earth and surrounding the planet's core is a liquid layer called the
-              <strong>outer core</strong>. The <strong>mantle</strong> sometimes
-              produces the <strong>magma</strong> that flows out of the volcanoes
-              as <strong>lava</strong>.
-            </p>
-
-            <h6>The Movements</h6>
-            <div class="images-container">
-              <!-- Image by gritsalak from Adobe Stock: 
+        <h6>The Movements</h6>
+        <div class="images-container">
+          <!-- Image by gritsalak from Adobe Stock: 
                 (https://stock.adobe.com/ie/images/volcano-and-earthquake-infographic-vector/211375558?prev_url=detail) -->
-              <img
-                src="assets/images/subjects-images/volcano/volcano-formation.jpg"
-                alt="Illustration of a volcano with tectonic plates."
-                title="Illustration of a volcano with tectonic plates."
-                height="418"
-                width="600"
-              />
-            </div>
+          <img src="assets/images/subjects-images/volcano/volcano-formation.jpg"
+            alt="Illustration of a volcano with tectonic plates."
+            title="Illustration of a volcano with tectonic plates." height="418" width="600" />
+        </div>
 
-            <p>
-              The crust is not one solid piece. In fact if it were, we might not
-              have any volcanoes! Indeed the crust (<em
-                >composed of the oceanic crust and continental crust</em
-              >) moves with the tectonic plates.<br />
-              The tectonic plates form the lithosphere. They are huge section of
-              rocks that are constantly moving. Where those plates meet the
-              friction creates a lot of energy with very hight temperature and
-              pressure. Cracks form and the magma can emerged from a
-              <strong>magma chamber</strong> producing a volcano.<br />
-              Although volcanoes are mostly found at the contact of two tectonic
-              plates, they are also found away from those plates boundaries in
-              <strong>hotspots</strong> zones. Hotspots are formed when very hot
-              magma makes its way through the crust. They happen when magma is
-              especially hot and the conditions are extreme.
-            </p>
+        <p>
+          The crust is not one solid piece. In fact if it were, we might not
+          have any volcanoes! Indeed the crust (<em>composed of the oceanic crust and continental crust</em>) moves with
+          the tectonic plates.<br />
+          The tectonic plates form the lithosphere. They are huge section of
+          rocks that are constantly moving. Where those plates meet the
+          friction creates a lot of energy with very hight temperature and
+          pressure. Cracks form and the magma can emerged from a
+          <strong>magma chamber</strong> producing a volcano.<br />
+          Although volcanoes are mostly found at the contact of two tectonic
+          plates, they are also found away from those plates boundaries in
+          <strong>hotspots</strong> zones. Hotspots are formed when very hot
+          magma makes its way through the crust. They happen when magma is
+          especially hot and the conditions are extreme.
+        </p>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                You can think of the tectonic plates as giant pieces of puzzle
-                that cover the Earth. They never stop moving but it is so slow we
-                can't feel it. They progress at the rate of a couple of
-                centimeters (<em>between 3 and 5cms</em>) a year!
-              </p>
-              <ul>
-                <span>
-                  The movement of the plates creates three types of tectonic
-                  boundaries:
-                </span>
-                <li>
-                  <strong>Convergent</strong>, when plates move toward one another
-                  (also known as subduction). They can form mountain ranges like
-                  the Himalaya and the mount Everest (that keep growing over
-                  time), or trenches like the Mariana Trench in the North Pacific
-                  Ocean (deepest point on Earth)
-                </li>
-                <li>
-                  <strong>Divergent</strong>, when plates move away from one
-                  another. In the ocean this process widen the oceanic floor and
-                  create a ridge.
-                </li>
-                <li>
-                  <strong>Transform</strong>, when plates move alongside one
-                  another. They grind each other and create devastating
-                  earthquake.
-                </li>
-              </ul>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            You can think of the tectonic plates as giant pieces of puzzle
+            that cover the Earth. They never stop moving but it is so slow we
+            can't feel it. They progress at the rate of a couple of
+            centimeters (<em>between 3 and 5cms</em>) a year!
+          </p>
+          <ul>
+            <span>
+              The movement of the plates creates three types of tectonic
+              boundaries:
+            </span>
+            <li>
+              <strong>Convergent</strong>, when plates move toward one another
+              (also known as subduction). They can form mountain ranges like
+              the Himalaya and the mount Everest (that keep growing over
+              time), or trenches like the Mariana Trench in the North Pacific
+              Ocean (deepest point on Earth)
+            </li>
+            <li>
+              <strong>Divergent</strong>, when plates move away from one
+              another. In the ocean this process widen the oceanic floor and
+              create a ridge.
+            </li>
+            <li>
+              <strong>Transform</strong>, when plates move alongside one
+              another. They grind each other and create devastating
+              earthquake.
+            </li>
+          </ul>
+        </div>
 
-            <h5>The Different types of volcanoes:</h5>
-            <!-- The following four images are extracted from one image by designua from Adobe Stock: 
+        <h5>The Different types of volcanoes:</h5>
+        <!-- The following four images are extracted from one image by designua from Adobe Stock: 
             (https://stock.adobe.com/ie/images/volcano-type-shield-dome-composite-and-caldera/319892493?prev_url=detail) -->
-            <div class="images-container">
-              <img
-                src="assets/images/subjects-images/volcano/shield-volcano.jpg"
-                alt="Volcano types."
-                title="Volcano types."
-                height="743"
-                width="600"
-              />
-            </div>
-            <div class="images-container">
-              <img
-                src="assets/images/subjects-images/volcano/dome-volcano.jpg"
-                alt="Volcano types."
-                title="Volcano types."
-                height="907"
-                width="600"
-              />
-            </div>
-            <div class="images-container">
-              <img
-                src="assets/images/subjects-images/volcano/caldera-volcano.jpg"
-                alt="Volcano types."
-                title="Volcano types."
-                height="1058"
-                width="600"
-              />
-            </div>
-            <div class="images-container">
-              <img
-                src="assets/images/subjects-images/volcano/composite-volcano.jpg"
-                alt="Volcano types."
-                title="Volcano types."
-                height="1052"
-                width="600"
-              />
-            </div>
+        <div class="images-container">
+          <img src="assets/images/subjects-images/volcano/shield-volcano.jpg" alt="Volcano types."
+            title="Volcano types." height="743" width="600" />
+        </div>
+        <div class="images-container">
+          <img src="assets/images/subjects-images/volcano/dome-volcano.jpg" alt="Volcano types." title="Volcano types."
+            height="907" width="600" />
+        </div>
+        <div class="images-container">
+          <img src="assets/images/subjects-images/volcano/caldera-volcano.jpg" alt="Volcano types."
+            title="Volcano types." height="1058" width="600" />
+        </div>
+        <div class="images-container">
+          <img src="assets/images/subjects-images/volcano/composite-volcano.jpg" alt="Volcano types."
+            title="Volcano types." height="1052" width="600" />
+        </div>
 
-            <p>
-              Volcanoes appear in different sizes and variety. We can find four
-              basic types that are characterized by the lava flow.<br />
-              The lava composition ranges from very liquid to very viscous and
-              influences directly the lava flow.<br />
-            </p>
-            <ul>
-              <span> The volcano types: </span>
-              <li>
-                <strong>Shield volcano</strong> are the result of liquid lava
-                emitted from a central vent. The low viscosity lava flows rapidly
-                over long distance forming the shield like shape volcano. Their
-                gentle slopes usually don't exceed 10 degrees.
-              </li>
-              <li>
-                <strong>Composite volcano</strong> also known as
-                <strong>Stratovolcanoes</strong> are the result of more viscous
-                lava emitted from a main central vent and secondary side vents.
-                The medium to hight viscosity lava flows slowly forming steeper
-                slopes. Over time the hight density lava hardening rapidly builds
-                up rising the hight of the volcano. They can explode with a great
-                violence from the main vent as well as the side vents.
-              </li>
-              <li>
-                <strong>Dome volcano</strong> are the result of very viscous lava
-                emitted from a central vent. The hight viscosity lava flows very
-                slowly cooling and hardening when it reaches the surface. This
-                phenomena create a dome like shape around and over the vent
-                blocking the eruption. Sometimes when the pressure gets hight
-                enough it produces violent eruption blowing the dome into pieces.
-              </li>
-              <li>
-                <strong>Caldera volcano</strong> are the result of viscous lava
-                emitted from different vent that form over time. They form after a
-                volcanic eruption empties a deep magma chamber causing the surface
-                to collapse. This creates a crater like shape called caldera. They
-                can be up to 50 kilometers wide. Over time the magma chamber can
-                fill with magma again rising the caldera floor. It may stay like
-                this or create another eruption reshaping the caldera and know as
-                a <strong>resurgent caldera</strong>.
-              </li>
-            </ul>
+        <p>
+          Volcanoes appear in different sizes and variety. We can find four
+          basic types that are characterized by the lava flow.<br />
+          The lava composition ranges from very liquid to very viscous and
+          influences directly the lava flow.<br />
+        </p>
+        <ul>
+          <span> The volcano types: </span>
+          <li>
+            <strong>Shield volcano</strong> are the result of liquid lava
+            emitted from a central vent. The low viscosity lava flows rapidly
+            over long distance forming the shield like shape volcano. Their
+            gentle slopes usually don't exceed 10 degrees.
+          </li>
+          <li>
+            <strong>Composite volcano</strong> also known as
+            <strong>Stratovolcanoes</strong> are the result of more viscous
+            lava emitted from a main central vent and secondary side vents.
+            The medium to hight viscosity lava flows slowly forming steeper
+            slopes. Over time the hight density lava hardening rapidly builds
+            up rising the hight of the volcano. They can explode with a great
+            violence from the main vent as well as the side vents.
+          </li>
+          <li>
+            <strong>Dome volcano</strong> are the result of very viscous lava
+            emitted from a central vent. The hight viscosity lava flows very
+            slowly cooling and hardening when it reaches the surface. This
+            phenomena create a dome like shape around and over the vent
+            blocking the eruption. Sometimes when the pressure gets hight
+            enough it produces violent eruption blowing the dome into pieces.
+          </li>
+          <li>
+            <strong>Caldera volcano</strong> are the result of viscous lava
+            emitted from different vent that form over time. They form after a
+            volcanic eruption empties a deep magma chamber causing the surface
+            to collapse. This creates a crater like shape called caldera. They
+            can be up to 50 kilometers wide. Over time the magma chamber can
+            fill with magma again rising the caldera floor. It may stay like
+            this or create another eruption reshaping the caldera and know as
+            a <strong>resurgent caldera</strong>.
+          </li>
+        </ul>
 
-            <h5>The Parts of a Volcano:</h5>
-            <div class="images-container">
-              <!-- Image by blueringmedia from Adobe Stock: 
+        <h5>The Parts of a Volcano:</h5>
+        <div class="images-container">
+          <!-- Image by blueringmedia from Adobe Stock: 
                 (https://stock.adobe.com/ie/images/part-of-a-volcano/377249194?prev_url=detail) -->
-              <img
-                src="assets/images/subjects-images/volcano/volcano-parts.jpeg"
-                alt="Illustration of the different parts of a volcano."
-                title="Illustration of the different parts of a volcano."
-                height="402"
-                width="600"
-              />
-            </div>
-            <ul>
-              <span> Volcanoes are composed of: </span>
-              <li>Magma chamber</li>
-              <li>Magma</li>
-              <li>Main vent, conduit, pipe or column</li>
-              <li>Side or secondary vents</li>
-              <li>Crater</li>
-              <li>Lava</li>
-              <li>Ash cloud or plume</li>
-              <li>Layers of emitted lava and ash</li>
-            </ul>
+          <img src="assets/images/subjects-images/volcano/volcano-parts.jpeg"
+            alt="Illustration of the different parts of a volcano."
+            title="Illustration of the different parts of a volcano." height="402" width="600" />
+        </div>
+        <ul>
+          <span> Volcanoes are composed of: </span>
+          <li>Magma chamber</li>
+          <li>Magma</li>
+          <li>Main vent, conduit, pipe or column</li>
+          <li>Side or secondary vents</li>
+          <li>Crater</li>
+          <li>Lava</li>
+          <li>Ash cloud or plume</li>
+          <li>Layers of emitted lava and ash</li>
+        </ul>
 
-            <h5>Different Types of Eruptions:</h5>
-            <ul>
-              <span> Volcanic eruptions can be of two types: </span>
-              <li>
-                <strong>Explosive eruption</strong> is characterized by violent
-                emissions of gas, ashes and rocks in the atmosphere (<em
-                  >known as volcanic bomb</em
-                >).
-              </li>
-              <li>
-                <strong>Effusive eruption</strong> is characterized by outpouring
-                of lava, relatively low in viscosity and gas, without significant
-                explosion.
-              </li>
-            </ul>
+        <h5>Different Types of Eruptions:</h5>
+        <ul>
+          <span> Volcanic eruptions can be of two types: </span>
+          <li>
+            <strong>Explosive eruption</strong> is characterized by violent
+            emissions of gas, ashes and rocks in the atmosphere (<em>known as volcanic bomb</em>).
+          </li>
+          <li>
+            <strong>Effusive eruption</strong> is characterized by outpouring
+            of lava, relatively low in viscosity and gas, without significant
+            explosion.
+          </li>
+        </ul>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                In more detailed classification volcanic eruptions are are of six
-                types of increasing degree of explosiveness:<br />
-                They are characterized by their volcanic activity types and
-                location that are very often linked.
-                <strong>Icelandic</strong> is an effusive type with very liquid
-                lava outpouring from long parallel fissures often building lava
-                plateaus.<br />
-                <strong>Hawaiian</strong> is similar to the Icelandic type except
-                that the lava is flowing from the summit of a volcano creating
-                shield volcanoes.<br />
-                <strong>Strombolian</strong> is an effusive type with few outburst
-                of ga creating relatively small explosions.<br />
-                <strong>Vulcanian</strong> type involves moderate explosions
-                creating plume cloud.<br />
-                <strong>Pelean</strong> is an explosive type with low viscosity
-                lava, pyroclastic flows and very violent explosions and
-                destructive eruptions.<br />
-                <strong>Plinian</strong> is the most intense and destructive of
-                all. With a highly gas rich magma it creates enormous explosion
-                and ejects a huge quantity of gas and volcanic fragments into the
-                sky forming a devastating eruption cloud. It can be produced for
-                several hours and rise up to the stratosphere (<em
-                  >about 10 kilometers hight</em
-                >).
-              </p>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            In more detailed classification volcanic eruptions are are of six
+            types of increasing degree of explosiveness:<br />
+            They are characterized by their volcanic activity types and
+            location that are very often linked.<br />
+            <strong>Icelandic</strong> is an effusive type with very liquid
+            lava outpouring from long parallel fissures often building lava
+            plateaus.<br />
+            <strong>Hawaiian</strong> is similar to the Icelandic type except
+            that the lava is flowing from the summit of a volcano creating
+            shield volcanoes.<br />
+            <strong>Strombolian</strong> is an effusive type with few outburst
+            of ga creating relatively small explosions.<br />
+            <strong>Vulcanian</strong> type involves moderate explosions
+            creating plume cloud.<br />
+            <strong>Pelean</strong> is an explosive type with low viscosity
+            lava, pyroclastic flows and very violent explosions and
+            destructive eruptions.<br />
+            <strong>Plinian</strong> is the most intense and destructive of
+            all. With a highly gas rich magma it creates enormous explosion
+            and ejects a huge quantity of gas and volcanic fragments into the
+            sky forming a devastating eruption cloud. It can be produced for
+            several hours and rise up to the stratosphere (<em>about 10 kilometers hight</em>).
+          </p>
+        </div>
 
-            <h5>Interesting Facts:</h5>
-            <ul>
-              <li>
-                About 90% of all active volcanoes are located in the Pacific Ring
-                of Fire(<em
-                  >where the Pacific plate meets other surrounding tectonic
-                  plates</em
-                >).
-              </li>
-              <li>
-                More than 80% 2 of the external part of the Earth crust is made of
-                basaltic rocks formation resulting of lava eruptions.
-              </li>
-              <li>
-                Lava creates glass called obsidian. It is a very strong rock with
-                edges sharper than steel usually black and used for weaponry by
-                our ancestors.
-              </li>
-              <li>
-                The hottest lava made of basalt can reach temperatures as hight as
-                1170 celsius degree. It is hot enough to melt any kind of metal
-                and rocks.
-              </li>
-              <li>
-                The cloud produced by a volcano is not smoke but ash. Ash created
-                by volcanoes is made of immensely hot gas, lava and rocks
-                shattered into tiny pieces as small as two millimeters and
-                extremely dangerous.
-              </li>
-              <li>
-                Volcanic ash is very dangerous for airplanes causing engines
-                problems.
-              </li>
-              <li>
-                Volcanic lightning can appear during an eruption. It is caused by
-                the friction of the small fragments present in the volcanic ash
-                cloud generating static electricity.
-              </li>
-              <li>
-                The asthenosphere act as a giant moving belt induced by convection
-                movement of temperatures and magma making the tectonic plates
-                move.
-              </li>
-              <li>
-                Hotspots can create what is called a volcanic chain. The magma
-                erupting creates a volcano and while the tectonic plates are
-                moving, new volcanoes are created. This repeating process creates
-                the volcanic chain.
-              </li>
-              <li>
-                The mid-ocean ridge is the longest mountain range on Earth. It is
-                mostly under water and created by periodic eruptions.
-              </li>
-              <li>
-                Volcanic eruption can create lahars devastating everything on its
-                way.
-              </li>
-            </ul>
+        <h5>Interesting Facts:</h5>
+        <ul>
+          <li>
+            About 90% of all active volcanoes are located in the Pacific Ring
+            of Fire(<em>where the Pacific plate meets other surrounding tectonic
+              plates</em>).
+          </li>
+          <li>
+            More than 80% of the external part of the Earth crust is made of
+            basaltic rocks formation resulting of lava eruptions.
+          </li>
+          <li>
+            Lava creates glass called obsidian. It is a very strong rock with
+            edges sharper than steel usually black and used for weaponry by
+            our ancestors.
+          </li>
+          <li>
+            The hottest lava made of basalt can reach temperatures as hight as
+            1170 celsius degree. It is hot enough to melt any kind of metal
+            and rocks.
+          </li>
+          <li>
+            The cloud produced by a volcano is not smoke but ash. Ash created
+            by volcanoes is made of immensely hot gas, lava and rocks
+            shattered into tiny pieces as small as two millimeters and
+            extremely dangerous.
+          </li>
+          <li>
+            Volcanic ash is very dangerous for airplanes causing engines
+            problems.
+          </li>
+          <li>
+            Volcanic lightning can appear during an eruption. It is caused by
+            the friction of the small fragments present in the volcanic ash
+            cloud generating static electricity.
+          </li>
+          <li>
+            The asthenosphere act as a giant moving belt induced by convection
+            movement of temperatures and magma making the tectonic plates
+            move.
+          </li>
+          <li>
+            Hotspots can create what is called a volcanic chain. The magma
+            erupting creates a volcano and while the tectonic plates are
+            moving, new volcanoes are created. This repeating process creates
+            the volcanic chain.
+          </li>
+          <li>
+            The mid-ocean ridge is the longest mountain range on Earth. It is
+            mostly under water and created by periodic eruptions.
+          </li>
+          <li>
+            Volcanic eruption can create lahars devastating everything on its
+            way.
+          </li>
+        </ul>
 
-            <h5>Scientific Terms:</h5>
+        <h5>Scientific Terms:</h5>
 
-            <ul>
-              <li><strong>Volcanology</strong>: Study of volcanoes.</li>
-              <li><strong>Volcanologist</strong>: Whom study volcanoes.</li>
-              <li>
-                <strong>Active volcano</strong>: A volcano that has erupted at
-                least once in the pas 10,000 years and is expected to erupt again.
-                It can be erupting or dormant.
-              </li>
-              <li>
-                <strong>Magma</strong>: Mixed of gas and molten rocks below the
-                Earth's surface.
-              </li>
-              <li>
-                <strong>Lava</strong>: Magma that reaches the Earth's surface.
-              </li>
-              <li>
-                <strong>Pyroclastic flow</strong>: A turbulent and very fast
-                moving very hot mixture of gas and ash erupted from a volcano. It
-                can reach a speed that often exceed 80 kilometers per hour with a
-                temperature that ranges between 200 and 700 celsius degrees. It is
-                extremely devastating.
-              </li>
-              <li>
-                <strong>Lahar</strong>: A fast moving mudflow made of volcanic ash
-                and water. It can consume and incorporate anything in its way and
-                grow more than 10 times its initial size. In steep areas it can
-                exceed 200 kilometers per hour.
-              </li>
-            </ul>
-          </article>
+        <ul>
+          <li><strong>Volcanology</strong>: Study of volcanoes.</li>
+          <li><strong>Volcanologist</strong>: Whom study volcanoes.</li>
+          <li>
+            <strong>Active volcano</strong>: A volcano that has erupted at
+            least once in the pas 10,000 years and is expected to erupt again.
+            It can be erupting or dormant.
+          </li>
+          <li>
+            <strong>Magma</strong>: Mix of gas and molten rocks below the
+            Earth's surface.
+          </li>
+          <li>
+            <strong>Lava</strong>: Magma that reaches the Earth's surface.
+          </li>
+          <li>
+            <strong>Pyroclastic flow</strong>: A turbulent and very fast
+            moving very hot mixture of gas and ash erupted from a volcano. It
+            can reach a speed that often exceed 80 kilometers per hour with a
+            temperature that ranges between 200 and 700 celsius degrees. It is
+            extremely devastating.
+          </li>
+          <li>
+            <strong>Lahar</strong>: A fast moving mudflow made of volcanic ash
+            and water. It can consume and incorporate anything in its way and
+            grow more than 10 times its initial size. In steep areas it can
+            exceed 200 kilometers per hour.
+          </li>
+        </ul>
+      </article>
 
-          <!-- Jungle article -->
-          <article class="subject-content jungle hide">
-            <h4 class="heading">Jungle</h4>
+      <!-- Jungle article -->
+      <article class="subject-content jungle hide">
+        <h4 class="heading">Jungle</h4>
 
-            <h5>Definition:</h5>
-            <p>
-              Jungle is a generic term that refers to a dense forest generally
-              where the weather is hot.<br />
-              (<em
-                >Jungles are very similar to rainforests but are very slightly
-                different. In this study we will consider them the same and use
-                both names interchangeably as they share the same features</em
-              >).<br />
-              It is characterized by a dense tangled vegetation with an extensive
-              biodiversity.<br />
-              Jungles are one of the most important habitat on Earth and largely
-              contribute in sustaining the Earth's ecosystem as we know it.<br />
-              while each rainforest is unique, they all share common features.
-            </p>
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                Jungles are mostly situated in the tropics, subtropics and around
-                the equator. This type of forest host an incredible biodiversity.
-                It is though that over 50% of the plants and animals on earth live
-                in the rainforest.<br />
-                It covers about 4% of the Earth surface and 12% of the land
-                surface in 2020. it plays an important role in the Earth's
-                ecosystem.
-              </p>
-            </div>
+        <h5>Definition:</h5>
+        <p>
+          Jungle is a generic term that refers to a dense forest generally
+          where the weather is hot.<br />
+          (<em>Jungles are very similar to rainforests but are very slightly
+            different. In this study we will consider them the same and use
+            both names interchangeably as they share the same features</em>).<br />
+          It is characterized by a dense tangled vegetation with an extensive
+          biodiversity.<br />
+          Jungles are one of the most important habitat on Earth and largely
+          contribute in sustaining the Earth's ecosystem as we know it.<br />
+          while each rainforest is unique, they all share common features.
+        </p>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            Jungles are mostly situated in the tropics, subtropics and around
+            the equator. This type of forest host an incredible biodiversity.
+            It is though that over 50% of the plants and animals on earth live
+            in the rainforest.<br />
+            It covers about 4% of the Earth surface and 12% of the land
+            surface in 2020. it plays an important role in the Earth's
+            ecosystem.
+          </p>
+        </div>
 
-            <h5>How Does It Work?</h5>
+        <h5>How Does It Work?</h5>
 
-            <h6>Climate</h6>
+        <h6>Climate</h6>
 
-            <p>
-              Jungles precipitation is one of the highest on the globe. It
-              fluctuate between 200 and 600 centimeters of rain a year.<br />
-              The humidity is very high and average around 80%.<br />
-              It never froze in the jungle. In fact, the lowest temperature is
-              rarely below 20 celsius degrees and the highest rarely above 35
-              celsius degrees.<br />
-              This create a hot and steamy climate that works like a greenhouse
-              and is the perfect environment for the forest to develop. It is
-              <strong>equable</strong>: with not much variation.
-            </p>
+        <p>
+          Jungles precipitation is one of the highest on the globe. It
+          fluctuate between 200 and 600 centimeters of rain a year.<br />
+          The humidity is very high and average around 80%.<br />
+          It never froze in the jungle. In fact, the lowest temperature is
+          rarely below 20 celsius degrees and the highest rarely above 35
+          celsius degrees.<br />
+          This create a hot and steamy climate that works like a greenhouse
+          and is the perfect environment for the forest to develop. It is
+          <strong>equable</strong>: with not much variation.
+        </p>
 
-            <h6>Structure</h6>
-            <div class="images-container">
-              <!-- Image by Rudzhan from Adobe Stock: 
+        <h6>Structure</h6>
+        <div class="images-container">
+          <!-- Image by Rudzhan from Adobe Stock: 
                 (https://stock.adobe.com/ie/images/rainforest-layers-educational-banner-or-poster-jungle-vertical-structure-educational-scheme-emergent-canopy-understory-and-floor-levels-flat-vector-illustration/408770051?prev_url=detail&asset_id=408770051) -->
-              <img
-                src="assets/images/subjects-images/jungle/jungle-layers.jpeg"
-                alt="Illustration of the different layers of the rainforest."
-                title="Illustration of the different layers of the rainforest."
-                height="625"
-                width="500"
-              />
-            </div>
+          <img src="assets/images/subjects-images/jungle/jungle-layers.jpeg"
+            alt="Illustration of the different layers of the rainforest."
+            title="Illustration of the different layers of the rainforest." height="625" width="500" />
+        </div>
 
-            <ul>
-              Jungles are structured in four layers. Each level has unique
-              characteristics corresponding to an habitat with different
-              quantities of sunlight, water and air circulation. They are
-              interdependent and influence one another.
-              <li>
-                <strong>The Emergent Layer</strong> is the top layer of the
-                forest. Trees dominate with a hight reaching 60 meters.
-              </li>
-              <li>
-                <strong>The Canopy Layer</strong> is beneath the emergent layer.
-                It is about 6 meters of dense vegetation with a huge network of
-                branches and leaves forming a roof over the remaining layers.
-              </li>
-              <li>
-                <strong>The Understory Layer</strong> is a dark and more humid
-                environment. Vegetation usually develop large leaves in order to
-                catch the remaining sunlight reaching through the canopy.
-              </li>
-              <li>
-                <strong>The Forest Floor</strong> is the darkest part of the
-                jungle making it difficult for the vegetation to grow. In this
-                environment everything decays rapidly forming what is called the
-                <strong>humus</strong>. It is the food factory for the trees of
-                the jungle producing nutrients and hosting a thriving animal life.
-                The humus layer is very thin making the ground poor in nutrients.
-                For this reason the trees develop very shallow and widespread
-                roots called <strong>buttress roots</strong>.
-              </li>
-            </ul>
+        <ul>
+          Jungles are structured in four layers. Each level has unique
+          characteristics corresponding to an habitat with different
+          quantities of sunlight, water and air circulation. They are
+          interdependent and influence one another.
+          <li>
+            <strong>The Emergent Layer</strong> is the top layer of the
+            forest. Trees dominate with a hight reaching 60 meters.
+          </li>
+          <li>
+            <strong>The Canopy Layer</strong> is beneath the emergent layer.
+            It is about 6 meters of dense vegetation with a huge network of
+            branches and leaves forming a roof over the remaining layers.
+          </li>
+          <li>
+            <strong>The Understory Layer</strong> is a dark and more humid
+            environment. Vegetation usually develop large leaves in order to
+            catch the remaining sunlight reaching through the canopy.
+          </li>
+          <li>
+            <strong>The Forest Floor</strong> is the darkest part of the
+            jungle making it difficult for the vegetation to grow. In this
+            environment everything decays rapidly forming what is called the
+            <strong>humus</strong>. It is the food factory for the trees of
+            the jungle producing nutrients and hosting a thriving animal life.
+            The humus layer is very thin making the ground poor in nutrients.
+            For this reason the trees develop very shallow and widespread
+            roots called <strong>buttress roots</strong>.
+          </li>
+        </ul>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                In the jungle trees are mostly evergreen.<br />
-                In the canopy and above, animals move through the vegetation by
-                flying or gliding. Those animals are usually small so their weight
-                is supported by the most fragile branches.<br />
-                With a particularly rich availability in food, the canopy is home
-                to more animals than any other layers. It is estimated that the
-                canopy host more than 50% of the life in the rainforest.<br />
-                Understory plants often produce large and colorful flowers with a
-                strong sent in order to attract pollinators in the darkest parts
-                of the jungle.<br />
-                When rivers run through the jungle, they create an unusual
-                freshwater habitat on the forest floor. For example, the Amazon
-                river is home to one of the few freshwater dolphin in the world.
-              </p>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            In the jungle trees are mostly evergreen.<br />
+            In the canopy and above, animals move through the vegetation by
+            flying or gliding. Those animals are usually small so their weight
+            is supported by the most fragile branches.<br />
+            With a particularly rich availability in food, the canopy is home
+            to more animals than any other layers. It is estimated that the
+            canopy host more than 50% of the life in the rainforest.<br />
+            Understory plants often produce large and colorful flowers with a
+            strong sent in order to attract pollinators in the darkest parts
+            of the jungle.<br />
+            When rivers run through the jungle, they create an unusual
+            freshwater habitat on the forest floor. For example, the Amazon
+            river is home to one of the few freshwater dolphin in the world.
+          </p>
+        </div>
 
-            <h6>Ecosystem and Biodiversity</h6>
+        <h6>Ecosystem and Biodiversity</h6>
 
-            <p>
-              The rainforests have the most important terrestrial biodiversity on
-              Earth.<br />
-              They are located in tropical regions and receive a lot of sunlight.
-              The sunlight provide energy for the vegetation which is transmitted
-              to all the living organisms of the jungle through the
-              <strong>food chain</strong>.
-              <br />
-              The canopy structure provides an abundance of places for plants to
-              grow and animals to live. It offers resources such as food and
-              shelter that leads to interaction and interdependence of the species
-              that live there.<br />
-              The jungle is a very competitive place, with species developing
-              incredible strategies and innovations to survive, encouraging
-              <strong>specialization</strong>.
-            </p>
+        <p>
+          The rainforests have the most important terrestrial biodiversity on
+          Earth.<br />
+          They are located in tropical regions and receive a lot of sunlight.
+          The sunlight provide energy for the vegetation which is transmitted
+          to all the living organisms of the jungle through the
+          <strong>food chain</strong>.
+          <br />
+          The canopy structure provides an abundance of places for plants to
+          grow and animals to live. It offers resources such as food and
+          shelter that leads to interaction and interdependence of the species
+          that live there.<br />
+          The jungle is a very competitive place, with species developing
+          incredible strategies and innovations to survive, encouraging
+          <strong>specialization</strong>.
+        </p>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                The jungle is home to an incredible biodiversity such as plants
-                that only grow on other trees called
-                <strong>epiphytes</strong>.<br />
-                The climate present in the jungle allow organisms to grow at a
-                very quick pace. And because the competition between plants is
-                very hard and their environment harsh plants developed poisonous
-                toxins to protect themselves from the fauna.<br />
-                Some of the most known, mesmerizing and mystifying animals present
-                in the jungle are jaguars, tigers, elephants, gorillas, monkeys,
-                eagles and snakes that live in the trees or on the forest floor.
-                But as well the climate their is ideal for insects such as bees,
-                butterflies, termites, flies and ants. One particular species of
-                ants called the <strong>army ant</strong> are nomads like! They
-                have no nest and march in line everyday to hunt for food. When the
-                night comes, they come together and form a nest around their queen
-                by hooking on each other.
-              </p>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            The jungle is home to an incredible biodiversity such as plants
+            that only grow on other trees called
+            <strong>epiphytes</strong>.<br />
+            The climate present in the jungle allow organisms to grow at a
+            very quick pace. And because the competition between plants is
+            very hard and their environment harsh plants developed poisonous
+            toxins to protect themselves from the fauna.<br />
+            Some of the most known, mesmerizing and mystifying animals present
+            in the jungle are jaguars, tigers, elephants, gorillas, monkeys,
+            eagles and snakes that live in the trees or on the forest floor.
+            But as well the climate their is ideal for insects such as bees,
+            butterflies, termites, flies and ants. One particular species of
+            ants called the <strong>army ant</strong> are nomads like! They
+            have no nest and march in line everyday to hunt for food. When the
+            night comes, they come together and form a nest around their queen
+            by hooking on each other.
+          </p>
+        </div>
 
-            <h5>The Importance of the Jungle:</h5>
+        <h5>The Importance of the Jungle:</h5>
 
-            <ul>
-              <li>Provide home to an immense diversity of plants and animals.</li>
-              <li>
-                Participate greatly in the water cycle by receiving, stocking and
-                providing a huge quantity of fresh water. More than 50% of the
-                precipitation it received is returned by transpiration.
-              </li>
-              <li>
-                Help to maintain the Earth ecosystem by absorbing carbon dioxide,
-                reducing the impact of the greenhouse gas emissions. As well it
-                produces 20% of our oxygen and absorbs solar radiation.
-              </li>
-              <li>
-                Protect against flood, erosion and drought with its unique climate
-                and ecosystem.
-              </li>
-              <li>
-                Provide resources for food, medicine and economy like fruits,
-                coffee, chocolate, bananas, brazil nuts, rubber, tapioca, wood
-                etc.
-              </li>
-            </ul>
+        <ul>
+          <li>Provide home to an immense diversity of plants and animals.</li>
+          <li>
+            Participate greatly in the water cycle by receiving, stocking and
+            providing a huge quantity of fresh water. More than 50% of the
+            precipitation it received is returned by transpiration.
+          </li>
+          <li>
+            Help to maintain the Earth ecosystem by absorbing carbon dioxide,
+            reducing the impact of the greenhouse gas emissions. As well it
+            produces 20% of our oxygen and absorbs solar radiation.
+          </li>
+          <li>
+            Protect against flood, erosion and drought with its unique climate
+            and ecosystem.
+          </li>
+          <li>
+            Provide resources for food, medicine and economy like fruits,
+            coffee, chocolate, bananas, brazil nuts, rubber, tapioca, wood
+            etc.
+          </li>
+        </ul>
 
-            <h5>The Jungle in Danger:</h5>
-            <div class="images-container">
-              <!-- Image by whitcomberd from Adobe Stock: 
+        <h5>The Jungle in Danger:</h5>
+        <div class="images-container">
+          <!-- Image by whitcomberd from Adobe Stock: 
                 (https://stock.adobe.com/ie/images/aerial-view-of-deforestation-rainforest-being-removed-to-make-way-for-palm-oil-and-rubber-plantations/240813889?prev_url=detail&asset_id=240813889) -->
-              <img
-                src="assets/images/subjects-images/jungle/deforestation.jpg"
-                alt="Illustration of the different parts of a volcano."
-                height="333"
-                width="500"
-              />
-            </div>
+          <img src="assets/images/subjects-images/jungle/deforestation.jpg"
+            alt="Illustration of the different parts of a volcano." height="333" width="500" />
+        </div>
 
-            <p>
-              Deforestation is happening at an alarming pace. It is mainly due to
-              human activity. Many scientist predict that the rainforest will lose
-              between 5 and 10% of their species every decade. It would destruct
-              its habitats in a near future.<br />
-              This is one of the biggest challenge humanity is facing.<br />
-              On the bright side, there are a lot of people invested and wanting
-              to save the rainforests.
-            </p>
+        <p>
+          Deforestation is happening at an alarming pace. It is mainly due to
+          human activity. Many scientist predict that the rainforest will lose
+          between 5 and 10% of their species every decade. It would destruct
+          its habitats in a near future.<br />
+          This is one of the biggest challenge humanity is facing.<br />
+          On the bright side, there are a lot of people invested and wanting
+          to save the rainforests.
+        </p>
 
-            <h5>Interesting Facts:</h5>
-            <ul>
-              <li>About 25% of the medicines come from the jungle.</li>
-              <li>
-                The Brazil nut tree (<em>a vulnerable species</em>) can live up to
-                1,000 years.
-              </li>
-              <li>Only 2% of the light is reaching the forest floor.</li>
-              <li>
-                A lot of plants in the humid climate of the rainforest canopy have
-                developed leaves with pointy tips called
-                <strong>drip tips</strong> so the water does not stay on the
-                leaves avoiding the development of fungus.
-              </li>
-              <li>
-                While the forest floor layer of the jungle is very humid and
-                still, the top layer (<em>the emergent layer</em>) is the dryest.
-              </li>
-              <li>
-                It can take up to 10 minutes for a drop of rain water to fall on
-                the floor of the rainforest.
-              </li>
-              <li>
-                The largest rainforest is the Amazon, situated in South America
-                and mostly in Brazil.
-              </li>
-            </ul>
+        <h5>Interesting Facts:</h5>
+        <ul>
+          <li>About 25% of the medicines come from the jungle.</li>
+          <li>
+            The Brazil nut tree (<em>a vulnerable species</em>) can live up to
+            1,000 years.
+          </li>
+          <li>Only 2% of the light is reaching the forest floor.</li>
+          <li>
+            A lot of plants in the humid climate of the rainforest canopy have
+            developed leaves with pointy tips called
+            <strong>drip tips</strong> so the water does not stay on the
+            leaves avoiding the development of fungus.
+          </li>
+          <li>
+            While the forest floor layer of the jungle is very humid and
+            still, the top layer (<em>the emergent layer</em>) is the dryest.
+          </li>
+          <li>
+            It can take up to 10 minutes for a drop of rain water to fall on
+            the floor of the rainforest.
+          </li>
+          <li>
+            The largest rainforest is the Amazon, situated in South America
+            and mostly in Brazil.
+          </li>
+        </ul>
 
-            <h5>Scientific Terms:</h5>
+        <h5>Scientific Terms:</h5>
 
-            <ul>
-              <li>
-                <strong>Biologist</strong>: Whom is studying the field of biology.
-              </li>
-              <li>
-                <strong>Biology</strong>: Science of life and living organisms.
-              </li>
-              <li><strong>Foliage</strong>: Leafy parts of a tree or a plant.</li>
-              <li>
-                <strong>Biodiversity</strong>: Variability and diversity of life
-                on Earth from all sources. It is a measure of the diversity of
-                species in an area or habitat.
-              </li>
-              <li>
-                <strong>Photosynthesis</strong>: Process by which plants use
-                sunlight, water and carbon dioxide to produce glucose for their
-                growth and reproduction, and oxygen as a waste they don't need but
-                extremely useful for humanity!
-              </li>
-              <li>
-                <strong>Specialization</strong>: Process of adaptation of an
-                organism in a particular way in order to thrive and/or survive.
-              </li>
-              <li>
-                <strong>Food chain</strong>: Network of links in a food web
-                through which nutrients and energy pass from one organism to
-                another. It describes how different organisms eat each other.
-              </li>
-            </ul>
-          </article>
+        <ul>
+          <li>
+            <strong>Biologist</strong>: Whom is studying the field of biology.
+          </li>
+          <li>
+            <strong>Biology</strong>: Science of life and living organisms.
+          </li>
+          <li><strong>Foliage</strong>: Leafy parts of a tree or a plant.</li>
+          <li>
+            <strong>Biodiversity</strong>: Variability and diversity of life
+            on Earth from all sources. It is a measure of the diversity of
+            species in an area or habitat.
+          </li>
+          <li>
+            <strong>Photosynthesis</strong>: Process by which plants use
+            sunlight, water and carbon dioxide to produce glucose for their
+            growth and reproduction, and oxygen as a waste they don't need but
+            extremely useful for humanity!
+          </li>
+          <li>
+            <strong>Specialization</strong>: Process of adaptation of an
+            organism in a particular way in order to thrive and/or survive.
+          </li>
+          <li>
+            <strong>Food chain</strong>: Network of links in a food web
+            through which nutrients and energy pass from one organism to
+            another. It describes how different organisms eat each other.
+          </li>
+        </ul>
+      </article>
 
-          <!-- Ocean article -->
-          <article class="subject-content ocean hide">
-            <h4 class="heading">Ocean</h4>
+      <!-- Ocean article -->
+      <article class="subject-content ocean hide">
+        <h4 class="heading">Ocean</h4>
 
-            <h5>Definition:</h5>
-            <p>
-              An Ocean is a large body of salted water. There is only global ocean
-              that covers 71% of the Earth surface. All the water it contains is
-              connected.<br />
-              For convenience and political reasons, oceanographers geographically
-              divided the Ocean into five recognized basins.<br />
-              Historically there are 4 ocean basins: the Pacific, the Atlantic,
-              the Indian and the Arctic. However nowadays a fifth basins is
-              recognized by most of the countries: the Arctic (or southern) basin.
-            </p>
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                Ocean formed billions of years ago when the Earth temperature
-                cooled below 100 Celsius degree. The water state changed from gas
-                to water by condensing into rain. Over a long period of time it
-                filled the basin that we call ocean.<br />
-                It is commonly said that the colour of the ocean is given by the
-                sky but in reality the colour of the ocean is blue-green. In fact,
-                the water absorbs colours in the red spectrum of light reflecting
-                the colours that we see. This is observable over a large quantity
-                of water.<br />
-                The salt in the ocean comes from two sources: the runoff or
-                erosion of the land and openings in the ocean floor. Rocks on the
-                land are the main source of salts we find in the ocean water.
-                Rainfall and rivers that erodes the rocks on the land dissolved
-                them and carry minerals to the seas. While some of the minerals
-                are used by organisms found in the water, others are not. Over
-                time this process generates an increase in their concentration
-                making the ocean salty.
-              </p>
-            </div>
+        <h5>Definition:</h5>
+        <p>
+          An Ocean is a large body of salted water. There is only one global ocean
+          that covers 71% of the Earth surface. All the water it contains is
+          connected.<br />
+          For convenience and political reasons, oceanographers geographically
+          divided the Ocean into five recognized basins.<br />
+          Historically there are 4 ocean basins: the Pacific, the Atlantic,
+          the Indian and the Arctic. However nowadays a fifth basins is
+          recognized by most of the countries: the Arctic basin.
+        </p>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            Ocean formed billions of years ago when the Earth temperature
+            cooled below 100 Celsius degree. The water state changed from gas
+            to water by condensing into rain. Over a long period of time it
+            filled the basin that we call ocean.<br />
+            It is commonly said that the colour of the ocean is given by the
+            sky but in reality the colour of the ocean is blue-green. In fact,
+            the water absorbs colours in the red spectrum of light reflecting
+            the colours that we see. This is observable over a large quantity
+            of water.<br />
+            The salt in the ocean comes from two sources: the runoff or
+            erosion of the land and openings in the ocean floor. Rocks on the
+            land are the main source of salts we find in the ocean water.
+            Rainfall and rivers that erodes the rocks on the land dissolved
+            them and carry minerals to the seas. While some of the minerals
+            are used by organisms found in the water, others are not. Over
+            time this process generates an increase in their concentration
+            making the ocean salty.
+          </p>
+        </div>
 
-            <h5>Geographic Repartition:</h5>
+        <h5>Geographic Repartition:</h5>
 
-            <div class="images-container">
-              <!--Image by [our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/) -->
-              <img
-                src="assets/images/subjects-images/ocean/oceans-map.png"
-                alt="Map of the repartition of the oceans on Earth."
-                title="Map of the repartition of the oceans on Earth."
-                height="332"
-                width="600"
-              />
-            </div>
-            <p>
-              The boundaries of the ocean are mainly defined by surrounding lands.
-              They include all the seas within their area.<br />
-              <strong>The Pacific Ocean</strong> is the largest one and extends
-              from the Antarctic region in the South to the Arctic region in the
-              North and from Asia and Australia in the west to America in the
-              East.<br />
-              <strong>The Atlantic Ocean</strong> is the second largest and
-              extends from the Antarctic region in the South to the Arctic region
-              in the North and from America in the West to Europe and Africa in
-              the East.<br />
-              <strong>The Indian Ocean</strong> is the third largest and extends
-              from the Antarctic region in the South to Asia in the North and from
-              Africa in the West to Australia in the East.<br />
-              <strong>The Southern or Antarctic Ocean</strong> is formed by
-              combining the south parts od the previous ocean. It basically
-              extends all around the Antarctic in a circular form.<br />
-              <strong>The Arctic Ocean</strong> is the smallest and is mainly
-              delimited by the North border of the continents that surround it.
-            </p>
+        <div class="images-container">
+          <!--Image by [our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/) -->
+          <img src="assets/images/subjects-images/ocean/oceans-map.png"
+            alt="Map of the repartition of the oceans on Earth." title="Map of the repartition of the oceans on Earth."
+            height="332" width="600" />
+        </div>
+        <p>
+          The boundaries of the ocean are mainly defined by surrounding lands.
+          They include all the seas within their area.<br />
+          <strong>The Pacific Ocean</strong> is the largest one and extends
+          from the Antarctic region in the South to the Arctic region in the
+          North and from Asia and Australia in the west to America in the
+          East.<br />
+          <strong>The Atlantic Ocean</strong> is the second largest and
+          extends from the Antarctic region in the South to the Arctic region
+          in the North and from America in the West to Europe and Africa in
+          the East.<br />
+          <strong>The Indian Ocean</strong> is the third largest and extends
+          from the Antarctic region in the South to Asia in the North and from
+          Africa in the West to Australia in the East.<br />
+          <strong>The Southern or Antarctic Ocean</strong> is formed by
+          combining the south parts od the previous ocean. It basically
+          extends all around the Antarctic in a circular form.<br />
+          <strong>The Arctic Ocean</strong> is the smallest and is mainly
+          delimited by the North border of the continents that surround it.
+        </p>
 
-            <h5>How Does It Work?</h5>
+        <h5>How Does It Work?</h5>
 
-            <h6>Tides:</h6>
-            <div class="images-container">
-              <!-- Image by brgfx from [freepik](https://www.freepik.com): 
+        <h6>Tides:</h6>
+        <div class="images-container">
+          <!-- Image by brgfx from [freepik](https://www.freepik.com): 
                 (https://www.freepik.com/free-vector/tidal-movements-earth_1466597.htm#page=1&query=ocean%20tides&position=49) -->
-              <img
-                src="assets/images/subjects-images/ocean/tides.jpg"
-                alt="Illustration of the effect of the moon and the sun on the tides."
-                title="Illustration of the effect of the moon and the sun on the tides."
-                height="352"
-                width="600"
-              />
-            </div>
+          <img src="assets/images/subjects-images/ocean/tides.jpg"
+            alt="Illustration of the effect of the moon and the sun on the tides."
+            title="Illustration of the effect of the moon and the sun on the tides." height="352" width="600" />
+        </div>
 
-            <p>
-              Tides are the periodic variation of the sea level caused by
-              gravitational forces. They are caused by the gravitational pull of
-              the moon and the sun.<br />
-              It corresponds to the rise and fall of the sea level on the coast.
-              Tides fluctuate between high and low. The difference between the two
-              is called <strong>tidal range</strong>. It defines the
-              <strong>intertidal zone</strong>, a particularly important
-              ecological feature of the tides.
-            </p>
+        <p>
+          Tides are the periodic variation of the sea level caused by
+          gravitational forces. They are caused by the gravitational pull of
+          the moon and the sun.<br />
+          It corresponds to the rise and fall of the sea level on the coast.
+          Tides fluctuate between high and low. The difference between the two
+          is called <strong>tidal range</strong>. It defines the
+          <strong>intertidal zone</strong>, a particularly important
+          ecological feature of the tides.
+        </p>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                Almost everywhere on Earth there are two tides a day. They each
-                have a high point (<em>the high tide</em>) and a low point (<em
-                  >the low tide</em
-                >).<br />
-                When the tide is going toward the hight tide, it is called a
-                <strong>flood tide</strong>. And when the tide is going towards
-                the low tide, it is called an <strong>ebb tide</strong>.
-              </p>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            Almost everywhere on Earth there are two tides a day. They each
+            have a high point (<em>the high tide</em>) and a low point (<em>the low tide</em>).<br />
+            When the tide is going toward the hight tide, it is called a
+            <strong>flood tide</strong>. And when the tide is going towards
+            the low tide, it is called an <strong>ebb tide</strong>.
+          </p>
+        </div>
 
-            <h6>Currents:</h6>
+        <h6>Currents:</h6>
 
-            <p>
-              Ocean currents is a continuous movement of water. They are created
-              by wind, water temperature, salinity and tides. They can be found on
-              the surface of the ocean or deep down below.<br />
-              Close to the surface, the currents are widely affected by the wind.
-              Deeper, the currents are affected by temperature, pressure and
-              salinity.
-            </p>
+        <p>
+          Ocean current is a continuous movement of water. They are created
+          by wind, water temperature, salinity and tides. They can be found on
+          the surface of the ocean or deep down below.<br />
+          Close to the surface, the currents are widely affected by the wind.
+          Deeper, the currents are affected by temperature, pressure and
+          salinity.
+        </p>
 
-            <button class="magnifier">
-              <i class="fas fa-search-plus"></i>
-            </button>
-            <div class="extra-info hide">
-              <p>
-                The ocean is never still. While the currents move the water from
-                one place to another, waves are often seen on the surface of the
-                water but they do not move the water. Waves are commonly created
-                by the wind (but not only) and transmit energy called
-                <strong>kinetic energy</strong>.<br />
-                <strong>Rogue waves</strong> are waves that appear without being
-                expected and have a size of more than twice of the prevailing
-                condition.
-              </p>
-            </div>
+        <button class="magnifier">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <div class="extra-info hide">
+          <p>
+            The ocean is never still. While the currents move the water from
+            one place to another, waves are often seen on the surface of the
+            water but they do not move the water. Waves are commonly created
+            by the wind (but not only) and transmit energy called
+            <strong>kinetic energy</strong>.<br />
+            <strong>Rogue waves</strong> are waves that appear without being
+            expected and have a size of more than twice of the prevailing
+            condition.
+          </p>
+        </div>
 
-            <h6>THe Water Cycle:</h6>
-            <div class="images-container">
-              <!-- Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle : 
+        <h6>THe Water Cycle:</h6>
+        <div class="images-container">
+          <!-- Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle : 
                 (https://kids.kiddle.co/Image:Water_cycle.png) -->
-              <img
-                src="assets/images/subjects-images/ocean/water-cycle.png"
-                alt="Illustration of how the water cycle works."
-                title="Illustration of how the water cycle works."
-                height="411"
-                width="600"
-              />
-            </div>
-            <p>
-              Water is essential for life on Earth and the water cycle describes
-              its existence and movements on the planet.<br />
-              Water on Earth is present in different states: liquid, vapor and
-              ice.<br />
-              The Water on Earth is not new and is part of the cycle ever since it
-              existed which means that the water you drink today might have been
-              part of the snow cap of the Everest at one stage of its life!
-            </p>
+          <img src="assets/images/subjects-images/ocean/water-cycle.png"
+            alt="Illustration of how the water cycle works." title="Illustration of how the water cycle works."
+            height="411" width="600" />
+        </div>
+        <p>
+          Water is essential for life on Earth and the water cycle describes
+          its existence and movements on the planet.<br />
+          Water on Earth is present in different states: liquid, vapor and
+          ice.<br />
+          The Water on Earth is not new and is part of the cycle ever since it
+          existed which means that the water you drink today might have been
+          part of the snow cap of the Everest at one stage of its life!
+        </p>
 
-            <ul>
-              <span>Stages of the water cycle:</span>
-              <li>
-                The sun evaporates water from the ocean: water changes state from
-                liquid to vapor.
-              </li>
-              <li>
-                As the vapor rises into the atmosphere it cools down and the vapor
-                condensate: water changes state from vapor to liquid forming
-                clouds.
-              </li>
-              <li>
-                The clouds move the air current and keep charging with more water
-                that falls back on Earth as precipitations in the state of liquid
-                or solid (rain, snow or ice).
-              </li>
-              <li>
-                In cold climate the water is found in the solid state as snow or
-                ice.
-              </li>
-              <li>
-                Snow and ice can melt and flow into rivers changing state from
-                solid to liquid.
-              </li>
-              <li>
-                Snow and ice can as well directly evaporate into the air changing
-                state from solid to vapor.
-              </li>
-              <li>
-                Rainfall and water flow from ice and snow run down and supply or
-                create lakes, rivers and ocean.
-              </li>
-              <li>
-                Some of the flowing water goes underground by infiltration
-                becoming groundwater.
-              </li>
-              <li>Some groundwater can flow to the surface as springs.</li>
-              <li>
-                Plants take and use groundwater that then evaporate by
-                transpiration from their leaves into the air.
-              </li>
-              <li>
-                Groundwater can form some reserve very deep into the ground and
-                can flow into the ocean.
-              </li>
-            </ul>
+        <ul>
+          <span>Stages of the water cycle:</span>
+          <li>
+            The sun evaporates water from the ocean: water changes state from
+            liquid to vapor.
+          </li>
+          <li>
+            As the vapor rises into the atmosphere it cools down and the vapor
+            condensate: water changes state from vapor to liquid forming
+            clouds.
+          </li>
+          <li>
+            The clouds move the air current and keep charging with more water
+            that falls back on Earth as precipitations in the state of liquid
+            or solid (rain, snow or ice).
+          </li>
+          <li>
+            In cold climate the water is found in the solid state as snow or
+            ice.
+          </li>
+          <li>
+            Snow and ice can melt and flow into rivers changing state from
+            solid to liquid.
+          </li>
+          <li>
+            Snow and ice can as well directly evaporate into the air changing
+            state from solid to vapor.
+          </li>
+          <li>
+            Rainfall and water flow from ice and snow run down and supply or
+            create lakes, rivers and ocean.
+          </li>
+          <li>
+            Some of the flowing water goes underground by infiltration
+            becoming groundwater.
+          </li>
+          <li>Some groundwater can flow to the surface as springs.</li>
+          <li>
+            Plants take and use groundwater that then evaporate by
+            transpiration from their leaves into the air.
+          </li>
+          <li>
+            Groundwater can form some reserve very deep into the ground and
+            can flow into the ocean.
+          </li>
+        </ul>
 
-            <h5>Importance of The Ocean:</h5>
-            <p>
-              The Ocean produces over 50% of the world oxygen and absorbs 50 times
-              more carbon dioxide than our atmosphere.<br />
-              It plays an important role in the climate regulation by transporting
-              heat from the equator to the poles.<br />
-              It is an immense resource for food and economy. The ocean provides
-              salt, fish, crustacean, seaweed minerals and energy from fossil
-              energy to renewable energy.<br />
-              Covering most part of our planet, it is hugely used for
-              transportation.
-            </p>
+        <h5>Importance of The Ocean:</h5>
+        <p>
+          The Ocean produces over 50% of the world oxygen and absorbs 50 times
+          more carbon dioxide than our atmosphere.<br />
+          It plays an important role in the climate regulation by transporting
+          heat from the equator to the poles.<br />
+          It is an immense resource for food and economy. The ocean provides
+          salt, fish, crustacean, seaweed minerals and energy from fossil
+          energy to renewable energy.<br />
+          Covering most part of our planet, it is hugely used for
+          transportation.
+        </p>
 
-            <h5>Ocean Life:</h5>
-            <p>
-              <strong>Plankton</strong> are mostly microscopic organisms drifting
-              and carried by the current and the tides in the ocean and unable to
-              swim against them. It comes from the Greek for “wandering,
-              drifting”. It comprises phytoplankton and zooplankton. Plankton has
-              an important place in the food chain and ecosystem of the ocean.<br />
-              <strong>Phytoplankton</strong> are microscopic plants. They are the
-              main producer of oxygen performing the photosynthesis and are found
-              close to the surface.<br />
-              <strong>Zooplankton</strong> are microscopic animals including
-              krill, sea snail etc.<br />
-              The ocean is home to some incredible species from the seahorse to
-              the narwhals (the unicorns of the ocean). They include seaweed,
-              seagrass, mangrove, cephalopods, crustacean, corals, marine mammals,
-              fish, sea turtles, reptiles and seabirds.<br />
-              The ocean ecosystems hugely vary from the fjjords in Scandinavia to
-              sandy beach.
-            </p>
+        <h5>Ocean Life:</h5>
+        <p>
+          <strong>Plankton</strong> are mostly microscopic organisms drifting
+          and carried by the current and the tides in the ocean and unable to
+          swim against them. It comes from the Greek for “wandering,
+          drifting”. It comprises phytoplankton and zooplankton. Plankton has
+          an important place in the food chain and ecosystem of the ocean.<br />
+          <strong>Phytoplankton</strong> are microscopic plants. They are the
+          main producer of oxygen performing the photosynthesis and are found
+          close to the surface.<br />
+          <strong>Zooplankton</strong> are microscopic animals including
+          krill, sea snail etc.<br />
+          <br />
+          The ocean is home to some incredible species from the seahorse to
+          the narwhals (the unicorns of the ocean). They include seaweed,
+          seagrass, mangrove, cephalopods, crustacean, corals, marine mammals,
+          fish, sea turtles, reptiles and seabirds.<br />
+          The ocean ecosystems hugely vary from the fjjords in Scandinavia to
+          sandy beach.
+        </p>
 
-            <h5>Interesting Facts:</h5>
-            <ul>
-              <li>More than 80% of the ocean is unexplored.</li>
-              <li>More than 90% of the total water on Earth is in the Ocean.</li>
-              <li>
-                The Pacific Ocean cover more than 30% of the Earth’s surface.
-              </li>
-              <li>All the Earth land surface would fit in the Pacific Ocean.</li>
-              <li>Life began in the Ocean over 3.5 billion years ago.</li>
-              <li>
-                Water takes about 1000 years to travel all the way around the
-                globe.
-              </li>
-              <li>
-                The deepest part of the ocean is the Marina Trench at more than 10
-                kilometers deep.
-              </li>
-              <li>The mid-ocean ridge is nearly 65,000 kilometers long.</li>
-              <li>
-                The Great Barrier Reef in Australia is the largest living organism
-                on Earth and can be seen from the Moon.
-              </li>
-              <li>
-                The coral reef represents only 1/50 of the marine floor.<br />
-                1/4 of marine life find its home in the coral reef.
-              </li>
-              <li>
-                The Gulf Stream transport more water than all the Earth’s rivers
-                combined.
-              </li>
-              <li>
-                The Gulf Stream transport more water than all the Earth’s rivers
-                combined.
-              </li>
-              <li>
-                The coelacanth, a fish thought to be extinct and leaving in the
-                ocean 300 million years ago was caught by a fisherman off the
-                south coast of Africa.
-              </li>
-              <li>The Indian ocean is the warmest ocean.</li>
-              <li>Tsunami waves can travel as fast as a jet plane.</li>
-              <li>
-                The largest rogue waves recorded happened on the west of the coast
-                of Scotland and presented waves with a height reaching almost 30
-                meters.
-              </li>
-              <li>
-                Some research shows that if all the salt from the ocean would be
-                spread evenly on the Earth land surface, it would cover it all and
-                build up over 150 meters high.
-              </li>
-            </ul>
+        <h5>Interesting Facts:</h5>
+        <ul>
+          <li>More than 80% of the ocean is unexplored.</li>
+          <li>More than 90% of the total water on Earth is in the Ocean.</li>
+          <li>
+            The Pacific Ocean cover more than 30% of the Earth’s surface.
+          </li>
+          <li>All the Earth land surface would fit in the Pacific Ocean.</li>
+          <li>Life began in the Ocean over 3.5 billion years ago.</li>
+          <li>
+            Water takes about 1000 years to travel all the way around the
+            globe.
+          </li>
+          <li>
+            The deepest part of the ocean is the Marina Trench at more than 10
+            kilometers deep.
+          </li>
+          <li>The mid-ocean ridge is nearly 65,000 kilometers long.</li>
+          <li>
+            The Great Barrier Reef in Australia is the largest living organism
+            on Earth and can be seen from the Moon.
+          </li>
+          <li>
+            The coral reef represents only 1/50 of the marine floor.<br />
+            1/4 of marine life find its home in the coral reef.
+          </li>
+          <li>
+            The Gulf Stream transport more water than all the Earth’s rivers
+            combined.
+          </li>
+          <li>
+            The coelacanth, a fish thought to be extinct and leaving in the
+            ocean 300 million years ago was caught by a fisherman off the
+            south coast of Africa.
+          </li>
+          <li>The Indian ocean is the warmest ocean.</li>
+          <li>Tsunami waves can travel as fast as a jet plane.</li>
+          <li>
+            The largest rogue waves recorded happened on the west of the coast
+            of Scotland and presented waves with a height reaching almost 30
+            meters.
+          </li>
+          <li>
+            Some research shows that if all the salt from the ocean would be
+            spread evenly on the Earth land surface, it would cover it all and
+            build up over 150 meters high.
+          </li>
+        </ul>
 
-            <div class="images-container">
-              <!-- Image by U.S. Geological Survey , Department of the Interior/USGS 
+        <div class="images-container">
+          <!-- Image by U.S. Geological Survey , Department of the Interior/USGS 
               Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources" 
               (https://www.usgs.gov/media/images/distribution-water-and-above-earth)-->
-              <img
-                src="assets/images/subjects-images/ocean/water-distribution.png"
-                alt="Illustration of the distribution of the water on the planet Earth."
-                title="Illustration of the distribution of the water on the planet Earth."
-                height="484"
-                width="600"
-              />
-            </div>
-
-            <h5>Scientific Terms:</h5>
-            <ul>
-              <li>
-                <strong>Seas</strong>: Smaller than ocean and usually located
-                where the ocean and the land meet. They are partially enclosed by
-                land and are different from ocean geographically speaking.
-              </li>
-              <li><strong>Geography</strong>: The study of Earth surface.</li>
-              <li><strong>Oceanology</strong>: The study of the ocean.</li>
-              <li><strong>Oceanographer</strong>: Whom study the ocean.</li>
-              <li><strong>Water vapor</strong>: Gas invisible to the eye.</li>
-              <li>
-                <strong>Sublimation</strong>: Water changing state from solid to
-                vapor.
-              </li>
-              <li>
-                <strong>Deposition</strong>: Water changing state from vapor to
-                solid.
-              </li>
-              <li>
-                <strong>Liquefaction</strong>: Water changing state from solid to
-                liquid.
-              </li>
-              <li>
-                <strong>Solidification</strong>: Water changing state from liquid
-                to solid.
-              </li>
-              <li>
-                <strong>Evaporation</strong>: Water changing state from liquid to
-                vapor.
-              </li>
-              <li>
-                <strong>Condensation</strong>: Water changing state from vapor to
-                liquid.
-              </li>
-            </ul>
-          </article>
-        </section>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="copyright">
-          <i class="far fa-copyright" aria-hidden="true"></i>
-          For educational purposes.
+          <img src="assets/images/subjects-images/ocean/water-distribution.png"
+            alt="Illustration of the distribution of the water on the planet Earth."
+            title="Illustration of the distribution of the water on the planet Earth." height="484" width="600" />
         </div>
-        <div class="footer-links">
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fab fa-pinterest-p"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-graduation-cap"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-cogs"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-        </div>
-      </footer>
-  </body>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/study.js"></script>
+
+        <h5>Scientific Terms:</h5>
+        <ul>
+          <li>
+            <strong>Seas</strong>: Smaller than ocean and usually located
+            where the ocean and the land meet. They are partially enclosed by
+            land and are different from ocean geographically speaking.
+          </li>
+          <li><strong>Geography</strong>: The study of Earth surface.</li>
+          <li><strong>Oceanology</strong>: The study of the ocean.</li>
+          <li><strong>Oceanographer</strong>: Whom study the ocean.</li>
+          <li><strong>Water vapor</strong>: Gas invisible to the eye.</li>
+          <li>
+            <strong>Sublimation</strong>: Water changing state from solid to
+            vapor.
+          </li>
+          <li>
+            <strong>Deposition</strong>: Water changing state from vapor to
+            solid.
+          </li>
+          <li>
+            <strong>Liquefaction</strong>: Water changing state from solid to
+            liquid.
+          </li>
+          <li>
+            <strong>Solidification</strong>: Water changing state from liquid
+            to solid.
+          </li>
+          <li>
+            <strong>Evaporation</strong>: Water changing state from liquid to
+            vapor.
+          </li>
+          <li>
+            <strong>Condensation</strong>: Water changing state from vapor to
+            liquid.
+          </li>
+        </ul>
+      </article>
+    </section>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="copyright">
+      <i class="far fa-copyright" aria-hidden="true"></i>
+      For educational purposes.
+    </div>
+    <div class="footer-links">
+      <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+        <i class="fab fa-pinterest-p" aria-hidden="true" title="Link to websiteName."></i>
+      </a>
+      <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+        <i class="fas fa-graduation-cap" aria-hidden="true" title="Link to websiteName."></i>
+      </a>
+      <a href="#" rel="noopener" target="_blank" aria-label="Link to websiteName.">
+        <i class="fas fa-cogs" aria-hidden="true" title="Link to websiteName."></i>
+      </a>
+    </div>
+  </footer>
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/study.js"></script>
+
 </html>
