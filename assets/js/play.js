@@ -172,6 +172,118 @@ function getEarthEasyQuestions() {
     });
 }
 
+function getVolcanoInterQuestions() {
+  fetch("assets/JSON/inter-questions/volcano-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoInterQuestions = data;
+
+      for (let i = 0; i < volcanoInterQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getJungleInterQuestions() {
+  fetch("assets/JSON/inter-questions/jungle-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleInterQuestions = data;
+
+      for (let i = 0; i < jungleInterQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getOceanInterQuestions() {
+  fetch("assets/JSON/inter-questions/ocean-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanInterQuestions = data;
+
+      for (let i = 0; i < oceanInterQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getEarthInterQuestions() {
+  fetch("assets/JSON/inter-questions/earth-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthInterQuestions = data;
+
+      for (let i = 0; i < earthInterQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getVolcanoHardQuestions() {
+  fetch("assets/JSON/hard-questions/volcano-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoHardQuestions = data;
+
+      for (let i = 0; i < volcanoHardQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getJungleHardQuestions() {
+  fetch("assets/JSON/hard-questions/jungle-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleHardQuestions = data;
+
+      for (let i = 0; i < jungleHardQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getOceanHardQuestions() {
+  fetch("assets/JSON/hard-questions/ocean-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanHardQuestions = data;
+
+      for (let i = 0; i < oceanHardQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
+function getEarthHardQuestions() {
+  fetch("assets/JSON/hard-questions/earth-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthHardQuestions = data;
+
+      for (let i = 0; i < earthHardQuestions.length; i++) {
+        questionsNumber.push(i);
+      }
+    });
+}
+
 function setGameParameters() {
 
   let level = document.getElementById("button-display").innerText;
@@ -239,7 +351,23 @@ function setGameParameters() {
     getOceanEasyQuestions();
   } else if (level === "Apprentice" && subject.id === "earth") {
     getEarthEasyQuestions();
-  } // ADD THE DIFFERENTE LEVEL BUT NEED THE JSON FILE FIRST AND AS WELL POPULATE-QUESTION AND CHECK-ANSWER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  } else if (level === "Scientist" && subject.id === "volcano") {
+    getVolcanoInterQuestions();
+  } else if (level === "Scientist" && subject.id === "jungle") {
+    getJungleInterQuestions();
+  } else if (level === "Scientist" && subject.id === "ocean") {
+    getOceanInterQuestions();
+  } else if (level === "Scientist" && subject.id === "earth") {
+    getEarthInterQuestions();
+  } else if (level === "Genius" && subject.id === "volcano") {
+    getVolcanoHardQuestions();
+  } else if (level === "Genius" && subject.id === "jungle") {
+    getJungleHardQuestions();
+  } else if (level === "Genius" && subject.id === "ocean") {
+    getOceanHardQuestions();
+  } else if (level === "Genius" && subject.id === "earth") {
+    getEarthHardQuestions();
+  }
 
   // Set the localStorage items for the game data to zero
   // Score
@@ -474,7 +602,9 @@ function getNewPosition(availableDirections, chosenDirection) {
   // Get the string that correspond to the direction chosen in order to extract the new position from it.
   for (let direction of directions) {
     if (direction.includes(chosenDirection)) {
-      // Credit for the line 194 to [stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript).
+      // Credit for the substring method used with the index of method to:
+      //[stack overflow](https://stackoverflow.com/questions/29650867/remove-part-of-string-in-javascript).
+
       // Extract the new position and move the avatar.
       let newPosition = direction.substring(direction.indexOf("-") + 1);
       moveAvatar(newPosition);
@@ -582,7 +712,7 @@ function displayQuestion() {
   }
 }
 
-// Display the Question
+// Display the Question. --------------- EASY --------------------
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
@@ -667,7 +797,7 @@ function checkVolcanoEasyAnswer() {
     });
 }
 
-// Display the Question
+// Display the Question.
 function populateJungleEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/jungle-easy-questions.JSON")
@@ -752,7 +882,7 @@ function checkJungleEasyAnswer() {
     });
 }
 
-// Display the Question
+// Display the Question.
 function populateOceanEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/ocean-easy-questions.JSON")
@@ -837,7 +967,7 @@ function checkOceanEasyAnswer() {
     });
 }
 
-// Display the Question
+// Display the Question.
 function populateEarthEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/earth-easy-questions.JSON")
@@ -922,6 +1052,687 @@ function checkEarthEasyAnswer() {
     });
 }
 
+// Display the Question.
+function populateVolcanoInterQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/inter-questions/volcano-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoInterQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = volcanoInterQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkVolcanoInterAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer. --------------- INTERMEDIATE --------------------
+function checkVolcanoInterAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/inter-questions/volcano-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoInterQuestions = data;
+      for (let questions of volcanoInterQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateJungleInterQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/inter-questions/jungle-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleInterQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = jungleInterQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkJungleInterAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkJungleInterAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/inter-questions/jungle-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleInterQuestions = data;
+      for (let questions of jungleInterQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateOceanInterQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/inter-questions/ocean-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanInterQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = oceanInterQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkOceanInterAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkOceanInterAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/inter-questions/ocean-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanInterQuestions = data;
+      for (let questions of oceanInterQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateEarthInterQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/inter-questions/earth-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthInterQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = earthInterQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkEarthInterAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkEarthInterAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/inter-questions/earth-inter-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthInterQuestions = data;
+      for (let questions of earthInterQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question. --------------- HARD --------------------
+function populateVolcanoHardQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/hard-questions/volcano-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoHardQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = volcanoHardQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkVolcanoHardAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkVolcanoHardAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/hard-questions/volcano-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let volcanoHardQuestions = data;
+      for (let questions of volcanoHardQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateJungleHardQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/hard-questions/jungle-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleHardQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = jungleHardQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkJungleHardAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkJungleHardAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/hard-questions/jungle-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let jungleHardQuestions = data;
+      for (let questions of jungleHardQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateOceanHardQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/hard-questions/ocean-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanHardQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = oceanHardQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkOceanHardAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkOceanHardAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/hard-questions/ocean-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let oceanHardQuestions = data;
+      for (let questions of oceanHardQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+// Display the Question.
+function populateEarthHardQuestion() {
+  // Get the questions from the json file.
+  fetch("assets/JSON/hard-questions/earth-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthHardQuestions = data;
+
+      // select a random question.
+      // Generate a random number that does not to appear twice with the help of
+      //[stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)
+
+      if (questionsNumber.length > 0) {
+        let randomQuestionIndex = questionsNumber.splice(Math.random() * questionsNumber.length, 1)[0];
+
+        let randomQuestion = earthHardQuestions[randomQuestionIndex];
+
+        let questionDisplay = document.getElementById("question-display");
+        questionDisplay.innerText = randomQuestion.question;
+
+        let firstOption = document.querySelectorAll("[for='answer-one']")[0];
+        firstOption.innerText = randomQuestion.optionOne;
+
+        let secondOption = document.querySelectorAll("[for='answer-two']")[0];
+        secondOption.innerText = randomQuestion.optionTwo;
+
+        let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
+        thirdOption.innerText = randomQuestion.optionThree;
+      } else {
+        alert("There are no more questions");
+        closeQuestion();
+      }
+    });
+
+  // Submit the answer.
+  let questionForm = document.getElementById("question-form");
+  questionForm.addEventListener(
+    "submit",
+    function () {
+      checkEarthHardAnswer();
+    }, {
+      once: true
+    }
+  );
+}
+
+// Check the answer.
+function checkEarthHardAnswer() {
+  let askedQuestion = document.getElementById("question-display").innerText;
+
+  fetch("assets/JSON/hard-questions/earth-hard-questions.JSON")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let earthHardQuestions = data;
+      for (let questions of earthHardQuestions) {
+        if (questions.question === askedQuestion) {
+          let answers = document.querySelectorAll("#question-form input");
+          answers.forEach((answer) => {
+            if (answer.checked) {
+              let chosenAnswer = answer.nextElementSibling.innerText;
+              if (chosenAnswer === questions.correctAnswer) {
+                alert("That's right! Well done :)");
+                closeQuestion();
+                incrementScrore();
+              } else {
+                alert(
+                  `Sorry, wrong answer! 
+                  The correct answer was:  ${questions.correctAnswer}
+                 `
+                );
+                decrementScore();
+                addStrike();
+                closeQuestion();
+              }
+            }
+          });
+        }
+      }
+    });
+}
+
+
 // Close the question modal.
 function closeQuestion() {
   let questionModal = document.getElementsByClassName("question-modal")[0];
@@ -997,15 +1808,18 @@ function gameOver() {
 
 function checkForExit() {
   let level = document.getElementById("button-display").innerText;
-  let exit = document.querySelector(".grid-easy .labyrinth-exit").className.substring(15);
+  let exit; 
   let avatar;
 
   if (level === "Apprentice") {
     avatar = document.getElementById("easy-player");
+    exit = document.querySelector("#easy-game .labyrinth-exit").className.substring(15);
   } else if (level === "Scientist") {
     avatar = document.getElementById("inter-player");
+    exit = document.querySelector("#inter-game .labyrinth-exit").className.substring(15);
   } else if (level === "Genius") {
     avatar = document.getElementById("hard-player");
+    exit = document.querySelector("#hard-game .labyrinth-exit").className.substring(15);
   }
 
   let avatarPosition = avatar.className.substring(7);
@@ -1145,7 +1959,7 @@ function displayAchievements() {
   }
 
   if (Number(localStorage.atom) === 1) {
-    permAtomReward;
+    permAtomReward.classList.remove("hide");
   }
 
   if (Number(localStorage.flask) === 1) {
