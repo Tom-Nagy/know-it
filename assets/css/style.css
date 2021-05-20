@@ -271,7 +271,7 @@ a {
 
 .results-modal {
     width: 80%;
-    height: 40%;
+    height: 50%;
     border-radius: 10px;
     padding: 1em;
 }
@@ -1336,13 +1336,19 @@ a {
     width: 100%;
 }
 
+#score-wrapper {
+    padding: 1em 0;
+}
+
 #score {
     color: #d91e2e;
     font-weight: bold;
 }
 
+
 #achievements p {
     margin: 0;
+    padding: 1em 0.5em;
 }
 
 #achievements i {
