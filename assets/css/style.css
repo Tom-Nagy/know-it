@@ -265,7 +265,7 @@ a {
 
 .question-modal {
     border-radius: 5px;
-    height: 60%;
+    height: 80%;
     width: 85%;
 }
 
@@ -281,13 +281,14 @@ a {
     border-radius: 5px;
 }
 
-#wrong-answer {
+#wrong-answer,
+#game-over {
     width: 80%;
 }
 
 .overlay,
 .game-overlay,
-.answers-overlay,
+.messages-overlay,
 .ongame-overlay {
     position: fixed;
     opacity: 0;
@@ -308,12 +309,12 @@ a {
     z-index: 30;
 }
 
-.answers-overlay {
+.messages-overlay {
     z-index: 40;
 }
 
 .overlay,
-.answers-overlay,
+.messages-overlay,
 .ongame-overlay {
     background-color: rgba(0, 0, 0, 0.8);
 }

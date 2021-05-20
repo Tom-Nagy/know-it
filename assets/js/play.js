@@ -420,10 +420,10 @@ startButton.addEventListener("click", function () {
   let level = document.getElementById("button-display").innerText;
   let subject = document.getElementsByClassName("selected-subject")[0];
 
-  
+
   if (level !== "Set Level" && typeof subject !== "undefined") {
     displayTheme(subject);
-    
+
     // Display the game modal.
     let game = document.getElementById("game");
     game.classList.add("modal-active");
@@ -713,7 +713,9 @@ function displayQuestion() {
 }
 
 // Display the Question. --------------- EASY -------------------- 
+// Create a variable to store the rigth answer and pass it to the displayWrongAnswer function for displaying it in the modal.
 let correctAnswer;
+
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
@@ -778,7 +780,7 @@ function checkVolcanoEasyAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();                
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
@@ -860,15 +862,12 @@ function checkJungleEasyAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -945,15 +944,12 @@ function checkOceanEasyAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1030,15 +1026,12 @@ function checkEarthEasyAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1050,7 +1043,7 @@ function checkEarthEasyAnswer() {
     });
 }
 
-// Display the Question.
+// Display the Question. --------------- INTERMEDIATE --------------------
 function populateVolcanoInterQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/inter-questions/volcano-inter-questions.JSON")
@@ -1098,7 +1091,7 @@ function populateVolcanoInterQuestion() {
   );
 }
 
-// Check the answer. --------------- INTERMEDIATE --------------------
+// Check the answer. 
 function checkVolcanoInterAnswer() {
   let askedQuestion = document.getElementById("question-display").innerText;
 
@@ -1115,15 +1108,12 @@ function checkVolcanoInterAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1200,15 +1190,12 @@ function checkJungleInterAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1285,15 +1272,12 @@ function checkOceanInterAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1370,15 +1354,12 @@ function checkEarthInterAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1455,15 +1436,12 @@ function checkVolcanoHardAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1540,15 +1518,12 @@ function checkJungleHardAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1625,15 +1600,12 @@ function checkOceanHardAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1710,15 +1682,12 @@ function checkEarthHardAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1734,38 +1703,43 @@ function checkEarthHardAnswer() {
 function displayRightAnswerModal() {
   let rightAnswer = document.getElementById("right-answer");
   rightAnswer.classList.add("modal-active");
-  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
-  console.log(answersOverlay);
-  answersOverlay.classList.add("overlay-active");
+  let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+  messagesOverlay.classList.add("overlay-active");
 }
 
 // Diplay the wrong anser modal.
 function displayWrongAnswerModal(correctAnswer) {
   let wrongAnswer = document.getElementById("wrong-answer");
-  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
+  let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
   let displayCorrectAnswer = document.querySelector("#wrong-answer span");
 
   displayCorrectAnswer.innerText = correctAnswer;
 
   wrongAnswer.classList.add("modal-active");
-  answersOverlay.classList.add("overlay-active");
+  messagesOverlay.classList.add("overlay-active");
 }
 
-// Close Answers modals and overlay.
+// Close Answers, Game over modals and overlay.
 document.addEventListener("click", function closeAnswersModal() {
-  
+
   let rightAnswer = document.getElementById("right-answer");
   let wrongAnswer = document.getElementById("wrong-answer");
-  
+  let gameOverDisplay = document.getElementById("game-over");
+  let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+
   if (rightAnswer.classList.contains("modal-active")) {
     rightAnswer.classList.remove("modal-active");
-    
-  } else if (wrongAnswer.classList.contains("modal-active")){
-    wrongAnswer.classList.remove("modal-active");
-  }
+    messagesOverlay.classList.remove("overlay-active");
 
-  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
-  answersOverlay.classList.remove("overlay-active");
+  } else if (wrongAnswer.classList.contains("modal-active")) {
+    wrongAnswer.classList.remove("modal-active");
+    checkStrikes();
+
+  } else if (gameOverDisplay.classList.contains("modal-active")) {
+    gameOverDisplay.classList.remove("modal-active");
+    gameOver();
+    messagesOverlay.classList.remove("overlay-active");
+  }
 })
 
 
@@ -1805,21 +1779,7 @@ function addStrike() {
     localStorage.strike = 1;
   }
 
-  displayStrikes();
-
-  // Check if the Strikes have reached the limit for the selected level and call gameOver if it has.
-  let level = document.getElementById("button-display").innerText;
-  if (level === "Apprentice" && Number(localStorage.strike) === 3) {
-    gameOver();
-  } else if (level === "Scientist" && Number(localStorage.strike) === 2) {
-    gameOver();
-  } else if (level === "Genius" && Number(localStorage.strike) === 1) {
-    gameOver();
-  }
-}
-
-// Strike display.
-function displayStrikes() {
+  // Strike display.
   if (Number(localStorage.strike) === 1) {
     let strikeOne = document.querySelector(".strike-one i");
     strikeOne.classList.remove("hide");
@@ -1829,10 +1789,32 @@ function displayStrikes() {
   }
 }
 
+// Check if the Strikes have reached the limit for the selected level and call gameOver if it has.
+function checkStrikes() {
+
+  let level = document.getElementById("button-display").innerText;
+  if (level === "Apprentice" && Number(localStorage.strike) === 3) {
+    displayGameOver();
+  } else if (level === "Scientist" && Number(localStorage.strike) === 2) {
+    displayGameOver();
+  } else if (level === "Genius" && Number(localStorage.strike) === 1) {
+    displayGameOver();
+  } else {
+    let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+    messagesOverlay.classList.remove("overlay-active");
+  }
+}
+
+
+function displayGameOver() {
+  let gameOverDisplay = document.getElementById("game-over");
+  let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+
+  gameOverDisplay.classList.add("modal-active");
+  messagesOverlay.classList.add("overlay-active");
+}
+
 function gameOver() {
-  alert(
-    "Sorry you have reached the strike(s) limit.... GAME OVER! Try again ;)"
-  );
   closeQuestion();
   closeGame();
 }
@@ -1845,7 +1827,7 @@ function gameOver() {
 
 function checkForExit() {
   let level = document.getElementById("button-display").innerText;
-  let exit; 
+  let exit;
   let avatar;
 
   if (level === "Apprentice") {
