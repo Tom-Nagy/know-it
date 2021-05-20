@@ -227,6 +227,7 @@ a {
 
 .rules-modal,
 .contact-modals,
+.settings-modal,
 .game-modal,
 .question-modal,
 .results-modal,
@@ -242,6 +243,7 @@ a {
 
 .rules-modal,
 .contact-modals,
+.settings-modal,
 .game-modal {
     z-index: 10;
 }
@@ -276,17 +278,20 @@ a {
     padding: 1em;
 }
 
+.settings-modal,
 .answers-result {
     padding: 1em;
     border-radius: 5px;
 }
 
+.settings-modal,
 #wrong-answer,
 #game-over {
     width: 80%;
 }
 
 .overlay,
+.settings-overlay,
 .game-overlay,
 .messages-overlay,
 .ongame-overlay {
@@ -301,6 +306,7 @@ a {
 }
 
 .overlay,
+.settings-overlay,
 .game-overlay {
     z-index: 5;
 }
@@ -314,6 +320,7 @@ a {
 }
 
 .overlay,
+.settings-overlay,
 .messages-overlay,
 .ongame-overlay {
     background-color: rgba(0, 0, 0, 0.8);
@@ -2649,6 +2656,11 @@ a {
     /* index.html */
     .home-wrapper {
         padding: 0 10px 2px 10px;
+    }
+
+    /* contact.html */
+    #contact-form {
+        width: 300px;
     }
 }
 

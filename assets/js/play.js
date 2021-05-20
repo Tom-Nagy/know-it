@@ -284,6 +284,7 @@ function getEarthHardQuestions() {
     });
 }
 
+
 function setGameParameters() {
 
   let level = document.getElementById("button-display").innerText;
@@ -413,6 +414,20 @@ function setGameParameters() {
   }
 }
 
+// Close the modal message for setting the settings.
+let settingsModal = document.getElementsByClassName("settings-modal")[0];
+let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
+settingsModal.addEventListener("click", function () {
+  settingsOverlay.classList.remove("overlay-active");
+  settingsModal.classList.remove("modal-active")
+})
+
+settingsOverlay.addEventListener("click", function () {
+  settingsOverlay.classList.remove("overlay-active");
+  settingsModal.classList.remove("modal-active")
+})
+
+
 // Start the game and set game parameters.
 startButton.addEventListener("click", function () {
 
@@ -437,10 +452,15 @@ startButton.addEventListener("click", function () {
     setGameParameters();
 
   } else if (level === "Set Level" || typeof subject === "undefined") {
-    alert(
-      `Oops, it didn't work!!
-      PLease make sure you selected a SUBJECT and set the LEVEL ;)`
-    );
+
+    console.log("Osti man !!!!!!!");
+    let settingsModal = document.getElementsByClassName("settings-modal")[0];
+    let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
+
+    settingsOverlay.classList.add("overlay-active");
+    console.log(settingsOverlay);
+    settingsModal.classList.add("modal-active")
+    console.log(settingsModal);
   }
 });
 
@@ -1720,7 +1740,7 @@ function displayWrongAnswerModal(correctAnswer) {
 }
 
 // Close Answers, Game over modals and overlay.
-document.addEventListener("click", function closeAnswersModal() {
+document.addEventListener("click", function () {
 
   let rightAnswer = document.getElementById("right-answer");
   let wrongAnswer = document.getElementById("wrong-answer");
