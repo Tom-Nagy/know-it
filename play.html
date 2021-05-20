@@ -176,7 +176,16 @@
         </div>
 
         <button aria-label="Start the game." id="start-button">Start</button>
+
+        <div class="settings-modal">
+          <div class="modal-body">
+            Oops something went wrong !!!<br />
+            Make sure you have selected a <strong>Subject</strong> and set the <strong>Level</strong> &#x1F609;
+          </div>
+        </div>
+        <div class="settings-overlay"></div>
       </section>
+
       <section class="game-rewards">
         <div id="rewards-display">
           <span>
@@ -1740,6 +1749,12 @@
           <div class="modal-body">
             Sorry, wrong answer &#x1F644; The correct answer was: <br />
             <span></span>
+          </div>
+        </div>
+        <div class="no-questions">
+          <div class="modal-body">
+            Wow! It seems that you answered all the questions....<br />
+            So just run to the <strong>Exit</strong> &#x1F607;
           </div>
         </div>
         <div id="game-over" class="answers-result">

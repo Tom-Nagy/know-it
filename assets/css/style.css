@@ -231,7 +231,8 @@ a {
 .game-modal,
 .question-modal,
 .results-modal,
-.answers-result {
+.answers-result,
+.no-questions {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -253,7 +254,8 @@ a {
     z-index: 35;
 }
 
-.answers-result {
+.answers-result,
+.no-questions {
     z-index: 45;
 }
 
@@ -279,13 +281,15 @@ a {
 }
 
 .settings-modal,
-.answers-result {
+.answers-result,
+.no-questions {
     padding: 1em;
     border-radius: 5px;
 }
 
 .settings-modal,
 #wrong-answer,
+.no-questions,
 #game-over {
     width: 80%;
 }

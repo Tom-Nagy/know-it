@@ -763,7 +763,7 @@ function populateVolcanoEasyQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -845,7 +845,7 @@ function populateJungleEasyQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -927,7 +927,7 @@ function populateOceanEasyQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1009,7 +1009,7 @@ function populateEarthEasyQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1091,7 +1091,7 @@ function populateVolcanoInterQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1173,7 +1173,7 @@ function populateJungleInterQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1255,7 +1255,7 @@ function populateOceanInterQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1337,7 +1337,7 @@ function populateEarthInterQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1419,7 +1419,7 @@ function populateVolcanoHardQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1501,7 +1501,7 @@ function populateJungleHardQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1583,7 +1583,7 @@ function populateOceanHardQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1665,7 +1665,7 @@ function populateEarthHardQuestion() {
         let thirdOption = document.querySelectorAll("[for='answer-three']")[0];
         thirdOption.innerText = randomQuestion.optionThree;
       } else {
-        alert("There are no more questions");
+        displayNoMoreQuestionsModal();
         closeQuestion();
       }
     });
@@ -1736,13 +1736,23 @@ function displayWrongAnswerModal(correctAnswer) {
   messagesOverlay.classList.add("overlay-active");
 }
 
-// Close Answers, Game over modals and overlay.
+function displayNoMoreQuestionsModal() {
+  let noMoreQuestions = document.getElementsByClassName("no-questions")[0];
+  let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+  
+  noMoreQuestions.classList.add("modal-active");
+  messagesOverlay.classList.add("overlay-active");
+
+}
+
+// Close Answers, Game over, no questions modals and overlay.
 document.addEventListener("click", function () {
 
   let rightAnswer = document.getElementById("right-answer");
   let wrongAnswer = document.getElementById("wrong-answer");
   let gameOverDisplay = document.getElementById("game-over");
   let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
+  let noMoreQuestions = document.getElementsByClassName("no-questions")[0];
 
   if (rightAnswer.classList.contains("modal-active")) {
     rightAnswer.classList.remove("modal-active");
@@ -1751,6 +1761,10 @@ document.addEventListener("click", function () {
   } else if (wrongAnswer.classList.contains("modal-active")) {
     wrongAnswer.classList.remove("modal-active");
     checkStrikes();
+
+  } else if (noMoreQuestions.classList.contains("modal-active")) {
+    noMoreQuestions.classList.remove("modal-active");
+    messagesOverlay.classList.remove("overlay-active");
 
   } else if (gameOverDisplay.classList.contains("modal-active")) {
     gameOverDisplay.classList.remove("modal-active");
