@@ -294,6 +294,10 @@ a {
     width: 80%;
 }
 
+.settings-modal {
+    max-width: 450px;
+}
+
 .overlay,
 .settings-overlay,
 .game-overlay,
@@ -1846,7 +1850,7 @@ a {
     border-radius: 50%;
     position: absolute;
     top: 12px;
-    left: 12px;
+    left: 13px;
     background-color: transparent;
     box-shadow: -19px -20px 0 1px black;
     z-index: 15;
@@ -1934,7 +1938,7 @@ a {
     border-radius: 50%;
     position: absolute;
     bottom: 12px;
-    left: 12px;
+    left: 13px;
     background-color: transparent;
     box-shadow: -19px 20px 0 1px black;
     z-index: 15;
@@ -2664,6 +2668,11 @@ a {
 
     /* contact.html */
     #contact-form {
+        width: 300px;
+    }
+
+    /* play.html */
+    .game-modal {
         width: 300px;
     }
 }
