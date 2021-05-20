@@ -712,7 +712,8 @@ function displayQuestion() {
   }
 }
 
-// Display the Question. --------------- EASY --------------------
+// Display the Question. --------------- EASY -------------------- 
+let correctAnswer;
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
@@ -777,15 +778,12 @@ function checkVolcanoEasyAnswer() {
             if (answer.checked) {
               let chosenAnswer = answer.nextElementSibling.innerText;
               if (chosenAnswer === questions.correctAnswer) {
-                alert("That's right! Well done :)");
+                displayRightAnswerModal();                
                 closeQuestion();
                 incrementScrore();
               } else {
-                alert(
-                  `Sorry, wrong answer! 
-                  The correct answer was:  ${questions.correctAnswer}
-                 `
-                );
+                correctAnswer = questions.correctAnswer
+                displayWrongAnswerModal(correctAnswer);
                 decrementScore();
                 addStrike();
                 closeQuestion();
@@ -1731,6 +1729,45 @@ function checkEarthHardAnswer() {
       }
     });
 }
+
+// Display the right right answer modal.
+function displayRightAnswerModal() {
+  let rightAnswer = document.getElementById("right-answer");
+  rightAnswer.classList.add("modal-active");
+  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
+  console.log(answersOverlay);
+  answersOverlay.classList.add("overlay-active");
+}
+
+// Diplay the wrong anser modal.
+function displayWrongAnswerModal(correctAnswer) {
+  let wrongAnswer = document.getElementById("wrong-answer");
+  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
+  let displayCorrectAnswer = document.querySelector("#wrong-answer span");
+
+  displayCorrectAnswer.innerText = correctAnswer;
+
+  wrongAnswer.classList.add("modal-active");
+  answersOverlay.classList.add("overlay-active");
+}
+
+// Close Answers modals and overlay.
+document.addEventListener("click", function closeAnswersModal() {
+  
+  let rightAnswer = document.getElementById("right-answer");
+  let wrongAnswer = document.getElementById("wrong-answer");
+  
+  if (rightAnswer.classList.contains("modal-active")) {
+    rightAnswer.classList.remove("modal-active");
+    
+  } else if (wrongAnswer.classList.contains("modal-active")){
+    wrongAnswer.classList.remove("modal-active");
+  }
+
+  let answersOverlay = document.getElementsByClassName("answers-overlay")[0];
+  answersOverlay.classList.remove("overlay-active");
+})
+
 
 
 // Close the question modal.

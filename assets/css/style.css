@@ -229,13 +229,15 @@ a {
 .contact-modals,
 .game-modal,
 .question-modal,
-.results-modal {
+.results-modal,
+.answers-result {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: translate 350ms ease-in-out;
     background-color: #fcfcfc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .rules-modal,
@@ -249,9 +251,12 @@ a {
     z-index: 35;
 }
 
+.answers-result {
+    z-index: 45;
+}
+
 .rules-modal,
 .contact-modals {
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 1em;
     max-height: 80vh;
@@ -271,8 +276,18 @@ a {
     padding: 1em;
 }
 
+.answers-result {
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#wrong-answer {
+    width: 80%;
+}
+
 .overlay,
 .game-overlay,
+.answers-overlay,
 .ongame-overlay {
     position: fixed;
     opacity: 0;
@@ -293,7 +308,12 @@ a {
     z-index: 30;
 }
 
+.answers-overlay {
+    z-index: 40;
+}
+
 .overlay,
+.answers-overlay,
 .ongame-overlay {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -638,8 +658,8 @@ a {
     display: flex;
     justify-items: center;
     align-items: center;
-    margin: 2em auto;
-    padding: 1em;
+    margin: 0 auto;
+    padding-bottom: 7em;
     font-size: 0.9rem;
     text-align: center;
 }

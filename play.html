@@ -117,8 +117,8 @@
                 To activate the mechanism, step on the case with a question mark and answer the
                 question.
               </li>
-              <li>If you get it right, passage will be granted :) .</li>
-              <li>If you get it wrong you will get a strike :( .</li>
+              <li>If you get it right, passage will be granted &#x1F601;</li>
+              <li>If you get it wrong you will get a strike &#x1F631;</li>
             </ul>
             
             <ul>The number of strikes before game over depend on the level:
@@ -1730,6 +1730,19 @@
             <button id="submit-answer" type="submit">Let's check!</button>
           </form>
         </div>
+
+        <div id="right-answer" class="answers-result">
+          <div class="modal-body">
+            That's right well done &#x1F60E;
+          </div>
+        </div>
+        <div id="wrong-answer" class="answers-result">
+          <div class="modal-body">
+            Sorry, wrong answer &#x1F644; The correct answer was: <br />
+            <span></span>
+          </div>
+        </div>
+        <div class="answers-overlay"></div>
 
         <div class="results-modal">
           <div class="modal-header">
