@@ -414,7 +414,11 @@ function setGameParameters() {
   }
 }
 
-// Close the modal message for setting the settings.
+// Start a new game when clicking on the New game button.
+let newGameButton = document.querySelector("[data-new-game]");
+newGameButton.addEventListener("click", setGameParameters);
+
+// Close the settings modal.
 let settingsModal = document.getElementsByClassName("settings-modal")[0];
 let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
 settingsModal.addEventListener("click", function () {
@@ -453,14 +457,11 @@ startButton.addEventListener("click", function () {
 
   } else if (level === "Set Level" || typeof subject === "undefined") {
 
-    console.log("Osti man !!!!!!!");
     let settingsModal = document.getElementsByClassName("settings-modal")[0];
     let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
 
     settingsOverlay.classList.add("overlay-active");
-    console.log(settingsOverlay);
     settingsModal.classList.add("modal-active")
-    console.log(settingsModal);
   }
 });
 
@@ -575,9 +576,6 @@ for (let button of controlButtons) {
     let chosenDirection = button.dataset.buttonDirection;
     let availableDirections = "";
 
-    console.log(availableDirections);
-    console.log(level);
-
     // Get the position of the player (depending on the grid level) and the grid-area he is on.
     if (level === "Apprentice") {
       let avatar = document.getElementById("easy-player");
@@ -606,7 +604,6 @@ for (let button of controlButtons) {
       // Get the available directions from this grid-area.
       availableDirections = gridItem.dataset.easyAvailableDirection;
     }
-    console.log(availableDirections);
 
     // Check if the direction chosen is available for the player to move onto and get the new position.
     if (availableDirections.includes(chosenDirection)) {
