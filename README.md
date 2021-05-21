@@ -1,17 +1,17 @@
 # **Know It**
 
-![Mockup](assets/images/README-images/ami-responsive-website.png)
+![Mockup](assets/images/README-images/mockups/ami-responsive-website.png)
 
 Check out the other mockups:
 
-* [Home page](assets/images/README-images/mockup/ami-responsive-home.png)
-* [About page](assets/images/README-images/mockup/ami-responsive-about.png)
-* [Study page](assets/images/README-images/mockup/ami-responsive-study.png)
-* [Play page](assets/images/README-images/mockup/ami-responsive-play.png)
-* [Game interface](assets/images/README-images/mockup/ami-responsive-game-interface.png)
-* [Gameplay](assets/images/README-images/mockup/ami-responsive-gameplay.png)
-* [Contact page](assets/images/README-images/mockup/ami-responsive-contact.png)
-* [404 page](assets/images/README-images/mockup/ami-responsive-404.png)
+* [Home page](assets/images/README-images/mockups/ami-responsive-home.png)
+* [About page](assets/images/README-images/mockups/ami-responsive-about.png)
+* [Study page](assets/images/README-images/mockups/ami-responsive-study.png)
+* [Play page](assets/images/README-images/mockups/ami-responsive-play.png)
+* [Game interface](assets/images/README-images/mockups/ami-responsive-game-interface.png)
+* [Gameplay](assets/images/README-images/mockups/ami-responsive-gameplay.png)
+* [Contact page](assets/images/README-images/mockups/ami-responsive-contact.png)
+* [404 page](assets/images/README-images/mockups/ami-responsive-404.png)
 
 #### Visit the live Website : **[Know It :arrow_right:](tom-nagy.github.io/know-it/)**.
 
