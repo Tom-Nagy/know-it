@@ -4,11 +4,14 @@
 
 Check out the other mockups:
 
-* ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
-* ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
-* ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
-* ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
-* ["PAGE NAME"](assets/images/README-images/mockup/ami-responsive-"PAGE NAME".png)
+* [Home page](assets/images/README-images/mockup/ami-responsive-home.png)
+* [About page](assets/images/README-images/mockup/ami-responsive-about.png)
+* [Study page](assets/images/README-images/mockup/ami-responsive-study.png)
+* [Play page](assets/images/README-images/mockup/ami-responsive-play.png)
+* [Game interface](assets/images/README-images/mockup/ami-responsive-game-interface.png)
+* [Gameplay](assets/images/README-images/mockup/ami-responsive-gameplay.png)
+* [Contact page](assets/images/README-images/mockup/ami-responsive-contact.png)
+* [404 page](assets/images/README-images/mockup/ami-responsive-404.png)
 
 #### Visit the live Website : **[Know It :arrow_right:](tom-nagy.github.io/know-it/)**.
 
@@ -541,17 +544,24 @@ Solve : Create a function (`setGameParameters()`) that is called when the start 
 Issue : The rewards/achievements don't appear in the results when finishing the game with no strikes and they don't appear neither on play.html.  
 Solve : Changed the approache as I was using the `append()` method and it didn't give the result I was expecting. So I have created all the rewards that are icons in play.html and for displaying them I used a classe `hide` that has the `display="none"`. Then I toggled this class with JavaScript when relevant.
 
+Issue : The selection of random questions with no repeat doesn't work. I beleive because the function is called each time we are on a question and the index of the question for the game in progress should be store outside of it to keep track of what has been asked.  
+Solve : An array was created at the top level so it can be accessible from any functions. Then when the game start, a function is called to populate the array with the corresponding questions indexes depending on the subject and level. This array is set to empty when starting a new party and before to be populated.
+
+Issue : From one question to another in the game, the radio button is checked at the same position than the previous question.  
+Solve : Add an if statement that reset the button that is checked before displaying the question.
+
+Issue :  On smartphones when double click on the directional button zoom. This doesn't prevent users from playing but it doesn't give a good user experience.  
+Solve : Add `touch-action: manipulation` in style.css to prevent the double click. It is known not to work on ios.
+
 ### Unsolved
 
-Issue : When starting the game for the first time, and when answering the first question y clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.
+Issue : When starting the game for the first time, and when answering the first question by clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.
 
 Issue : on Iphone, the menue icone is not rendering properly rendering.
 
 Issue : on IPhone, the button to close modal doesnt render nicely.
 
-Issue : The selcetion of random question with no repeat doesnt work. I beleive because the function is called each time we are on a question and the index of the question should be store for the party to keep track of what has been asked.
-
-Issue : From one question to another in the game, the radio button is checked at the same position than the previous question.
+Issue :  On smartphones when double click on the directional button zoom. This doesn't prevent users from playing but it doesn't give a good user experience.
 
 Issue : 
 
@@ -587,6 +597,9 @@ For the explanation on how to create a substring without a fix index to start fr
 
 [stack overflow](https://stackoverflow.com/questions/15192614/javascript-how-to-stop-a-random-number-from-appearing-twice)  
 For the explanation on how to generate a random number and for that number not to appear twice.
+
+[Ross Allen](https://stackoverflow.com/questions/10614481/disable-double-tap-zoom-option-in-browser-on-touch-devices)  
+For explanation on how to disable double click on html elements.
 
 ### Media
 
