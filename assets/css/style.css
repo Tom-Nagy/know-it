@@ -1155,6 +1155,13 @@ a {
     box-shadow: 0 2px 0 0 black;
 }
 
+/* Credit to Ross Allen from stack overflow for disabling double click on html elements
+   https://stackoverflow.com/questions/10614481/disable-double-tap-zoom-option-in-browser-on-touch-devices */
+.controls,
+.control-buttons {
+    touch-action: manipulation;
+}
+
 .controls {
     position: relative;
     bottom: 0;
@@ -1212,6 +1219,8 @@ a {
 .button-down {
     transform: translate(-50%, 25%);
 }
+
+/* document.addEventListener('gesturestart', function (e) { e.preventDefault(); }); */
 
 /* Strikes Display */
 .strikes-area {
