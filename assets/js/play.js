@@ -770,14 +770,12 @@ function populateVolcanoEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkVolcanoEasyAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkVolcanoEasyAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -852,14 +850,12 @@ function populateJungleEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkJungleEasyAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkJungleEasyAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -934,14 +930,12 @@ function populateOceanEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkOceanEasyAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkOceanEasyAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1016,14 +1010,12 @@ function populateEarthEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkEarthEasyAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkEarthEasyAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1098,14 +1090,12 @@ function populateVolcanoInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkVolcanoInterAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkVolcanoInterAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer. 
@@ -1180,14 +1170,12 @@ function populateJungleInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkJungleInterAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkJungleInterAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1262,14 +1250,12 @@ function populateOceanInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkOceanInterAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkOceanInterAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1344,14 +1330,12 @@ function populateEarthInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkEarthInterAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkEarthInterAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1426,14 +1410,12 @@ function populateVolcanoHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkVolcanoHardAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkVolcanoHardAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1508,14 +1490,12 @@ function populateJungleHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkJungleHardAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkJungleHardAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1590,14 +1570,12 @@ function populateOceanHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkOceanHardAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkOceanHardAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1672,14 +1650,12 @@ function populateEarthHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener(
-    "submit",
-    function () {
-      checkEarthHardAnswer();
-    }, {
-      once: true
-    }
-  );
+  questionForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkEarthHardAnswer();
+  }, {
+    once: true
+  });
 }
 
 // Check the answer.
@@ -1739,7 +1715,7 @@ function displayWrongAnswerModal(correctAnswer) {
 function displayNoMoreQuestionsModal() {
   let noMoreQuestions = document.getElementsByClassName("no-questions")[0];
   let messagesOverlay = document.getElementsByClassName("messages-overlay")[0];
-  
+
   noMoreQuestions.classList.add("modal-active");
   messagesOverlay.classList.add("overlay-active");
 
@@ -1976,7 +1952,7 @@ function displayResults() {
   });
 }
 
-// Dislpay game achievements.
+// Display game achievements.
 
 function displayAchievements() {
   let permFlagReward = document.getElementById("perm-flag");
