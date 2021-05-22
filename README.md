@@ -13,13 +13,13 @@ Check out the other mockups:
 * [Contact page](assets/images/README-images/mockups/ami-responsive-contact.png)
 * [404 page](assets/images/README-images/mockups/ami-responsive-404.png)
 
-#### Visit the live Website : **[Know It :arrow_right:](tom-nagy.github.io/know-it/)**.
+#### Visit the live Website : **[Know It :arrow_right:](https://tom-nagy.github.io/know-it/)**.
 
-Know It is a learning application that promotes curiosity and enjoyment in the process of acquiring knowledge. Its motto is: “Learning is cool and knowledge is great!”.
-Know It is based on the fact that learning is easier when it is fun and entertaining; and we have fun when we play! The website proposes two platforms: a game and and study environment. They both are linked and related in their content, meaning that you can learn everything you need (and more!) to succeed and complete the game in the study environment.  
+**Know It** is a learning application that promotes curiosity and enjoyment in the process of acquiring knowledge. Its motto is: “Learning is cool and knowledge is great!”.
+**Know It** is based on the fact that learning is easier when it is fun and entertaining; and we have fun when we play! The website proposes two platforms: a game and and study environment. Both are linked and related in their content; meaning that you can learn everything you need (and more!) to succeed and complete the game in the study environment.  
 Different exciting and very cool topics are being treated. They all refer to the general and worldwide curriculum of children education, they appeal to everyone and reach the maximum of communities. The content is based on the syllabus of children between the age of 12 and 15 years old. At this stage of life knowledge is bursting, interesting and exciting. Children are learning about the World and how it functions.
-It is the fundamentals and the foundation of the “grown up” knowledge. In this spirit it will attract many people from the young adolescence to no limit.
-The application is published in English and will propose a French version as well (MAYBE).  
+It is the fundamentals and the foundation of the “grown up” knowledge. In this spirit it will attract many people from the young adolescence to no limit!
+
 The subjects of the starting version of the application are all about the cool things that everyone is excited about:
 
 * Volcano
@@ -27,15 +27,15 @@ The subjects of the starting version of the application are all about the cool t
 * Jungle
 * The Earth
 
-The Earth is the compilation of all the subjects treated and more.  
+The Earth is the compilation of all the other subjects treated.  
 They are amazing, entertaining, interesting and will be presented in the study environment in different sections as follow:
 
 * Generals facts and Definitions
 * How does it work?
-* Fun Facts!
-* Did you know ...
+* Interesting Facts!
+* Scientific terms.
 
-The game where the users will test their knowledge is a Labyrinth. Labyrinth are mesmerizing, intriguing and playful; that is why it is the perfect game to combine everything in an interactive and fun way.
+The game where the users will test their knowledge is a Labyrinth. Labyrinth are mesmerizing, intriguing and playful! That's why it is the perfect game to combine everything in an interactive and fun way.
 
 ## Table of Content
 
@@ -71,7 +71,7 @@ The game where the users will test their knowledge is a Labyrinth. Labyrinth are
 
 Know It encourage the **development of knowledge** and **understanding** of the different characteristics and features of the World.
 
-It promotes curiosity and enjoyment in this process for building lasting interest.  
+It promotes curiosity and enjoyment in the process of learning for building lasting interest.  
 It is and educational platform that makes learning cool and knowledge great!
 
 ### Developer and Business Goals
@@ -542,26 +542,29 @@ Issue : When exiting the game, if the user click start a game with (or whithout)
 Solve : Create a function (`setGameParameters()`) that is called when the start button is click and set the position of the avatar to the starting place.
 
 Issue : The rewards/achievements don't appear in the results when finishing the game with no strikes and they don't appear neither on play.html.  
-Solve : Changed the approache as I was using the `append()` method and it didn't give the result I was expecting. So I have created all the rewards that are icons in play.html and for displaying them I used a classe `hide` that has the `display="none"`. Then I toggled this class with JavaScript when relevant.
+Solve : Changed the approach as I was using the `append()` method and it didn't give the result I was expecting. So I have created all the rewards that are icons in play.html and for displaying them I used a class `hide` that has the `display="none"`. Then I toggled this class with JavaScript when relevant.
 
-Issue : The selection of random questions with no repeat doesn't work. I beleive because the function is called each time we are on a question and the index of the question for the game in progress should be store outside of it to keep track of what has been asked.  
+Issue : The selection of random questions with no repeat doesn't work. The function is called each time we are on a question and the indexes of the questions for the game in progress is reset. The array containing the indexes should be store outside of the function to keep track of what has been asked.  
 Solve : An array was created at the top level so it can be accessible from any functions. Then when the game start, a function is called to populate the array with the corresponding questions indexes depending on the subject and level. This array is set to empty when starting a new party and before to be populated.
 
-Issue : From one question to another in the game, the radio button is checked at the same position than the previous question.  
+Issue : From one question to another in the game, the radio button is checked at the same position as the previous question.  
 Solve : Add an if statement that reset the button that is checked before displaying the question.
 
-Issue :  On smartphones when double click on the directional button zoom. This doesn't prevent users from playing but it doesn't give a good user experience.  
-Solve : Add `touch-action: manipulation` in style.css to prevent the double click. It is known not to work on ios.
+Issue : On smartphones when double-click on the directional button, it zooms. This doesn't prevent users from playing, but it doesn't give a good user experience.  
+Solve : Add `touch-action: manipulation` in style.css to prevent the double click.
+
+Issue : When starting the game for the first time, and when answering the first question by clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.  
+Solve : Add the `.preventDefault()` method when submitting the form to prevent the default GET method.
+
+Solve: General solve for reoccurring bugs. The scripts tags for linking the JavaScript files were not placed properly in the HTML files. So i moved them from after to before the `</body>`.
 
 ### Unsolved
 
-Issue : When starting the game for the first time, and when answering the first question by clicking on the `Let's check!` button it quits the game ang goes back to play.html. It looks like the page is reloading.
+Issue : On iOS, the menu icon is not rendering properly rendering.
 
-Issue : on Iphone, the menue icone is not rendering properly rendering.
+Issue : On iOS, the button to close modal doesn't render nicely.
 
-Issue : on IPhone, the button to close modal doesnt render nicely.
-
-Issue :  On smartphones when double click on the directional button zoom. This doesn't prevent users from playing but it doesn't give a good user experience.
+Issue : On iOS, the directional buttons hover and/or focus effect don't render properly. this does not prevent users from playing, but it takes away from the user experience.
 
 Issue : 
 
@@ -605,9 +608,9 @@ For explanation on how to disable double click on html elements.
 
 ##### External links :
 
-[Facebook](WEBSITE LINK)  
-[Instagram](WEBSITE LINK)  
-[Pinterest](WEBSITE LINK)  
+[ScienceNewsforStudents](https://www.sciencenewsforstudents.org/article/top-10-tips-study-smarter-not-longer-study-skills)  
+[FocusMe](https://focusme.com/blog/8-tips-to-study-better/)  
+[Pinterest 10 Study Tips by Diamond](https://www.pinterest.ie/pin/184225440993206363/)  
 [Wikipedia 404 error definition](https://en.wikipedia.org/wiki/HTTP_404)
 
 ##### Icons :
