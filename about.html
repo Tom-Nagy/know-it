@@ -1,206 +1,139 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
-      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!"
-    />
-    <meta
-      name="keywords"
-      content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
-      volcano, jungle, ocean, earth"
-    />
-    <meta name="author" content="Know It" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/a5ee39e432.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Know It is a fun learning platform that promotes curiosity and enjoyment. We provide an entertaining way of studying 
+      and learning. Here you will find a study room and a game with which you can reinforce your knowledge. Try it and have some FUN!" />
+  <meta name="keywords" content="learning, learn, knowledge, curiosity, fun, enjoyment, explore, discover, improve, playing, play, game, studying, study, labyrinth, 
+      volcano, jungle, ocean, earth" />
+  <meta name="author" content="Know It" />
 
-    <!-- Favicon implementation from Hostinger Tutorials (https://www.hostinger.com/tutorials/how-to-add-favicon-to-website) -->
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon/favicon.ico" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a5ee39e432.js" crossorigin="anonymous"></script>
 
-    <title>Know It</title>
-    <link rel="stylesheet" href="assets/css/style.css" media="all" />
-  </head>
+  <!-- Favicon implementation from Hostinger Tutorials (https://www.hostinger.com/tutorials/how-to-add-favicon-to-website) -->
+  <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon/favicon.ico" />
 
-  <body>
-    <div class="about-wrapper">
-      <header>
-        <!-- Navigation bar -->
-        <nav>
-          <!-- Logo -->
-          <a href="index.html" class="logo" aria-label="Link to the home page.">
-            <img
-              src="assets/images/logo/logo.png"
-              alt="Know It logo representing a smiling friendly brain with eyes."
-              title="Link to the home page."
-              height="40"
-              width="40"
-            />
-          </a>
+  <title>Know It</title>
+  <link rel="stylesheet" href="assets/css/style.css" media="all" />
+</head>
 
-          <!--Dropdown navigation menu for all devices -->
-          <button
-            id="navigation-button"
-            class="menu-icon"
-            aria-label="Navigation menu."
-          >
-            <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
-            <img
-              src="assets/images/icons/menu.png"
-              alt="Icon of a book."
-              title="Navigation menu."
-              height="40"
-              width="40"
-            />
-            <span class="menu-text">Menu</span>
-          </button>
+<body>
+  <div class="about-wrapper">
+    <header>
+      <!-- Navigation bar -->
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Link to the home page.">
+          <img src="assets/images/logo/logo.png" alt="Know It logo representing a smiling friendly brain with eyes."
+            title="Link to the home page." height="40" width="40" />
+        </a>
 
-          <div class="navigation-menu">
-            <ul class="navigation-list">
-              <li class="navigation-items">
-                <a
-                  href="index.html"
-                  class="navigation-links"
-                  aria-label="Link to the home page."
-                >
-                  Home
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="about.html"
-                  class="navigation-links"
-                  aria-label="Link to the about page."
-                >
-                  About
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="study.html"
-                  class="navigation-links"
-                  aria-label="Link to the study page."
-                >
-                  Study
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="play.html"
-                  class="navigation-links"
-                  aria-label="Link to the play page."
-                >
-                  Play
-                </a>
-              </li>
-              <li class="navigation-items">
-                <a
-                  href="contact.html"
-                  class="navigation-links"
-                  aria-label="Link to the contact page."
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+        <!--Dropdown navigation menu for all devices -->
+        <button id="navigation-button" class="menu-icon" aria-label="Navigation menu.">
+          <!-- Icon image from iconfinder.com(https://www.iconfinder.com/search/?q=book&price=free) -->
+          <img src="assets/images/icons/menu.png" alt="Icon of a book." title="Navigation menu." height="40"
+            width="40" />
+          <span class="menu-text">Menu</span>
+        </button>
 
-      <!-- Heading -->
-      <div class="heading">
-        <h2>About</h2>
-      </div>
-
-      <!-- main section -->
-      <section class="about-section">
-        <p>
-          <strong>Know It</strong> is a learning platform that promotes curiosity
-          and enjoyment in the process of studying. Our purpose is to help develop
-          one's knowledge making learning fun and enjoyable!
-        </p>
-
-        <p>
-          We propose a <em>Study</em> space where you can select the subject you
-          want to discover and have fun exploring it.<br />
-          As well we developed a <em>Game</em> that helps reinforced your
-          knowledge. The game is based on the content presented in the study.
-        </p>
-
-        <p>
-          All the content presented is build on the curriculum of the 12 to 15
-          years old students. It treats exciting subjects that appeal to everyone.
-        </p>
-
-        <p>Why don't you give it a try?</p>
-        <a href="study.html" class="buttons small-buttons study-button">Study</a>
-        <a href="play.html" class="buttons small-buttons play-button">Play</a>
-
-        <p>
-          If you are looking for some content tailored to specific needs, don't
-          hesitate to contact us.<br />
-          We can provide what you need!
-          <a href="contact.html" class="contact-button">Contact</a>
-        </p>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="copyright">
-          <i class="far fa-copyright" aria-hidden="true"></i>
-          For educational purposes.
+        <div class="navigation-menu">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a href="index.html" class="navigation-links" aria-label="Link to the home page.">
+                Home
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="about.html" class="navigation-links" aria-label="Link to the about page.">
+                About
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="study.html" class="navigation-links" aria-label="Link to the study page.">
+                Study
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="play.html" class="navigation-links" aria-label="Link to the play page.">
+                Play
+              </a>
+            </li>
+            <li class="navigation-items">
+              <a href="contact.html" class="navigation-links" aria-label="Link to the contact page.">
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-links">
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fab fa-pinterest-p"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-graduation-cap"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-          <a
-            href="#"
-            rel="noopener"
-            target="_blank"
-            aria-label="Link to websiteName."
-          >
-            <i
-              class="fas fa-cogs"
-              aria-hidden="true"
-              title="Link to websiteName."
-            ></i>
-          </a>
-        </div>
-      </footer>
+      </nav>
+    </header>
+
+    <!-- Heading -->
+    <div class="heading">
+      <h2>About</h2>
     </div>
-    <script src="assets/js/main.js"></script>
-  </body>
+
+    <!-- main section -->
+    <section class="about-section">
+      <p>
+        <strong>Know It</strong> is a learning platform that promotes curiosity
+        and enjoyment in the process of studying. Our purpose is to help develop
+        one's knowledge making learning fun and enjoyable!
+      </p>
+
+      <p>
+        We propose a <em>Study</em> space where you can select the subject you
+        want to discover and have fun exploring it.<br />
+        As well we developed a <em>Game</em> that helps reinforced your
+        knowledge. The game is based on the content presented in the study.
+      </p>
+
+      <p>
+        All the content presented is build on the curriculum of the 12 to 15
+        years old students. It treats exciting subjects that appeal to everyone.
+      </p>
+
+      <p>Why don't you give it a try?</p>
+      <a href="study.html" class="buttons small-buttons study-button">Study</a>
+      <a href="play.html" class="buttons small-buttons play-button">Play</a>
+
+      <p>
+        If you are looking for some content tailored to specific needs, don't
+        hesitate to contact us.<br />
+        We can provide what you need!
+        <a href="contact.html" class="contact-button">Contact</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="copyright">
+        <i class="far fa-copyright" aria-hidden="true"></i>
+        For educational purposes.
+      </div>
+      <div class="footer-links">
+        <a href="https://www.pinterest.ie/pin/184225440993206363/" rel="noopener" target="_blank"
+          aria-label="Link to Pinterest.ie.">
+          <i class="fab fa-pinterest-p" aria-hidden="true" title="10 study tips on Pinterest.ie."></i>
+        </a>
+        <a href="https://www.sciencenewsforstudents.org/article/top-10-tips-study-smarter-not-longer-study-skills"
+          rel="noopener" target="_blank" aria-label="Link to ScienceNewsforStudents.org">
+          <i class="fas fa-graduation-cap" aria-hidden="true" title="How to study smater, not longer."></i>
+        </a>
+        <a href="https://focusme.com/blog/8-tips-to-study-better/" rel="noopener" target="_blank"
+          aria-label="Link to FocusMe.com">
+          <i class="fas fa-cogs" aria-hidden="true" title="Tips to study better."></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
