@@ -82,8 +82,8 @@ It is and educational platform that makes learning cool and knowledge great!
 * Teach environmental awareness.
 * Entertain.
 * Impact a broad range of Users.
-* Grow “Know It” culture and brand awareness (to attract more Users).
-* Be consider for and/or as a permanent tool in schools curriculum.
+* Grow “Know It” culture and brand awareness.
+* Be consider for and/or as a permanent tool in schools curriculum and other institutions.
 
 ### User Goals
 
@@ -101,9 +101,7 @@ It is and educational platform that makes learning cool and knowledge great!
 
 ### **Audience Definition**
 
-The targeted audience is international with an age range of 11 or 12 years old to 15 or 16 years old and above. This audience is either children 
-or adults that are interested in science, environment and knowledge in general. It is as well children that have to study or know about a subject 
-and want to improve.
+The targeted audience is international with an age range of 11 or 12 years old to 15 or 16 years old and above. This audience is either children, or adults that are interested in science, environment and knowledge in general. It is as well children that have to study or learn about a subject and want to improve.
 
 #### The targeted audience for this website is looking for :
 
@@ -121,18 +119,19 @@ and want to improve.
 * It matches children's curriculum and syllabus.
 * It follows the best learning practice.
 * It displays the content interactively.
-* It gives and enjoyable learning experience.
-* It provides useful links on some additional content.
-* It provides useful links on how to learn and improving learning.
+* It gives an enjoyable learning experience.
+* It provides useful links on how improving learning and studying skills.
 * It proposes a game to test and reinforce knowledge.
 * It proposes different level of difficulties for progression and challenge.
 * It presents some feedback to the users for encouraging them to pursue their learning and improving.
+* It rewards users by displaying achievements icons upon completing levels without mistakes.
+* It gives a challenge to the users.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ### **User Stories**
 
-Users between 11 and 16 years old and older users are treated as the same because the only difference would be that the younger audience might have to learn what is provided by the application for grades and schools reasons while the older audience would not have this imperative. This does not affect the users stories significantly to be treated separately.
+Users between 11 and 16 years old and older users are treated as the same because the only difference would be that the younger audience might have to learn what is provided by the application for grades and schools reasons; while the older audience would not have this imperative. This does not affect the users stories significantly to be treated separately.
 
 **As a first time user, I want:**
 
@@ -146,16 +145,15 @@ Users between 11 and 16 years old and older users are treated as the same becaus
 8. The gameplay to be easy to understand.
 9. To be able to choose a difficulty level for the game.
 10. To be able to choose the subject of the game.
-11. To create a profile to keep tract of my gaming score and progress.
+11. To keep tract of my gaming score and progress.
 
 **As a returning user, I want:**
 
 1. To improve.
 2. To check the different subjects.
 3. Challenge myself on the game.
-4. Earn different medals and success regarding my game score.
-5. To check out additional content or information.
-6. To contact and get information on the website owner.
+4. Earn different achievements playing the game.
+5. To contact and get information on the website owner.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -177,16 +175,30 @@ The fonts selected for this project have clear and defined shapes to support lea
 
 #### Icons
 
->"CHECK AND DOUBLE-CHECK THE LINKS..... ADD AND ADAPT THE CONTENT ...."
+* FontAwesome icons :  
+They are used for better user experience mostly in the game for identifying the questions cases on the labyrinth.
 
-* FontAwesome icons will be used for better user experience.
+![Question mark](assets/images/README-images/design/question-design.png)
+
+As well, achievements icons that users obtain as a reward upon finishing a level with no mistakes.
+
+![Rewards Icons](assets/images/README-images/design/rewards-design.png)
+
+As well, they are used in the study page as a magnifier button to toggle more information.
+
+![Magnifier](assets/images/README-images/design/magnifier-design.png)
+
+* Icons are used to have a visual and easy way to recognize the subjects treated on the website.
+
+![Subjects icons](assets/images/README-images/design/subjects-design.png)
+
 * The logo and [favicon](assets/images/favicon/favicon.ico) are the same image to follow best practice and consistency.
 
 ![Logo](assets/images/logo/logo.png)
 
 #### Colors
 
-![Colour scheme](assets/images/README-images/colors/color.png)
+![Colour scheme](assets/images/README-images/design/color.png)
 
 The colours chosen for the website are bright and joyful. They are based on the psychology behind colours ([colour affects](http://www.colour-affects.co.uk/psychological-properties-of-colours), [London Image Institute](https://londonimageinstitute.com/how-to-empower-yourself-with-color-psychology/)). I used [Adobe Color](https://color.adobe.com/create/color-wheel) to create the colour scheme.
 
@@ -200,15 +212,35 @@ white will be used as background colour for cleanliness and simplicity.
 
 The swatches are said to be color-blind safe by Adobe Color [accessibility tool](https://color.adobe.com/create/color-accessibility).
 
-![Colour accessibility](assets/images/README-images/colors/color-accessibility.png)
+![Colour accessibility](assets/images/README-images/design/color-accessibility.png)
 
 #### Images
 
 Images will be used for illustration purposes. They will help the representation of information in the study page of the website and are composed of pictures, drawings, schema and diagrams.
 
+As well images are used to create the labyrinth paths. They correspond to the subject selected for consistency and visual cues.
+
+* Volcano:
+
+![Volcano path](assets/images/README-images/design/volcano-path-design.png)
+
+* Jungle:
+
+![Jungle path](assets/images/README-images/design/jungle-path-design.png)
+
+* Ocean:
+
+![Ocean path](assets/images/README-images/design/ocean-path-design.png)
+
+* Earth:
+
+![Earth path](assets/images/README-images/design/earth-path-design.png)
+
 #### Styling and Feeling
 
-The website is a learning platform that includes some content and a game. It uses bright and simple colours to provide the feeling of easy accessibility. It presents a clean, welcoming and trustworthy feel in order to bring quality information in a fun way!
+The website is a learning platform that includes some content and a game.  
+It uses bright and simple colours to provide the feeling of easy accessibility.  
+It presents a clean, playful, welcoming and trustworthy feel in order to bring quality information in a fun way!
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
