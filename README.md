@@ -192,7 +192,7 @@ As well, they are used in the study page as a magnifier button to toggle more in
 
 ![Subjects icons](assets/images/README-images/design/subjects-design.png)
 
-* The logo and [favicon](assets/images/favicon/favicon.ico) are the same image to follow best practice and consistency.
+* The **logo** and **[favicon](assets/images/favicon/favicon.ico)** are the same image to follow best practice and consistency.
 
 ![Logo](assets/images/logo/logo.png)
 
@@ -280,33 +280,31 @@ It does not impact negatively the user experience and will be part of the featur
 
 ## Features
 
-The contact page is reachable from the menu or the about page.
-It is intended not to be as obvious as the rest of the website because the main website audience is students and the contact page is mostly for teachers, schools, business etc.
-
-The navigation menu is purposely “hidden” for focus reasons. It is a toggle on small screen and display on larger screen when the icon is hovered.  
+The navigation menu is purposely “hidden” for focus reasons. I have made the choice to present it as a button that will toggle the different links in order to prevent visual interferences.  
 This provides a cleaner and less busy viewport for the users. The goal being to avoid distractions.  
-CONSIDER TOGGLE ON ALL SCREENS.  
+It is clearly recognizable by its position (top right) and the icon that defines it contains the word menu.  
 
-When the player is activating the mechanism, a question pop up.
-The question difficulty depends on the level played.
+All the main pages are accessible by a visual link presented as an arrow sign situated at a relevant position on the page without the need of clicking on the menu icon.
 
-The check-box must be selected (only one at the time possible → radio button) and the button confirm answer clicked to send the answer.
-Message should appear to guide the user if the confirm button is clicked with no answer selected.
-Feedback on the answer should be given as well for right and wrong answer.
+The contact page is reachable from about page or the dropdown menu.  
+It is intended not to be as obvious as the rest of the website because the main website audience is students and the website primary goal is about learning and playing, not being contacted.  
+The contact page is mostly intended for teachers, schools, institution, business etc; that would want to reach out.
 
 ### **Existing Features**
 
 #### Repeated Features
 
-The **navigation bar** and the **footer** are present on all the pages except for the game page.
+The **navigation bar** and the **footer** are present on all the pages except when the game is being played.
 
 * The navigation bar:  
   * There is the website logo on the left that is linked to the home page for best practice.
-  * The navigation menu is displayed as a toggle on all screen sizes in order to keep distractions to the minimum.
+  * The navigation menu is displayed as a toggle on all screen sizes in order to keep a clean visual and distractions to the minimum.
+
+![Dropdown menu](assets/images/README-images/features/menu-features.png)
 
 * The Footer:
-  * On the left it will display the “copyright” *For educational use*.
-  * On the right it will display some external links for additional information.
+  * On the left it displays the “copyright” *For educational use*.
+  * On the right it displays some external links giving information and tips on study and learning technics.
 
 #### Home
 
@@ -320,6 +318,8 @@ It presents three buttons that link to the corresponding page:
 
 It corresponds to three choices that represent the main content of the website.
 
+![Home page](assets/images/README-images/features/home-features.png)
+
 #### About
 
 The about page gives a description of the website goals and features.  
@@ -332,10 +332,12 @@ As well a paragraph offers users to reach out to the website owner with a second
 
 * Contact
 
+![About page](assets/images/README-images/features/about-features.png)
+
 #### Study
 
 This page presents some learning content.  
-It is composed of a title to explain how to proceed: “To choose a subject, click on it!”; and a subtitle to present a feature of the page inviting users to look for  magnifiers in order to discover more information about a section.  
+It is composed of a title to identify clearly the page the user is on. There are as well explanation on how to proceed: “To choose a subject, click on it!”; and it presents a feature of the page inviting users to look for magnifiers in order to discover more information about a section.  
 
 Four icons are displayed and represent the subject available to study. The fourth one being the compiled version of the other ones:
 
@@ -344,16 +346,32 @@ Four icons are displayed and represent the subject available to study. The fourt
 * Ocean
 * Earth
 
-The volcano subject will be preloaded.
+The volcano subject will be displayed by default.
+
+![Study page](assets/images/README-images/features/study-features.png)
+
+At the bottom of the page and at the end of the articles a link to the play page is displayed and text invites users to test their knowledge by playing the game.
+
+![Study page link](assets/images/README-images/features/study-link-features.png)
 
 #### Play
 
 The page presents a title inviting to play: “Let's play!”.  
 As well is displayed the steps to follow in order to set up a party.  
-There is an invitation to go to the study room in order to refresh our memory with a button linked to the corresponding page.  
-You will find a *How to play?* link that triggers a pop-up with the rules and more precise information on the game.  
+There is an invitation to go to the study room in order to refresh our memory with a link to the corresponding page.  
+There is a *How to play?* button that triggers a pop-up with the rules and more precise information on the game.
 
 The interface to set up the party is composed of a **dropdown menu** to set the level, a **carousel** to display the subject's icons on one line and a button: “**Play**” to start the game. This protocol provide users an overview of the settings and choices made before to start to play.
+
+The game settings are composed of:
+
+* A **subjects** section that displays the available subjects to select from.
+* A **dropdown menu** to set the level.
+* A **Start** button to play the game.
+
+![Play page](assets/images/README-images/features/play-features.png)
+
+As well, not visible when just starting to play, a section at the bottom of the page is set to display achievements when getting them. It is intentionally not given any title or visible separation in order to keep this as a surprise. It provides users positive feedback and rewards upon finishing and completing levels with no mistakes.
 
 #### Game
 
@@ -361,40 +379,65 @@ The game interface is composed of:
 
 * The game area in the middle → the labyrinth.
 * The control buttons on the bottom. They are four directional arrows.
-* A New game button on the top right to start a new game with the same configuration.
-* An Exit button on the top right to go back to the play page.
-* The icon corresponding to the subject selected on the top left.
-* The level difficulty corresponding to the level selected on the top left.
+* A New game button on the top left to start a new game with the same settings as the one being played.
+* An Exit button on the top right to go back to the “main” play page.
+* The subject being played on the top middle left.
+* The difficulty level being played on the top middle right.
+
+![Game](assets/images/README-images/features/game-features.png)
 
 The gameplay is as follow:  
-You will move the avatar through the labyrinth in order to reach the exit. The access to the exit is blocked and in order progress through the labyrinth you will need to activate some mechanism. They are accessible via a special panel easily recognizable.  
-Once you reached the panel you will have to answer a multiple choices question.  
-If you get it right you will gain access to another part of the labyrinth.  
-If you get it wrong you will get a strike, but you will be able to guess again.  
+You will move the avatar through the labyrinth in order to reach the exit. The access to the exit is blocked and in order progress through the labyrinth you will need to answer some questions.  
+Once you reached the question mark, you will have to answer a multiple choices question.  
+If you get it right your passage will be granted.  
+If you get it wrong you will get a strike, but you will be able to progress.  
 The number of strikes allowed are determined by the level difficulty of the party.  
 The questions appear as pop-up. There you will have to select one answer and validate your answer.
 Will you be able to get out?
 
 #### Contact
 
-The contact page is very simple and offer users to reach out to the website owner.  
-There are three fields to fill up:
+The contact page is very simple and offer users a way to reach out to the website owner.  
+EmailJS has been implemented and allows the management of emails without needing the server side. It has been set to send an automatic email back to the user for better user experience.
 
-* You are: → Who the person is.
-* Reason: → Dropdown menu to select from.
+There are four fields to fill up:
+
+* Your name: → Who the person is.
+* Email address: → To be answered back.
+* Reason: → Dropdown menu to select from different options.
 * Tell us more: → A textarea to provide additional information.
+* A send button is displayed as well to send the form.  
 
-A send button is displayed as well to send the form.  
-Upon sending, a pop-up will give feedback to the user thanking him for the message. It will provide as well links to different pages of the website: Home / Study / Play.
+![Contact page](assets/images/README-images/features/contact-features.png)
+
+Upon sending, a pop-up will give feedback to the user thanking him for the message. It will provide as well links to different pages of the website: Home, Study and Play in order to provide the main navigation links for better user experience.  
+A similar feature will display if the form fail to send.
+
+![Form submitted](assets/images/README-images/features/form-features.png)
 
 #### 404 error
 
 A custom page will handle the “404 error” by displaying a message explaining the error.  
-It provides a button to go back to the home page and some useful links. One that will bring the user to website that explain what is a 404 error and one that bring the user to the contact page to report an issue with the reason pre-populated.
+It provides a button to go back to the home page and some useful links.
+
+* A link that will bring the user to a website that explain what is a 404 error.
+* A link that bring the user to the contact page to report an issue.
+
+![404 page](assets/images/README-images/features/error-features.png)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ### **Features to Implement in the Future Versions**
+ with the reason pre-populated.
+ with the subject pre-populated to play.
+ with the subject pre-populated to study.
+
+ carousel for the subjects.
+ carousel for the images in the study.
+
+ Other subjects to play and study.
+ Different rewards combining achievements.
+
 
 #### PAGE NAME
 
@@ -417,20 +460,15 @@ FEATURES TO BE ADDED
 
 ### Programing Languages
 
-This project uses ...
+This project uses HTML, CSS and JavaScript.
 
 ### Frameworks, Libraries and Programs
 
 * [Balsamiq](https://balsamiq.com/wireframes/)  
 For creating wireframes.
 
-* [Bootstrap](https://getbootstrap.com/)  
-With the [compiled CSS, JS and CDN](https://getbootstrap.com/docs/4.6/getting-started/download/)  
-For the [Grid system](https://getbootstrap.com/docs/4.6/layout/overview/) that provides responsive layout.  
-For the various [components](https://getbootstrap.com/docs/4.6/components/alerts/) with built in css.  
-
 * [Google Fonts](https://fonts.google.com/)  
-For importing fonts (***FONT NAME*** and ***FONT NAME***) into the style.css file.
+For importing fonts (**Fredoka One**, **Handlee** and **Andika New Basic**) into the style.css file.
 
 * [Font Awesome](https://fontawesome.com/icons?d=gallery)  
 For using icons throughout the website.
@@ -442,16 +480,19 @@ For generating the favicon.
 For resizing all the images.
 
 * [BeFunky](https://www.befunky.com/create/)
-For cropping some of the images.
+For cropping some images.
 
 * [Adobe Color](https://color.adobe.com/create/image)  
 For extracting the color scheme used on the website.
 
 * [Am I Responsive?](http://ami.responsivedesign.is/?url=http://ami.responsivedesign.is/#)  
-For providing a screenshot of the responsiveness of the website across several devices.
+For providing screenshots of the responsiveness of the website across several devices.
 
 * [Autoprefixer CSS online](https://autoprefixer.github.io/)  
 For adding prefixer for cross browser compatibility.
+
+* [EmailJs](https://www.emailjs.com/)  
+For email service implementation using API and without server.
 
 * [Git](https://git-scm.com/)  
 For Version control.
@@ -469,7 +510,7 @@ For deploying the website live.
 
 ## Deployment
 
-This project was developed on [GitPod Workspaces IDE](https://gitpod.io/workspaces/) (Integrated Development Environment) committed and pushed to my [GitHub Repository](https://github.com/Tom-Nagy/"REPO NAME") using GitPod Command Line Interface (CLI).
+This project was developed on [GitPod Workspaces IDE](https://gitpod.io/workspaces/) (Integrated Development Environment) committed and pushed to my [GitHub Repository](https://github.com/Tom-Nagy/know-it) using GitPod Command Line Interface (CLI).
 
 ## Live Deployment
 
@@ -477,7 +518,7 @@ To make this website accessible to the public, Walking Around has been deployed 
 
 1. Log in to my GitHub account.
     * To create an account you need to sign up on [GitHub](https://github.com/).
-2. Go to my **Repositories** and select the repository corresponding : [WEBSITE NAME](https://github.com/Tom-Nagy/"REPO NAME").
+2. Go to my **Repositories** and select the repository corresponding : [Know It](https://github.com/Tom-Nagy/know-it).
     * To create a repository see [Create a repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo).
 3. Navigate to **Settings** :
 
