@@ -770,8 +770,8 @@ function populateVolcanoEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkVolcanoEasyAnswer();
   }, {
     once: true
@@ -850,8 +850,8 @@ function populateJungleEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkJungleEasyAnswer();
   }, {
     once: true
@@ -930,8 +930,8 @@ function populateOceanEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkOceanEasyAnswer();
   }, {
     once: true
@@ -1010,8 +1010,8 @@ function populateEarthEasyQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkEarthEasyAnswer();
   }, {
     once: true
@@ -1090,8 +1090,8 @@ function populateVolcanoInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkVolcanoInterAnswer();
   }, {
     once: true
@@ -1170,8 +1170,8 @@ function populateJungleInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkJungleInterAnswer();
   }, {
     once: true
@@ -1250,8 +1250,8 @@ function populateOceanInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkOceanInterAnswer();
   }, {
     once: true
@@ -1330,8 +1330,8 @@ function populateEarthInterQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkEarthInterAnswer();
   }, {
     once: true
@@ -1410,8 +1410,8 @@ function populateVolcanoHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkVolcanoHardAnswer();
   }, {
     once: true
@@ -1490,8 +1490,8 @@ function populateJungleHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkJungleHardAnswer();
   }, {
     once: true
@@ -1570,8 +1570,8 @@ function populateOceanHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkOceanHardAnswer();
   }, {
     once: true
@@ -1650,8 +1650,8 @@ function populateEarthHardQuestion() {
 
   // Submit the answer.
   let questionForm = document.getElementById("question-form");
-  questionForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  questionForm.addEventListener("submit", function (questionForm) {
+    questionForm.preventDefault();
     checkEarthHardAnswer();
   }, {
     once: true
