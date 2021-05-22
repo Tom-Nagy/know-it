@@ -1304,9 +1304,9 @@ a {
 .avatar {
     height: 20px;
     width: 20px;
-    border: 2px solid black;
+    border: 2px solid #d9cb11;
     border-radius: 50%;
-    background-color: #fcfcfc;
+    background-color: #d9cb11;
     z-index: 25;
     position: relative;
 
@@ -2200,7 +2200,7 @@ a {
     border-radius: 50%;
     position: absolute;
     top: 12px;
-    right: 12px;
+    right: 13px;
     background-color: transparent;
     z-index: 15;
     
@@ -2233,7 +2233,7 @@ a {
     border-radius: 50%;
     position: absolute;
     bottom: 12px;
-    right: 12px;
+    right: 13px;
     background-color: transparent;
     z-index: 15;
     
@@ -3386,13 +3386,777 @@ a {
     }
 }
 
-/* -------------------------------------------- Media Queries for Grid size and Game interface in play.html-----------*/
+
+/* -------------------------------------------- Media Queries for Medium Grid size and Game interface----------- */
 
 @media (min-width: 320px) {
     .game-modal {
         width: 300px;
     }
 }
+
+@media (min-height: 700px) {
+    .game-modal {
+        width: 420px;
+    }
+
+    .grid-easy,
+    .grid-inter,
+    .grid-hard {
+        height: 600px;
+    }
+
+    .question-modal {
+        height: 50%;
+    }
+
+    /* ----------------------------------------Grid easy */
+
+    .grid-easy .path {
+        height: 90px;
+        width: 90px;
+    }
+
+
+    #easy-two::before,
+    #easy-three::before,
+    #easy-seven::before,
+    #easy-nineteen::before,
+    #easy-twenty-three::before,
+    #easy-twenty-four::before {
+        content: "";
+        height: 22px;
+        width: 98%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #easy-two::after,
+    #easy-three::after,
+    #easy-seven::after,
+    #easy-nineteen::after,
+    #easy-twenty-three::after,
+    #easy-twenty-four::after {
+        content: "";
+        height: 22px;
+        width: 98%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #easy-five::before,
+    #easy-nine::before,
+    #easy-ten::before,
+    #easy-thirteen::before,
+    #easy-sixteen::before,
+    #easy-seventeen::before,
+    #easy-twenty-one::before {
+        content: "";
+        height: 98%;
+        width: 22px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #easy-five::after,
+    #easy-nine::after,
+    #easy-ten::after,
+    #easy-thirteen::after,
+    #easy-sixteen::after,
+    #easy-seventeen::after,
+    #easy-twenty-one::after {
+        content: "";
+        height: 98%;
+        width: 22px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #easy-one::before,
+    #easy-six::before,
+    #easy-eleven::before,
+    #easy-eighteen::before {
+        content: "";
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px -30px 0 1px black;
+        -webkit-box-shadow: -30px -30px 0 1px black;
+    }
+
+    #easy-one::after,
+    #easy-six::after,
+    #easy-eleven::after,
+    #easy-eighteen::after {
+        content: "";
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -45px;
+        right: -45px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px -23px 0 0 black;
+        -webkit-box-shadow: -23px -23px 0 0 black;
+    }
+
+    #easy-four::before,
+    #easy-twelve::before {
+        content: "";
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px -30px 0 1px black;
+        -webkit-box-shadow: 30px -30px 0 1px black;
+    }
+
+    #easy-four::after,
+    #easy-twelve::after {
+        content: "";
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -45px;
+        left: -45px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px -23px 0 0 black;
+        -webkit-box-shadow: 23px -23px 0 0 black;
+    }
+
+    #easy-eight::before,
+    #easy-fifteen::before,
+    #easy-twenty::before {
+        content: "";
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        right: 20px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px 30px 0 1px black;
+        -webkit-box-shadow: 30px 30px 0 1px black;
+    }
+
+    #easy-eight::after,
+    #easy-fifteen::after,
+    #easy-twenty::after {
+        content: "";
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        position: absolute;
+        top: -45px;
+        left: -45px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px 23px 0 0 black;
+        -webkit-box-shadow: 23px 23px 0 0 black;
+    }
+
+    #easy-fourteen::before,
+    #easy-twenty-two::before {
+        content: "";
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        left: 20px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px 30px 0 1px black;
+        -webkit-box-shadow: -30px 30px 0 1px black;
+    }
+
+    #easy-fourteen::after,
+    #easy-twenty-two::after {
+        content: "";
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        position: absolute;
+        top: -45px;
+        right: -45px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px 23px 0 0 black;
+        -webkit-box-shadow: -23px 23px 0 0 black;
+    }
+
+    /* ----------------------------------------Grid intermediate */
+
+    .grid-inter .path {
+        height: 60px;
+        width: 60px;
+    }
+
+    #inter-four::before,
+    #inter-five::before,
+    #inter-fifteen::before,
+    #inter-twenty-one::before,
+    #inter-twenty-two::before,
+    #inter-twenty-three::before,
+    #inter-forty-seven::before,
+    #inter-fifty-one::before,
+    #inter-fifty-two::before,
+    #inter-fifty-three::before {
+        content: "";
+        height: 18px;
+        width: 98%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #inter-four::after,
+    #inter-five::after,
+    #inter-fifteen::after,
+    #inter-twenty-one::after,
+    #inter-twenty-two::after,
+    #inter-twenty-three::after,
+    #inter-forty-seven::after,
+    #inter-fifty-one::after,
+    #inter-fifty-two::after,
+    #inter-fifty-three::after {
+        content: "";
+        height: 18px;
+        width: 98%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #inter-seven::before,
+    #inter-twelve::before,
+    #inter-thirteen::before,
+    #inter-nineteen::before,
+    #inter-twenty-five::before,
+    #inter-thirty::before,
+    #inter-thirty-three::before,
+    #inter-thirty-four::before,
+    #inter-thirty-five::before,
+    #inter-thirty-six::before,
+    #inter-thirty-nine::before,
+    #inter-forty::before,
+    #inter-forty-three::before,
+    #inter-forty-four::before,
+    #inter-forty-five::before,
+    #inter-forty-nine::before {
+        content: "";
+        height: 98%;
+        width: 18px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #inter-seven::after,
+    #inter-twelve::after,
+    #inter-thirteen::after,
+    #inter-nineteen::after,
+    #inter-twenty-five::after,
+    #inter-thirty::after,
+    #inter-thirty-three::after,
+    #inter-thirty-four::after,
+    #inter-thirty-five::after,
+    #inter-thirty-six::after,
+    #inter-thirty-nine::after,
+    #inter-forty::after,
+    #inter-forty-three::after,
+    #inter-forty-four::after,
+    #inter-forty-five::after,
+    #inter-forty-nine::after {
+        content: "";
+        height: 98%;
+        width: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #inter-one::before,
+    #inter-three::before,
+    #inter-ten::before,
+    #inter-fourteen::before,
+    #inter-twenty-six::before,
+    #inter-twenty-eight::before,
+    #inter-thirty-seven::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px -30px 0 1px black;
+        -webkit-box-shadow: -30px -30px 0 1px black;
+    }
+
+    #inter-one::after,
+    #inter-three::after,
+    #inter-ten::after,
+    #inter-fourteen::after,
+    #inter-twenty-six::after,
+    #inter-twenty-eight::after,
+    #inter-thirty-seven::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -33px;
+        right: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px -23px 0 0 black;
+        -webkit-box-shadow: -23px -23px 0 0 black;
+    }
+
+    #inter-two::before,
+    #inter-six::before,
+    #inter-eleven::before,
+    #inter-twenty-four::before,
+    #inter-twenty-seven::before,
+    #inter-twenty-nine::before,
+    #inter-thirty-eight::before,
+    #inter-forty-eight::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px -30px 0 1px black;
+        -webkit-box-shadow: 30px -30px 0 1px black;
+    }
+
+    #inter-two::after,
+    #inter-six::after,
+    #inter-eleven::after,
+    #inter-twenty-four::after,
+    #inter-twenty-seven::after,
+    #inter-twenty-nine::after,
+    #inter-thirty-eight::after,
+    #inter-forty-eight::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -33px;
+        left: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px -23px 0 0 black;
+        -webkit-box-shadow: 23px -23px 0 0 black;
+    }
+
+    #inter-nine::before,
+    #inter-sixteen::before,
+    #inter-eighteen::before,
+    #inter-thirty-two::before,
+    #inter-forty-two::before,
+    #inter-fifty-four::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px 30px 0 1px black;
+        -webkit-box-shadow: 30px 30px 0 1px black;
+    }
+
+    #inter-nine::after,
+    #inter-sixteen::after,
+    #inter-eighteen::after,
+    #inter-thirty-two::after,
+    #inter-forty-two::after,
+    #inter-fifty-four::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        top: -33px;
+        left: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px 23px 0 0 black;
+        -webkit-box-shadow: 23px 23px 0 0 black;
+    }
+
+    #inter-eight::before,
+    #inter-seventeen::before,
+    #inter-twenty::before,
+    #inter-thirty-one::before,
+    #inter-forty-one::before,
+    #inter-forty-six::before,
+    #inter-fifty::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px 30px 0 1px black;
+        -webkit-box-shadow: -30px 30px 0 1px black;
+    }
+
+    #inter-eight::after,
+    #inter-seventeen::after,
+    #inter-twenty::after,
+    #inter-thirty-one::after,
+    #inter-forty-one::after,
+    #inter-forty-six::after,
+    #inter-fifty::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        top: -33px;
+        right: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px 23px 0 0 black;
+        -webkit-box-shadow: -23px 23px 0 0 black;
+    }
+
+    /* ----------------------------------------Grid hard */
+
+    .grid-hard .path {
+        height: 60px;
+        width: 60px;
+    }
+
+
+    /* Path display */
+
+    #hard-two::before,
+    #hard-three::before,
+    #hard-eight::before,
+    #hard-twenty-seven::before,
+    #hard-twenty-eight::before,
+    #hard-thirty-three::before,
+    #hard-thirty-four::before,
+    #hard-thirty-five::before,
+    #hard-thirty-nine::before,
+    #hard-forty::before,
+    #hard-forty-one::before,
+    #hard-forty-five::before,
+    #hard-fifty::before,
+    #hard-fifty-one::before,
+    #hard-fifty-four::before {
+        content: "";
+        height: 18px;
+        width: 98%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #hard-two::after,
+    #hard-three::after,
+    #hard-eight::after,
+    #hard-twenty-seven::after,
+    #hard-twenty-eight::after,
+    #hard-thirty-three::after,
+    #hard-thirty-four::after,
+    #hard-thirty-five::after,
+    #hard-thirty-nine::after,
+    #hard-forty::after,
+    #hard-forty-one::after,
+    #hard-forty-five::after,
+    #hard-fifty::after,
+    #hard-fifty-one::after,
+    #hard-fifty-four::after {
+        content: "";
+        height: 18px;
+        width: 98%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #hard-twelve::before,
+    #hard-fifteen::before,
+    #hard-eighteen::before,
+    #hard-nineteen::before,
+    #hard-twenty-two::before,
+    #hard-twenty-three::before,
+    #hard-twenty-four::before,
+    #hard-twenty-five::before,
+    #hard-thirty::before,
+    #hard-thirty-one::before,
+    #hard-thirty-seven::before,
+    #hard-forty-three::before {
+        content: "";
+        height: 98%;
+        width: 18px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #hard-twelve::after,
+    #hard-fifteen::after,
+    #hard-eighteen::after,
+    #hard-nineteen::after,
+    #hard-twenty-two::after,
+    #hard-twenty-three::after,
+    #hard-twenty-four::after,
+    #hard-twenty-five::after,
+    #hard-thirty::after,
+    #hard-thirty-one::after,
+    #hard-thirty-seven::after,
+    #hard-forty-three::after {
+        content: "";
+        height: 98%;
+        width: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        z-index: 15;
+    }
+
+    #hard-one::before,
+    #hard-five::before,
+    #hard-thirteen::before,
+    #hard-sixteen::before,
+    #hard-twenty-six::before,
+    #hard-thirty-eight::before,
+    #hard-forty-seven::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px -30px 0 1px black;
+        -webkit-box-shadow: -30px -30px 0 1px black;
+    }
+
+    #hard-one::after,
+    #hard-five::after,
+    #hard-thirteen::after,
+    #hard-sixteen::after,
+    #hard-twenty-six::after,
+    #hard-thirty-eight::after,
+    #hard-forty-seven::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -33px;
+        right: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px -23px 0 0 black;
+        -webkit-box-shadow: -23px -23px 0 0 black;
+    }
+
+    #hard-four::before,
+    #hard-six::before,
+    #hard-nine::before,
+    #hard-fourteen::before,
+    #hard-seventeen::before,
+    #hard-forty-two::before,
+    #hard-forty-six::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px -30px 0 1px black;
+        -webkit-box-shadow: 30px -30px 0 1px black;
+    }
+
+    #hard-four::after,
+    #hard-six::after,
+    #hard-nine::after,
+    #hard-fourteen::after,
+    #hard-seventeen::after,
+    #hard-forty-two::after,
+    #hard-forty-six::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -33px;
+        left: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px -23px 0 0 black;
+        -webkit-box-shadow: 23px -23px 0 0 black;
+    }
+
+    #hard-eleven::before,
+    #hard-twenty-one::before,
+    #hard-twenty-nine::before,
+    #hard-thirty-six::before,
+    #hard-forty-eight::before,
+    #hard-fifty-two::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 30px 30px 0 1px black;
+        -webkit-box-shadow: 30px 30px 0 1px black;
+    }
+
+    #hard-eleven::after,
+    #hard-twenty-one::after,
+    #hard-twenty-nine::after,
+    #hard-thirty-six::after,
+    #hard-forty-eight::after,
+    #hard-fifty-two::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        top: -33px;
+        left: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: 23px 23px 0 0 black;
+        -webkit-box-shadow: 23px 23px 0 0 black;
+    }
+
+    #hard-seven::before,
+    #hard-ten::before,
+    #hard-twenty::before,
+    #hard-thirty-two::before,
+    #hard-forty-four::before,
+    #hard-forty-nine::before,
+    #hard-fifty-three::before {
+        content: "";
+        height: 83px;
+        width: 83px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -30px 30px 0 1px black;
+        -webkit-box-shadow: -30px 30px 0 1px black;
+    }
+
+    #hard-seven::after,
+    #hard-ten::after,
+    #hard-twenty::after,
+    #hard-thirty-two::after,
+    #hard-forty-four::after,
+    #hard-forty-nine::after,
+    #hard-fifty-three::after {
+        content: "";
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        position: absolute;
+        top: -33px;
+        right: -33px;
+        background-color: transparent;
+        z-index: 15;
+        
+        box-shadow: -23px 23px 0 0 black;
+        -webkit-box-shadow: -23px 23px 0 0 black;
+    }
+}
+
+/* -------------------------------------------- Media Queries for Large Grid size and Game interface-----------*/
 
 @media (min-height: 1040px) {
     .game-modal {
@@ -3464,9 +4228,9 @@ a {
     .grid-hard .avatar {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid #d9cb11;
         border-radius: 50%;
-        background-color: #fcfcfc;
+        background-color: #d9cb11;
         z-index: 25;
         position: relative;
 
@@ -3528,6 +4292,11 @@ a {
     .grid-inter .question i,
     .grid-hard .question i {
         font-size: 30px;
+    }
+
+    .question-modal {
+        height: 50%;
+        width: 60%;
     }
 
     /* ----------------------------------------Grid easy */
@@ -4274,6 +5043,4 @@ a {
         box-shadow: -30px 30px 0 0 black;
         -webkit-box-shadow: -30px 30px 0 0 black;
     }
-
-
 }
