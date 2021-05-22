@@ -96,6 +96,10 @@ a {
 
 .buttons:hover {
     transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
 }
 
 .about-button {
@@ -104,6 +108,10 @@ a {
 
 .about-button:focus {
     box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px #0da80e,
+        0 0 0 12px black;
+    -webkit-box-shadow:
         0 0 0 6px white,
         0 0 0 9px #0da80e,
         0 0 0 12px black;
@@ -118,6 +126,10 @@ a {
         0 0 0 6px white,
         0 0 0 9px #f57400,
         0 0 0 12px black;
+    -webkit-box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px #f57400,
+        0 0 0 12px black;
 }
 
 .play-button {
@@ -126,6 +138,10 @@ a {
 
 .play-button:focus {
     box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px #d9cb11,
+        0 0 0 12px black;
+    -webkit-box-shadow:
         0 0 0 6px white,
         0 0 0 9px #d9cb11,
         0 0 0 12px black;
@@ -153,6 +169,10 @@ a {
         0 0 0 3px white,
         0 0 0 6px #d91e2e,
         0 0 0 9px black;
+    -webkit-box-shadow:
+        0 0 0 3px white,
+        0 0 0 6px #d91e2e,
+        0 0 0 9px black;
 }
 
 .contact-button:hover {
@@ -171,17 +191,23 @@ a {
     border-radius: 10px;
     background-color: #fcfcfc;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
 
     transition-duration: 300ms;
     -o-transition-duration: 300ms;
     -ms-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
     -webkit-transition-duration: 300ms;
+
     transition-property: transform, box-shadow;
     -o-transition-property: transform, box-shadow;
     -ms-transition-property: transform, box-shadow;
     -moz-transition-property: transform, box-shadow;
     -webkit-transition-property: transform, box-shadow;
+
+    -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+    transition-property: -webkit-transform, -webkit-box-shadow;
+    transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow;
 }
 
 .subjects-buttons:focus {
@@ -189,7 +215,14 @@ a {
 }
 
 .subjects-buttons:hover {
+
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
 }
 
@@ -200,11 +233,15 @@ a {
     position: absolute;
     top: 100%;
     right: 50%;
-    transform: translateX(50%);
-    /* Might need prefix for cross browser support */
     margin-top: 0.3em;
     font-size: 1.1rem;
     letter-spacing: 0.04rem;
+
+    transform: translateX(50%);
+    -o-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
 }
 
 .volcano-button::after {
@@ -236,10 +273,20 @@ a {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: translate 350ms ease-in-out;
     background-color: #fcfcfc;
     border: 1px solid rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+
+    transition: translate 350ms ease-in-out;
+    -o-transition: translate 350ms ease-in-out;
+    -moz-transition: translate 350ms ease-in-out;
+    -ms-transition: translate 350ms ease-in-out;
+    -webkit-transition: translate 350ms ease-in-out;
 }
 
 .rules-modal,
@@ -305,12 +352,17 @@ a {
 .ongame-overlay {
     position: fixed;
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     pointer-events: none;
+
+    transition: opacity 200ms ease-in-out;
+    -o-transition: opacity 200ms ease-in-out;
+    -ms-transition: opacity 200ms ease-in-out;
+    -moz-transition: opacity 200ms ease-in-out;
+    -webkit-transition: opacity 200ms ease-in-out;
 }
 
 .overlay,
@@ -345,6 +397,10 @@ a {
 
 .modal-active {
     transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-header {
@@ -352,16 +408,24 @@ a {
     font-weight: bold;
     padding: 1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     text-transform: capitalize;
+
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .results-modal .modal-header {
     font-size: 1rem;
     padding: 0;
-
 }
 
 .close-modal {
@@ -373,7 +437,9 @@ a {
 
 .close-modal:focus {
     border-radius: 10px;
+
     box-shadow: 0 0 0 2px red;
+    -webkit-box-shadow: 0 0 0 2px red;
 }
 
 .close-modal:hover {
@@ -384,20 +450,27 @@ a {
 
 .logo img {
     margin: 16px;
-    box-sizing: border-box;
-    border: 0px solid;
     /* Sets a border that doesn't display in order to have a round shaped border without adjusting the image */
+    border: 0px solid;
     border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
 }
 
 .logo:focus img {
     box-shadow:
         0 0 0 6px white,
         0 0 0 9px black;
+    -webkit-box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px black;
 }
 
 .logo:hover img {
     box-shadow: 0 0 10px 0 black;
+    -webkit-box-shadow: 0 0 10px 0 black;
 }
 
 .menu-icon {
@@ -427,6 +500,9 @@ a {
     box-shadow:
         0 0 0 6px white,
         0 0 0 9px #d9cb11;
+    -webkit-box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px #d9cb11;
 }
 
 .menu-icon:hover {
@@ -454,12 +530,27 @@ a {
     margin: 15px 10px;
     background-color: #d9cb11f2;
     border-radius: 5px;
-    transform: scale(0);
+
     transition: transform 300ms ease-in-out;
+    transition: -webkit-transform 300ms ease-in-out;
+    -o-transition: transform 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out;
+    -moz-transition: transform 300ms ease-in-out;
+    -webkit-transition: -webkit-transform 300ms ease-in-out;
+
+    transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
 }
 
 .menu-active {
     transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 .navigation-list {
@@ -486,6 +577,7 @@ a {
 
 .navigation-links:hover {
     text-decoration: underline 2px #9941bf;
+    -webkit-text-decoration: underline 2px #9941bf;
 }
 
 /* ------------------------------------------------------Footer */
@@ -510,15 +602,25 @@ a {
 .copyright {
     left: 10%;
     top: 50%;
-    transform: translateY(-55%);
     font-size: 0.7rem;
+
+    transform: translateY(-55%);
+    -o-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    -moz-transform: translateY(-55%);
+    -webkit-transform: translateY(-55%);
 }
 
 .footer-links {
     right: 10%;
     top: 50%;
-    transform: translate(0, -50%);
     font-size: 1rem;
+
+    transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
 }
 
 .footer-links a {
@@ -546,6 +648,9 @@ a {
 
 .footer-links a:focus i {
     box-shadow:
+        0 0 0 2px white,
+        0 0 0 4px black;
+    -webkit-box-shadow:
         0 0 0 2px white,
         0 0 0 4px black;
 }
@@ -596,11 +701,24 @@ a {
 
 .about-section {
     margin: 3em 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
+
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 
 .about-section p {
@@ -613,10 +731,19 @@ a {
 /* Subtitle section */
 
 .study-explanations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .study-explanations p {
@@ -656,8 +783,10 @@ a {
 }
 
 .magnifier:focus i {
-    box-shadow: 0 0 0 2px black;
     background-color: #3a8be9;
+
+    box-shadow: 0 0 0 2px black;
+    -webkit-box-shadow: 0 0 0 2px black;
 }
 
 .magnifier:hover i {
@@ -671,13 +800,20 @@ a {
 }
 
 .go-play {
-    display: flex;
-    justify-items: center;
-    align-items: center;
     margin: 0 auto;
     padding-bottom: 7em;
     font-size: 0.9rem;
     text-align: center;
+
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+
+    justify-items: center;
 }
 
 .go-play a {
@@ -687,11 +823,24 @@ a {
 /* Subject Content */
 
 .subject-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
+
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .subject-content {
@@ -699,8 +848,10 @@ a {
     padding: 3em;
     border: 3px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
     background-color: #fcfcfc;
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 .subject-content h5 {
@@ -771,9 +922,21 @@ a {
 .game-settings,
 .game-rewards {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
     flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+
     justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
     align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .play-explanation .study-button {
@@ -786,19 +949,26 @@ a {
     border-radius: 5px;
     background-color: transparent;
     font-size: 1.2rem;
-    text-decoration: underline 2px black;
     margin: 1em 0 1.5em;
+
+    text-decoration: underline 2px black;
+    -webkit-text-decoration: underline 2px black;
 }
 
 #rules-button:focus {
     box-shadow:
         0 0 0 3px #fcfcfc,
         0 0 0 6px black;
+    -webkit-box-shadow:
+        0 0 0 3px #fcfcfc,
+        0 0 0 6px black;
 }
 
 #rules-button:hover {
     color: #d91e2e;
+
     text-decoration: underline 2px #d91e2e;
+    -webkit-text-decoration: underline 2px #d91e2e;
 }
 
 #levels-button {
@@ -808,11 +978,16 @@ a {
     padding: 0.3em;
     border: 3px solid black;
     border-radius: 10px;
+
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 #levels-button:focus {
     box-shadow:
+        0 0 0 2px #fcfcfc,
+        0 0 0 5px black;
+    -webkit-box-shadow:
         0 0 0 2px #fcfcfc,
         0 0 0 5px black;
 }
@@ -852,6 +1027,7 @@ a {
 
 .levels-list li:hover {
     box-shadow: 0 0 6px 0 #9941bf;
+    -webkit-box-shadow: 0 0 6px 0 #9941bf;
 }
 
 #start-button {
@@ -862,11 +1038,16 @@ a {
     padding: 0.3em;
     border: 3px solid black;
     border-radius: 10px;
+
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 #start-button:focus {
     box-shadow:
+        0 0 0 2px #fcfcfc,
+        0 0 0 5px black;
+    -webkit-box-shadow:
         0 0 0 2px #fcfcfc,
         0 0 0 5px black;
 }
@@ -901,9 +1082,21 @@ a {
 
 .error-section {
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+
     flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    
     justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
     align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .error-section p {
@@ -923,10 +1116,15 @@ a {
     border: 3px solid black;
     border-radius: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .back-home-button:focus {
     box-shadow:
+        0 0 0 6px white,
+        0 0 0 9px #3A8BE980,
+        0 0 0 10px black;
+    -webkit-box-shadow:
         0 0 0 6px white,
         0 0 0 9px #3A8BE980,
         0 0 0 10px black;
@@ -970,10 +1168,15 @@ a {
         0 0 0 1px black,
         0 0 0 3px #9941bf,
         0 0 0 4px black;
+    -webkit-box-shadow:
+        0 0 0 1px black,
+        0 0 0 3px #9941bf,
+        0 0 0 4px black;
 }
 
 .error-links:hover {
     text-decoration: underline 2px #9941bf;
+    -webkit-text-decoration: underline 2px #9941bf;
 }
 
 /* ------------------------------------------------------ Contact page */
@@ -983,11 +1186,21 @@ a {
 }
 
 .form-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     padding-bottom: 3em;
+    text-align: center;
+
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
 }
 
 .form-section p {
@@ -1002,7 +1215,9 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #fcfcfc;
+
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.45);
 }
 
 #contact-form label,
@@ -1036,15 +1251,19 @@ a {
     border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     background-color: #fcfcfc;
+
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 #contact-form input:focus,
 #contact-form select:focus,
 #contact-form textarea:focus,
 #send-button:focus {
-    box-shadow: 0 0 8px 0 #9941bf;
     background-color: #3a8be980;
+    
+    box-shadow: 0 0 8px 0 #9941bf;
+    -webkit-box-shadow: 0 0 8px 0 #9941bf;
 }
 
 #contact-form input:hover,
@@ -1052,14 +1271,17 @@ a {
 #contact-form textarea:hover,
 #send-button:hover {
     box-shadow: 0 0 8px 0 #9941bf;
+    -webkit-box-shadow: 0 0 8px 0 #9941bf;
 }
 
 .small-home-button {
     padding: 0.5em;
     width: fit-content;
     margin: 1.5em auto;
-    box-shadow: none;
     font-size: 1rem;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .contact-modals .small-buttons {
@@ -1085,10 +1307,15 @@ a {
     border: 2px solid black;
     border-radius: 50%;
     background-color: #fcfcfc;
-    justify-self: center;
-    align-self: center;
     z-index: 25;
     position: relative;
+
+    justify-self: center;
+    -ms-grid-column-align: center;
+
+    align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
 }
 
 .avatar::before {
@@ -1100,7 +1327,9 @@ a {
     position: absolute;
     top: 2px;
     left: 3px;
+
     box-shadow: 8px 0 0 0 black;
+    -webkit-box-shadow: 8px 0 0 0 black;
 }
 
 .avatar::after {
@@ -1112,7 +1341,9 @@ a {
     position: absolute;
     bottom: 4px;
     left: 4px;
+
     box-shadow: 0 2px 0 0 black;
+    -webkit-box-shadow: 0 2px 0 0 black;
 }
 
 /* Inter and Hard grid */
@@ -1123,10 +1354,15 @@ a {
     border: 2px solid black;
     border-radius: 50%;
     background-color: #fcfcfc;
-    justify-self: center;
-    align-self: center;
     z-index: 25;
     position: relative;
+    
+    justify-self: center;
+    -ms-grid-column-align: center;
+
+    align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
 }
 
 .grid-inter .avatar::before,
@@ -1139,7 +1375,9 @@ a {
     position: absolute;
     top: 3px;
     left: 2px;
+
     box-shadow: 7px 0 0 0 black;
+    -webkit-box-shadow: 7px 0 0 0 black;
 }
 
 .grid-inter .avatar::after,
@@ -1152,7 +1390,9 @@ a {
     position: absolute;
     bottom: 4px;
     left: 3px;
+    
     box-shadow: 0 2px 0 0 black;
+    -webkit-box-shadow: 0 2px 0 0 black;
 }
 
 /* Credit to Ross Allen from stack overflow for disabling double click on html elements
@@ -1160,6 +1400,7 @@ a {
 .controls,
 .control-buttons {
     touch-action: manipulation;
+    -ms-touch-action: manipulation;
 }
 
 .controls {
@@ -1200,27 +1441,46 @@ a {
     position: relative;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 /* Position the buttons */
 .button-up {
     transform: translate(-50%, -125%);
+    -o-transform: translate(-50%, -125%);
+    -ms-transform: translate(-50%, -125%);
+    -moz-transform: translate(-50%, -125%);
+    -webkit-transform: translate(-50%, -125%);
 }
 
 .button-left {
     transform: translate(-125%, -50%);
+    -o-transform: translate(-125%, -50%);
+    -ms-transform: translate(-125%, -50%);
+    -moz-transform: translate(-125%, -50%);
+    -webkit-transform: translate(-125%, -50%);
 }
 
 .button-right {
     transform: translate(25%, -50%);
+    -o-transform: translate(25%, -50%);
+    -ms-transform: translate(25%, -50%);
+    -moz-transform: translate(25%, -50%);
+    -webkit-transform: translate(25%, -50%);
 }
 
 .button-down {
     transform: translate(-50%, 25%);
+    -o-transform: translate(-50%, 25%);
+    -ms-transform: translate(-50%, 25%);
+    -moz-transform: translate(-50%, 25%);
+    -webkit-transform: translate(-50%, 25%);
 }
-
-/* document.addEventListener('gesturestart', function (e) { e.preventDefault(); }); */
 
 /* Strikes Display */
 .strikes-area {
@@ -1273,10 +1533,18 @@ a {
 
 .game-subject {
     transform: translate(-110%, -20%);
+    -o-transform: translate(-110%, -20%);
+    -ms-transform: translate(-110%, -20%);
+    -moz-transform: translate(-110%, -20%);
+    -webkit-transform: translate(-110%, -20%);
 }
 
 .game-level {
     transform: translate(10%, -20%);
+    -o-transform: translate(10%, -20%);
+    -ms-transform: translate(10%, -20%);
+    -moz-transform: translate(10%, -20%);
+    -webkit-transform: translate(10%, -20%);
 }
 
 .exit-button {
@@ -1291,11 +1559,16 @@ a {
 
 .labyrinth-exit,
 .question {
-    justify-self: center;
-    align-self: center;
     position: relative;
     height: 100%;
     width: 100%;
+
+    justify-self: center;
+    -ms-grid-column-align: center;
+
+    align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
 }
 
 .exit-sign,
@@ -1303,8 +1576,13 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 20;
+
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .exit-sign {
@@ -1338,9 +1616,14 @@ a {
     position: absolute;
     top: 50%;
     left: 45px;
-    transform: translate(0, -50%);
     font-size: 0.8rem;
     padding: 1em 1em 1em 0;
+
+    transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
 }
 
 #question-form button {
@@ -1353,7 +1636,12 @@ a {
     position: absolute;
     bottom: 0;
     left: 50%;
+
     transform: translate(-65%, 0);
+    -o-transform: translate(-65%, 0);
+    -ms-transform: translate(-65%, 0);
+    -moz-transform: translate(-65%, 0);
+    -webkit-transform: translate(-65%, 0);
 }
 
 #achievements {
@@ -1391,8 +1679,13 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 10px;
+
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 /* grid-area positions */
@@ -1749,31 +2042,45 @@ a {
 #hard-fifty-two,
 #hard-fifty-three,
 #hard-fifty-four {
-    justify-self: center;
-    align-self: center;
     position: relative;
     height: 100%;
     width: 100%;
+
+    justify-self: center;
+    -ms-grid-column-align: center;
+
+    align-self: center;
+    -ms-grid-row-align: center;
+    -ms-flex-item-align: center;
 }
 
 
 /* ---------------------------------------- Easy level/Grid ---------------------------*/
 .grid-easy {
+    min-width: 280px;
+    min-height: 400px;
+    
     display: grid;
+    display: -ms-grid;
+
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(4, 1fr);
+
     grid-template-areas:
         "one two three four"
         "five six seven eight"
         "nine ten eleven twelve"
         "thirteen fourteen fifteen sixteen"
         "seventeen eighteen nineteen twenty"
-        "twenty-one twenty-two twenty-three twenty-four";
-    min-width: 280px;
-    min-height: 400px;
-
+        "twenty-one twenty-two twenty-three twenty-four"
+    ;
+ 
     justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
     align-content: center;
+    -ms-flex-line-pack: center;
 
     background-color: black;
     margin: 10px auto;
@@ -1861,8 +2168,10 @@ a {
     top: 12px;
     left: 13px;
     background-color: transparent;
-    box-shadow: -19px -20px 0 1px black;
     z-index: 15;
+
+    box-shadow: -19px -20px 0 1px black;
+    -webkit-box-shadow: -19px -20px 0 1px black;
 }
 
 #easy-one::after,
@@ -1877,8 +2186,10 @@ a {
     bottom: -30px;
     right: -30px;
     background-color: transparent;
-    box-shadow: -15px -15px 0 0 black;
     z-index: 15;
+
+    box-shadow: -15px -15px 0 0 black;
+    -webkit-box-shadow: -15px -15px 0 0 black;
 }
 
 #easy-four::before,
@@ -1891,8 +2202,10 @@ a {
     top: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px -20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px -20px 0 1px black;
+    -webkit-box-shadow: 19px -20px 0 1px black;
 }
 
 #easy-four::after,
@@ -1905,8 +2218,10 @@ a {
     bottom: -30px;
     left: -30px;
     background-color: transparent;
-    box-shadow: 15px -15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px -15px 0 0 black;
+    -webkit-box-shadow: 15px -15px 0 0 black;
 }
 
 #easy-eight::before,
@@ -1920,8 +2235,10 @@ a {
     bottom: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px 20px 0 1px black;
+    -webkit-box-shadow: 19px 20px 0 1px black;
 }
 
 #easy-eight::after,
@@ -1935,8 +2252,10 @@ a {
     top: -30px;
     left: -30px;
     background-color: transparent;
-    box-shadow: 15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px 15px 0 0 black;
+    -webkit-box-shadow: 15px 15px 0 0 black;
 }
 
 #easy-fourteen::before,
@@ -1949,8 +2268,10 @@ a {
     bottom: 12px;
     left: 13px;
     background-color: transparent;
-    box-shadow: -19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: -19px 20px 0 1px black;
+    -webkit-box-shadow: -19px 20px 0 1px black;
 }
 
 #easy-fourteen::after,
@@ -1963,14 +2284,22 @@ a {
     top: -30px;
     right: -30px;
     background-color: transparent;
-    box-shadow: -15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: -15px 15px 0 0 black;
+    -webkit-box-shadow: -15px 15px 0 0 black;
 }
 
 
 /* ---------------------------------------- Intermediate level/Grid ---------------------------*/
 .grid-inter {
+    min-width: 280px;
+    min-height: 400px;
+    
     display: grid;
+    display: -ms-grid;
+
+
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
@@ -1982,12 +2311,15 @@ a {
         "thirty-one thirty-two thirty-three thirty-four thirty-five thirty-six"
         "thirty-seven thirty-eight thirty-nine forty forty-one forty-two"
         "forty-three forty-four forty-five forty-six forty-seven forty-eight"
-        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four";
-    min-width: 280px;
-    min-height: 400px;
+        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four"
+    ;
 
     justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
     align-content: center;
+    -ms-flex-line-pack: center;
 
     background-color: black;
     margin: 10px auto;
@@ -2113,8 +2445,10 @@ a {
     top: 12px;
     left: 12px;
     background-color: transparent;
-    box-shadow: -19px -20px 0 1px black;
     z-index: 15;
+
+    box-shadow: -19px -20px 0 1px black;
+    -webkit-box-shadow: -19px -20px 0 1px black;
 }
 
 #inter-one::after,
@@ -2132,8 +2466,10 @@ a {
     bottom: -22px;
     right: -22px;
     background-color: transparent;
-    box-shadow: -15px -15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: -15px -15px 0 0 black;
+    -webkit-box-shadow: -15px -15px 0 0 black;
 }
 
 #inter-two::before,
@@ -2152,8 +2488,10 @@ a {
     top: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px -20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px -20px 0 1px black;
+    -webkit-box-shadow: 19px -20px 0 1px black;
 }
 
 #inter-two::after,
@@ -2172,8 +2510,10 @@ a {
     bottom: -22px;
     left: -22px;
     background-color: transparent;
-    box-shadow: 15px -15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px -15px 0 0 black;
+    -webkit-box-shadow: 15px -15px 0 0 black;
 }
 
 #inter-nine::before,
@@ -2190,8 +2530,10 @@ a {
     bottom: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px 20px 0 1px black;
+    -webkit-box-shadow: 19px 20px 0 1px black;
 }
 
 #inter-nine::after,
@@ -2208,8 +2550,10 @@ a {
     top: -22px;
     left: -22px;
     background-color: transparent;
-    box-shadow: 15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px 15px 0 0 black;
+    -webkit-box-shadow: 15px 15px 0 0 black;
 }
 
 #inter-eight::before,
@@ -2227,8 +2571,10 @@ a {
     bottom: 12px;
     left: 12px;
     background-color: transparent;
-    box-shadow: -19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: -19px 20px 0 1px black;
+    -webkit-box-shadow: -19px 20px 0 1px black;
 }
 
 #inter-eight::after,
@@ -2246,14 +2592,21 @@ a {
     top: -22px;
     right: -22px;
     background-color: transparent;
-    box-shadow: -15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: -15px 15px 0 0 black;
+    -webkit-box-shadow: -15px 15px 0 0 black;
 }
 
 /* ---------------------------------------- Hard level/Grid ---------------------------*/
 
 .grid-hard {
+    min-width: 280px;
+    min-height: 400px;
+    
     display: grid;
+    display: -ms-grid;
+
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
@@ -2265,12 +2618,15 @@ a {
         "thirty-one thirty-two thirty-three thirty-four thirty-five thirty-six"
         "thirty-seven thirty-eight thirty-nine forty forty-one forty-two"
         "forty-three forty-four forty-five forty-six forty-seven forty-eight"
-        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four";
-    min-width: 280px;
-    min-height: 400px;
+        "forty-nine fifty fifty-one fifty-two fifty-three fifty-four"
+    ;
 
     justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+
     align-content: center;
+    -ms-flex-line-pack: center;
 
     background-color: black;
     margin: 10px auto;
@@ -2398,8 +2754,10 @@ a {
     top: 12px;
     left: 12px;
     background-color: transparent;
-    box-shadow: -19px -20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: -19px -20px 0 1px black;
+    -webkit-box-shadow: -19px -20px 0 1px black;
 }
 
 #hard-one::after,
@@ -2417,8 +2775,10 @@ a {
     bottom: -22px;
     right: -22px;
     background-color: transparent;
-    box-shadow: -15px -15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: -15px -15px 0 0 black;
+    -webkit-box-shadow: -15px -15px 0 0 black;
 }
 
 #hard-four::before,
@@ -2436,8 +2796,10 @@ a {
     top: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px -20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px -20px 0 1px black;
+    -webkit-box-shadow: 19px -20px 0 1px black;
 }
 
 #hard-four::after,
@@ -2455,8 +2817,10 @@ a {
     bottom: -22px;
     left: -22px;
     background-color: transparent;
-    box-shadow: 15px -15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px -15px 0 0 black;
+    -webkit-box-shadow: 15px -15px 0 0 black;
 }
 
 #hard-eleven::before,
@@ -2473,8 +2837,10 @@ a {
     bottom: 12px;
     right: 12px;
     background-color: transparent;
-    box-shadow: 19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: 19px 20px 0 1px black;
+    -webkit-box-shadow: 19px 20px 0 1px black;
 }
 
 #hard-eleven::after,
@@ -2491,8 +2857,10 @@ a {
     top: -22px;
     left: -22px;
     background-color: transparent;
-    box-shadow: 15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: 15px 15px 0 0 black;
+    -webkit-box-shadow: 15px 15px 0 0 black;
 }
 
 #hard-seven::before,
@@ -2510,8 +2878,10 @@ a {
     bottom: 12px;
     left: 12px;
     background-color: transparent;
-    box-shadow: -19px 20px 0 1px black;
     z-index: 15;
+    
+    box-shadow: -19px 20px 0 1px black;
+    -webkit-box-shadow: -19px 20px 0 1px black;
 }
 
 #hard-seven::after,
@@ -2529,8 +2899,10 @@ a {
     top: -22px;
     right: -22px;
     background-color: transparent;
-    box-shadow: -15px 15px 0 0 black;
     z-index: 15;
+    
+    box-shadow: -15px 15px 0 0 black;
+    -webkit-box-shadow: -15px 15px 0 0 black;
 }
 
 
@@ -3051,18 +3423,34 @@ a {
 
     .button-up {
         transform: translate(-50%, -175%);
+        -o-transform: translate(-50%, -175%);
+        -ms-transform: translate(-50%, -175%);
+        -moz-transform: translate(-50%, -175%);
+        -webkit-transform: translate(-50%, -175%);
     }
 
     .button-left {
         transform: translate(-200%, -50%);
+        -o-transform: translate(-200%, -50%);
+        -ms-transform: translate(-200%, -50%);
+        -moz-transform: translate(-200%, -50%);
+        -webkit-transform: translate(-200%, -50%);
     }
 
     .button-right {
         transform: translate(100%, -50%);
+        -o-transform: translate(100%, -50%);
+        -ms-transform: translate(100%, -50%);
+        -moz-transform: translate(100%, -50%);
+        -webkit-transform: translate(100%, -50%);
     }
 
     .button-down {
         transform: translate(-50%, 75%);
+        -o-transform: translate(-50%, 75%);
+        -ms-transform: translate(-50%, 75%);
+        -moz-transform: translate(-50%, 75%);
+        -webkit-transform: translate(-50%, 75%);
     }
 
     .grid-easy,
@@ -3079,12 +3467,17 @@ a {
         border: 2px solid black;
         border-radius: 50%;
         background-color: #fcfcfc;
-        justify-self: center;
-        align-self: center;
         z-index: 25;
         position: relative;
+
+        justify-self: center;
+        -ms-grid-column-align: center;
+
+        align-self: center;
+        -ms-grid-row-align: center;
+        -ms-flex-item-align: center;
     }
-    
+
     .avatar::before,
     .grid-inter .avatar::before,
     .grid-hard .avatar::before {
@@ -3096,9 +3489,11 @@ a {
         position: absolute;
         top: 3px;
         left: 5px;
+        
         box-shadow: 12px 0 0 0 black;
+        -webkit-box-shadow: 12px 0 0 0 black;
     }
-    
+
     .avatar::after,
     .grid-inter .avatar::after,
     .grid-hard .avatar::after {
@@ -3110,7 +3505,9 @@ a {
         position: absolute;
         bottom: 6px;
         left: 6px;
+        
         box-shadow: 0 3px 0 0 black;
+        -webkit-box-shadow: 0 3px 0 0 black;
     }
 
     .exit-sign,
@@ -3118,7 +3515,7 @@ a {
         height: 45px;
         width: 60px;
     }
-    
+
     .grid-hard .exit-sign {
         height: 30px;
         width: 60px;
@@ -3219,8 +3616,10 @@ a {
         top: 24px;
         left: 26px;
         background-color: transparent;
-        box-shadow: -38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px -40px 0 2px black;
+        -webkit-box-shadow: -38px -40px 0 2px black;
     }
 
     #easy-one::after,
@@ -3235,8 +3634,10 @@ a {
         bottom: -60px;
         right: -60px;
         background-color: transparent;
-        box-shadow: -30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px -30px 0 0 black;
+        -webkit-box-shadow: -30px -30px 0 0 black;
     }
 
     #easy-four::before,
@@ -3249,8 +3650,10 @@ a {
         top: 24px;
         right: 26px;
         background-color: transparent;
-        box-shadow: 38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px -40px 0 2px black;
+        -webkit-box-shadow: 38px -40px 0 2px black;
     }
 
     #easy-four::after,
@@ -3263,8 +3666,10 @@ a {
         bottom: -60px;
         left: -60px;
         background-color: transparent;
-        box-shadow: 30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px -30px 0 0 black;
+        -webkit-box-shadow: 30px -30px 0 0 black;
     }
 
     #easy-eight::before,
@@ -3278,8 +3683,10 @@ a {
         bottom: 24px;
         right: 26px;
         background-color: transparent;
-        box-shadow: 38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px 40px 0 2px black;
+        -webkit-box-shadow: 38px 40px 0 2px black;
     }
 
     #easy-eight::after,
@@ -3293,8 +3700,10 @@ a {
         top: -60px;
         left: -60px;
         background-color: transparent;
-        box-shadow: 30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px 30px 0 0 black;
+        -webkit-box-shadow: 30px 30px 0 0 black;
     }
 
     #easy-fourteen::before,
@@ -3307,8 +3716,10 @@ a {
         bottom: 24px;
         left: 26px;
         background-color: transparent;
-        box-shadow: -38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px 40px 0 2px black;
+        -webkit-box-shadow: -38px 40px 0 2px black;
     }
 
     #easy-fourteen::after,
@@ -3321,8 +3732,10 @@ a {
         top: -60px;
         right: -60px;
         background-color: transparent;
-        box-shadow: -30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px 30px 0 0 black;
+        -webkit-box-shadow: -30px 30px 0 0 black;
     }
 
     /* ----------------------------------------Grid intermediate */
@@ -3439,8 +3852,10 @@ a {
         top: 24px;
         left: 24px;
         background-color: transparent;
-        box-shadow: -38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px -40px 0 2px black;
+        -webkit-box-shadow: -38px -40px 0 2px black;
     }
 
     #inter-one::after,
@@ -3458,8 +3873,10 @@ a {
         bottom: -44px;
         right: -44px;
         background-color: transparent;
-        box-shadow: -30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px -30px 0 0 black;
+        -webkit-box-shadow: -30px -30px 0 0 black;
     }
 
     #inter-two::before,
@@ -3478,8 +3895,10 @@ a {
         top: 24px;
         right: 24px;
         background-color: transparent;
-        box-shadow: 38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px -40px 0 2px black;
+        -webkit-box-shadow: 38px -40px 0 2px black;
     }
 
     #inter-two::after,
@@ -3498,8 +3917,10 @@ a {
         bottom: -44px;
         left: -44px;
         background-color: transparent;
-        box-shadow: 30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px -30px 0 0 black;
+        -webkit-box-shadow: 30px -30px 0 0 black;
     }
 
     #inter-nine::before,
@@ -3516,8 +3937,10 @@ a {
         bottom: 24px;
         right: 24px;
         background-color: transparent;
-        box-shadow: 38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px 40px 0 2px black;
+        -webkit-box-shadow: 38px 40px 0 2px black;
     }
 
     #inter-nine::after,
@@ -3534,8 +3957,10 @@ a {
         top: -44px;
         left: -44px;
         background-color: transparent;
-        box-shadow: 30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px 30px 0 0 black;
+        -webkit-box-shadow: 30px 30px 0 0 black;
     }
 
     #inter-eight::before,
@@ -3553,8 +3978,10 @@ a {
         bottom: 24px;
         left: 24px;
         background-color: transparent;
-        box-shadow: -38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px 40px 0 2px black;
+        -webkit-box-shadow: -38px 40px 0 2px black;
     }
 
     #inter-eight::after,
@@ -3572,8 +3999,10 @@ a {
         top: -44px;
         right: -44px;
         background-color: transparent;
-        box-shadow: -30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px 30px 0 0 black;
+        -webkit-box-shadow: -30px 30px 0 0 black;
     }
 
     /* ----------------------------------------Grid hard */
@@ -3695,8 +4124,10 @@ a {
         top: 24px;
         left: 24px;
         background-color: transparent;
-        box-shadow: -38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px -40px 0 2px black;
+        -webkit-box-shadow: -38px -40px 0 2px black;
     }
 
     #hard-one::after,
@@ -3714,8 +4145,10 @@ a {
         bottom: -44px;
         right: -44px;
         background-color: transparent;
-        box-shadow: -30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px -30px 0 0 black;
+        -webkit-box-shadow: -30px -30px 0 0 black;
     }
 
     #hard-four::before,
@@ -3733,8 +4166,10 @@ a {
         top: 24px;
         right: 24px;
         background-color: transparent;
-        box-shadow: 38px -40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px -40px 0 2px black;
+        -webkit-box-shadow: 38px -40px 0 2px black;
     }
 
     #hard-four::after,
@@ -3752,8 +4187,10 @@ a {
         bottom: -44px;
         left: -44px;
         background-color: transparent;
-        box-shadow: 30px -30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px -30px 0 0 black;
+        -webkit-box-shadow: 30px -30px 0 0 black;
     }
 
     #hard-eleven::before,
@@ -3770,8 +4207,10 @@ a {
         bottom: 24px;
         right: 24px;
         background-color: transparent;
-        box-shadow: 38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: 38px 40px 0 2px black;
+        -webkit-box-shadow: 38px 40px 0 2px black;
     }
 
     #hard-eleven::after,
@@ -3788,8 +4227,10 @@ a {
         top: -44px;
         left: -44px;
         background-color: transparent;
-        box-shadow: 30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: 30px 30px 0 0 black;
+        -webkit-box-shadow: 30px 30px 0 0 black;
     }
 
     #hard-seven::before,
@@ -3807,8 +4248,10 @@ a {
         bottom: 24px;
         left: 24px;
         background-color: transparent;
-        box-shadow: -38px 40px 0 2px black;
         z-index: 15;
+        
+        box-shadow: -38px 40px 0 2px black;
+        -webkit-box-shadow: -38px 40px 0 2px black;
     }
 
     #hard-seven::after,
@@ -3826,8 +4269,10 @@ a {
         top: -44px;
         right: -44px;
         background-color: transparent;
-        box-shadow: -30px 30px 0 0 black;
         z-index: 15;
+        
+        box-shadow: -30px 30px 0 0 black;
+        -webkit-box-shadow: -30px 30px 0 0 black;
     }
 
 
