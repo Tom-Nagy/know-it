@@ -263,12 +263,18 @@ For the full version:
 
 ### **Different Design**
 
-"IF THE LIVE WEBSITE IS DIFFERENT FROM THE WIREFRAMES"
-Some designs are different from the wireframes because of user experience compliance, accessibility, technical skills and time.  
+Some designs are different from the wireframes because of user experience compliance, accessibility and time.  
 
-#### Site Map
+#### The Icon/Menu :
 
-"STRUCTURE OF THE WEBSITE IS DIFFERENT IN THIS AND THAT WAY BECAUSE ...."
+The logo was supposes to be the menu as well and the menu would have displayed when hovering or clicking on it.  
+I realized that it was not relevant for this website and it would not benefit the user experience in any way and at the contrary, it would have made the navigation difficult.
+The logo and and the menu are two different icons now and have their own functionality that correspond to the best practice.
+
+#### The Carousel in play.html :
+
+A carousel was supposed to be used in order to display the subjects in play.html. This was not implemented because of time constraints.  
+It does not impact negatively the user experience and will be part of the features to implement in the future.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
