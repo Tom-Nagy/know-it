@@ -1,3 +1,5 @@
+/* jshint esversion: 8, jquery: true */
+
 // Add event listener once the page is fully loaded.
 $(document).ready(function () {
   // To the magnifier button.
@@ -5,15 +7,13 @@ $(document).ready(function () {
 
   // To the subject buttons.
   $(".study-subjects").click(displayContent);
-
-})
+});
 
 // Toggle the extra content.
 function toggleInfo () {
 
     let extraInfo = $(this).next();
     extraInfo.toggle(300);
-    
 }
 
 // Display the selected content.

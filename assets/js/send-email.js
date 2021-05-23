@@ -1,3 +1,5 @@
+/* jshint esversion: 8, jquery: true */
+
 $(document).ready(function () {
   // Template of how to add the service [emailjs.com](https://www.emailjs.com/docs/sdk/send/) slightly adjusted.
   $("#contact-form").submit(function (contactForm) {
@@ -43,21 +45,19 @@ function emailFailed() {
   overlay.classList.add("overlay-active");
 }
 
-
-
 // Close the modals
 
 closeModalButtons.forEach(button => {
   button.addEventListener("click", () => {
   let modal = document.getElementsByClassName("modal-active")[0];
   closeModal(modal);
-  })
-})
+  });
+});
 
 overlay.addEventListener("click", () => {
   let modal = document.getElementsByClassName("modal-active")[0];
   closeModal(modal);
-})
+});
 
 function closeModal(modal) {
   modal.classList.remove("modal-active");

@@ -1,3 +1,5 @@
+/* jshint esversion: 8, jquery: true */
+
 // ------------------------------------------------------------------ Display of the rules
 // Build following the tutorial video on Youtube made [by Web Dev Simplified](https://www.youtube.com/watch?v=MBaw_6cPmAw).
 // start credit
@@ -106,7 +108,6 @@ levelList.forEach((level) => {
 
 function setLevel(getLevel) {
   document.getElementById("button-display").innerText = getLevel;
-  let level = document.getElementById("button-display").innerText;
 }
 
 // ------------------------------------------------------------------ Game -------------------------------------------------------
@@ -423,13 +424,13 @@ let settingsModal = document.getElementsByClassName("settings-modal")[0];
 let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
 settingsModal.addEventListener("click", function () {
   settingsOverlay.classList.remove("overlay-active");
-  settingsModal.classList.remove("modal-active")
-})
+  settingsModal.classList.remove("modal-active");
+});
 
 settingsOverlay.addEventListener("click", function () {
   settingsOverlay.classList.remove("overlay-active");
-  settingsModal.classList.remove("modal-active")
-})
+  settingsModal.classList.remove("modal-active");
+});
 
 
 // Start the game and set game parameters.
@@ -461,7 +462,7 @@ startButton.addEventListener("click", function () {
     let settingsOverlay = document.getElementsByClassName("settings-overlay")[0];
 
     settingsOverlay.classList.add("overlay-active");
-    settingsModal.classList.add("modal-active")
+    settingsModal.classList.add("modal-active");
   }
 });
 
@@ -546,13 +547,13 @@ function closeGame() {
     if (avatar.classList.contains("hide") === false) {
       avatar.classList.add("hide");
     }
-  })
+  });
 
   allExits.forEach(exit => {
     if (exit.classList.contains("hide") === false) {
       exit.classList.add("hide");
     }
-  })
+  });
 
   // Reset the grids display property to grid.
   let grids = document.querySelectorAll(".grids");
@@ -560,56 +561,57 @@ function closeGame() {
     if (grid.style.display === "none") {
       grid.style.display = "grid";
     }
-  })
+  });
 }
 
 // Move the Avatar (player)
 
 let controlButtons = document.querySelectorAll("[data-button-direction]");
 
-for (let button of controlButtons) {
-  button.addEventListener("click", function () {
+controlButtons.forEach(button => {
+  button.addEventListener("click", checkMove);
+});
 
-    let level = document.getElementById("button-display").innerText;
+function checkMove() {
+  let level = document.getElementById("button-display").innerText;
 
-    // Get the direction the player chose.
-    let chosenDirection = button.dataset.buttonDirection;
-    let availableDirections = "";
+  // Get the direction the player chose.
+  let chosenDirection = this.dataset.buttonDirection;
+  let availableDirections = "";
 
-    // Get the position of the player (depending on the grid level) and the grid-area he is on.
-    if (level === "Apprentice") {
-      let avatar = document.getElementById("easy-player");
-      let avatarPosition = avatar.className.substring(7);
-      let gridItemID = "easy-" + avatarPosition;
-      let gridItem = document.getElementById(gridItemID);
+  // Get the position of the player (depending on the grid level) and the grid-area he is on.
+  if (level === "Apprentice") {
+    let avatar = document.getElementById("easy-player");
+    let avatarPosition = avatar.className.substring(7);
+    let gridItemID = "easy-" + avatarPosition;
+    let gridItem = document.getElementById(gridItemID);
 
-      // Get the available directions from this grid-area.
-      availableDirections = gridItem.dataset.easyAvailableDirection;
+    // Get the available directions from this grid-area.
+    availableDirections = gridItem.dataset.easyAvailableDirection;
 
-    } else if (level === "Scientist") {
-      let avatar = document.getElementById("inter-player");
-      let avatarPosition = avatar.className.substring(7);
-      let gridItemID = "inter-" + avatarPosition;
-      let gridItem = document.getElementById(gridItemID);
+  } else if (level === "Scientist") {
+    let avatar = document.getElementById("inter-player");
+    let avatarPosition = avatar.className.substring(7);
+    let gridItemID = "inter-" + avatarPosition;
+    let gridItem = document.getElementById(gridItemID);
 
-      // Get the available directions from this grid-area.
-      availableDirections = gridItem.dataset.easyAvailableDirection;
+    // Get the available directions from this grid-area.
+    availableDirections = gridItem.dataset.easyAvailableDirection;
 
-    } else if (level === "Genius") {
-      let avatar = document.getElementById("hard-player");
-      let avatarPosition = avatar.className.substring(7);
-      let gridItemID = "hard-" + avatarPosition;
-      let gridItem = document.getElementById(gridItemID);
+  } else if (level === "Genius") {
+    let avatar = document.getElementById("hard-player");
+    let avatarPosition = avatar.className.substring(7);
+    let gridItemID = "hard-" + avatarPosition;
+    let gridItem = document.getElementById(gridItemID);
 
-      // Get the available directions from this grid-area.
-      availableDirections = gridItem.dataset.easyAvailableDirection;
-    }
+    // Get the available directions from this grid-area.
+    availableDirections = gridItem.dataset.easyAvailableDirection;
+  }
 
-    // Check if the direction chosen is available for the player to move onto and get the new position.
-    if (availableDirections.includes(chosenDirection)) {
-      getNewPosition(availableDirections, chosenDirection);
-    }
-  });
+  // Check if the direction chosen is available for the player to move onto and get the new position.
+  if (availableDirections.includes(chosenDirection)) {
+    getNewPosition(availableDirections, chosenDirection);
+  }
 }
 
 function getNewPosition(availableDirections, chosenDirection) {
@@ -733,6 +735,26 @@ function displayQuestion() {
 // Create a variable to store the rigth answer and pass it to the displayWrongAnswer function for displaying it in the modal.
 let correctAnswer;
 
+// Check the answer against the correct answer with the the data from extracted from the JSON file.
+function checkAnswer(answers, questions) {
+  answers.forEach((answer) => {
+    if (answer.checked) {
+      let chosenAnswer = answer.nextElementSibling.innerText;
+      if (chosenAnswer === questions.correctAnswer) {
+        displayRightAnswerModal();
+        closeQuestion();
+        incrementScrore();
+      } else {
+        correctAnswer = questions.correctAnswer;
+        displayWrongAnswerModal(correctAnswer);
+        decrementScore();
+        addStrike();
+        closeQuestion();
+      }
+    }
+  });
+}
+
 function populateVolcanoEasyQuestion() {
   // Get the questions from the json file.
   fetch("assets/JSON/easy-questions/volcano-easy-questions.JSON")
@@ -791,22 +813,7 @@ function checkVolcanoEasyAnswer() {
       for (let questions of volcanoEasyQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -871,22 +878,7 @@ function checkJungleEasyAnswer() {
       for (let questions of jungleEasyQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -951,22 +943,7 @@ function checkOceanEasyAnswer() {
       for (let questions of oceanEasyQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1031,22 +1008,7 @@ function checkEarthEasyAnswer() {
       for (let questions of earthEasyQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1111,22 +1073,7 @@ function checkVolcanoInterAnswer() {
       for (let questions of volcanoInterQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1191,22 +1138,7 @@ function checkJungleInterAnswer() {
       for (let questions of jungleInterQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1271,22 +1203,7 @@ function checkOceanInterAnswer() {
       for (let questions of oceanInterQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1351,22 +1268,7 @@ function checkEarthInterAnswer() {
       for (let questions of earthInterQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1431,22 +1333,7 @@ function checkVolcanoHardAnswer() {
       for (let questions of volcanoHardQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1511,22 +1398,7 @@ function checkJungleHardAnswer() {
       for (let questions of jungleHardQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1591,22 +1463,7 @@ function checkOceanHardAnswer() {
       for (let questions of oceanHardQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1671,22 +1528,7 @@ function checkEarthHardAnswer() {
       for (let questions of earthHardQuestions) {
         if (questions.question === askedQuestion) {
           let answers = document.querySelectorAll("#question-form input");
-          answers.forEach((answer) => {
-            if (answer.checked) {
-              let chosenAnswer = answer.nextElementSibling.innerText;
-              if (chosenAnswer === questions.correctAnswer) {
-                displayRightAnswerModal();
-                closeQuestion();
-                incrementScrore();
-              } else {
-                correctAnswer = questions.correctAnswer
-                displayWrongAnswerModal(correctAnswer);
-                decrementScore();
-                addStrike();
-                closeQuestion();
-              }
-            }
-          });
+          checkAnswer(answers, questions);
         }
       }
     });
@@ -1747,9 +1589,7 @@ document.addEventListener("click", function () {
     gameOver();
     messagesOverlay.classList.remove("overlay-active");
   }
-})
-
-
+});
 
 // Close the question modal.
 function closeQuestion() {
