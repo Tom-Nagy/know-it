@@ -57,6 +57,7 @@ The game where the users will test their knowledge is a Labyrinth. Labyrinth are
 * [Deployment](#Deployment)
   * [Live Deployment](#Live-Deployment)
   * [Local Deployment](#Local-Deployment)
+  * [Implementing API](#Implementing-API)
 * [Bugs](#Bugs)
   * [Solved](#Solved)
   * [Unsolved](#Unsolved)
@@ -483,9 +484,9 @@ For extracting the color scheme used on the website.
 For providing screenshots of the responsiveness of the website across several devices.
 
 * [Autoprefixer CSS online](https://autoprefixer.github.io/)  
-For adding prefixer for cross browser compatibility.
+For adding prefixer in style.css for cross browser compatibility.
 
-* [EmailJs](https://www.emailjs.com/)  
+* [EmailJS](https://www.emailjs.com/)  
 For email service implementation using API and without server.
 
 * [Git](https://git-scm.com/)  
@@ -598,6 +599,22 @@ To Fork a repository take the following steps :
 
 4. Now you should find a copy of the repository in ```Your repositories```.
 
+## Implementing API
+
+[EmailJS](https://www.emailjs.com/) is used in this project in order to manage the contact form of the website.  
+It is an API (Application Programming Interface), that allows emails management using JavaScript, without needing the server side.
+
+To implement EmailJS take the following steps :
+
+1. Create an account by [signing up](https://dashboard.emailjs.com/sign-up).
+Free account are avaible and was used in this project limiting the number of email to 200 per month.
+2. Go to [Email Services](https://dashboard.emailjs.com/admin) in order to link your email account.
+3. Create a template or use the default proposed in [Email Templates](https://dashboard.emailjs.com/admin/templates).
+4. Go to the [Docs → emailjs.send](https://www.emailjs.com/docs/sdk/send/) section in order to see how to implemnt the service. Different options are available.
+5. In order to implement the service you will need your **user ID** and **Access Token** that refer to the **API keys**. You will find them in the [integration](https://dashboard.emailjs.com/admin/integration) section of your account.
+
+:warning: **API keys** are private and sensitive information that should not be shared and kept private.
+
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ## Testing
@@ -641,7 +658,6 @@ Issue : On iOS, the menu icon is not rendering properly rendering.
 Issue : On iOS, the button to close modal doesn't render nicely.
 
 Issue : On iOS, the directional buttons hover and/or focus effect don't render properly. this does not prevent users from playing, but it takes away from the user experience.
-
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
