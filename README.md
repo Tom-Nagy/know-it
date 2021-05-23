@@ -264,6 +264,10 @@ The logo and and the menu are two different icons now and have their own functio
 A carousel was supposed to be used in order to display the subjects in play.html. This was not implemented because of time constraints.  
 It does not impact negatively the user experience and will be part of the features to implement in the future.
 
+#### The link in 404.html
+
+The reason input field will not be pre-populated when clicking on `report an issue`. This was not implemented because it needs exporting and importing data from different files and I was adviced not to do it because of the need of compilers to be installed.
+
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ## Features
@@ -416,31 +420,33 @@ It provides a button to go back to the home page and some useful links.
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ### **Features to Implement in the Future Versions**
- with the reason pre-populated.
- with the subject pre-populated to play.
- with the subject pre-populated to study.
 
- carousel for the subjects.
- carousel for the images in the study.
+ On a general note, adding other subjects to play and study.
 
- Other subjects to play and study.
- Different rewards combining achievements.
+#### play.html
 
+Create a carousel to display the subjects available to play on one line only for space management and better user experience. This would be helpful for future website maintenance and expansion because it will always take the same real estate on the page.
 
-#### PAGE NAME
+In pair with the study page, pre-select the subject that was played when clicking on the `Study`, so the same subject is displayed.
 
-FEATURES TO BE ADDED
-CHANGES TO BE DONE
+##### play.html ⇾ game
 
-#### PAGE NAME
+Add Different rewards. Extra rewards earned when combining achievements.
 
-FEATURES TO BE ADDED
-CHANGES TO BE DONE
+Create a toggle button named `Achievements` that would display the achievements.
 
+Add the otpion to create a profile to be able to store information on different browsers and devices.  
+Add the option to display rewards icon on profile picture.
 
-#### Additional page
+#### study.html
 
-FEATURES TO BE ADDED
+Add carousels in the different articles to support the representation of the subject being treated.  This could be presented as a tab on top of the article, so the user would be able to choose between “Article” and “Gallery”.
+
+In pair with the play page, pre-select the subject that was studied when clicking on the `Play`, so the same subject is pre-selected.
+
+#### 404.html
+
+Pre-populate the reason input field in the contact form upon clicking the link to report an issue.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -625,6 +631,9 @@ Solve : Add the `.preventDefault()` method when submitting the form to prevent t
 
 Solve: General solve for reoccurring bugs. The scripts tags for linking the JavaScript files were not placed properly in the HTML files. So i moved them from after to before the `</body>`.
 
+Issue : Some content is displayed outside the viewport and is not being centered anymore.
+Solve : Remove `display: -webkit-box` in style.css.
+
 ### Unsolved
 
 Issue : On iOS, the menu icon is not rendering properly rendering.
@@ -633,7 +642,6 @@ Issue : On iOS, the button to close modal doesn't render nicely.
 
 Issue : On iOS, the directional buttons hover and/or focus effect don't render properly. this does not prevent users from playing, but it takes away from the user experience.
 
-Issue : 
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
