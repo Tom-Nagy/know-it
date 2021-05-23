@@ -1295,7 +1295,7 @@ a {
 .avatar {
     height: 20px;
     width: 20px;
-    border: 2px solid #d9cb11;
+    border: 1px solid black;
     border-radius: 50%;
     background-color: #d9cb11;
     z-index: 25;
@@ -1342,9 +1342,9 @@ a {
 .grid-hard .avatar {
     height: 20px;
     width: 15px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 50%;
-    background-color: #fcfcfc;
+    background-color: #d9cb11;
     z-index: 25;
     position: relative;
     
@@ -4223,7 +4223,7 @@ a {
     .grid-hard .avatar {
         height: 30px;
         width: 30px;
-        border: 2px solid #d9cb11;
+        border: 1px solid black;
         border-radius: 50%;
         background-color: #d9cb11;
         z-index: 25;
