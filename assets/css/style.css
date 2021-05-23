@@ -2903,7 +2903,7 @@ a {
 @media (max-width: 360px) {
 
     /* Common */
-    h3 {
+    h2 {
         font-size: 1.5rem;
     }
 
@@ -3197,7 +3197,7 @@ a {
         font-size: 2.5rem;
     }
 
-    h3 {
+    h2 {
         font-size: 3rem;
     }
 
@@ -3255,7 +3255,7 @@ a {
     }
 
     .modal-header,
-    h3,
+    h2,
     .home-heading+span,
     .study-explanations p {
         font-size: 3rem;
