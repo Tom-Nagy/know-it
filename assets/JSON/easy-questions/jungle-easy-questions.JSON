@@ -29,10 +29,10 @@
   },
   {
     "question": "Which of the following is false?",
-    "optionOne": "Sometimes it froze in the jungle.",
-    "optionTwo": "The temperature rarely exceed 35 celsius degrees in the jungle.",
+    "optionOne": "The temperature rarely exceed 35 celsius degrees in the jungle.",
+    "optionTwo": "It freezes in the jungle.",
     "optionThree": "Jungles are one of the most important habitat on Earth.",
-    "correctAnswer": "Sometimes it froze in the jungle."
+    "correctAnswer": "It freezes in the jungle."
   },
   {
     "question": "Which of the following is true?",
