@@ -220,21 +220,9 @@ Images will be used for illustration purposes. They will help the representation
 
 As well images are used to create the labyrinth paths. They correspond to the subject selected for consistency and visual cues.
 
-* Volcano:
-
-![Volcano path](assets/images/README-images/design/volcano-path-design.png)
-
-* Jungle:
-
-![Jungle path](assets/images/README-images/design/jungle-path-design.png)
-
-* Ocean:
-
-![Ocean path](assets/images/README-images/design/ocean-path-design.png)
-
-* Earth:
-
-![Earth path](assets/images/README-images/design/earth-path-design.png)
+| Volcano | Jungle | Ocean | Earth |
+| :-----: | :----: | :---: | :---: |
+| ![Volcano path](assets/images/README-images/design/volcano-path-design.png) | ![Jungle path](assets/images/README-images/design/jungle-path-design.png) | ![Ocean path](assets/images/README-images/design/ocean-path-design.png) | ![Earth path](assets/images/README-images/design/earth-path-design.png) |
 
 #### Styling and Feeling
 
@@ -348,7 +336,7 @@ Four icons are displayed and represent the subject available to study. The fourt
 
 The volcano subject will be displayed by default.
 
-![Study page](assets/images/README-images/features/study-features.png)
+![Study page](assets/images/README-images/features/study-features.jpg)
 
 At the bottom of the page and at the end of the articles a link to the play page is displayed and text invites users to test their knowledge by playing the game.
 

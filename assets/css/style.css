@@ -412,7 +412,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     justify-content: space-between;
     -ms-flex-pack: justify;
@@ -704,8 +703,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
-
 
     justify-content: center;
     -ms-flex-pack: center;
@@ -735,7 +732,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     justify-content: center;
     -ms-flex-pack: center;
@@ -807,7 +803,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     align-items: center;
     -ms-flex-align: center;
@@ -827,7 +822,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     flex-direction: column;
     -ms-flex-direction: column;
@@ -923,7 +917,6 @@ a {
 .game-rewards {
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     flex-direction: column;
     -ms-flex-direction: column;
@@ -1083,7 +1076,6 @@ a {
 .error-section {
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
 
     flex-direction: column;
     -ms-flex-direction: column;
@@ -1191,7 +1183,6 @@ a {
 
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
     
     flex-direction: column;
     -ms-flex-direction: column;
