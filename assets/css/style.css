@@ -2904,7 +2904,7 @@ a {
 
     /* Common */
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .heading {
@@ -3047,6 +3047,10 @@ a {
 
     .statement {
         margin-top: 4rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
     }
 
     /* about.html */
