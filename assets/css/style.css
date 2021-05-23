@@ -575,8 +575,8 @@ a {
 }
 
 .navigation-links:hover {
-    text-decoration: underline 2px #9941bf;
-    -webkit-text-decoration: underline 2px #9941bf;
+    text-decoration: underline #9941bf wavy;
+    -webkit-text-decoration: underline #9941bf wavy;
 }
 
 /* ------------------------------------------------------Footer */
@@ -944,8 +944,8 @@ a {
     font-size: 1.2rem;
     margin: 1em 0 1.5em;
 
-    text-decoration: underline 2px black;
-    -webkit-text-decoration: underline 2px black;
+    text-decoration: underline black solid;
+    -webkit-text-decoration: underline black solid;
 }
 
 #rules-button:focus {
@@ -960,8 +960,8 @@ a {
 #rules-button:hover {
     color: #d91e2e;
 
-    text-decoration: underline 2px #d91e2e;
-    -webkit-text-decoration: underline 2px #d91e2e;
+    text-decoration: underline #d91e2e double;
+    -webkit-text-decoration: underline #d91e2e double;
 }
 
 #levels-button {
@@ -1167,8 +1167,8 @@ a {
 }
 
 .error-links:hover {
-    text-decoration: underline 2px #9941bf;
-    -webkit-text-decoration: underline 2px #9941bf;
+    text-decoration: underline #9941bf solid;
+    -webkit-text-decoration: underline #9941bf solid;
 }
 
 /* ------------------------------------------------------ Contact page */
@@ -1519,7 +1519,7 @@ a {
     left: 50%;
     font-family: "Handlee", cursive;
     font-weight: bold;
-    text-decoration: 1.5px underline black;
+    text-decoration: underline black solid;
 }
 
 .game-subject {
@@ -2916,7 +2916,7 @@ a {
     }
 
     ul {
-        padding-inline-start: 1em;
+        padding-left: 1em;
     }
 
     /* Footer */
