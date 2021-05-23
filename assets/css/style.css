@@ -156,11 +156,11 @@ a {
 .contact-button {
     font-size: 0.85rem;
     letter-spacing: 0.04rem;
-    background-color: #d91e2e;
-    color: black;
+    background-color: black;
+    color: #fcfcfc;
     padding: 0.4em;
     margin: 1.5em;
-    border: 2px solid black;
+    border: 2px solid #fcfcfc;
     border-radius: 10px;
 }
 
@@ -176,9 +176,9 @@ a {
 }
 
 .contact-button:hover {
-    background-color: black;
-    color: #d91e2e;
-    border: 2px solid #d91e2e;
+    background-color: #d91e2e;
+    color: black;
+    border: 2px solid black;
 }
 
 /* Subjects Icons (buttons) */
@@ -515,7 +515,7 @@ a {
 .menu-text {
     position: relative;
     top: -12px;
-    color: #9941bf;
+    color: black;
     font-family: "Fredoka One", cursive;
     font-size: 0.8rem;
     letter-spacing: 0.03rem;
@@ -848,7 +848,7 @@ a {
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 }
 
-.subject-content h5 {
+.subject-content h4 {
     position: relative;
     font-size: 1.1rem;
     margin: 4em 2em 1em;
@@ -856,8 +856,8 @@ a {
     text-decoration: underline;
 }
 
-/* Add a separation line before the h5 headings */
-.subject-content h5::before {
+/* Add a separation line before the h4 headings */
+.subject-content h4::before {
     content: "";
     height: 2px;
     width: 40%;
@@ -867,7 +867,7 @@ a {
     left: 30%;
 }
 
-.subject-content h6 {
+.subject-content h5 {
     position: relative;
     font-size: 1rem;
     font-weight: bold;
@@ -875,7 +875,7 @@ a {
 }
 
 /* Add a bullet point like list */
-.subject-content h6::before {
+.subject-content h5::before {
     content: "";
     height: 6px;
     width: 6px;
@@ -2987,7 +2987,7 @@ a {
         margin: 0.5em;
     }
 
-    .subject-content h5 {
+    .subject-content h4 {
         font-size: 1rem;
     }
 
@@ -3227,7 +3227,7 @@ a {
     .go-play,
     .go-play a,
     .subject-content p,
-    .subject-content h6,
+    .subject-content h5,
     .subject-content span,
     .play-wrapper p,
     .play-explanation .study-button,
@@ -3245,7 +3245,7 @@ a {
     .jungle-button::after,
     .ocean-button::after,
     .earth-button::after,
-    .subject-content h5,
+    .subject-content h4,
     .magnifier i,
     #start-button,
     #levels-button,
@@ -3324,7 +3324,7 @@ a {
         margin: 1em;
     }
 
-    .subject-content h6::before {
+    .subject-content h5::before {
         height: 15px;
         width: 15px;
     }

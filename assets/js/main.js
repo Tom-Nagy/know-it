@@ -1,4 +1,4 @@
-/* jshint esversion: 8, jquery: true */
+/* jshint esversion: 8 */
 
 // Toggle of the navigation menu.
 let menuButton = document.getElementById("navigation-button");
