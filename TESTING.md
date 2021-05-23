@@ -14,6 +14,7 @@
 * [Lighthouse](#Lighthouse)
 * [Cross Browsers Testing](#Cross-Browsers-Testing)
   * [Manual Testing](#Manual-Testing)
+  * [Conclusions and Notations](#Conclusions-and-Notations)
 * [User Stories Testing from UX section of the README.md](#User-Stories-Testing-from-UX-section-of-the-README.md)
   * [First Time User](#First-Time-User)
   * [Returning User](#Returning-User)
@@ -46,8 +47,9 @@ The results are positive and the code is valid.
 ## Lighthouse
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) is a tool provided by Google Chrome DevTools and allows to identify the site performance, accessibility and user experience on Mobile and Desktop.  
-All the pages from the website have been tested with Lighthouse.  
-They all show 100% score except for the performance for most pages.
+All the pages from the website have been tested with Lighthouse.
+
+They all show 100% score except for the performance for most pages. This is due to images sizes mostly and to the css file size. In the future devlopement of the website, considering a separation of the css between the play page and the rest of the website could be beneficial as well as creating different image sizes that would be loaded depending on the screen size.
 
 * Home
   * ![Mobile](assets/images/TESTING-images/lighthouse/lighthouse-mobile-home.png)
@@ -72,75 +74,119 @@ They all show 100% score except for the performance for most pages.
 
 ## Cross Browsers Testing
 
-The website was tested on severals browsers ( Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera) 
-and shows good functionality across them all.  
+The website was tested on severals browsers (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari and Opera) and shows good functionality across them all.  
 Manual testing was executed on **all browsers** as shown in the following section.
 
 ### Manual Testing
 
-The responsiveness of the website for different viewport sizes was tested by dragging the window up, down, 
-left and right.  
+The responsiveness of the website for different viewport sizes was tested by dragging the window up, down, left and right.  
 The following tests have been executed severals times at different viewport breakpoints.
 
-"ALL THE FOLLOWING TESTING IS LEFT FOR DEMONSTRATION AND EXAMPLE PURPOSES BUT NEED TO BE CHANGED AND ADAPTED TO THE PROJECT"
-
 * Header
-    * Click on ```"PAGE NAME"``` navigation link, and check if the link works, when hovered and stays highlighted while on 
-    the page on medium and larger screens.
-    * Click on ```"PAGE NAME"``` navigation link, and check if the link works, when hovered and stays highlighted while on 
-    the page on medium and larger screens.
-    * Click on ```"PAGE NAME"``` navigation link, and check if the link works, when hovered and stays highlighted while on 
-    the page on medium and larger screens.
-    * Click on ```"PAGE NAME"``` navigation link, and check if the link works, when hovered and stays highlighted while on 
-    the page on medium and larger screens.
-    * Click on ```"PAGE NAME"``` navigation link, and check if the link works, when hovered and stays highlighted while on 
-    the page on medium and larger screens.
-    * Click on ```the logo```, and check if the link works on all screens sizes.
-
-    * The toggle menu's links on small screens have been tested as well.  
+  * Click on the website **Logo**, and check if the link works and changes state when hovered and focused.
+  * Click on the **menu button** to toggle the menu's links list and check if the button works and changes state when hovered and focused as well as all the links it contains.  
 
 * Footer
-    * Click on ```"BUTTON NAME"``` navigation link (button), and check if the link works, when hovered as well.
-    * Click on ```the Facebook icon``` link and check if the link works, when hovered and opens in a different tab.
-    * Click on ```the Instagram icon``` link and check if the link works, when hovered and opens in a different tab.
-    * Click on ```the Pinterest icon``` link and check if the link works, when hovered and opens in a different tab.
+  * Click on **the graduation cap icon** link and check if the link works and changes state when hovered, focused and opens in a different tab.
+  * Click on **the cogs icon** link and check if the link works, when hovered and changes state focused and opens in a different tab.
+  * Click on **the Pinterest icon** link and check if the link works, when hovered and changes state focused and opens in a different tab.
 
-* Home 
-    * Click on ```About Us``` navigation link (button), and check if the link works, when hovered as well.
+* index.html
+  * Click on **About** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **Study** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **Play** navigation link (button), and check if the link works and changes state when hovered and focused.
 
-* "PAGE NAME"
-    * Not applicable.
+* about.html
+  * Click on **Study** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **Play** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **Contact** navigation link (button), and check if the link works and changes state when hovered and focused.
 
-* "PAGE NAME"
-    * Not applicable.
+* study.html
+  * Click on **Volcano** icon/button, and check if loads the content and changes state when hovered and focused.
+  * Click on **Jungle** icon/button, and check if loads the content and changes state when hovered and focused.
+  * Click on **Ocean** icon/button, and check if loads the content and changes state when hovered and focused.
+  * Click on **Earth** icon/button, and check if loads the content and changes state when hovered and focused.
+  * Click on **Play** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **the magnifiers** navigation link (button) in all the articles, and check if they toggle the content correctly and change state when hovered and focused.
 
-* "PAGE NAME"
-    * Click on the arrows to change slides.
-    * Click on the images and check if the modal appear with the corresponding information.
-    * Click on the closing button of the modal to close it.
-    * Click outside of the modal window to close it.
+* play.html
+  * Click on **Study** navigation link (button), and check if the link works and changes state when hovered and focused.
+  * Click on **How to play** button, and check if it toggles the rules and changes state when hovered and focused.
+  * Click on **Volcano** icon/button, and check if it changes state when hovered and focused.
+  * Click on **Jungle** icon/button, and check if it changes state when hovered and focused.
+  * Click on **Ocean** icon/button, and check if it changes state when hovered and focused.
+  * Click on **Earth** icon/button, and check if it changes state when hovered and focused.
+  * Click on **Set Level** button, and check if it toggles the levels list and it changes state when hovered and focused.
+  * Click on **Apprentice** and check if it changes state when hovered and focused and that it popultate the **Set Level** button when selected.
+  * Click on **Scientist** and check if it changes state when hovered and focused and that it popultate the **Set Level** button when selected.
+  * Click on **Genius** and check if it changes state when hovered and focused and that it popultate the **Set Level** button when selected.
+  * Click on **Start** button and check if it works and loads the corresponding game defined by the selected subject and level.
+  * Check if a modal pop-up if the settings are not set properly when clicking on **Start**.
+  * Check if the achievements are being displayed at the bottom of the page upon receiving them.
 
-* "PAGE NAME"
-    * Click on the download icons beside the titles and check if the link opens a pdf file in a different tab.
-    * Click on the icons (links) at the end of every tips and check if the links work and open in a different tab.
+* Game
+  * Extensively check all the games features:
+    * General Display.
+    * Subject and level display.
+    * New Game and Exit buttons.
+    * Directional buttons.
+    * Questions modals.
+    * Question form when submitting without selection.
+    * Answering right answer and getting the correct feedback.
+    * Answering wrong answer and getting the correct feedback, displaying the right answer and displaying a strike on the game.
+    * Receiving the correct feedback upon completing the game, receiving rewards when finishing with no strikes and getting score.
 
-* "PAGE NAME"
-    * Try to submit the form without filling the :
-        * Full Name input and check if the form is valid and that an error message appears.
-        * Email input and check if the form is valid and that an error message appears.
-        * Phone input and check if the form is valid and that an error message appears.
-        * Date of Birth input and check if the form is valid and that an error message appears.
-        * Home Address input and check if the form is valid and that an error message appears.
-        * About You input and check if the form is valid and that an error message appears.
-    * Try to submit the form given incorrect input for :
-        * Email and check if the form is valid and that an error message appears.
-        * Phone and check if the form is valid and that an error message appears.
+* contact.html
+
+  * Try to submit the form without :
+    * Filling **Your name** input and check if the form is valid and that an error message appears.
+    * Filling **Your email address** input and check if the form is valid and that an error message appears.
+    * Filling **Your message** input and check if the form is valid and that an error message appears.
+    * Selecting a **Reason** and check if the form is valid and that an error message appears.
+
+  * Try to submit the form given incorrect format input for :
+    * Email and check if the form is valid and that an error message appears.
+
+  * Send the form and check if :
+    * A pop-up appears to give feedback upon submitting the form. One if the submission is successful and another one if it is not.
+      * Check if the links available on those pop-ups works and change state when hovered and focused.
+    * I reveived an email as a website owner delivered by EmailJS.
+    * I received an email confirmation as a user.
+
+  * Hovered and focused on the different input field and the button to check if they change state.
+
+* 404.html
+  * Click on **Back to home page** link (button) and check if the link works and changes state when hovered, focused.
+  * Click on **What is a 404 error?** link and check if the link works, when hovered and changes state focused and opens in a different tab.
+  * Click on **Report an issue** link and check if the link works, when hovered and changes state focused.
+
+* Modals
+  * Check if the modals appear and close correctly depending on their functionality.
 
 [**:back:** *Table of Content* ](#Table-of-Content)
 
+### Conclusions and Notations
+
+All the features and functionality works very well across browers except for some features on safary and iOS.
+
+Noted issues on iphones and iOS:
+
+* The **menu button** does not render as intended and is a bit off.
+* There are some unnoticeable design difference like the text-decoration of the subject and level on the game.
+* Some differences are a bit more obvious and seem to be in relation to positioning, hover and focus effect.
+  * The subjects buttons in the Study pages do not change backgound-color when ckicked. This is a positive feedback for the user to know what has been selected.
+  * The directional buttons in the game display what i beleive is the focus and/or hover effect in an unexpected way.
+  * In the modals, the closing button does not render nicely.
+
+Noted general issue:
+
+* The scrolling on smartphones can be a bit disturbing while on a modal because we can notice from time to time that something is happening in the background.
+
+Although those issues do not change and/or impact on the functionality of the features, they have negative effects on the user experience.
+
 ## User Stories Testing from UX section of the README.md
 
-### First Time User ====> THIS TESTING PART HAVE TO BE CHANGED ADAPTED TO THE UX OF THE PROJECT
+### First Time User
 
 1. As a first time user, I want the website to be appealing.
     * The website uses clean and spacious design.
