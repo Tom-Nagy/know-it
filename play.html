@@ -80,8 +80,8 @@
     </div>
 
     <!-- Steps to follow section -->
-    <section class="play-section-wrapper">
-      <section class="play-explanation">
+    <div class="play-section-wrapper">
+      <div class="play-explanation">
         <p>
           To start please <strong>pick a subject</strong> first by selecting
           the icon of your choice, then <strong>set the level</strong> and
@@ -118,7 +118,8 @@
               <li>If you get it wrong you will get a strike &#x1F631;</li>
             </ul>
 
-            <ul>The number of strikes before game over depend on the level:
+            <span>The number of strikes before game over depend on the level:</span>
+            <ul>
               <li>3 for Apprentice</li>
               <li>2 for Scientist</li>
               <li>1 for Genius</li>
@@ -130,10 +131,10 @@
           </div>
         </div>
         <div class="overlay"></div>
-      </section>
+      </div>
 
       <!-- Game settings interface -->
-      <section class="game-settings">
+      <div class="game-settings">
         <!-- Display the subjects -->
         <div>
           <!-- Credit for the images used in the buttons: Icons made by Freepik from [www.flaticon.com](www.flaticon.com):
@@ -168,7 +169,7 @@
           <ul class="levels-list hide">
             <li tabindex="1" data-level="apprentice">Apprentice</li>
             <li tabindex="1" data-level="scientist">Scientist</li>
-            <li tabindex=" 1" data-level="genius">Genius</li>
+            <li tabindex="1" data-level="genius">Genius</li>
           </ul>
         </div>
 
@@ -181,9 +182,9 @@
           </div>
         </div>
         <div class="settings-overlay"></div>
-      </section>
+      </div>
 
-      <section class="game-rewards">
+      <div class="game-rewards">
         <div id="rewards-display">
           <span>
             <i id="perm-flag" class="fas fa-flag-checkered hide" title="Volcano Apprentice achievements"></i>
@@ -200,8 +201,8 @@
             <i id="perm-astronaut" class="fas fa-user-astronaut hide" title="Earth Genius achievements"></i>
           </span>
         </div>
-      </section>
-      <!--------------------- Game -->
+      </div>
+      <!-- Game -->
       <!-- Credit for the images used as background for the different subject on the game interface.
         All images are from [Adobe Stock](https://stock.adobe.com/ie/):
         volcano: [heat red cracked ground texture after eruption volcano by releon8211](https://stock.adobe.com/ie/images/heat-red-cracked-ground-texture-after-eruption-volcano/110818846?prev_url=detail), 
@@ -1818,7 +1819,7 @@
         </div>
       </div>
       <div class="game-overlay"></div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

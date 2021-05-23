@@ -22,8 +22,8 @@
   <title>Know It</title>
   <link rel="stylesheet" href="assets/css/style.css" media="all" />
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
     (function () {
       emailjs.init("user_zZR48PZvHUdToIEtpRtBT");
     })();
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Form section -->
-    <section class="form-section">
+    <div class="form-section">
       <p>
         To get in touch, please fill up the form, we will get back to you as
         soon as possible.
@@ -99,8 +99,8 @@
         <label for="email">Your email address:</label>
         <input id="email" type="email" name="email" required />
         <label for="reasons">Reason:</label>
-        <select id="reasons" type="text" name="reasons" required>
-          <option value="select">Please select a reason</option>
+        <select id="reasons" name="reasons" required>
+          <option value="">Please select a reason</option>
           <option value="request">Special request</option>
           <option value="issue">Report an issue</option>
           <option value="other">Other</option>
@@ -109,7 +109,7 @@
         <textarea id="message" name="message" cols="15" rows="5" required></textarea>
         <button id="send-button" type="submit">Send</button>
       </form>
-    </section>
+    </div>
 
     <!-- Modal to pop-up when email is send -->
     <div id="email-sent" class="contact-modals">

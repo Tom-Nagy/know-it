@@ -891,7 +891,7 @@ a {
     padding: 1em;
 }
 
-.subject-content ul span {
+.subject-content span {
     font-size: 1rem;
     text-decoration: underline;
 }
@@ -1128,7 +1128,7 @@ a {
     color: #fcfcfc;
 }
 
-.error-section ul span {
+.error-section span {
     font-size: 1rem;
     font-weight: bold;
 }
@@ -3228,12 +3228,12 @@ a {
     .go-play a,
     .subject-content p,
     .subject-content h6,
-    .subject-content ul span,
+    .subject-content span,
     .play-wrapper p,
     .play-explanation .study-button,
     #rules-button,
     .contact-wrapper,
-    .error-section ul span,
+    .error-section span,
     .error-section p,
     .error-wrapper .heading span,
     .back-home-button {
