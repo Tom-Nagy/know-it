@@ -2,7 +2,7 @@
 
 **[:leftwards_arrow_with_hook: *README.md*](README.md)**
 
-#### Visit the live Website : **[WEBSITE NAME](WEBSITE LINK)**.
+#### Visit the live Website : **[Know It :arrow_right:](https://tom-nagy.github.io/know-it/)**.
 
 # Testing
 
@@ -52,8 +52,8 @@ All the pages from the website have been tested with Lighthouse.
 They all show 100% score except for the performance for most pages. This is due to images sizes mostly and to the css file size. In the future devlopement of the website, considering a separation of the css between the play page and the rest of the website could be beneficial as well as creating different image sizes that would be loaded depending on the screen size.
 
 * Home
-  * ![Mobile](assets/images/TESTING-images/lighthouse/lighthouse-mobile-home.png)
-  * ![Desktop](assets/images/TESTING-images/lighthouse/lighthouse-desktop-home.png)
+  * ![Mobile](assets/images/TESTING-images/lighthouse/lighthouse-mobile-index.png)
+  * ![Desktop](assets/images/TESTING-images/lighthouse/lighthouse-desktop-index.png)
 * About
   * ![Mobile](assets/images/TESTING-images/lighthouse/lighthouse-mobile-about.png)
   * ![Desktop](assets/images/TESTING-images/lighthouse/lighthouse-desktop-about.png)
