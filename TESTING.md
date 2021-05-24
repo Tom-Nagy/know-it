@@ -184,71 +184,125 @@ Noted general issue:
 
 Although those issues do not change and/or impact on the functionality of the features, they have negative effects on the user experience.
 
+[**:back:** *Table of Content* ](#Table-of-Content)
+
 ## User Stories Testing from UX section of the README.md
 
 ### First Time User
 
 1. As a first time user, I want the website to be appealing.
     * The website uses clean and spacious design.
-    * The website applies all the accessibility protocols for an easy and good user experience for all. ===> PROOF OF ACCESSIBILITY FROM OTHER SOURCES !?
-
-![home](assets/images/README-images/ami-responsive-home.png)
-!["PAGE NAME"](assets/images/README-images/ami-responsive-"PAGE NAME".png)
-!["PAGE NAME"](assets/images/README-images/ami-responsive-"PAGE NAME".png)
-!["PAGE NAME"](assets/images/README-images/ami-responsive-"PAGE NAME".png)
-!["PAGE NAME" Tips](assets/images/README-images/ami-responsive-"PAGE NAME".png)
-!["PAGE NAME"](assets/images/README-images/ami-responsive-"PAGE NAME".png)
+    * The website uses playful fonts and colors that gives a friendly and attractive feel.
+    * The website applies all the accessibility protocols for an easy and good user experience for all.
 
 See [Lighthouse](https://github.com/Tom-Nagy/walking-around/blob/master/TESTING.md#Lighthouse) for accessibility results.
 
 2. As a first time user, I want the navigation to be easy and intuitive.
-    * The header and the footer are fixed respectively on the top and on the bottom of the page and always 
-    accessible. So it is easy and quick to navigate.
-    * The navigation menu is clear.
-    * The current page is highlighted on medium and large screens to provide feedback location information to the user.
+    * The navigation menu is easily accessible and recognizable.
+    * All the pages present a large and clear title that help users to identify on what page they are.
+    * The navigation choice is to provide links to the main website's features on the pages where it is relevant for simplicity and effectiveness.
+    * The links network is design not to have the need to use the navigation menu when using the website for its main purpose.
+    * On the home page, three links are provided: About, Study and Play.
+    * On the study page, a link to the play page is provided.
+    * On the play page, a link to the study page is provided.
 
-![Navigation](assets/images/TESTING-images/manual-testing/testing-nav.png)
+![Navigation](assets/images/TESTING-images/manual-testing/nav-testing-home.png)
 
-    * The current page replace the website name beside the logo on small screens to provide feedback location information to the user.
+![Navigation-sm](assets/images/TESTING-images/manual-testing/nav-testing-about.png)
 
-![Navigation-sm](assets/images/TESTING-images/manual-testing/testing-nav-sm.png)
+![Navigation-sm](assets/images/TESTING-images/manual-testing/nav-testing-study.png)
+
+![Navigation-sm](assets/images/TESTING-images/manual-testing/nav-testing-play.png)
 
 3. As a first time user, I want the content to be informative but not overwhelming.
-    * The content is displayed per readable and short sections to provide the feeling that it is approachable and 
-    not complicated. This is supported by the website design.
-    
-4. As a first time user, I want to understand immediately what is the website about without the need 
-of looking for it.
-    * The home page provide all the information that a new user need :
-        * The heading gives the main information: "Ireland Best Walking Community" which includes location, 
-        and what it is about.
+    * The content is displayed per readable and short sections to provide the feeling that it is approachable and not complicated. This is supported by the website design.
+    * The articles in the study section are designed to be attrative and offer a magnifier (button) to toggle more information on the corresponding subject.
+
+![Magnifier toggle extra content](assets/images/TESTING-images/manual-testing/magnifier-testing.png)
+
+4. As a first time user, I want to understand immediately what is the website about without the need of looking for it.
+    * The home page provide all the information that a new user needs:
+        * The main heading gives the main information: “Welcome to Know It” which includes a subtitle: “Learning is cool and Knowledge is great!”. This gives information on the website focus which is learning and knowledge.
+        * The statement below the heading says: “Here learning is FUN !” which gives the information to the user that the means used to learn and get the knowledge are playful and fun.
+        * As well the playfulness of the fonts gives a visual cue.
 
 ![Home Heading](assets/images/TESTING-images/manual-testing/home-heading.png)
 
-        * Three paragraphs give extra information about the community spirit and goals.
+![Home statement](assets/images/TESTING-images/manual-testing/home-statement.png)
 
-![Home Headlines](assets/images/TESTING-images/manual-testing/home-headlines.png)
+5. As a first time user, I want to be able to choose the subject to study.
+    * Information on how to use the study room is displayed at the top of the page.
+    * The subjects are presented as clickable icons (buttons) So it is easy to select and change subject.
+    * The selected subject is highlighted with a red background and a bigger scale so it is easy to identify.
 
+![Study explanation](assets/images/TESTING-images/manual-testing/study-explanation.png)
 
-5. As a first time user, I want to be able to apply for joining the Club.
-    * In the footer a button/link ```Join Us !``` is always visible and accessible.
-    * The form gives information (on the top) on what to except. After filling up the form, someone will contact 
-    the user.
-    * Additional information is given in the "About Us" section of The Club page on how to join.
+6. As a first time user, I want the content to be interactive.
+    * The website design present an interactive feel over the website by using hover and focus effects coupled with buttons for displaying extra content in the study page.
+
+![Study link hovered](assets/images/TESTING-images/manual-testing/button-hovered.png)
+
+![Jungle icon hovered](assets/images/TESTING-images/manual-testing/jungle-hovered.png)
+
+![Toggle information](assets/images/TESTING-images/manual-testing/info-toggle.png)
+
+7. As a first time user, I want to play the game.
+    * The game is accessible from the first visit and offer three levels with one easy that is accessible to everyone.
+    * The easy level is composed of six questions and two strikes are allowed.
+
+![Layrinth Apprentice](assets/images/TESTING-images/manual-testing/game-easy.png)
+
+8. As a first time user, I want the gameplay to be easy to understand.
+    * The rules are very simple and accessile from the play page just above setting the game.
+    * Use the arrows to move the avatar and reach the exit.
+    * When on a question, answer it. If right you continue, if wrong you get a strike and continue.
+    * Strike(s) limit depends on the level selected.
+    * Strikes received are displayed on the screen.
+
+![Rules](assets/images/TESTING-images/manual-testing/rules.png)
+
+![Gameplay](assets/images/TESTING-images/manual-testing/gameplay.png)
+
+9. As a first time user, I want to be able to choose a difficulty level for the game.
+    * Game settings are available and accessible from the play page.
+
+![Level settings](assets/images/TESTING-images/manual-testing/level-settings.png)
+
+10. As a first time user, I want to be able to choose the subject of the game.
+    * Game settings are available and accessible from the play page.
+
+![Game settings](assets/images/TESTING-images/manual-testing/game-settings.png)
+
+11. As a first time user, I want to keep tract of my gaming score and progress.
+    * Results are being displayed upon finishing a labyrinth level.
+    * Rewards/Achievements receivde are displayed at the bottom of the play page.
+
+![Game results](assets/images/TESTING-images/manual-testing/game-results.png)
+
+![Game rewards](assets/images/TESTING-images/manual-testing/game-rewards.png)
 
 ### Returning User
 
-6. As a returning user, I want to see when and where are the Club's meetings.
-    * Club's meeting policy is explained in the "Meet up" section of the Activities page. 
+1. As a returning user, I want to improve.
+    * There are three different game level with three subjects and an extra subject/difficulty that combines the three others.
+    * There is the study page available to browse in order to learn and improve.
+    * All the answer of the questions are found in the study content.
 
-7. As a returning user, I want to check out the different social media links for inspiration and ideas.
-    * Relevant social media links are provided in the fixed footer and always accessible.
+2. As a returning user, I want to check the different subjects.
+    * The subjects are easy to access and three subjects are available at the moment.
 
-8. As a returning user, I want to get information about hiking.
-    * A page is dedicated to Hiking Tips which include three main tips.
-    * Each tip is downloadable in a pdf format.
-    * Additional information is available at the bottom of each tip's section in a form of a link to external 
-    websites.
+3. As a returning user, I want to challenge myself on the game.
+4. As a returning user, I want to earn different achievements playing the game.
+    * Different levels are available.
+    * Twelve rewards/achievements are available to collect at the moment and provide a goal and motivation to progress in the game and to improve.
+
+5. As a returning user, I want to contact and get information on the website owner.
+    * A contact page is available and accessible from the navigation menu and the about page.
+    * In the about page a section encourage reaching out for specific request.
+
+![Contact incentive](assets/images/TESTING-images/manual-testing/contact-incentive.png)
+
+![Contact form](assets/images/TESTING-images/manual-testing/contact-form.png)
 
 [**:back:** *Table of Content* ](#Table-of-Content)
 
@@ -256,9 +310,5 @@ of looking for it.
 
 * The website has been tested by fellow students, slack community, friends and family.
 * All the issues raised have been addressed.
-
-# Bugs
-
-INCLUDE A BUGS SECTIONS IN RELATION TO TESTING AND NOT DEVELOPMENT !?
 
 [**:back:** *Table of Content* ](#Table-of-Content)
