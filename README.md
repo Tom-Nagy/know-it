@@ -422,7 +422,7 @@ It provides a button to go back to the home page and some useful links.
 
 ### **Features to Implement in the Future Versions**
 
- On a general note, adding other subjects to play and study.
+ On a general note, adding other subjects to play and study pages; and expanding the existing subjects.
 
 #### play.html
 
@@ -657,7 +657,11 @@ Issue : On iOS, the menu icon is not rendering properly rendering.
 
 Issue : On iOS, the button to close modal doesn't render nicely.
 
-Issue : On iOS, the directional buttons hover and/or focus effect don't render properly. this does not prevent users from playing, but it takes away from the user experience.
+Issue : On iOS, the directional buttons hover and/or focus effect don't render properly.
+
+Issue : When selecting a subject in the study.html on iOS, the “focus” state doesn't show. It should be red background but stays white.
+
+Thoses issues do not prevent users from using the website festures and functionalities, but they take away from the user experience.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -695,6 +699,9 @@ For the explanation on how to generate a random number and for that number not t
 [Ross Allen](https://stackoverflow.com/questions/10614481/disable-double-tap-zoom-option-in-browser-on-touch-devices)  
 For explanation on how to disable double click on html elements.
 
+[Hostinger Tutorials](https://www.hostinger.com/tutorials/how-to-add-favicon-to-website)  
+For favicon implementation.
+
 ### Media
 
 ##### External links :
@@ -728,7 +735,7 @@ For the menu icon that was slightly adjusted to the website needs using [Iconfin
   * [Oceans map by our homework help](https://ourhomeworkhelp.wordpress.com/2016/07/11/map-of-continents-oceans/)  
   * [Image by brgfx from [freepik](https://www.freepik.com)](https://www.freepik.com/free-vector/tidal-movements-earth_1466597.htm#page=1&query=ocean%20tides&position=49)  
   * [Image by U.S. Geological Survey, Department of the Interior/USGS Howard Perlman, USGS and John Evans, USGS. from Kiddle](https://kids.kiddle.co/Image:Water_cycle.png)  
-  * [Image by U.S. Geological Survey , Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
+  * [Image by U.S. Geological Survey, Department of the Interior/USGS Igor Shiklamonov, 1993, "Water in Crisis: A Guide to the World's Freshwater Resources"](https://www.usgs.gov/media/images/distribution-water-and-above-earth)  
 
 * For the Jungle content:
   Images from [Adobe Stock](https://stock.adobe.com/ie/):  
