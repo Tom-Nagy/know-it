@@ -311,4 +311,15 @@ See [Lighthouse](https://github.com/Tom-Nagy/walking-around/blob/master/TESTING.
 * The website has been tested by fellow students, slack community, friends and family.
 * All the issues raised have been addressed.
 
+* An issue has appeard on the console when loding the page:
+
+>Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
+
+This message was present during devlopement process and desappeard at some point. And now it is back again. It comes along a 404 erro message that appear briefly with a *robots.txt* file type.  
+After reading about this issue, it seems like GitHub pages should have had solved it: [gitbog](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/).
+
+This warning do not prevent the website from functioning correctly.
+
+![Warning](assets/images/TESTING-images/manual-testing/warning.png)
+
 [**:back:** *Table of Content* ](#Table-of-Content)
