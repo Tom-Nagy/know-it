@@ -509,7 +509,7 @@ This project was developed on [GitPod Workspaces IDE](https://gitpod.io/workspac
 
 ## Live Deployment
 
-To make this website accessible to the public, Walking Around has been deployed on [GitHub Pages](https://pages.github.com/) as follow :
+To make this website accessible to the public, Know It has been deployed on [GitHub Pages](https://pages.github.com/) as follow :
 
 1. Log in to my GitHub account.
     * To create an account you need to sign up on [GitHub](https://github.com/).
